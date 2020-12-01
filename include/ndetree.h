@@ -11,7 +11,7 @@ public:
 		Fitness = MAXINT;
   };
 
-  void MoveSubTree(int fromI, int toI);
+  void MoveSubTree(int from, int to);
 
 	// The fitness functions: calculates and adds the value of the NDETree to it
 	void CalcAddSubTreeCorrectness(int ind = 0);
@@ -22,5 +22,7 @@ public:
   vector<int> Depths;
 
 	static NDETree GenerateRandom();
+	int GetSubTreeLength(int ind);
+
 private:
 };

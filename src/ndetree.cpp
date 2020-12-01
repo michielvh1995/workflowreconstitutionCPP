@@ -41,3 +41,24 @@ void NDETree::CalcAddSubTreeCorrectness(int ind) {
   // And update the fitness value with the difference
   Fitness += diff.size();
 };
+
+// Calculates the length of a subtree with root at a given index
+// Inputs : int : ind	: The index of the root of the subtree
+// Output : int : The length of the subtree. Length 1 means that the rootnode is a leaf.
+int NDETree::GetSubTreeLength(int ind) {
+  for(auto i = ind + 1; i < Depths.size(); i++)
+    if (Depths[i] <= Depths[ind]) return i-ind;
+  return Depths.size() - ind;
+}
+
+// Creates a new NDETree with a moved subtree compared to this one.
+// Inputs : int : ind	: The index of the root of the subtree
+void NDETree::MoveSubTree(int from, int to) {
+  // Get the length of the subtree
+  int len = GetSubTreeLength(from);
+
+  // Now extract the subtree and update its depths
+  int tD = Depths[to];
+  vector<int> newDs;
+}
+

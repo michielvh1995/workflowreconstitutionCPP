@@ -18,23 +18,25 @@ bool Stop(int gen, int last, int best, int platsize){
 //
 //
 //
-NDETree CrossOver(NDETree p1, NDETree p2){
+NDETree CrossOver(NDETree p1, NDETree p2) {
   return p1;
 }
 
 //
 //
 //
-NDETree Mutate(NDETree tree){
+NDETree Mutate(NDETree tree) {
+
   return tree;
 }
 
-//
-//
-//
-void Fitness(NDETree tree){
-  tree.Fitness = 0;
-  tree.CalcAddSubTreeCorrectness();
+// Fitness calculates the fitness value a given tree, by calling the corresponding functions
+// Automatically updates the tree's fitness value
+// Inputs :  NDETree*  : Takes a pointer to an NDETree object
+// Outputs: Void
+void Fitness(NDETree *tree){
+  tree->Fitness = 0;
+  tree->CalcAddSubTreeCorrectness();
 }
 
 bool treeCompare(const NDETree& a, const NDETree& b)
@@ -68,8 +70,8 @@ void Play(vector<NDETree> pool, int poolSize) {
       c2 = Mutate(c2);
 
       // Calculate their fitness
-      Fitness(c1);
-      Fitness(c2);
+      Fitness(&c1);
+      Fitness(&c2);
 
       // Add them to the list
       children.push_back(c1);
@@ -101,9 +103,27 @@ int main() {
   testLeaf.name = "leaf";
   testLeaf.outputs = {out};
 
-  NDETree testTree({testTool, testLeaf, testLeaf}, {0, 1, 1});
-  Fitness(testTree);
+  Tool testLe;
+  testLe.name = "Jack";
+  testLe.outputs = {out};
+
+  NDETree testTree({testTool, testLeaf, testLe}, {0, 1, 2});
+  Fitness(&testTree);
   printf("Test tree fitness: %d\n", testTree.Fitness);
+
+  for (auto t: testTree.Tools) {
+    printf("%s", t.name.c_str());
+  }
+  printf("\n");
+  //testTree.MoveSubTree(2, 0);
+
+  rotate(testTree.Depths.begin() + 1, testTree.Depths.begin() + 2, testTree.Depths.begin());
+
+  for (auto t: testTree.Depths) {
+    printf("%s", t);
+  }
+  printf("\n Completed rotation \n");
+
 
 // =============================================================
 // Dataset
