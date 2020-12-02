@@ -21,8 +21,13 @@ public:
   vector<Tool> Tools;
   vector<int> Depths;
 
-	static NDETree GenerateRandom();
 	int GetSubTreeLength(int ind);
+	void Print();
+
+	void EPO(int from, int to);
+
+	static NDETree GenerateRandom();
+	static NDETree ECO(NDETree* base, NDETree* ref);
 
 private:
 };

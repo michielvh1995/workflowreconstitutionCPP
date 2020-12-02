@@ -2,10 +2,19 @@
 #include "common.h"
 #endif
 
-#include <iostream>
-#include <map>
-
 #include "ndetree.h"
+
+// =============================================================
+// =================== Import Factorio data ====================
+// =============================================================
+#include "../data/factorioGenerator.cpp"
+
+
+
+
+// =============================================================
+// ================= Set the genetic operators =================
+// =============================================================
 
 // Import the operators
 // Selection
@@ -18,16 +27,21 @@ bool Stop(int gen, int last, int best, int platsize){
 //
 //
 //
-NDETree CrossOver(NDETree p1, NDETree p2) {
-  return p1;
+NDETree CrossOver(NDETree* p1, NDETree* p2) {
+  return NDETree::ECO(p1, p2);
 }
 
-//
-//
-//
-NDETree Mutate(NDETree tree) {
+// This function mutates a single individual tree into the other
+void Mutate(NDETree* tree) {
+  // Get two random indices
+  int ind1, ind2;
 
-  return tree;
+  ind1 = rand() % (tree->Depths.size()-1) + 1; // we don't want to take the root node as swap-away
+  ind2 = rand() % tree->Depths.size();
+
+  while(ind1 == ind2) ind2 = rand() % tree->Depths.size();
+
+  tree->EPO(ind1, ind2);
 }
 
 // Fitness calculates the fitness value a given tree, by calling the corresponding functions
@@ -37,6 +51,7 @@ NDETree Mutate(NDETree tree) {
 void Fitness(NDETree *tree){
   tree->Fitness = 0;
   tree->CalcAddSubTreeCorrectness();
+  fflush(stdout);
 }
 
 bool treeCompare(const NDETree& a, const NDETree& b)
@@ -44,6 +59,10 @@ bool treeCompare(const NDETree& a, const NDETree& b)
     // smallest comes first
     return a.Fitness < b.Fitness;
 }
+
+// =============================================================
+// ================== The Genetic Game itself ==================
+// =============================================================
 
 void Play(vector<NDETree> pool, int poolSize) {
   vector<NDETree> parents;
@@ -62,12 +81,12 @@ void Play(vector<NDETree> pool, int poolSize) {
     // Generate the offspring
     for (auto i = 0; i < parents.size()/2; i++) {
       // perform crossover
-      NDETree c1 = CrossOver(parents[i*2], parents[i*2 +1]);
-      NDETree c2 = CrossOver(parents[i*2 +1], parents[i*2]);
+      NDETree c1 = CrossOver(&parents[i*2], &parents[i*2 +1]);
+      NDETree c2 = CrossOver(&parents[i*2 +1], &parents[i*2]);
 
       // mutate both
-      c1 = Mutate(c1);
-      c2 = Mutate(c2);
+      Mutate(&c1);
+      Mutate(&c2);
 
       // Calculate their fitness
       Fitness(&c1);
@@ -86,70 +105,59 @@ void Play(vector<NDETree> pool, int poolSize) {
     children.clear();
     generation++;
   }
-
 }
 
-
 int main() {
+  // =============================================================
+  // =================== Initalize some values ===================
+  // =============================================================
 
-  Tool testTool;
-  testTool.name = "test";
-  testTool.inTypes = {"int"};
+  // Seed the random
+  srand(time(0));
 
-  Input out;
-  out.type = "int";
-
-  Tool testLeaf;
-  testLeaf.name = "leaf";
-  testLeaf.outputs = {out};
-
-  Tool testLe;
-  testLe.name = "Jack";
-  testLe.outputs = {out};
-
-  NDETree testTree({testTool, testLeaf, testLe}, {0, 1, 2});
-  Fitness(&testTree);
-  printf("Test tree fitness: %d\n", testTree.Fitness);
-
-  for (auto t: testTree.Tools) {
-    printf("%s", t.name.c_str());
-  }
-  printf("\n");
-  //testTree.MoveSubTree(2, 0);
-
-  rotate(testTree.Depths.begin() + 1, testTree.Depths.begin() + 2, testTree.Depths.begin());
-
-  for (auto t: testTree.Depths) {
-    printf("%s", t);
-  }
-  printf("\n Completed rotation \n");
+  printf("TODO: \n * Generate Trees (at random) \n * Stop condition \n * More fitness functions \n\n");
 
 
-// =============================================================
-// Dataset
-// =============================================================
+  // =============================================================
+  // ========================== Dataset ==========================
+  // =============================================================
+
   printf("Get the data-set:\n");
 
-  map<string, Tool> dataset;
-  dataset["test"] = testTool;
+  auto tools = Factorio();
+  auto dataset = map<string, Tool>();
 
-  printf("Retrieved %d tools\n", dataset.size());
+  for(auto t : tools)
+    dataset[t.name.c_str()] = t;
 
-// =============================================================
-// Create the tree
-// =============================================================
-  /*
-  stc = [("imagemagick-copy",0),("user-input-string",1), ("imagemagick-new", 1),("user-input-int", 2), ("user-input-int",2), ("user-input-string",2)]
-  dt = [(Node(recipes[n]), d) for n,d in stc]
+  printf("Retrieved %d tools\n\n", dataset.size());
 
-  goal = ndeTree.NDETree(list = dt)
-  */
-  //vector<Tool> tools = {dataset["imagemagick-copy"], dataset["user-input-string"], dataset["imagemagick-new"], dataset["user-input-int"], dataset["user-input-int"],dataset["user-input-string"]};
+  // =============================================================
+  // Create the tree
+  // =============================================================
 
-  vector<Tool> tools = {dataset["test"]};
-  vector<int> depths = {0, 1, 1, 2, 2, 2};
+  //NDETree testTree({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["copper-ore"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,3,1,2});
+  NDETree testTree({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["copper-ore"]}, {0,1,2,3});
+  NDETree testTree2({dataset["iron-gear-wheel"], dataset["iron-plate"], dataset["iron-ore"], dataset["copper-ore"]}, {0,1,2,2});
 
-  NDETree Goal = NDETree(tools, depths);
+  printf("%d Inputs of %s:\n",dataset["electronic-circuit"].inTypes.size(), dataset["electronic-circuit"].name.c_str());
+  for (int i = 0; i < dataset["electronic-circuit"].inTypes.size(); i++) {
+    printf("%d: %s ",i , dataset["electronic-circuit"].inTypes[i].c_str());
+  }
+  printf("\n");
+  printf("\n");
 
+  testTree.Print();
+  Fitness(&testTree);
+  printf("Fitness: %d\n", testTree.Fitness);
+  return 0;
+  testTree.EPO(1, 0);
+  testTree.Print();
+  auto p = NDETree::ECO(&testTree, &testTree2);
+  
+  Fitness(&p);
+  printf("Tree after ECO:\n  ");
+  p.Print();
+  printf("Fitness: %d \n", p.Fitness);
   return 0;
 }
