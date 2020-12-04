@@ -143,13 +143,14 @@ def PrintInput(inputs, recipe, ind = 2):
         print(' ' * ind + recipe+'.inputs.push_back(ins);')
         print(' ' * ind + recipe+'.inTypes.push_back("' + input['type']  + '");')
     #print(' '*ind + 'sort ('+ recipe+'.inputs.begin(),' + recipe+'.inputs.end());' )
-    #print(' '*ind + 'sort ('+ recipe+'.inTypes.begin(),' + recipe+'.inTypes.end());' )
+    print(' '*ind + 'sort ('+ recipe+'.inTypes.begin(),' + recipe+'.inTypes.end());' )
 
 for t in tools:
     print()
     print(('  Tool ' +t['id']+ ';').replace('-', '_'))
     print('  ' +t['id'].replace('-', '_')+'.name = "' +t['id']+ '";')
     print('  ' +t['id'].replace('-', '_')+'.id = "' +t['id']+ '";')
+    print('  ' +t['id'].replace('-', '_')+'.operation = "' +t['id']+ '";')
     # Type of the tool is either input or a tool
     print('  ' +t['id'].replace('-', '_')+'.type = "' +t['type']+ '";')
 

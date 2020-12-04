@@ -11,6 +11,7 @@ vector<Tool> Factorio() {
   Tool accumulator;
   accumulator.name = "accumulator";
   accumulator.id = "accumulator";
+  accumulator.operation = "accumulator";
   accumulator.type = "tool";
   accumulator.inputs = {};
   accumulator.inTypes = {};
@@ -24,17 +25,16 @@ vector<Tool> Factorio() {
   ins.type = "battery";
   accumulator.inputs.push_back(ins);
   accumulator.inTypes.push_back("battery");
-  sort (accumulator.inputs.begin(),accumulator.inputs.end());
   sort (accumulator.inTypes.begin(),accumulator.inTypes.end());
   outs.label = "output1";
   outs.type = "accumulator";
   accumulator.outputs.push_back(outs);
-  sort (accumulator.outputs.begin(),accumulator.outputs.end());
   factorio.push_back(accumulator);
 
   Tool advanced_circuit;
   advanced_circuit.name = "advanced-circuit";
   advanced_circuit.id = "advanced-circuit";
+  advanced_circuit.operation = "advanced-circuit";
   advanced_circuit.type = "tool";
   advanced_circuit.inputs = {};
   advanced_circuit.inTypes = {};
@@ -52,17 +52,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   advanced_circuit.inputs.push_back(ins);
   advanced_circuit.inTypes.push_back("copper-cable");
-  sort (advanced_circuit.inputs.begin(),advanced_circuit.inputs.end());
   sort (advanced_circuit.inTypes.begin(),advanced_circuit.inTypes.end());
   outs.label = "output1";
   outs.type = "advanced-circuit";
   advanced_circuit.outputs.push_back(outs);
-  sort (advanced_circuit.outputs.begin(),advanced_circuit.outputs.end());
   factorio.push_back(advanced_circuit);
 
   Tool advanced_oil_processing;
   advanced_oil_processing.name = "advanced-oil-processing";
   advanced_oil_processing.id = "advanced-oil-processing";
+  advanced_oil_processing.operation = "advanced-oil-processing";
   advanced_oil_processing.type = "tool";
   advanced_oil_processing.inputs = {};
   advanced_oil_processing.inTypes = {};
@@ -76,7 +75,6 @@ vector<Tool> Factorio() {
   ins.type = "crude-oil";
   advanced_oil_processing.inputs.push_back(ins);
   advanced_oil_processing.inTypes.push_back("crude-oil");
-  sort (advanced_oil_processing.inputs.begin(),advanced_oil_processing.inputs.end());
   sort (advanced_oil_processing.inTypes.begin(),advanced_oil_processing.inTypes.end());
   outs.label = "output1";
   outs.type = "resource";
@@ -87,12 +85,12 @@ vector<Tool> Factorio() {
   outs.label = "output3";
   outs.type = "resource";
   advanced_oil_processing.outputs.push_back(outs);
-  sort (advanced_oil_processing.outputs.begin(),advanced_oil_processing.outputs.end());
   factorio.push_back(advanced_oil_processing);
 
   Tool arithmetic_combinator;
   arithmetic_combinator.name = "arithmetic-combinator";
   arithmetic_combinator.id = "arithmetic-combinator";
+  arithmetic_combinator.operation = "arithmetic-combinator";
   arithmetic_combinator.type = "tool";
   arithmetic_combinator.inputs = {};
   arithmetic_combinator.inTypes = {};
@@ -106,17 +104,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   arithmetic_combinator.inputs.push_back(ins);
   arithmetic_combinator.inTypes.push_back("electronic-circuit");
-  sort (arithmetic_combinator.inputs.begin(),arithmetic_combinator.inputs.end());
   sort (arithmetic_combinator.inTypes.begin(),arithmetic_combinator.inTypes.end());
   outs.label = "output1";
   outs.type = "arithmetic-combinator";
   arithmetic_combinator.outputs.push_back(outs);
-  sort (arithmetic_combinator.outputs.begin(),arithmetic_combinator.outputs.end());
   factorio.push_back(arithmetic_combinator);
 
   Tool artillery_shell;
   artillery_shell.name = "artillery-shell";
   artillery_shell.id = "artillery-shell";
+  artillery_shell.operation = "artillery-shell";
   artillery_shell.type = "tool";
   artillery_shell.inputs = {};
   artillery_shell.inTypes = {};
@@ -134,17 +131,16 @@ vector<Tool> Factorio() {
   ins.type = "explosives";
   artillery_shell.inputs.push_back(ins);
   artillery_shell.inTypes.push_back("explosives");
-  sort (artillery_shell.inputs.begin(),artillery_shell.inputs.end());
   sort (artillery_shell.inTypes.begin(),artillery_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "artillery-shell";
   artillery_shell.outputs.push_back(outs);
-  sort (artillery_shell.outputs.begin(),artillery_shell.outputs.end());
   factorio.push_back(artillery_shell);
 
   Tool artillery_targeting_remote;
   artillery_targeting_remote.name = "artillery-targeting-remote";
   artillery_targeting_remote.id = "artillery-targeting-remote";
+  artillery_targeting_remote.operation = "artillery-targeting-remote";
   artillery_targeting_remote.type = "tool";
   artillery_targeting_remote.inputs = {};
   artillery_targeting_remote.inTypes = {};
@@ -158,17 +154,16 @@ vector<Tool> Factorio() {
   ins.type = "radar";
   artillery_targeting_remote.inputs.push_back(ins);
   artillery_targeting_remote.inTypes.push_back("radar");
-  sort (artillery_targeting_remote.inputs.begin(),artillery_targeting_remote.inputs.end());
   sort (artillery_targeting_remote.inTypes.begin(),artillery_targeting_remote.inTypes.end());
   outs.label = "output1";
   outs.type = "artillery-targeting-remote";
   artillery_targeting_remote.outputs.push_back(outs);
-  sort (artillery_targeting_remote.outputs.begin(),artillery_targeting_remote.outputs.end());
   factorio.push_back(artillery_targeting_remote);
 
   Tool artillery_turret;
   artillery_turret.name = "artillery-turret";
   artillery_turret.id = "artillery-turret";
+  artillery_turret.operation = "artillery-turret";
   artillery_turret.type = "tool";
   artillery_turret.inputs = {};
   artillery_turret.inTypes = {};
@@ -190,17 +185,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   artillery_turret.inputs.push_back(ins);
   artillery_turret.inTypes.push_back("advanced-circuit");
-  sort (artillery_turret.inputs.begin(),artillery_turret.inputs.end());
   sort (artillery_turret.inTypes.begin(),artillery_turret.inTypes.end());
   outs.label = "output1";
   outs.type = "artillery-turret";
   artillery_turret.outputs.push_back(outs);
-  sort (artillery_turret.outputs.begin(),artillery_turret.outputs.end());
   factorio.push_back(artillery_turret);
 
   Tool artillery_wagon;
   artillery_wagon.name = "artillery-wagon";
   artillery_wagon.id = "artillery-wagon";
+  artillery_wagon.operation = "artillery-wagon";
   artillery_wagon.type = "tool";
   artillery_wagon.inputs = {};
   artillery_wagon.inTypes = {};
@@ -226,17 +220,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   artillery_wagon.inputs.push_back(ins);
   artillery_wagon.inTypes.push_back("advanced-circuit");
-  sort (artillery_wagon.inputs.begin(),artillery_wagon.inputs.end());
   sort (artillery_wagon.inTypes.begin(),artillery_wagon.inTypes.end());
   outs.label = "output1";
   outs.type = "artillery-wagon";
   artillery_wagon.outputs.push_back(outs);
-  sort (artillery_wagon.outputs.begin(),artillery_wagon.outputs.end());
   factorio.push_back(artillery_wagon);
 
   Tool assembling_machine_1;
   assembling_machine_1.name = "assembling-machine-1";
   assembling_machine_1.id = "assembling-machine-1";
+  assembling_machine_1.operation = "assembling-machine-1";
   assembling_machine_1.type = "tool";
   assembling_machine_1.inputs = {};
   assembling_machine_1.inTypes = {};
@@ -254,17 +247,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   assembling_machine_1.inputs.push_back(ins);
   assembling_machine_1.inTypes.push_back("iron-plate");
-  sort (assembling_machine_1.inputs.begin(),assembling_machine_1.inputs.end());
   sort (assembling_machine_1.inTypes.begin(),assembling_machine_1.inTypes.end());
   outs.label = "output1";
   outs.type = "assembling-machine-1";
   assembling_machine_1.outputs.push_back(outs);
-  sort (assembling_machine_1.outputs.begin(),assembling_machine_1.outputs.end());
   factorio.push_back(assembling_machine_1);
 
   Tool assembling_machine_2;
   assembling_machine_2.name = "assembling-machine-2";
   assembling_machine_2.id = "assembling-machine-2";
+  assembling_machine_2.operation = "assembling-machine-2";
   assembling_machine_2.type = "tool";
   assembling_machine_2.inputs = {};
   assembling_machine_2.inTypes = {};
@@ -286,17 +278,16 @@ vector<Tool> Factorio() {
   ins.type = "assembling-machine-1";
   assembling_machine_2.inputs.push_back(ins);
   assembling_machine_2.inTypes.push_back("assembling-machine-1");
-  sort (assembling_machine_2.inputs.begin(),assembling_machine_2.inputs.end());
   sort (assembling_machine_2.inTypes.begin(),assembling_machine_2.inTypes.end());
   outs.label = "output1";
   outs.type = "assembling-machine-2";
   assembling_machine_2.outputs.push_back(outs);
-  sort (assembling_machine_2.outputs.begin(),assembling_machine_2.outputs.end());
   factorio.push_back(assembling_machine_2);
 
   Tool assembling_machine_3;
   assembling_machine_3.name = "assembling-machine-3";
   assembling_machine_3.id = "assembling-machine-3";
+  assembling_machine_3.operation = "assembling-machine-3";
   assembling_machine_3.type = "tool";
   assembling_machine_3.inputs = {};
   assembling_machine_3.inTypes = {};
@@ -310,17 +301,16 @@ vector<Tool> Factorio() {
   ins.type = "assembling-machine-2";
   assembling_machine_3.inputs.push_back(ins);
   assembling_machine_3.inTypes.push_back("assembling-machine-2");
-  sort (assembling_machine_3.inputs.begin(),assembling_machine_3.inputs.end());
   sort (assembling_machine_3.inTypes.begin(),assembling_machine_3.inTypes.end());
   outs.label = "output1";
   outs.type = "assembling-machine-3";
   assembling_machine_3.outputs.push_back(outs);
-  sort (assembling_machine_3.outputs.begin(),assembling_machine_3.outputs.end());
   factorio.push_back(assembling_machine_3);
 
   Tool atomic_bomb;
   atomic_bomb.name = "atomic-bomb";
   atomic_bomb.id = "atomic-bomb";
+  atomic_bomb.operation = "atomic-bomb";
   atomic_bomb.type = "tool";
   atomic_bomb.inputs = {};
   atomic_bomb.inTypes = {};
@@ -338,17 +328,16 @@ vector<Tool> Factorio() {
   ins.type = "uranium-235";
   atomic_bomb.inputs.push_back(ins);
   atomic_bomb.inTypes.push_back("uranium-235");
-  sort (atomic_bomb.inputs.begin(),atomic_bomb.inputs.end());
   sort (atomic_bomb.inTypes.begin(),atomic_bomb.inTypes.end());
   outs.label = "output1";
   outs.type = "atomic-bomb";
   atomic_bomb.outputs.push_back(outs);
-  sort (atomic_bomb.outputs.begin(),atomic_bomb.outputs.end());
   factorio.push_back(atomic_bomb);
 
   Tool automation_science_pack;
   automation_science_pack.name = "automation-science-pack";
   automation_science_pack.id = "automation-science-pack";
+  automation_science_pack.operation = "automation-science-pack";
   automation_science_pack.type = "tool";
   automation_science_pack.inputs = {};
   automation_science_pack.inTypes = {};
@@ -362,17 +351,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   automation_science_pack.inputs.push_back(ins);
   automation_science_pack.inTypes.push_back("iron-gear-wheel");
-  sort (automation_science_pack.inputs.begin(),automation_science_pack.inputs.end());
   sort (automation_science_pack.inTypes.begin(),automation_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "automation-science-pack";
   automation_science_pack.outputs.push_back(outs);
-  sort (automation_science_pack.outputs.begin(),automation_science_pack.outputs.end());
   factorio.push_back(automation_science_pack);
 
   Tool basic_oil_processing;
   basic_oil_processing.name = "basic-oil-processing";
   basic_oil_processing.id = "basic-oil-processing";
+  basic_oil_processing.operation = "basic-oil-processing";
   basic_oil_processing.type = "tool";
   basic_oil_processing.inputs = {};
   basic_oil_processing.inTypes = {};
@@ -382,17 +370,16 @@ vector<Tool> Factorio() {
   ins.type = "crude-oil";
   basic_oil_processing.inputs.push_back(ins);
   basic_oil_processing.inTypes.push_back("crude-oil");
-  sort (basic_oil_processing.inputs.begin(),basic_oil_processing.inputs.end());
   sort (basic_oil_processing.inTypes.begin(),basic_oil_processing.inTypes.end());
   outs.label = "output1";
   outs.type = "resource";
   basic_oil_processing.outputs.push_back(outs);
-  sort (basic_oil_processing.outputs.begin(),basic_oil_processing.outputs.end());
   factorio.push_back(basic_oil_processing);
 
   Tool battery;
   battery.name = "battery";
   battery.id = "battery";
+  battery.operation = "battery";
   battery.type = "tool";
   battery.inputs = {};
   battery.inTypes = {};
@@ -410,17 +397,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   battery.inputs.push_back(ins);
   battery.inTypes.push_back("copper-plate");
-  sort (battery.inputs.begin(),battery.inputs.end());
   sort (battery.inTypes.begin(),battery.inTypes.end());
   outs.label = "output1";
   outs.type = "battery";
   battery.outputs.push_back(outs);
-  sort (battery.outputs.begin(),battery.outputs.end());
   factorio.push_back(battery);
 
   Tool battery_equipment;
   battery_equipment.name = "battery-equipment";
   battery_equipment.id = "battery-equipment";
+  battery_equipment.operation = "battery-equipment";
   battery_equipment.type = "tool";
   battery_equipment.inputs = {};
   battery_equipment.inTypes = {};
@@ -434,17 +420,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   battery_equipment.inputs.push_back(ins);
   battery_equipment.inTypes.push_back("steel-plate");
-  sort (battery_equipment.inputs.begin(),battery_equipment.inputs.end());
   sort (battery_equipment.inTypes.begin(),battery_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "battery-equipment";
   battery_equipment.outputs.push_back(outs);
-  sort (battery_equipment.outputs.begin(),battery_equipment.outputs.end());
   factorio.push_back(battery_equipment);
 
   Tool battery_mk2_equipment;
   battery_mk2_equipment.name = "battery-mk2-equipment";
   battery_mk2_equipment.id = "battery-mk2-equipment";
+  battery_mk2_equipment.operation = "battery-mk2-equipment";
   battery_mk2_equipment.type = "tool";
   battery_mk2_equipment.inputs = {};
   battery_mk2_equipment.inTypes = {};
@@ -462,17 +447,16 @@ vector<Tool> Factorio() {
   ins.type = "low-density-structure";
   battery_mk2_equipment.inputs.push_back(ins);
   battery_mk2_equipment.inTypes.push_back("low-density-structure");
-  sort (battery_mk2_equipment.inputs.begin(),battery_mk2_equipment.inputs.end());
   sort (battery_mk2_equipment.inTypes.begin(),battery_mk2_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "battery-mk2-equipment";
   battery_mk2_equipment.outputs.push_back(outs);
-  sort (battery_mk2_equipment.outputs.begin(),battery_mk2_equipment.outputs.end());
   factorio.push_back(battery_mk2_equipment);
 
   Tool beacon;
   beacon.name = "beacon";
   beacon.id = "beacon";
+  beacon.operation = "beacon";
   beacon.type = "tool";
   beacon.inputs = {};
   beacon.inTypes = {};
@@ -494,17 +478,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   beacon.inputs.push_back(ins);
   beacon.inTypes.push_back("copper-cable");
-  sort (beacon.inputs.begin(),beacon.inputs.end());
   sort (beacon.inTypes.begin(),beacon.inTypes.end());
   outs.label = "output1";
   outs.type = "beacon";
   beacon.outputs.push_back(outs);
-  sort (beacon.outputs.begin(),beacon.outputs.end());
   factorio.push_back(beacon);
 
   Tool belt_immunity_equipment;
   belt_immunity_equipment.name = "belt-immunity-equipment";
   belt_immunity_equipment.id = "belt-immunity-equipment";
+  belt_immunity_equipment.operation = "belt-immunity-equipment";
   belt_immunity_equipment.type = "tool";
   belt_immunity_equipment.inputs = {};
   belt_immunity_equipment.inTypes = {};
@@ -518,17 +501,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   belt_immunity_equipment.inputs.push_back(ins);
   belt_immunity_equipment.inTypes.push_back("steel-plate");
-  sort (belt_immunity_equipment.inputs.begin(),belt_immunity_equipment.inputs.end());
   sort (belt_immunity_equipment.inTypes.begin(),belt_immunity_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "belt-immunity-equipment";
   belt_immunity_equipment.outputs.push_back(outs);
-  sort (belt_immunity_equipment.outputs.begin(),belt_immunity_equipment.outputs.end());
   factorio.push_back(belt_immunity_equipment);
 
   Tool big_electric_pole;
   big_electric_pole.name = "big-electric-pole";
   big_electric_pole.id = "big-electric-pole";
+  big_electric_pole.operation = "big-electric-pole";
   big_electric_pole.type = "tool";
   big_electric_pole.inputs = {};
   big_electric_pole.inTypes = {};
@@ -546,17 +528,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   big_electric_pole.inputs.push_back(ins);
   big_electric_pole.inTypes.push_back("copper-plate");
-  sort (big_electric_pole.inputs.begin(),big_electric_pole.inputs.end());
   sort (big_electric_pole.inTypes.begin(),big_electric_pole.inTypes.end());
   outs.label = "output1";
   outs.type = "big-electric-pole";
   big_electric_pole.outputs.push_back(outs);
-  sort (big_electric_pole.outputs.begin(),big_electric_pole.outputs.end());
   factorio.push_back(big_electric_pole);
 
   Tool boiler;
   boiler.name = "boiler";
   boiler.id = "boiler";
+  boiler.operation = "boiler";
   boiler.type = "tool";
   boiler.inputs = {};
   boiler.inTypes = {};
@@ -570,17 +551,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   boiler.inputs.push_back(ins);
   boiler.inTypes.push_back("pipe");
-  sort (boiler.inputs.begin(),boiler.inputs.end());
   sort (boiler.inTypes.begin(),boiler.inTypes.end());
   outs.label = "output1";
   outs.type = "boiler";
   boiler.outputs.push_back(outs);
-  sort (boiler.outputs.begin(),boiler.outputs.end());
   factorio.push_back(boiler);
 
   Tool burner_inserter;
   burner_inserter.name = "burner-inserter";
   burner_inserter.id = "burner-inserter";
+  burner_inserter.operation = "burner-inserter";
   burner_inserter.type = "tool";
   burner_inserter.inputs = {};
   burner_inserter.inTypes = {};
@@ -594,17 +574,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   burner_inserter.inputs.push_back(ins);
   burner_inserter.inTypes.push_back("iron-gear-wheel");
-  sort (burner_inserter.inputs.begin(),burner_inserter.inputs.end());
   sort (burner_inserter.inTypes.begin(),burner_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "burner-inserter";
   burner_inserter.outputs.push_back(outs);
-  sort (burner_inserter.outputs.begin(),burner_inserter.outputs.end());
   factorio.push_back(burner_inserter);
 
   Tool burner_mining_drill;
   burner_mining_drill.name = "burner-mining-drill";
   burner_mining_drill.id = "burner-mining-drill";
+  burner_mining_drill.operation = "burner-mining-drill";
   burner_mining_drill.type = "tool";
   burner_mining_drill.inputs = {};
   burner_mining_drill.inTypes = {};
@@ -622,17 +601,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   burner_mining_drill.inputs.push_back(ins);
   burner_mining_drill.inTypes.push_back("iron-plate");
-  sort (burner_mining_drill.inputs.begin(),burner_mining_drill.inputs.end());
   sort (burner_mining_drill.inTypes.begin(),burner_mining_drill.inTypes.end());
   outs.label = "output1";
   outs.type = "burner-mining-drill";
   burner_mining_drill.outputs.push_back(outs);
-  sort (burner_mining_drill.outputs.begin(),burner_mining_drill.outputs.end());
   factorio.push_back(burner_mining_drill);
 
   Tool cannon_shell;
   cannon_shell.name = "cannon-shell";
   cannon_shell.id = "cannon-shell";
+  cannon_shell.operation = "cannon-shell";
   cannon_shell.type = "tool";
   cannon_shell.inputs = {};
   cannon_shell.inTypes = {};
@@ -650,17 +628,16 @@ vector<Tool> Factorio() {
   ins.type = "explosives";
   cannon_shell.inputs.push_back(ins);
   cannon_shell.inTypes.push_back("explosives");
-  sort (cannon_shell.inputs.begin(),cannon_shell.inputs.end());
   sort (cannon_shell.inTypes.begin(),cannon_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "cannon-shell";
   cannon_shell.outputs.push_back(outs);
-  sort (cannon_shell.outputs.begin(),cannon_shell.outputs.end());
   factorio.push_back(cannon_shell);
 
   Tool car;
   car.name = "car";
   car.id = "car";
+  car.operation = "car";
   car.type = "tool";
   car.inputs = {};
   car.inTypes = {};
@@ -678,17 +655,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   car.inputs.push_back(ins);
   car.inTypes.push_back("steel-plate");
-  sort (car.inputs.begin(),car.inputs.end());
   sort (car.inTypes.begin(),car.inTypes.end());
   outs.label = "output1";
   outs.type = "car";
   car.outputs.push_back(outs);
-  sort (car.outputs.begin(),car.outputs.end());
   factorio.push_back(car);
 
   Tool cargo_wagon;
   cargo_wagon.name = "cargo-wagon";
   cargo_wagon.id = "cargo-wagon";
+  cargo_wagon.operation = "cargo-wagon";
   cargo_wagon.type = "tool";
   cargo_wagon.inputs = {};
   cargo_wagon.inTypes = {};
@@ -706,17 +682,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   cargo_wagon.inputs.push_back(ins);
   cargo_wagon.inTypes.push_back("steel-plate");
-  sort (cargo_wagon.inputs.begin(),cargo_wagon.inputs.end());
   sort (cargo_wagon.inTypes.begin(),cargo_wagon.inTypes.end());
   outs.label = "output1";
   outs.type = "cargo-wagon";
   cargo_wagon.outputs.push_back(outs);
-  sort (cargo_wagon.outputs.begin(),cargo_wagon.outputs.end());
   factorio.push_back(cargo_wagon);
 
   Tool centrifuge;
   centrifuge.name = "centrifuge";
   centrifuge.id = "centrifuge";
+  centrifuge.operation = "centrifuge";
   centrifuge.type = "tool";
   centrifuge.inputs = {};
   centrifuge.inTypes = {};
@@ -738,17 +713,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   centrifuge.inputs.push_back(ins);
   centrifuge.inTypes.push_back("iron-gear-wheel");
-  sort (centrifuge.inputs.begin(),centrifuge.inputs.end());
   sort (centrifuge.inTypes.begin(),centrifuge.inTypes.end());
   outs.label = "output1";
   outs.type = "centrifuge";
   centrifuge.outputs.push_back(outs);
-  sort (centrifuge.outputs.begin(),centrifuge.outputs.end());
   factorio.push_back(centrifuge);
 
   Tool chemical_plant;
   chemical_plant.name = "chemical-plant";
   chemical_plant.id = "chemical-plant";
+  chemical_plant.operation = "chemical-plant";
   chemical_plant.type = "tool";
   chemical_plant.inputs = {};
   chemical_plant.inTypes = {};
@@ -770,17 +744,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   chemical_plant.inputs.push_back(ins);
   chemical_plant.inTypes.push_back("pipe");
-  sort (chemical_plant.inputs.begin(),chemical_plant.inputs.end());
   sort (chemical_plant.inTypes.begin(),chemical_plant.inTypes.end());
   outs.label = "output1";
   outs.type = "chemical-plant";
   chemical_plant.outputs.push_back(outs);
-  sort (chemical_plant.outputs.begin(),chemical_plant.outputs.end());
   factorio.push_back(chemical_plant);
 
   Tool chemical_science_pack;
   chemical_science_pack.name = "chemical-science-pack";
   chemical_science_pack.id = "chemical-science-pack";
+  chemical_science_pack.operation = "chemical-science-pack";
   chemical_science_pack.type = "tool";
   chemical_science_pack.inputs = {};
   chemical_science_pack.inTypes = {};
@@ -798,17 +771,16 @@ vector<Tool> Factorio() {
   ins.type = "sulfur";
   chemical_science_pack.inputs.push_back(ins);
   chemical_science_pack.inTypes.push_back("sulfur");
-  sort (chemical_science_pack.inputs.begin(),chemical_science_pack.inputs.end());
   sort (chemical_science_pack.inTypes.begin(),chemical_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "chemical-science-pack";
   chemical_science_pack.outputs.push_back(outs);
-  sort (chemical_science_pack.outputs.begin(),chemical_science_pack.outputs.end());
   factorio.push_back(chemical_science_pack);
 
   Tool cliff_explosives;
   cliff_explosives.name = "cliff-explosives";
   cliff_explosives.id = "cliff-explosives";
+  cliff_explosives.operation = "cliff-explosives";
   cliff_explosives.type = "tool";
   cliff_explosives.inputs = {};
   cliff_explosives.inTypes = {};
@@ -826,17 +798,16 @@ vector<Tool> Factorio() {
   ins.type = "empty-barrel";
   cliff_explosives.inputs.push_back(ins);
   cliff_explosives.inTypes.push_back("empty-barrel");
-  sort (cliff_explosives.inputs.begin(),cliff_explosives.inputs.end());
   sort (cliff_explosives.inTypes.begin(),cliff_explosives.inTypes.end());
   outs.label = "output1";
   outs.type = "cliff-explosives";
   cliff_explosives.outputs.push_back(outs);
-  sort (cliff_explosives.outputs.begin(),cliff_explosives.outputs.end());
   factorio.push_back(cliff_explosives);
 
   Tool cluster_grenade;
   cluster_grenade.name = "cluster-grenade";
   cluster_grenade.id = "cluster-grenade";
+  cluster_grenade.operation = "cluster-grenade";
   cluster_grenade.type = "tool";
   cluster_grenade.inputs = {};
   cluster_grenade.inTypes = {};
@@ -854,17 +825,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   cluster_grenade.inputs.push_back(ins);
   cluster_grenade.inTypes.push_back("steel-plate");
-  sort (cluster_grenade.inputs.begin(),cluster_grenade.inputs.end());
   sort (cluster_grenade.inTypes.begin(),cluster_grenade.inTypes.end());
   outs.label = "output1";
   outs.type = "cluster-grenade";
   cluster_grenade.outputs.push_back(outs);
-  sort (cluster_grenade.outputs.begin(),cluster_grenade.outputs.end());
   factorio.push_back(cluster_grenade);
 
   Tool coal_liquefaction;
   coal_liquefaction.name = "coal-liquefaction";
   coal_liquefaction.id = "coal-liquefaction";
+  coal_liquefaction.operation = "coal-liquefaction";
   coal_liquefaction.type = "tool";
   coal_liquefaction.inputs = {};
   coal_liquefaction.inTypes = {};
@@ -882,7 +852,6 @@ vector<Tool> Factorio() {
   ins.type = "steam";
   coal_liquefaction.inputs.push_back(ins);
   coal_liquefaction.inTypes.push_back("steam");
-  sort (coal_liquefaction.inputs.begin(),coal_liquefaction.inputs.end());
   sort (coal_liquefaction.inTypes.begin(),coal_liquefaction.inTypes.end());
   outs.label = "output1";
   outs.type = "resource";
@@ -893,12 +862,12 @@ vector<Tool> Factorio() {
   outs.label = "output3";
   outs.type = "resource";
   coal_liquefaction.outputs.push_back(outs);
-  sort (coal_liquefaction.outputs.begin(),coal_liquefaction.outputs.end());
   factorio.push_back(coal_liquefaction);
 
   Tool combat_shotgun;
   combat_shotgun.name = "combat-shotgun";
   combat_shotgun.id = "combat-shotgun";
+  combat_shotgun.operation = "combat-shotgun";
   combat_shotgun.type = "tool";
   combat_shotgun.inputs = {};
   combat_shotgun.inTypes = {};
@@ -920,17 +889,16 @@ vector<Tool> Factorio() {
   ins.type = "wood";
   combat_shotgun.inputs.push_back(ins);
   combat_shotgun.inTypes.push_back("wood");
-  sort (combat_shotgun.inputs.begin(),combat_shotgun.inputs.end());
   sort (combat_shotgun.inTypes.begin(),combat_shotgun.inTypes.end());
   outs.label = "output1";
   outs.type = "combat-shotgun";
   combat_shotgun.outputs.push_back(outs);
-  sort (combat_shotgun.outputs.begin(),combat_shotgun.outputs.end());
   factorio.push_back(combat_shotgun);
 
   Tool concrete;
   concrete.name = "concrete";
   concrete.id = "concrete";
+  concrete.operation = "concrete";
   concrete.type = "tool";
   concrete.inputs = {};
   concrete.inTypes = {};
@@ -948,17 +916,16 @@ vector<Tool> Factorio() {
   ins.type = "water";
   concrete.inputs.push_back(ins);
   concrete.inTypes.push_back("water");
-  sort (concrete.inputs.begin(),concrete.inputs.end());
   sort (concrete.inTypes.begin(),concrete.inTypes.end());
   outs.label = "output1";
   outs.type = "concrete";
   concrete.outputs.push_back(outs);
-  sort (concrete.outputs.begin(),concrete.outputs.end());
   factorio.push_back(concrete);
 
   Tool constant_combinator;
   constant_combinator.name = "constant-combinator";
   constant_combinator.id = "constant-combinator";
+  constant_combinator.operation = "constant-combinator";
   constant_combinator.type = "tool";
   constant_combinator.inputs = {};
   constant_combinator.inTypes = {};
@@ -972,17 +939,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   constant_combinator.inputs.push_back(ins);
   constant_combinator.inTypes.push_back("electronic-circuit");
-  sort (constant_combinator.inputs.begin(),constant_combinator.inputs.end());
   sort (constant_combinator.inTypes.begin(),constant_combinator.inTypes.end());
   outs.label = "output1";
   outs.type = "constant-combinator";
   constant_combinator.outputs.push_back(outs);
-  sort (constant_combinator.outputs.begin(),constant_combinator.outputs.end());
   factorio.push_back(constant_combinator);
 
   Tool construction_robot;
   construction_robot.name = "construction-robot";
   construction_robot.id = "construction-robot";
+  construction_robot.operation = "construction-robot";
   construction_robot.type = "tool";
   construction_robot.inputs = {};
   construction_robot.inTypes = {};
@@ -996,17 +962,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   construction_robot.inputs.push_back(ins);
   construction_robot.inTypes.push_back("electronic-circuit");
-  sort (construction_robot.inputs.begin(),construction_robot.inputs.end());
   sort (construction_robot.inTypes.begin(),construction_robot.inTypes.end());
   outs.label = "output1";
   outs.type = "construction-robot";
   construction_robot.outputs.push_back(outs);
-  sort (construction_robot.outputs.begin(),construction_robot.outputs.end());
   factorio.push_back(construction_robot);
 
   Tool copper_cable;
   copper_cable.name = "copper-cable";
   copper_cable.id = "copper-cable";
+  copper_cable.operation = "copper-cable";
   copper_cable.type = "tool";
   copper_cable.inputs = {};
   copper_cable.inTypes = {};
@@ -1016,17 +981,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   copper_cable.inputs.push_back(ins);
   copper_cable.inTypes.push_back("copper-plate");
-  sort (copper_cable.inputs.begin(),copper_cable.inputs.end());
   sort (copper_cable.inTypes.begin(),copper_cable.inTypes.end());
   outs.label = "output1";
   outs.type = "copper-cable";
   copper_cable.outputs.push_back(outs);
-  sort (copper_cable.outputs.begin(),copper_cable.outputs.end());
   factorio.push_back(copper_cable);
 
   Tool copper_plate;
   copper_plate.name = "copper-plate";
   copper_plate.id = "copper-plate";
+  copper_plate.operation = "copper-plate";
   copper_plate.type = "tool";
   copper_plate.inputs = {};
   copper_plate.inTypes = {};
@@ -1036,17 +1000,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-ore";
   copper_plate.inputs.push_back(ins);
   copper_plate.inTypes.push_back("copper-ore");
-  sort (copper_plate.inputs.begin(),copper_plate.inputs.end());
   sort (copper_plate.inTypes.begin(),copper_plate.inTypes.end());
   outs.label = "output1";
   outs.type = "copper-plate";
   copper_plate.outputs.push_back(outs);
-  sort (copper_plate.outputs.begin(),copper_plate.outputs.end());
   factorio.push_back(copper_plate);
 
   Tool decider_combinator;
   decider_combinator.name = "decider-combinator";
   decider_combinator.id = "decider-combinator";
+  decider_combinator.operation = "decider-combinator";
   decider_combinator.type = "tool";
   decider_combinator.inputs = {};
   decider_combinator.inTypes = {};
@@ -1060,17 +1023,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   decider_combinator.inputs.push_back(ins);
   decider_combinator.inTypes.push_back("electronic-circuit");
-  sort (decider_combinator.inputs.begin(),decider_combinator.inputs.end());
   sort (decider_combinator.inTypes.begin(),decider_combinator.inTypes.end());
   outs.label = "output1";
   outs.type = "decider-combinator";
   decider_combinator.outputs.push_back(outs);
-  sort (decider_combinator.outputs.begin(),decider_combinator.outputs.end());
   factorio.push_back(decider_combinator);
 
   Tool defender_capsule;
   defender_capsule.name = "defender-capsule";
   defender_capsule.id = "defender-capsule";
+  defender_capsule.operation = "defender-capsule";
   defender_capsule.type = "tool";
   defender_capsule.inputs = {};
   defender_capsule.inTypes = {};
@@ -1088,17 +1050,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   defender_capsule.inputs.push_back(ins);
   defender_capsule.inTypes.push_back("iron-gear-wheel");
-  sort (defender_capsule.inputs.begin(),defender_capsule.inputs.end());
   sort (defender_capsule.inTypes.begin(),defender_capsule.inTypes.end());
   outs.label = "output1";
   outs.type = "defender-capsule";
   defender_capsule.outputs.push_back(outs);
-  sort (defender_capsule.outputs.begin(),defender_capsule.outputs.end());
   factorio.push_back(defender_capsule);
 
   Tool destroyer_capsule;
   destroyer_capsule.name = "destroyer-capsule";
   destroyer_capsule.id = "destroyer-capsule";
+  destroyer_capsule.operation = "destroyer-capsule";
   destroyer_capsule.type = "tool";
   destroyer_capsule.inputs = {};
   destroyer_capsule.inTypes = {};
@@ -1112,17 +1073,16 @@ vector<Tool> Factorio() {
   ins.type = "speed-module";
   destroyer_capsule.inputs.push_back(ins);
   destroyer_capsule.inTypes.push_back("speed-module");
-  sort (destroyer_capsule.inputs.begin(),destroyer_capsule.inputs.end());
   sort (destroyer_capsule.inTypes.begin(),destroyer_capsule.inTypes.end());
   outs.label = "output1";
   outs.type = "destroyer-capsule";
   destroyer_capsule.outputs.push_back(outs);
-  sort (destroyer_capsule.outputs.begin(),destroyer_capsule.outputs.end());
   factorio.push_back(destroyer_capsule);
 
   Tool discharge_defense_equipment;
   discharge_defense_equipment.name = "discharge-defense-equipment";
   discharge_defense_equipment.id = "discharge-defense-equipment";
+  discharge_defense_equipment.operation = "discharge-defense-equipment";
   discharge_defense_equipment.type = "tool";
   discharge_defense_equipment.inputs = {};
   discharge_defense_equipment.inTypes = {};
@@ -1140,17 +1100,16 @@ vector<Tool> Factorio() {
   ins.type = "laser-turret";
   discharge_defense_equipment.inputs.push_back(ins);
   discharge_defense_equipment.inTypes.push_back("laser-turret");
-  sort (discharge_defense_equipment.inputs.begin(),discharge_defense_equipment.inputs.end());
   sort (discharge_defense_equipment.inTypes.begin(),discharge_defense_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "discharge-defense-equipment";
   discharge_defense_equipment.outputs.push_back(outs);
-  sort (discharge_defense_equipment.outputs.begin(),discharge_defense_equipment.outputs.end());
   factorio.push_back(discharge_defense_equipment);
 
   Tool discharge_defense_remote;
   discharge_defense_remote.name = "discharge-defense-remote";
   discharge_defense_remote.id = "discharge-defense-remote";
+  discharge_defense_remote.operation = "discharge-defense-remote";
   discharge_defense_remote.type = "tool";
   discharge_defense_remote.inputs = {};
   discharge_defense_remote.inTypes = {};
@@ -1160,17 +1119,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   discharge_defense_remote.inputs.push_back(ins);
   discharge_defense_remote.inTypes.push_back("electronic-circuit");
-  sort (discharge_defense_remote.inputs.begin(),discharge_defense_remote.inputs.end());
   sort (discharge_defense_remote.inTypes.begin(),discharge_defense_remote.inTypes.end());
   outs.label = "output1";
   outs.type = "discharge-defense-remote";
   discharge_defense_remote.outputs.push_back(outs);
-  sort (discharge_defense_remote.outputs.begin(),discharge_defense_remote.outputs.end());
   factorio.push_back(discharge_defense_remote);
 
   Tool distractor_capsule;
   distractor_capsule.name = "distractor-capsule";
   distractor_capsule.id = "distractor-capsule";
+  distractor_capsule.operation = "distractor-capsule";
   distractor_capsule.type = "tool";
   distractor_capsule.inputs = {};
   distractor_capsule.inTypes = {};
@@ -1184,17 +1142,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   distractor_capsule.inputs.push_back(ins);
   distractor_capsule.inTypes.push_back("advanced-circuit");
-  sort (distractor_capsule.inputs.begin(),distractor_capsule.inputs.end());
   sort (distractor_capsule.inTypes.begin(),distractor_capsule.inTypes.end());
   outs.label = "output1";
   outs.type = "distractor-capsule";
   distractor_capsule.outputs.push_back(outs);
-  sort (distractor_capsule.outputs.begin(),distractor_capsule.outputs.end());
   factorio.push_back(distractor_capsule);
 
   Tool effectivity_module;
   effectivity_module.name = "effectivity-module";
   effectivity_module.id = "effectivity-module";
+  effectivity_module.operation = "effectivity-module";
   effectivity_module.type = "tool";
   effectivity_module.inputs = {};
   effectivity_module.inTypes = {};
@@ -1208,17 +1165,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   effectivity_module.inputs.push_back(ins);
   effectivity_module.inTypes.push_back("electronic-circuit");
-  sort (effectivity_module.inputs.begin(),effectivity_module.inputs.end());
   sort (effectivity_module.inTypes.begin(),effectivity_module.inTypes.end());
   outs.label = "output1";
   outs.type = "effectivity-module";
   effectivity_module.outputs.push_back(outs);
-  sort (effectivity_module.outputs.begin(),effectivity_module.outputs.end());
   factorio.push_back(effectivity_module);
 
   Tool effectivity_module_2;
   effectivity_module_2.name = "effectivity-module-2";
   effectivity_module_2.id = "effectivity-module-2";
+  effectivity_module_2.operation = "effectivity-module-2";
   effectivity_module_2.type = "tool";
   effectivity_module_2.inputs = {};
   effectivity_module_2.inTypes = {};
@@ -1236,17 +1192,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   effectivity_module_2.inputs.push_back(ins);
   effectivity_module_2.inTypes.push_back("processing-unit");
-  sort (effectivity_module_2.inputs.begin(),effectivity_module_2.inputs.end());
   sort (effectivity_module_2.inTypes.begin(),effectivity_module_2.inTypes.end());
   outs.label = "output1";
   outs.type = "effectivity-module-2";
   effectivity_module_2.outputs.push_back(outs);
-  sort (effectivity_module_2.outputs.begin(),effectivity_module_2.outputs.end());
   factorio.push_back(effectivity_module_2);
 
   Tool effectivity_module_3;
   effectivity_module_3.name = "effectivity-module-3";
   effectivity_module_3.id = "effectivity-module-3";
+  effectivity_module_3.operation = "effectivity-module-3";
   effectivity_module_3.type = "tool";
   effectivity_module_3.inputs = {};
   effectivity_module_3.inTypes = {};
@@ -1264,17 +1219,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   effectivity_module_3.inputs.push_back(ins);
   effectivity_module_3.inTypes.push_back("processing-unit");
-  sort (effectivity_module_3.inputs.begin(),effectivity_module_3.inputs.end());
   sort (effectivity_module_3.inTypes.begin(),effectivity_module_3.inTypes.end());
   outs.label = "output1";
   outs.type = "effectivity-module-3";
   effectivity_module_3.outputs.push_back(outs);
-  sort (effectivity_module_3.outputs.begin(),effectivity_module_3.outputs.end());
   factorio.push_back(effectivity_module_3);
 
   Tool electric_energy_interface;
   electric_energy_interface.name = "electric-energy-interface";
   electric_energy_interface.id = "electric-energy-interface";
+  electric_energy_interface.operation = "electric-energy-interface";
   electric_energy_interface.type = "tool";
   electric_energy_interface.inputs = {};
   electric_energy_interface.inTypes = {};
@@ -1288,17 +1242,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   electric_energy_interface.inputs.push_back(ins);
   electric_energy_interface.inTypes.push_back("electronic-circuit");
-  sort (electric_energy_interface.inputs.begin(),electric_energy_interface.inputs.end());
   sort (electric_energy_interface.inTypes.begin(),electric_energy_interface.inTypes.end());
   outs.label = "output1";
   outs.type = "electric-energy-interface";
   electric_energy_interface.outputs.push_back(outs);
-  sort (electric_energy_interface.outputs.begin(),electric_energy_interface.outputs.end());
   factorio.push_back(electric_energy_interface);
 
   Tool electric_engine_unit;
   electric_engine_unit.name = "electric-engine-unit";
   electric_engine_unit.id = "electric-engine-unit";
+  electric_engine_unit.operation = "electric-engine-unit";
   electric_engine_unit.type = "tool";
   electric_engine_unit.inputs = {};
   electric_engine_unit.inTypes = {};
@@ -1316,17 +1269,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   electric_engine_unit.inputs.push_back(ins);
   electric_engine_unit.inTypes.push_back("electronic-circuit");
-  sort (electric_engine_unit.inputs.begin(),electric_engine_unit.inputs.end());
   sort (electric_engine_unit.inTypes.begin(),electric_engine_unit.inTypes.end());
   outs.label = "output1";
   outs.type = "electric-engine-unit";
   electric_engine_unit.outputs.push_back(outs);
-  sort (electric_engine_unit.outputs.begin(),electric_engine_unit.outputs.end());
   factorio.push_back(electric_engine_unit);
 
   Tool electric_furnace;
   electric_furnace.name = "electric-furnace";
   electric_furnace.id = "electric-furnace";
+  electric_furnace.operation = "electric-furnace";
   electric_furnace.type = "tool";
   electric_furnace.inputs = {};
   electric_furnace.inTypes = {};
@@ -1344,17 +1296,16 @@ vector<Tool> Factorio() {
   ins.type = "stone-brick";
   electric_furnace.inputs.push_back(ins);
   electric_furnace.inTypes.push_back("stone-brick");
-  sort (electric_furnace.inputs.begin(),electric_furnace.inputs.end());
   sort (electric_furnace.inTypes.begin(),electric_furnace.inTypes.end());
   outs.label = "output1";
   outs.type = "electric-furnace";
   electric_furnace.outputs.push_back(outs);
-  sort (electric_furnace.outputs.begin(),electric_furnace.outputs.end());
   factorio.push_back(electric_furnace);
 
   Tool electric_mining_drill;
   electric_mining_drill.name = "electric-mining-drill";
   electric_mining_drill.id = "electric-mining-drill";
+  electric_mining_drill.operation = "electric-mining-drill";
   electric_mining_drill.type = "tool";
   electric_mining_drill.inputs = {};
   electric_mining_drill.inTypes = {};
@@ -1372,17 +1323,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   electric_mining_drill.inputs.push_back(ins);
   electric_mining_drill.inTypes.push_back("iron-plate");
-  sort (electric_mining_drill.inputs.begin(),electric_mining_drill.inputs.end());
   sort (electric_mining_drill.inTypes.begin(),electric_mining_drill.inTypes.end());
   outs.label = "output1";
   outs.type = "electric-mining-drill";
   electric_mining_drill.outputs.push_back(outs);
-  sort (electric_mining_drill.outputs.begin(),electric_mining_drill.outputs.end());
   factorio.push_back(electric_mining_drill);
 
   Tool electronic_circuit;
   electronic_circuit.name = "electronic-circuit";
   electronic_circuit.id = "electronic-circuit";
+  electronic_circuit.operation = "electronic-circuit";
   electronic_circuit.type = "tool";
   electronic_circuit.inputs = {};
   electronic_circuit.inTypes = {};
@@ -1396,17 +1346,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   electronic_circuit.inputs.push_back(ins);
   electronic_circuit.inTypes.push_back("copper-cable");
-  sort (electronic_circuit.inputs.begin(),electronic_circuit.inputs.end());
   sort (electronic_circuit.inTypes.begin(),electronic_circuit.inTypes.end());
   outs.label = "output1";
   outs.type = "electronic-circuit";
   electronic_circuit.outputs.push_back(outs);
-  sort (electronic_circuit.outputs.begin(),electronic_circuit.outputs.end());
   factorio.push_back(electronic_circuit);
 
   Tool empty_barrel;
   empty_barrel.name = "empty-barrel";
   empty_barrel.id = "empty-barrel";
+  empty_barrel.operation = "empty-barrel";
   empty_barrel.type = "tool";
   empty_barrel.inputs = {};
   empty_barrel.inTypes = {};
@@ -1416,17 +1365,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   empty_barrel.inputs.push_back(ins);
   empty_barrel.inTypes.push_back("steel-plate");
-  sort (empty_barrel.inputs.begin(),empty_barrel.inputs.end());
   sort (empty_barrel.inTypes.begin(),empty_barrel.inTypes.end());
   outs.label = "output1";
   outs.type = "empty-barrel";
   empty_barrel.outputs.push_back(outs);
-  sort (empty_barrel.outputs.begin(),empty_barrel.outputs.end());
   factorio.push_back(empty_barrel);
 
   Tool energy_shield_equipment;
   energy_shield_equipment.name = "energy-shield-equipment";
   energy_shield_equipment.id = "energy-shield-equipment";
+  energy_shield_equipment.operation = "energy-shield-equipment";
   energy_shield_equipment.type = "tool";
   energy_shield_equipment.inputs = {};
   energy_shield_equipment.inTypes = {};
@@ -1440,17 +1388,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   energy_shield_equipment.inputs.push_back(ins);
   energy_shield_equipment.inTypes.push_back("steel-plate");
-  sort (energy_shield_equipment.inputs.begin(),energy_shield_equipment.inputs.end());
   sort (energy_shield_equipment.inTypes.begin(),energy_shield_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "energy-shield-equipment";
   energy_shield_equipment.outputs.push_back(outs);
-  sort (energy_shield_equipment.outputs.begin(),energy_shield_equipment.outputs.end());
   factorio.push_back(energy_shield_equipment);
 
   Tool energy_shield_mk2_equipment;
   energy_shield_mk2_equipment.name = "energy-shield-mk2-equipment";
   energy_shield_mk2_equipment.id = "energy-shield-mk2-equipment";
+  energy_shield_mk2_equipment.operation = "energy-shield-mk2-equipment";
   energy_shield_mk2_equipment.type = "tool";
   energy_shield_mk2_equipment.inputs = {};
   energy_shield_mk2_equipment.inTypes = {};
@@ -1468,17 +1415,16 @@ vector<Tool> Factorio() {
   ins.type = "low-density-structure";
   energy_shield_mk2_equipment.inputs.push_back(ins);
   energy_shield_mk2_equipment.inTypes.push_back("low-density-structure");
-  sort (energy_shield_mk2_equipment.inputs.begin(),energy_shield_mk2_equipment.inputs.end());
   sort (energy_shield_mk2_equipment.inTypes.begin(),energy_shield_mk2_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "energy-shield-mk2-equipment";
   energy_shield_mk2_equipment.outputs.push_back(outs);
-  sort (energy_shield_mk2_equipment.outputs.begin(),energy_shield_mk2_equipment.outputs.end());
   factorio.push_back(energy_shield_mk2_equipment);
 
   Tool engine_unit;
   engine_unit.name = "engine-unit";
   engine_unit.id = "engine-unit";
+  engine_unit.operation = "engine-unit";
   engine_unit.type = "tool";
   engine_unit.inputs = {};
   engine_unit.inTypes = {};
@@ -1496,17 +1442,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   engine_unit.inputs.push_back(ins);
   engine_unit.inTypes.push_back("pipe");
-  sort (engine_unit.inputs.begin(),engine_unit.inputs.end());
   sort (engine_unit.inTypes.begin(),engine_unit.inTypes.end());
   outs.label = "output1";
   outs.type = "engine-unit";
   engine_unit.outputs.push_back(outs);
-  sort (engine_unit.outputs.begin(),engine_unit.outputs.end());
   factorio.push_back(engine_unit);
 
   Tool exoskeleton_equipment;
   exoskeleton_equipment.name = "exoskeleton-equipment";
   exoskeleton_equipment.id = "exoskeleton-equipment";
+  exoskeleton_equipment.operation = "exoskeleton-equipment";
   exoskeleton_equipment.type = "tool";
   exoskeleton_equipment.inputs = {};
   exoskeleton_equipment.inTypes = {};
@@ -1524,17 +1469,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   exoskeleton_equipment.inputs.push_back(ins);
   exoskeleton_equipment.inTypes.push_back("steel-plate");
-  sort (exoskeleton_equipment.inputs.begin(),exoskeleton_equipment.inputs.end());
   sort (exoskeleton_equipment.inTypes.begin(),exoskeleton_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "exoskeleton-equipment";
   exoskeleton_equipment.outputs.push_back(outs);
-  sort (exoskeleton_equipment.outputs.begin(),exoskeleton_equipment.outputs.end());
   factorio.push_back(exoskeleton_equipment);
 
   Tool explosive_cannon_shell;
   explosive_cannon_shell.name = "explosive-cannon-shell";
   explosive_cannon_shell.id = "explosive-cannon-shell";
+  explosive_cannon_shell.operation = "explosive-cannon-shell";
   explosive_cannon_shell.type = "tool";
   explosive_cannon_shell.inputs = {};
   explosive_cannon_shell.inTypes = {};
@@ -1552,17 +1496,16 @@ vector<Tool> Factorio() {
   ins.type = "explosives";
   explosive_cannon_shell.inputs.push_back(ins);
   explosive_cannon_shell.inTypes.push_back("explosives");
-  sort (explosive_cannon_shell.inputs.begin(),explosive_cannon_shell.inputs.end());
   sort (explosive_cannon_shell.inTypes.begin(),explosive_cannon_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "explosive-cannon-shell";
   explosive_cannon_shell.outputs.push_back(outs);
-  sort (explosive_cannon_shell.outputs.begin(),explosive_cannon_shell.outputs.end());
   factorio.push_back(explosive_cannon_shell);
 
   Tool explosive_rocket;
   explosive_rocket.name = "explosive-rocket";
   explosive_rocket.id = "explosive-rocket";
+  explosive_rocket.operation = "explosive-rocket";
   explosive_rocket.type = "tool";
   explosive_rocket.inputs = {};
   explosive_rocket.inTypes = {};
@@ -1576,17 +1519,16 @@ vector<Tool> Factorio() {
   ins.type = "explosives";
   explosive_rocket.inputs.push_back(ins);
   explosive_rocket.inTypes.push_back("explosives");
-  sort (explosive_rocket.inputs.begin(),explosive_rocket.inputs.end());
   sort (explosive_rocket.inTypes.begin(),explosive_rocket.inTypes.end());
   outs.label = "output1";
   outs.type = "explosive-rocket";
   explosive_rocket.outputs.push_back(outs);
-  sort (explosive_rocket.outputs.begin(),explosive_rocket.outputs.end());
   factorio.push_back(explosive_rocket);
 
   Tool explosive_uranium_cannon_shell;
   explosive_uranium_cannon_shell.name = "explosive-uranium-cannon-shell";
   explosive_uranium_cannon_shell.id = "explosive-uranium-cannon-shell";
+  explosive_uranium_cannon_shell.operation = "explosive-uranium-cannon-shell";
   explosive_uranium_cannon_shell.type = "tool";
   explosive_uranium_cannon_shell.inputs = {};
   explosive_uranium_cannon_shell.inTypes = {};
@@ -1600,17 +1542,16 @@ vector<Tool> Factorio() {
   ins.type = "uranium-238";
   explosive_uranium_cannon_shell.inputs.push_back(ins);
   explosive_uranium_cannon_shell.inTypes.push_back("uranium-238");
-  sort (explosive_uranium_cannon_shell.inputs.begin(),explosive_uranium_cannon_shell.inputs.end());
   sort (explosive_uranium_cannon_shell.inTypes.begin(),explosive_uranium_cannon_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "explosive-uranium-cannon-shell";
   explosive_uranium_cannon_shell.outputs.push_back(outs);
-  sort (explosive_uranium_cannon_shell.outputs.begin(),explosive_uranium_cannon_shell.outputs.end());
   factorio.push_back(explosive_uranium_cannon_shell);
 
   Tool explosives;
   explosives.name = "explosives";
   explosives.id = "explosives";
+  explosives.operation = "explosives";
   explosives.type = "tool";
   explosives.inputs = {};
   explosives.inTypes = {};
@@ -1628,17 +1569,16 @@ vector<Tool> Factorio() {
   ins.type = "water";
   explosives.inputs.push_back(ins);
   explosives.inTypes.push_back("water");
-  sort (explosives.inputs.begin(),explosives.inputs.end());
   sort (explosives.inTypes.begin(),explosives.inTypes.end());
   outs.label = "output1";
   outs.type = "explosives";
   explosives.outputs.push_back(outs);
-  sort (explosives.outputs.begin(),explosives.outputs.end());
   factorio.push_back(explosives);
 
   Tool express_loader;
   express_loader.name = "express-loader";
   express_loader.id = "express-loader";
+  express_loader.operation = "express-loader";
   express_loader.type = "tool";
   express_loader.inputs = {};
   express_loader.inTypes = {};
@@ -1652,17 +1592,16 @@ vector<Tool> Factorio() {
   ins.type = "fast-loader";
   express_loader.inputs.push_back(ins);
   express_loader.inTypes.push_back("fast-loader");
-  sort (express_loader.inputs.begin(),express_loader.inputs.end());
   sort (express_loader.inTypes.begin(),express_loader.inTypes.end());
   outs.label = "output1";
   outs.type = "express-loader";
   express_loader.outputs.push_back(outs);
-  sort (express_loader.outputs.begin(),express_loader.outputs.end());
   factorio.push_back(express_loader);
 
   Tool express_splitter;
   express_splitter.name = "express-splitter";
   express_splitter.id = "express-splitter";
+  express_splitter.operation = "express-splitter";
   express_splitter.type = "tool";
   express_splitter.inputs = {};
   express_splitter.inTypes = {};
@@ -1684,17 +1623,16 @@ vector<Tool> Factorio() {
   ins.type = "lubricant";
   express_splitter.inputs.push_back(ins);
   express_splitter.inTypes.push_back("lubricant");
-  sort (express_splitter.inputs.begin(),express_splitter.inputs.end());
   sort (express_splitter.inTypes.begin(),express_splitter.inTypes.end());
   outs.label = "output1";
   outs.type = "express-splitter";
   express_splitter.outputs.push_back(outs);
-  sort (express_splitter.outputs.begin(),express_splitter.outputs.end());
   factorio.push_back(express_splitter);
 
   Tool express_transport_belt;
   express_transport_belt.name = "express-transport-belt";
   express_transport_belt.id = "express-transport-belt";
+  express_transport_belt.operation = "express-transport-belt";
   express_transport_belt.type = "tool";
   express_transport_belt.inputs = {};
   express_transport_belt.inTypes = {};
@@ -1712,17 +1650,16 @@ vector<Tool> Factorio() {
   ins.type = "lubricant";
   express_transport_belt.inputs.push_back(ins);
   express_transport_belt.inTypes.push_back("lubricant");
-  sort (express_transport_belt.inputs.begin(),express_transport_belt.inputs.end());
   sort (express_transport_belt.inTypes.begin(),express_transport_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "express-transport-belt";
   express_transport_belt.outputs.push_back(outs);
-  sort (express_transport_belt.outputs.begin(),express_transport_belt.outputs.end());
   factorio.push_back(express_transport_belt);
 
   Tool express_underground_belt;
   express_underground_belt.name = "express-underground-belt";
   express_underground_belt.id = "express-underground-belt";
+  express_underground_belt.operation = "express-underground-belt";
   express_underground_belt.type = "tool";
   express_underground_belt.inputs = {};
   express_underground_belt.inTypes = {};
@@ -1740,17 +1677,16 @@ vector<Tool> Factorio() {
   ins.type = "lubricant";
   express_underground_belt.inputs.push_back(ins);
   express_underground_belt.inTypes.push_back("lubricant");
-  sort (express_underground_belt.inputs.begin(),express_underground_belt.inputs.end());
   sort (express_underground_belt.inTypes.begin(),express_underground_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "express-underground-belt";
   express_underground_belt.outputs.push_back(outs);
-  sort (express_underground_belt.outputs.begin(),express_underground_belt.outputs.end());
   factorio.push_back(express_underground_belt);
 
   Tool fast_inserter;
   fast_inserter.name = "fast-inserter";
   fast_inserter.id = "fast-inserter";
+  fast_inserter.operation = "fast-inserter";
   fast_inserter.type = "tool";
   fast_inserter.inputs = {};
   fast_inserter.inTypes = {};
@@ -1768,17 +1704,16 @@ vector<Tool> Factorio() {
   ins.type = "inserter";
   fast_inserter.inputs.push_back(ins);
   fast_inserter.inTypes.push_back("inserter");
-  sort (fast_inserter.inputs.begin(),fast_inserter.inputs.end());
   sort (fast_inserter.inTypes.begin(),fast_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "fast-inserter";
   fast_inserter.outputs.push_back(outs);
-  sort (fast_inserter.outputs.begin(),fast_inserter.outputs.end());
   factorio.push_back(fast_inserter);
 
   Tool fast_loader;
   fast_loader.name = "fast-loader";
   fast_loader.id = "fast-loader";
+  fast_loader.operation = "fast-loader";
   fast_loader.type = "tool";
   fast_loader.inputs = {};
   fast_loader.inTypes = {};
@@ -1792,17 +1727,16 @@ vector<Tool> Factorio() {
   ins.type = "loader";
   fast_loader.inputs.push_back(ins);
   fast_loader.inTypes.push_back("loader");
-  sort (fast_loader.inputs.begin(),fast_loader.inputs.end());
   sort (fast_loader.inTypes.begin(),fast_loader.inTypes.end());
   outs.label = "output1";
   outs.type = "fast-loader";
   fast_loader.outputs.push_back(outs);
-  sort (fast_loader.outputs.begin(),fast_loader.outputs.end());
   factorio.push_back(fast_loader);
 
   Tool fast_splitter;
   fast_splitter.name = "fast-splitter";
   fast_splitter.id = "fast-splitter";
+  fast_splitter.operation = "fast-splitter";
   fast_splitter.type = "tool";
   fast_splitter.inputs = {};
   fast_splitter.inTypes = {};
@@ -1820,17 +1754,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   fast_splitter.inputs.push_back(ins);
   fast_splitter.inTypes.push_back("electronic-circuit");
-  sort (fast_splitter.inputs.begin(),fast_splitter.inputs.end());
   sort (fast_splitter.inTypes.begin(),fast_splitter.inTypes.end());
   outs.label = "output1";
   outs.type = "fast-splitter";
   fast_splitter.outputs.push_back(outs);
-  sort (fast_splitter.outputs.begin(),fast_splitter.outputs.end());
   factorio.push_back(fast_splitter);
 
   Tool fast_transport_belt;
   fast_transport_belt.name = "fast-transport-belt";
   fast_transport_belt.id = "fast-transport-belt";
+  fast_transport_belt.operation = "fast-transport-belt";
   fast_transport_belt.type = "tool";
   fast_transport_belt.inputs = {};
   fast_transport_belt.inTypes = {};
@@ -1844,17 +1777,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   fast_transport_belt.inputs.push_back(ins);
   fast_transport_belt.inTypes.push_back("transport-belt");
-  sort (fast_transport_belt.inputs.begin(),fast_transport_belt.inputs.end());
   sort (fast_transport_belt.inTypes.begin(),fast_transport_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "fast-transport-belt";
   fast_transport_belt.outputs.push_back(outs);
-  sort (fast_transport_belt.outputs.begin(),fast_transport_belt.outputs.end());
   factorio.push_back(fast_transport_belt);
 
   Tool fast_underground_belt;
   fast_underground_belt.name = "fast-underground-belt";
   fast_underground_belt.id = "fast-underground-belt";
+  fast_underground_belt.operation = "fast-underground-belt";
   fast_underground_belt.type = "tool";
   fast_underground_belt.inputs = {};
   fast_underground_belt.inTypes = {};
@@ -1868,17 +1800,16 @@ vector<Tool> Factorio() {
   ins.type = "underground-belt";
   fast_underground_belt.inputs.push_back(ins);
   fast_underground_belt.inTypes.push_back("underground-belt");
-  sort (fast_underground_belt.inputs.begin(),fast_underground_belt.inputs.end());
   sort (fast_underground_belt.inTypes.begin(),fast_underground_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "fast-underground-belt";
   fast_underground_belt.outputs.push_back(outs);
-  sort (fast_underground_belt.outputs.begin(),fast_underground_belt.outputs.end());
   factorio.push_back(fast_underground_belt);
 
   Tool filter_inserter;
   filter_inserter.name = "filter-inserter";
   filter_inserter.id = "filter-inserter";
+  filter_inserter.operation = "filter-inserter";
   filter_inserter.type = "tool";
   filter_inserter.inputs = {};
   filter_inserter.inTypes = {};
@@ -1892,17 +1823,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   filter_inserter.inputs.push_back(ins);
   filter_inserter.inTypes.push_back("electronic-circuit");
-  sort (filter_inserter.inputs.begin(),filter_inserter.inputs.end());
   sort (filter_inserter.inTypes.begin(),filter_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "filter-inserter";
   filter_inserter.outputs.push_back(outs);
-  sort (filter_inserter.outputs.begin(),filter_inserter.outputs.end());
   factorio.push_back(filter_inserter);
 
   Tool firearm_magazine;
   firearm_magazine.name = "firearm-magazine";
   firearm_magazine.id = "firearm-magazine";
+  firearm_magazine.operation = "firearm-magazine";
   firearm_magazine.type = "tool";
   firearm_magazine.inputs = {};
   firearm_magazine.inTypes = {};
@@ -1912,17 +1842,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   firearm_magazine.inputs.push_back(ins);
   firearm_magazine.inTypes.push_back("iron-plate");
-  sort (firearm_magazine.inputs.begin(),firearm_magazine.inputs.end());
   sort (firearm_magazine.inTypes.begin(),firearm_magazine.inTypes.end());
   outs.label = "output1";
   outs.type = "firearm-magazine";
   firearm_magazine.outputs.push_back(outs);
-  sort (firearm_magazine.outputs.begin(),firearm_magazine.outputs.end());
   factorio.push_back(firearm_magazine);
 
   Tool flamethrower;
   flamethrower.name = "flamethrower";
   flamethrower.id = "flamethrower";
+  flamethrower.operation = "flamethrower";
   flamethrower.type = "tool";
   flamethrower.inputs = {};
   flamethrower.inTypes = {};
@@ -1936,17 +1865,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   flamethrower.inputs.push_back(ins);
   flamethrower.inTypes.push_back("iron-gear-wheel");
-  sort (flamethrower.inputs.begin(),flamethrower.inputs.end());
   sort (flamethrower.inTypes.begin(),flamethrower.inTypes.end());
   outs.label = "output1";
   outs.type = "flamethrower";
   flamethrower.outputs.push_back(outs);
-  sort (flamethrower.outputs.begin(),flamethrower.outputs.end());
   factorio.push_back(flamethrower);
 
   Tool flamethrower_ammo;
   flamethrower_ammo.name = "flamethrower-ammo";
   flamethrower_ammo.id = "flamethrower-ammo";
+  flamethrower_ammo.operation = "flamethrower-ammo";
   flamethrower_ammo.type = "tool";
   flamethrower_ammo.inputs = {};
   flamethrower_ammo.inTypes = {};
@@ -1960,17 +1888,16 @@ vector<Tool> Factorio() {
   ins.type = "crude-oil";
   flamethrower_ammo.inputs.push_back(ins);
   flamethrower_ammo.inTypes.push_back("crude-oil");
-  sort (flamethrower_ammo.inputs.begin(),flamethrower_ammo.inputs.end());
   sort (flamethrower_ammo.inTypes.begin(),flamethrower_ammo.inTypes.end());
   outs.label = "output1";
   outs.type = "flamethrower-ammo";
   flamethrower_ammo.outputs.push_back(outs);
-  sort (flamethrower_ammo.outputs.begin(),flamethrower_ammo.outputs.end());
   factorio.push_back(flamethrower_ammo);
 
   Tool flamethrower_turret;
   flamethrower_turret.name = "flamethrower-turret";
   flamethrower_turret.id = "flamethrower-turret";
+  flamethrower_turret.operation = "flamethrower-turret";
   flamethrower_turret.type = "tool";
   flamethrower_turret.inputs = {};
   flamethrower_turret.inTypes = {};
@@ -1992,17 +1919,16 @@ vector<Tool> Factorio() {
   ins.type = "engine-unit";
   flamethrower_turret.inputs.push_back(ins);
   flamethrower_turret.inTypes.push_back("engine-unit");
-  sort (flamethrower_turret.inputs.begin(),flamethrower_turret.inputs.end());
   sort (flamethrower_turret.inTypes.begin(),flamethrower_turret.inTypes.end());
   outs.label = "output1";
   outs.type = "flamethrower-turret";
   flamethrower_turret.outputs.push_back(outs);
-  sort (flamethrower_turret.outputs.begin(),flamethrower_turret.outputs.end());
   factorio.push_back(flamethrower_turret);
 
   Tool fluid_wagon;
   fluid_wagon.name = "fluid-wagon";
   fluid_wagon.id = "fluid-wagon";
+  fluid_wagon.operation = "fluid-wagon";
   fluid_wagon.type = "tool";
   fluid_wagon.inputs = {};
   fluid_wagon.inTypes = {};
@@ -2024,17 +1950,16 @@ vector<Tool> Factorio() {
   ins.type = "storage-tank";
   fluid_wagon.inputs.push_back(ins);
   fluid_wagon.inTypes.push_back("storage-tank");
-  sort (fluid_wagon.inputs.begin(),fluid_wagon.inputs.end());
   sort (fluid_wagon.inTypes.begin(),fluid_wagon.inTypes.end());
   outs.label = "output1";
   outs.type = "fluid-wagon";
   fluid_wagon.outputs.push_back(outs);
-  sort (fluid_wagon.outputs.begin(),fluid_wagon.outputs.end());
   factorio.push_back(fluid_wagon);
 
   Tool flying_robot_frame;
   flying_robot_frame.name = "flying-robot-frame";
   flying_robot_frame.id = "flying-robot-frame";
+  flying_robot_frame.operation = "flying-robot-frame";
   flying_robot_frame.type = "tool";
   flying_robot_frame.inputs = {};
   flying_robot_frame.inTypes = {};
@@ -2056,17 +1981,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   flying_robot_frame.inputs.push_back(ins);
   flying_robot_frame.inTypes.push_back("electronic-circuit");
-  sort (flying_robot_frame.inputs.begin(),flying_robot_frame.inputs.end());
   sort (flying_robot_frame.inTypes.begin(),flying_robot_frame.inTypes.end());
   outs.label = "output1";
   outs.type = "flying-robot-frame";
   flying_robot_frame.outputs.push_back(outs);
-  sort (flying_robot_frame.outputs.begin(),flying_robot_frame.outputs.end());
   factorio.push_back(flying_robot_frame);
 
   Tool fusion_reactor_equipment;
   fusion_reactor_equipment.name = "fusion-reactor-equipment";
   fusion_reactor_equipment.id = "fusion-reactor-equipment";
+  fusion_reactor_equipment.operation = "fusion-reactor-equipment";
   fusion_reactor_equipment.type = "tool";
   fusion_reactor_equipment.inputs = {};
   fusion_reactor_equipment.inTypes = {};
@@ -2080,17 +2004,16 @@ vector<Tool> Factorio() {
   ins.type = "low-density-structure";
   fusion_reactor_equipment.inputs.push_back(ins);
   fusion_reactor_equipment.inTypes.push_back("low-density-structure");
-  sort (fusion_reactor_equipment.inputs.begin(),fusion_reactor_equipment.inputs.end());
   sort (fusion_reactor_equipment.inTypes.begin(),fusion_reactor_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "fusion-reactor-equipment";
   fusion_reactor_equipment.outputs.push_back(outs);
-  sort (fusion_reactor_equipment.outputs.begin(),fusion_reactor_equipment.outputs.end());
   factorio.push_back(fusion_reactor_equipment);
 
   Tool gate;
   gate.name = "gate";
   gate.id = "gate";
+  gate.operation = "gate";
   gate.type = "tool";
   gate.inputs = {};
   gate.inTypes = {};
@@ -2108,17 +2031,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   gate.inputs.push_back(ins);
   gate.inTypes.push_back("electronic-circuit");
-  sort (gate.inputs.begin(),gate.inputs.end());
   sort (gate.inTypes.begin(),gate.inTypes.end());
   outs.label = "output1";
   outs.type = "gate";
   gate.outputs.push_back(outs);
-  sort (gate.outputs.begin(),gate.outputs.end());
   factorio.push_back(gate);
 
   Tool green_wire;
   green_wire.name = "green-wire";
   green_wire.id = "green-wire";
+  green_wire.operation = "green-wire";
   green_wire.type = "tool";
   green_wire.inputs = {};
   green_wire.inTypes = {};
@@ -2132,17 +2054,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   green_wire.inputs.push_back(ins);
   green_wire.inTypes.push_back("copper-cable");
-  sort (green_wire.inputs.begin(),green_wire.inputs.end());
   sort (green_wire.inTypes.begin(),green_wire.inTypes.end());
   outs.label = "output1";
   outs.type = "green-wire";
   green_wire.outputs.push_back(outs);
-  sort (green_wire.outputs.begin(),green_wire.outputs.end());
   factorio.push_back(green_wire);
 
   Tool grenade;
   grenade.name = "grenade";
   grenade.id = "grenade";
+  grenade.operation = "grenade";
   grenade.type = "tool";
   grenade.inputs = {};
   grenade.inTypes = {};
@@ -2156,17 +2077,16 @@ vector<Tool> Factorio() {
   ins.type = "coal";
   grenade.inputs.push_back(ins);
   grenade.inTypes.push_back("coal");
-  sort (grenade.inputs.begin(),grenade.inputs.end());
   sort (grenade.inTypes.begin(),grenade.inTypes.end());
   outs.label = "output1";
   outs.type = "grenade";
   grenade.outputs.push_back(outs);
-  sort (grenade.outputs.begin(),grenade.outputs.end());
   factorio.push_back(grenade);
 
   Tool gun_turret;
   gun_turret.name = "gun-turret";
   gun_turret.id = "gun-turret";
+  gun_turret.operation = "gun-turret";
   gun_turret.type = "tool";
   gun_turret.inputs = {};
   gun_turret.inTypes = {};
@@ -2184,17 +2104,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   gun_turret.inputs.push_back(ins);
   gun_turret.inTypes.push_back("iron-plate");
-  sort (gun_turret.inputs.begin(),gun_turret.inputs.end());
   sort (gun_turret.inTypes.begin(),gun_turret.inTypes.end());
   outs.label = "output1";
   outs.type = "gun-turret";
   gun_turret.outputs.push_back(outs);
-  sort (gun_turret.outputs.begin(),gun_turret.outputs.end());
   factorio.push_back(gun_turret);
 
   Tool hazard_concrete;
   hazard_concrete.name = "hazard-concrete";
   hazard_concrete.id = "hazard-concrete";
+  hazard_concrete.operation = "hazard-concrete";
   hazard_concrete.type = "tool";
   hazard_concrete.inputs = {};
   hazard_concrete.inTypes = {};
@@ -2204,17 +2123,16 @@ vector<Tool> Factorio() {
   ins.type = "concrete";
   hazard_concrete.inputs.push_back(ins);
   hazard_concrete.inTypes.push_back("concrete");
-  sort (hazard_concrete.inputs.begin(),hazard_concrete.inputs.end());
   sort (hazard_concrete.inTypes.begin(),hazard_concrete.inTypes.end());
   outs.label = "output1";
   outs.type = "hazard-concrete";
   hazard_concrete.outputs.push_back(outs);
-  sort (hazard_concrete.outputs.begin(),hazard_concrete.outputs.end());
   factorio.push_back(hazard_concrete);
 
   Tool heat_exchanger;
   heat_exchanger.name = "heat-exchanger";
   heat_exchanger.id = "heat-exchanger";
+  heat_exchanger.operation = "heat-exchanger";
   heat_exchanger.type = "tool";
   heat_exchanger.inputs = {};
   heat_exchanger.inTypes = {};
@@ -2232,17 +2150,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   heat_exchanger.inputs.push_back(ins);
   heat_exchanger.inTypes.push_back("pipe");
-  sort (heat_exchanger.inputs.begin(),heat_exchanger.inputs.end());
   sort (heat_exchanger.inTypes.begin(),heat_exchanger.inTypes.end());
   outs.label = "output1";
   outs.type = "heat-exchanger";
   heat_exchanger.outputs.push_back(outs);
-  sort (heat_exchanger.outputs.begin(),heat_exchanger.outputs.end());
   factorio.push_back(heat_exchanger);
 
   Tool heat_pipe;
   heat_pipe.name = "heat-pipe";
   heat_pipe.id = "heat-pipe";
+  heat_pipe.operation = "heat-pipe";
   heat_pipe.type = "tool";
   heat_pipe.inputs = {};
   heat_pipe.inTypes = {};
@@ -2256,17 +2173,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   heat_pipe.inputs.push_back(ins);
   heat_pipe.inTypes.push_back("copper-plate");
-  sort (heat_pipe.inputs.begin(),heat_pipe.inputs.end());
   sort (heat_pipe.inTypes.begin(),heat_pipe.inTypes.end());
   outs.label = "output1";
   outs.type = "heat-pipe";
   heat_pipe.outputs.push_back(outs);
-  sort (heat_pipe.outputs.begin(),heat_pipe.outputs.end());
   factorio.push_back(heat_pipe);
 
   Tool heavy_armor;
   heavy_armor.name = "heavy-armor";
   heavy_armor.id = "heavy-armor";
+  heavy_armor.operation = "heavy-armor";
   heavy_armor.type = "tool";
   heavy_armor.inputs = {};
   heavy_armor.inTypes = {};
@@ -2280,17 +2196,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   heavy_armor.inputs.push_back(ins);
   heavy_armor.inTypes.push_back("steel-plate");
-  sort (heavy_armor.inputs.begin(),heavy_armor.inputs.end());
   sort (heavy_armor.inTypes.begin(),heavy_armor.inTypes.end());
   outs.label = "output1";
   outs.type = "heavy-armor";
   heavy_armor.outputs.push_back(outs);
-  sort (heavy_armor.outputs.begin(),heavy_armor.outputs.end());
   factorio.push_back(heavy_armor);
 
   Tool heavy_oil_cracking;
   heavy_oil_cracking.name = "heavy-oil-cracking";
   heavy_oil_cracking.id = "heavy-oil-cracking";
+  heavy_oil_cracking.operation = "heavy-oil-cracking";
   heavy_oil_cracking.type = "tool";
   heavy_oil_cracking.inputs = {};
   heavy_oil_cracking.inTypes = {};
@@ -2304,17 +2219,16 @@ vector<Tool> Factorio() {
   ins.type = "heavy-oil";
   heavy_oil_cracking.inputs.push_back(ins);
   heavy_oil_cracking.inTypes.push_back("heavy-oil");
-  sort (heavy_oil_cracking.inputs.begin(),heavy_oil_cracking.inputs.end());
   sort (heavy_oil_cracking.inTypes.begin(),heavy_oil_cracking.inTypes.end());
   outs.label = "output1";
   outs.type = "resource";
   heavy_oil_cracking.outputs.push_back(outs);
-  sort (heavy_oil_cracking.outputs.begin(),heavy_oil_cracking.outputs.end());
   factorio.push_back(heavy_oil_cracking);
 
   Tool inserter;
   inserter.name = "inserter";
   inserter.id = "inserter";
+  inserter.operation = "inserter";
   inserter.type = "tool";
   inserter.inputs = {};
   inserter.inTypes = {};
@@ -2332,17 +2246,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   inserter.inputs.push_back(ins);
   inserter.inTypes.push_back("iron-plate");
-  sort (inserter.inputs.begin(),inserter.inputs.end());
   sort (inserter.inTypes.begin(),inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "inserter";
   inserter.outputs.push_back(outs);
-  sort (inserter.outputs.begin(),inserter.outputs.end());
   factorio.push_back(inserter);
 
   Tool iron_chest;
   iron_chest.name = "iron-chest";
   iron_chest.id = "iron-chest";
+  iron_chest.operation = "iron-chest";
   iron_chest.type = "tool";
   iron_chest.inputs = {};
   iron_chest.inTypes = {};
@@ -2352,17 +2265,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   iron_chest.inputs.push_back(ins);
   iron_chest.inTypes.push_back("iron-plate");
-  sort (iron_chest.inputs.begin(),iron_chest.inputs.end());
   sort (iron_chest.inTypes.begin(),iron_chest.inTypes.end());
   outs.label = "output1";
   outs.type = "iron-chest";
   iron_chest.outputs.push_back(outs);
-  sort (iron_chest.outputs.begin(),iron_chest.outputs.end());
   factorio.push_back(iron_chest);
 
   Tool iron_gear_wheel;
   iron_gear_wheel.name = "iron-gear-wheel";
   iron_gear_wheel.id = "iron-gear-wheel";
+  iron_gear_wheel.operation = "iron-gear-wheel";
   iron_gear_wheel.type = "tool";
   iron_gear_wheel.inputs = {};
   iron_gear_wheel.inTypes = {};
@@ -2372,17 +2284,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   iron_gear_wheel.inputs.push_back(ins);
   iron_gear_wheel.inTypes.push_back("iron-plate");
-  sort (iron_gear_wheel.inputs.begin(),iron_gear_wheel.inputs.end());
   sort (iron_gear_wheel.inTypes.begin(),iron_gear_wheel.inTypes.end());
   outs.label = "output1";
   outs.type = "iron-gear-wheel";
   iron_gear_wheel.outputs.push_back(outs);
-  sort (iron_gear_wheel.outputs.begin(),iron_gear_wheel.outputs.end());
   factorio.push_back(iron_gear_wheel);
 
   Tool iron_plate;
   iron_plate.name = "iron-plate";
   iron_plate.id = "iron-plate";
+  iron_plate.operation = "iron-plate";
   iron_plate.type = "tool";
   iron_plate.inputs = {};
   iron_plate.inTypes = {};
@@ -2392,17 +2303,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-ore";
   iron_plate.inputs.push_back(ins);
   iron_plate.inTypes.push_back("iron-ore");
-  sort (iron_plate.inputs.begin(),iron_plate.inputs.end());
   sort (iron_plate.inTypes.begin(),iron_plate.inTypes.end());
   outs.label = "output1";
   outs.type = "iron-plate";
   iron_plate.outputs.push_back(outs);
-  sort (iron_plate.outputs.begin(),iron_plate.outputs.end());
   factorio.push_back(iron_plate);
 
   Tool iron_stick;
   iron_stick.name = "iron-stick";
   iron_stick.id = "iron-stick";
+  iron_stick.operation = "iron-stick";
   iron_stick.type = "tool";
   iron_stick.inputs = {};
   iron_stick.inTypes = {};
@@ -2412,17 +2322,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   iron_stick.inputs.push_back(ins);
   iron_stick.inTypes.push_back("iron-plate");
-  sort (iron_stick.inputs.begin(),iron_stick.inputs.end());
   sort (iron_stick.inTypes.begin(),iron_stick.inTypes.end());
   outs.label = "output1";
   outs.type = "iron-stick";
   iron_stick.outputs.push_back(outs);
-  sort (iron_stick.outputs.begin(),iron_stick.outputs.end());
   factorio.push_back(iron_stick);
 
   Tool kovarex_enrichment_process;
   kovarex_enrichment_process.name = "kovarex-enrichment-process";
   kovarex_enrichment_process.id = "kovarex-enrichment-process";
+  kovarex_enrichment_process.operation = "kovarex-enrichment-process";
   kovarex_enrichment_process.type = "tool";
   kovarex_enrichment_process.inputs = {};
   kovarex_enrichment_process.inTypes = {};
@@ -2436,7 +2345,6 @@ vector<Tool> Factorio() {
   ins.type = "uranium-238";
   kovarex_enrichment_process.inputs.push_back(ins);
   kovarex_enrichment_process.inTypes.push_back("uranium-238");
-  sort (kovarex_enrichment_process.inputs.begin(),kovarex_enrichment_process.inputs.end());
   sort (kovarex_enrichment_process.inTypes.begin(),kovarex_enrichment_process.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-235";
@@ -2444,12 +2352,12 @@ vector<Tool> Factorio() {
   outs.label = "output2";
   outs.type = "uranium-238";
   kovarex_enrichment_process.outputs.push_back(outs);
-  sort (kovarex_enrichment_process.outputs.begin(),kovarex_enrichment_process.outputs.end());
   factorio.push_back(kovarex_enrichment_process);
 
   Tool lab;
   lab.name = "lab";
   lab.id = "lab";
+  lab.operation = "lab";
   lab.type = "tool";
   lab.inputs = {};
   lab.inTypes = {};
@@ -2467,17 +2375,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   lab.inputs.push_back(ins);
   lab.inTypes.push_back("transport-belt");
-  sort (lab.inputs.begin(),lab.inputs.end());
   sort (lab.inTypes.begin(),lab.inTypes.end());
   outs.label = "output1";
   outs.type = "lab";
   lab.outputs.push_back(outs);
-  sort (lab.outputs.begin(),lab.outputs.end());
   factorio.push_back(lab);
 
   Tool land_mine;
   land_mine.name = "land-mine";
   land_mine.id = "land-mine";
+  land_mine.operation = "land-mine";
   land_mine.type = "tool";
   land_mine.inputs = {};
   land_mine.inTypes = {};
@@ -2491,17 +2398,16 @@ vector<Tool> Factorio() {
   ins.type = "explosives";
   land_mine.inputs.push_back(ins);
   land_mine.inTypes.push_back("explosives");
-  sort (land_mine.inputs.begin(),land_mine.inputs.end());
   sort (land_mine.inTypes.begin(),land_mine.inTypes.end());
   outs.label = "output1";
   outs.type = "land-mine";
   land_mine.outputs.push_back(outs);
-  sort (land_mine.outputs.begin(),land_mine.outputs.end());
   factorio.push_back(land_mine);
 
   Tool landfill;
   landfill.name = "landfill";
   landfill.id = "landfill";
+  landfill.operation = "landfill";
   landfill.type = "tool";
   landfill.inputs = {};
   landfill.inTypes = {};
@@ -2511,17 +2417,16 @@ vector<Tool> Factorio() {
   ins.type = "stone";
   landfill.inputs.push_back(ins);
   landfill.inTypes.push_back("stone");
-  sort (landfill.inputs.begin(),landfill.inputs.end());
   sort (landfill.inTypes.begin(),landfill.inTypes.end());
   outs.label = "output1";
   outs.type = "landfill";
   landfill.outputs.push_back(outs);
-  sort (landfill.outputs.begin(),landfill.outputs.end());
   factorio.push_back(landfill);
 
   Tool laser_turret;
   laser_turret.name = "laser-turret";
   laser_turret.id = "laser-turret";
+  laser_turret.operation = "laser-turret";
   laser_turret.type = "tool";
   laser_turret.inputs = {};
   laser_turret.inTypes = {};
@@ -2539,17 +2444,16 @@ vector<Tool> Factorio() {
   ins.type = "battery";
   laser_turret.inputs.push_back(ins);
   laser_turret.inTypes.push_back("battery");
-  sort (laser_turret.inputs.begin(),laser_turret.inputs.end());
   sort (laser_turret.inTypes.begin(),laser_turret.inTypes.end());
   outs.label = "output1";
   outs.type = "laser-turret";
   laser_turret.outputs.push_back(outs);
-  sort (laser_turret.outputs.begin(),laser_turret.outputs.end());
   factorio.push_back(laser_turret);
 
   Tool light_armor;
   light_armor.name = "light-armor";
   light_armor.id = "light-armor";
+  light_armor.operation = "light-armor";
   light_armor.type = "tool";
   light_armor.inputs = {};
   light_armor.inTypes = {};
@@ -2559,17 +2463,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   light_armor.inputs.push_back(ins);
   light_armor.inTypes.push_back("iron-plate");
-  sort (light_armor.inputs.begin(),light_armor.inputs.end());
   sort (light_armor.inTypes.begin(),light_armor.inTypes.end());
   outs.label = "output1";
   outs.type = "light-armor";
   light_armor.outputs.push_back(outs);
-  sort (light_armor.outputs.begin(),light_armor.outputs.end());
   factorio.push_back(light_armor);
 
   Tool light_oil_cracking;
   light_oil_cracking.name = "light-oil-cracking";
   light_oil_cracking.id = "light-oil-cracking";
+  light_oil_cracking.operation = "light-oil-cracking";
   light_oil_cracking.type = "tool";
   light_oil_cracking.inputs = {};
   light_oil_cracking.inTypes = {};
@@ -2583,17 +2486,16 @@ vector<Tool> Factorio() {
   ins.type = "light-oil";
   light_oil_cracking.inputs.push_back(ins);
   light_oil_cracking.inTypes.push_back("light-oil");
-  sort (light_oil_cracking.inputs.begin(),light_oil_cracking.inputs.end());
   sort (light_oil_cracking.inTypes.begin(),light_oil_cracking.inTypes.end());
   outs.label = "output1";
   outs.type = "resource";
   light_oil_cracking.outputs.push_back(outs);
-  sort (light_oil_cracking.outputs.begin(),light_oil_cracking.outputs.end());
   factorio.push_back(light_oil_cracking);
 
   Tool loader;
   loader.name = "loader";
   loader.id = "loader";
+  loader.operation = "loader";
   loader.type = "tool";
   loader.inputs = {};
   loader.inTypes = {};
@@ -2619,17 +2521,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   loader.inputs.push_back(ins);
   loader.inTypes.push_back("transport-belt");
-  sort (loader.inputs.begin(),loader.inputs.end());
   sort (loader.inTypes.begin(),loader.inTypes.end());
   outs.label = "output1";
   outs.type = "loader";
   loader.outputs.push_back(outs);
-  sort (loader.outputs.begin(),loader.outputs.end());
   factorio.push_back(loader);
 
   Tool locomotive;
   locomotive.name = "locomotive";
   locomotive.id = "locomotive";
+  locomotive.operation = "locomotive";
   locomotive.type = "tool";
   locomotive.inputs = {};
   locomotive.inTypes = {};
@@ -2647,17 +2548,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   locomotive.inputs.push_back(ins);
   locomotive.inTypes.push_back("steel-plate");
-  sort (locomotive.inputs.begin(),locomotive.inputs.end());
   sort (locomotive.inTypes.begin(),locomotive.inTypes.end());
   outs.label = "output1";
   outs.type = "locomotive";
   locomotive.outputs.push_back(outs);
-  sort (locomotive.outputs.begin(),locomotive.outputs.end());
   factorio.push_back(locomotive);
 
   Tool logistic_chest_active_provider;
   logistic_chest_active_provider.name = "logistic-chest-active-provider";
   logistic_chest_active_provider.id = "logistic-chest-active-provider";
+  logistic_chest_active_provider.operation = "logistic-chest-active-provider";
   logistic_chest_active_provider.type = "tool";
   logistic_chest_active_provider.inputs = {};
   logistic_chest_active_provider.inTypes = {};
@@ -2675,17 +2575,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_chest_active_provider.inputs.push_back(ins);
   logistic_chest_active_provider.inTypes.push_back("advanced-circuit");
-  sort (logistic_chest_active_provider.inputs.begin(),logistic_chest_active_provider.inputs.end());
   sort (logistic_chest_active_provider.inTypes.begin(),logistic_chest_active_provider.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-chest-active-provider";
   logistic_chest_active_provider.outputs.push_back(outs);
-  sort (logistic_chest_active_provider.outputs.begin(),logistic_chest_active_provider.outputs.end());
   factorio.push_back(logistic_chest_active_provider);
 
   Tool logistic_chest_buffer;
   logistic_chest_buffer.name = "logistic-chest-buffer";
   logistic_chest_buffer.id = "logistic-chest-buffer";
+  logistic_chest_buffer.operation = "logistic-chest-buffer";
   logistic_chest_buffer.type = "tool";
   logistic_chest_buffer.inputs = {};
   logistic_chest_buffer.inTypes = {};
@@ -2703,17 +2602,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_chest_buffer.inputs.push_back(ins);
   logistic_chest_buffer.inTypes.push_back("advanced-circuit");
-  sort (logistic_chest_buffer.inputs.begin(),logistic_chest_buffer.inputs.end());
   sort (logistic_chest_buffer.inTypes.begin(),logistic_chest_buffer.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-chest-buffer";
   logistic_chest_buffer.outputs.push_back(outs);
-  sort (logistic_chest_buffer.outputs.begin(),logistic_chest_buffer.outputs.end());
   factorio.push_back(logistic_chest_buffer);
 
   Tool logistic_chest_passive_provider;
   logistic_chest_passive_provider.name = "logistic-chest-passive-provider";
   logistic_chest_passive_provider.id = "logistic-chest-passive-provider";
+  logistic_chest_passive_provider.operation = "logistic-chest-passive-provider";
   logistic_chest_passive_provider.type = "tool";
   logistic_chest_passive_provider.inputs = {};
   logistic_chest_passive_provider.inTypes = {};
@@ -2731,17 +2629,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_chest_passive_provider.inputs.push_back(ins);
   logistic_chest_passive_provider.inTypes.push_back("advanced-circuit");
-  sort (logistic_chest_passive_provider.inputs.begin(),logistic_chest_passive_provider.inputs.end());
   sort (logistic_chest_passive_provider.inTypes.begin(),logistic_chest_passive_provider.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-chest-passive-provider";
   logistic_chest_passive_provider.outputs.push_back(outs);
-  sort (logistic_chest_passive_provider.outputs.begin(),logistic_chest_passive_provider.outputs.end());
   factorio.push_back(logistic_chest_passive_provider);
 
   Tool logistic_chest_requester;
   logistic_chest_requester.name = "logistic-chest-requester";
   logistic_chest_requester.id = "logistic-chest-requester";
+  logistic_chest_requester.operation = "logistic-chest-requester";
   logistic_chest_requester.type = "tool";
   logistic_chest_requester.inputs = {};
   logistic_chest_requester.inTypes = {};
@@ -2759,17 +2656,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_chest_requester.inputs.push_back(ins);
   logistic_chest_requester.inTypes.push_back("advanced-circuit");
-  sort (logistic_chest_requester.inputs.begin(),logistic_chest_requester.inputs.end());
   sort (logistic_chest_requester.inTypes.begin(),logistic_chest_requester.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-chest-requester";
   logistic_chest_requester.outputs.push_back(outs);
-  sort (logistic_chest_requester.outputs.begin(),logistic_chest_requester.outputs.end());
   factorio.push_back(logistic_chest_requester);
 
   Tool logistic_chest_storage;
   logistic_chest_storage.name = "logistic-chest-storage";
   logistic_chest_storage.id = "logistic-chest-storage";
+  logistic_chest_storage.operation = "logistic-chest-storage";
   logistic_chest_storage.type = "tool";
   logistic_chest_storage.inputs = {};
   logistic_chest_storage.inTypes = {};
@@ -2787,17 +2683,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_chest_storage.inputs.push_back(ins);
   logistic_chest_storage.inTypes.push_back("advanced-circuit");
-  sort (logistic_chest_storage.inputs.begin(),logistic_chest_storage.inputs.end());
   sort (logistic_chest_storage.inTypes.begin(),logistic_chest_storage.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-chest-storage";
   logistic_chest_storage.outputs.push_back(outs);
-  sort (logistic_chest_storage.outputs.begin(),logistic_chest_storage.outputs.end());
   factorio.push_back(logistic_chest_storage);
 
   Tool logistic_robot;
   logistic_robot.name = "logistic-robot";
   logistic_robot.id = "logistic-robot";
+  logistic_robot.operation = "logistic-robot";
   logistic_robot.type = "tool";
   logistic_robot.inputs = {};
   logistic_robot.inTypes = {};
@@ -2811,17 +2706,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   logistic_robot.inputs.push_back(ins);
   logistic_robot.inTypes.push_back("advanced-circuit");
-  sort (logistic_robot.inputs.begin(),logistic_robot.inputs.end());
   sort (logistic_robot.inTypes.begin(),logistic_robot.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-robot";
   logistic_robot.outputs.push_back(outs);
-  sort (logistic_robot.outputs.begin(),logistic_robot.outputs.end());
   factorio.push_back(logistic_robot);
 
   Tool logistic_science_pack;
   logistic_science_pack.name = "logistic-science-pack";
   logistic_science_pack.id = "logistic-science-pack";
+  logistic_science_pack.operation = "logistic-science-pack";
   logistic_science_pack.type = "tool";
   logistic_science_pack.inputs = {};
   logistic_science_pack.inTypes = {};
@@ -2835,17 +2729,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   logistic_science_pack.inputs.push_back(ins);
   logistic_science_pack.inTypes.push_back("transport-belt");
-  sort (logistic_science_pack.inputs.begin(),logistic_science_pack.inputs.end());
   sort (logistic_science_pack.inTypes.begin(),logistic_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "logistic-science-pack";
   logistic_science_pack.outputs.push_back(outs);
-  sort (logistic_science_pack.outputs.begin(),logistic_science_pack.outputs.end());
   factorio.push_back(logistic_science_pack);
 
   Tool long_handed_inserter;
   long_handed_inserter.name = "long-handed-inserter";
   long_handed_inserter.id = "long-handed-inserter";
+  long_handed_inserter.operation = "long-handed-inserter";
   long_handed_inserter.type = "tool";
   long_handed_inserter.inputs = {};
   long_handed_inserter.inTypes = {};
@@ -2863,17 +2756,16 @@ vector<Tool> Factorio() {
   ins.type = "inserter";
   long_handed_inserter.inputs.push_back(ins);
   long_handed_inserter.inTypes.push_back("inserter");
-  sort (long_handed_inserter.inputs.begin(),long_handed_inserter.inputs.end());
   sort (long_handed_inserter.inTypes.begin(),long_handed_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "long-handed-inserter";
   long_handed_inserter.outputs.push_back(outs);
-  sort (long_handed_inserter.outputs.begin(),long_handed_inserter.outputs.end());
   factorio.push_back(long_handed_inserter);
 
   Tool low_density_structure;
   low_density_structure.name = "low-density-structure";
   low_density_structure.id = "low-density-structure";
+  low_density_structure.operation = "low-density-structure";
   low_density_structure.type = "tool";
   low_density_structure.inputs = {};
   low_density_structure.inTypes = {};
@@ -2891,17 +2783,16 @@ vector<Tool> Factorio() {
   ins.type = "plastic-bar";
   low_density_structure.inputs.push_back(ins);
   low_density_structure.inTypes.push_back("plastic-bar");
-  sort (low_density_structure.inputs.begin(),low_density_structure.inputs.end());
   sort (low_density_structure.inTypes.begin(),low_density_structure.inTypes.end());
   outs.label = "output1";
   outs.type = "low-density-structure";
   low_density_structure.outputs.push_back(outs);
-  sort (low_density_structure.outputs.begin(),low_density_structure.outputs.end());
   factorio.push_back(low_density_structure);
 
   Tool lubricant;
   lubricant.name = "lubricant";
   lubricant.id = "lubricant";
+  lubricant.operation = "lubricant";
   lubricant.type = "tool";
   lubricant.inputs = {};
   lubricant.inTypes = {};
@@ -2911,17 +2802,16 @@ vector<Tool> Factorio() {
   ins.type = "heavy-oil";
   lubricant.inputs.push_back(ins);
   lubricant.inTypes.push_back("heavy-oil");
-  sort (lubricant.inputs.begin(),lubricant.inputs.end());
   sort (lubricant.inTypes.begin(),lubricant.inTypes.end());
   outs.label = "output1";
   outs.type = "lubricant";
   lubricant.outputs.push_back(outs);
-  sort (lubricant.outputs.begin(),lubricant.outputs.end());
   factorio.push_back(lubricant);
 
   Tool medium_electric_pole;
   medium_electric_pole.name = "medium-electric-pole";
   medium_electric_pole.id = "medium-electric-pole";
+  medium_electric_pole.operation = "medium-electric-pole";
   medium_electric_pole.type = "tool";
   medium_electric_pole.inputs = {};
   medium_electric_pole.inTypes = {};
@@ -2939,17 +2829,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   medium_electric_pole.inputs.push_back(ins);
   medium_electric_pole.inTypes.push_back("copper-plate");
-  sort (medium_electric_pole.inputs.begin(),medium_electric_pole.inputs.end());
   sort (medium_electric_pole.inTypes.begin(),medium_electric_pole.inTypes.end());
   outs.label = "output1";
   outs.type = "medium-electric-pole";
   medium_electric_pole.outputs.push_back(outs);
-  sort (medium_electric_pole.outputs.begin(),medium_electric_pole.outputs.end());
   factorio.push_back(medium_electric_pole);
 
   Tool military_science_pack;
   military_science_pack.name = "military-science-pack";
   military_science_pack.id = "military-science-pack";
+  military_science_pack.operation = "military-science-pack";
   military_science_pack.type = "tool";
   military_science_pack.inputs = {};
   military_science_pack.inTypes = {};
@@ -2967,17 +2856,16 @@ vector<Tool> Factorio() {
   ins.type = "stone-wall";
   military_science_pack.inputs.push_back(ins);
   military_science_pack.inTypes.push_back("stone-wall");
-  sort (military_science_pack.inputs.begin(),military_science_pack.inputs.end());
   sort (military_science_pack.inTypes.begin(),military_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "military-science-pack";
   military_science_pack.outputs.push_back(outs);
-  sort (military_science_pack.outputs.begin(),military_science_pack.outputs.end());
   factorio.push_back(military_science_pack);
 
   Tool modular_armor;
   modular_armor.name = "modular-armor";
   modular_armor.id = "modular-armor";
+  modular_armor.operation = "modular-armor";
   modular_armor.type = "tool";
   modular_armor.inputs = {};
   modular_armor.inTypes = {};
@@ -2991,17 +2879,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   modular_armor.inputs.push_back(ins);
   modular_armor.inTypes.push_back("steel-plate");
-  sort (modular_armor.inputs.begin(),modular_armor.inputs.end());
   sort (modular_armor.inTypes.begin(),modular_armor.inTypes.end());
   outs.label = "output1";
   outs.type = "modular-armor";
   modular_armor.outputs.push_back(outs);
-  sort (modular_armor.outputs.begin(),modular_armor.outputs.end());
   factorio.push_back(modular_armor);
 
   Tool night_vision_equipment;
   night_vision_equipment.name = "night-vision-equipment";
   night_vision_equipment.id = "night-vision-equipment";
+  night_vision_equipment.operation = "night-vision-equipment";
   night_vision_equipment.type = "tool";
   night_vision_equipment.inputs = {};
   night_vision_equipment.inTypes = {};
@@ -3015,17 +2902,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   night_vision_equipment.inputs.push_back(ins);
   night_vision_equipment.inTypes.push_back("steel-plate");
-  sort (night_vision_equipment.inputs.begin(),night_vision_equipment.inputs.end());
   sort (night_vision_equipment.inTypes.begin(),night_vision_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "night-vision-equipment";
   night_vision_equipment.outputs.push_back(outs);
-  sort (night_vision_equipment.outputs.begin(),night_vision_equipment.outputs.end());
   factorio.push_back(night_vision_equipment);
 
   Tool nuclear_fuel;
   nuclear_fuel.name = "nuclear-fuel";
   nuclear_fuel.id = "nuclear-fuel";
+  nuclear_fuel.operation = "nuclear-fuel";
   nuclear_fuel.type = "tool";
   nuclear_fuel.inputs = {};
   nuclear_fuel.inTypes = {};
@@ -3039,17 +2925,16 @@ vector<Tool> Factorio() {
   ins.type = "rocket-fuel";
   nuclear_fuel.inputs.push_back(ins);
   nuclear_fuel.inTypes.push_back("rocket-fuel");
-  sort (nuclear_fuel.inputs.begin(),nuclear_fuel.inputs.end());
   sort (nuclear_fuel.inTypes.begin(),nuclear_fuel.inTypes.end());
   outs.label = "output1";
   outs.type = "nuclear-fuel";
   nuclear_fuel.outputs.push_back(outs);
-  sort (nuclear_fuel.outputs.begin(),nuclear_fuel.outputs.end());
   factorio.push_back(nuclear_fuel);
 
   Tool nuclear_fuel_reprocessing;
   nuclear_fuel_reprocessing.name = "nuclear-fuel-reprocessing";
   nuclear_fuel_reprocessing.id = "nuclear-fuel-reprocessing";
+  nuclear_fuel_reprocessing.operation = "nuclear-fuel-reprocessing";
   nuclear_fuel_reprocessing.type = "tool";
   nuclear_fuel_reprocessing.inputs = {};
   nuclear_fuel_reprocessing.inTypes = {};
@@ -3059,17 +2944,16 @@ vector<Tool> Factorio() {
   ins.type = "used-up-uranium-fuel-cell";
   nuclear_fuel_reprocessing.inputs.push_back(ins);
   nuclear_fuel_reprocessing.inTypes.push_back("used-up-uranium-fuel-cell");
-  sort (nuclear_fuel_reprocessing.inputs.begin(),nuclear_fuel_reprocessing.inputs.end());
   sort (nuclear_fuel_reprocessing.inTypes.begin(),nuclear_fuel_reprocessing.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-238";
   nuclear_fuel_reprocessing.outputs.push_back(outs);
-  sort (nuclear_fuel_reprocessing.outputs.begin(),nuclear_fuel_reprocessing.outputs.end());
   factorio.push_back(nuclear_fuel_reprocessing);
 
   Tool nuclear_reactor;
   nuclear_reactor.name = "nuclear-reactor";
   nuclear_reactor.id = "nuclear-reactor";
+  nuclear_reactor.operation = "nuclear-reactor";
   nuclear_reactor.type = "tool";
   nuclear_reactor.inputs = {};
   nuclear_reactor.inTypes = {};
@@ -3091,17 +2975,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   nuclear_reactor.inputs.push_back(ins);
   nuclear_reactor.inTypes.push_back("copper-plate");
-  sort (nuclear_reactor.inputs.begin(),nuclear_reactor.inputs.end());
   sort (nuclear_reactor.inTypes.begin(),nuclear_reactor.inTypes.end());
   outs.label = "output1";
   outs.type = "nuclear-reactor";
   nuclear_reactor.outputs.push_back(outs);
-  sort (nuclear_reactor.outputs.begin(),nuclear_reactor.outputs.end());
   factorio.push_back(nuclear_reactor);
 
   Tool offshore_pump;
   offshore_pump.name = "offshore-pump";
   offshore_pump.id = "offshore-pump";
+  offshore_pump.operation = "offshore-pump";
   offshore_pump.type = "tool";
   offshore_pump.inputs = {};
   offshore_pump.inTypes = {};
@@ -3119,17 +3002,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   offshore_pump.inputs.push_back(ins);
   offshore_pump.inTypes.push_back("iron-gear-wheel");
-  sort (offshore_pump.inputs.begin(),offshore_pump.inputs.end());
   sort (offshore_pump.inTypes.begin(),offshore_pump.inTypes.end());
   outs.label = "output1";
   outs.type = "offshore-pump";
   offshore_pump.outputs.push_back(outs);
-  sort (offshore_pump.outputs.begin(),offshore_pump.outputs.end());
   factorio.push_back(offshore_pump);
 
   Tool oil_refinery;
   oil_refinery.name = "oil-refinery";
   oil_refinery.id = "oil-refinery";
+  oil_refinery.operation = "oil-refinery";
   oil_refinery.type = "tool";
   oil_refinery.inputs = {};
   oil_refinery.inTypes = {};
@@ -3155,17 +3037,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   oil_refinery.inputs.push_back(ins);
   oil_refinery.inTypes.push_back("pipe");
-  sort (oil_refinery.inputs.begin(),oil_refinery.inputs.end());
   sort (oil_refinery.inTypes.begin(),oil_refinery.inTypes.end());
   outs.label = "output1";
   outs.type = "oil-refinery";
   oil_refinery.outputs.push_back(outs);
-  sort (oil_refinery.outputs.begin(),oil_refinery.outputs.end());
   factorio.push_back(oil_refinery);
 
   Tool personal_laser_defense_equipment;
   personal_laser_defense_equipment.name = "personal-laser-defense-equipment";
   personal_laser_defense_equipment.id = "personal-laser-defense-equipment";
+  personal_laser_defense_equipment.operation = "personal-laser-defense-equipment";
   personal_laser_defense_equipment.type = "tool";
   personal_laser_defense_equipment.inputs = {};
   personal_laser_defense_equipment.inTypes = {};
@@ -3183,17 +3064,16 @@ vector<Tool> Factorio() {
   ins.type = "laser-turret";
   personal_laser_defense_equipment.inputs.push_back(ins);
   personal_laser_defense_equipment.inTypes.push_back("laser-turret");
-  sort (personal_laser_defense_equipment.inputs.begin(),personal_laser_defense_equipment.inputs.end());
   sort (personal_laser_defense_equipment.inTypes.begin(),personal_laser_defense_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "personal-laser-defense-equipment";
   personal_laser_defense_equipment.outputs.push_back(outs);
-  sort (personal_laser_defense_equipment.outputs.begin(),personal_laser_defense_equipment.outputs.end());
   factorio.push_back(personal_laser_defense_equipment);
 
   Tool personal_roboport_equipment;
   personal_roboport_equipment.name = "personal-roboport-equipment";
   personal_roboport_equipment.id = "personal-roboport-equipment";
+  personal_roboport_equipment.operation = "personal-roboport-equipment";
   personal_roboport_equipment.type = "tool";
   personal_roboport_equipment.inputs = {};
   personal_roboport_equipment.inTypes = {};
@@ -3215,17 +3095,16 @@ vector<Tool> Factorio() {
   ins.type = "battery";
   personal_roboport_equipment.inputs.push_back(ins);
   personal_roboport_equipment.inTypes.push_back("battery");
-  sort (personal_roboport_equipment.inputs.begin(),personal_roboport_equipment.inputs.end());
   sort (personal_roboport_equipment.inTypes.begin(),personal_roboport_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "personal-roboport-equipment";
   personal_roboport_equipment.outputs.push_back(outs);
-  sort (personal_roboport_equipment.outputs.begin(),personal_roboport_equipment.outputs.end());
   factorio.push_back(personal_roboport_equipment);
 
   Tool personal_roboport_mk2_equipment;
   personal_roboport_mk2_equipment.name = "personal-roboport-mk2-equipment";
   personal_roboport_mk2_equipment.id = "personal-roboport-mk2-equipment";
+  personal_roboport_mk2_equipment.operation = "personal-roboport-mk2-equipment";
   personal_roboport_mk2_equipment.type = "tool";
   personal_roboport_mk2_equipment.inputs = {};
   personal_roboport_mk2_equipment.inTypes = {};
@@ -3243,17 +3122,16 @@ vector<Tool> Factorio() {
   ins.type = "low-density-structure";
   personal_roboport_mk2_equipment.inputs.push_back(ins);
   personal_roboport_mk2_equipment.inTypes.push_back("low-density-structure");
-  sort (personal_roboport_mk2_equipment.inputs.begin(),personal_roboport_mk2_equipment.inputs.end());
   sort (personal_roboport_mk2_equipment.inTypes.begin(),personal_roboport_mk2_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "personal-roboport-mk2-equipment";
   personal_roboport_mk2_equipment.outputs.push_back(outs);
-  sort (personal_roboport_mk2_equipment.outputs.begin(),personal_roboport_mk2_equipment.outputs.end());
   factorio.push_back(personal_roboport_mk2_equipment);
 
   Tool piercing_rounds_magazine;
   piercing_rounds_magazine.name = "piercing-rounds-magazine";
   piercing_rounds_magazine.id = "piercing-rounds-magazine";
+  piercing_rounds_magazine.operation = "piercing-rounds-magazine";
   piercing_rounds_magazine.type = "tool";
   piercing_rounds_magazine.inputs = {};
   piercing_rounds_magazine.inTypes = {};
@@ -3271,17 +3149,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   piercing_rounds_magazine.inputs.push_back(ins);
   piercing_rounds_magazine.inTypes.push_back("copper-plate");
-  sort (piercing_rounds_magazine.inputs.begin(),piercing_rounds_magazine.inputs.end());
   sort (piercing_rounds_magazine.inTypes.begin(),piercing_rounds_magazine.inTypes.end());
   outs.label = "output1";
   outs.type = "piercing-rounds-magazine";
   piercing_rounds_magazine.outputs.push_back(outs);
-  sort (piercing_rounds_magazine.outputs.begin(),piercing_rounds_magazine.outputs.end());
   factorio.push_back(piercing_rounds_magazine);
 
   Tool piercing_shotgun_shell;
   piercing_shotgun_shell.name = "piercing-shotgun-shell";
   piercing_shotgun_shell.id = "piercing-shotgun-shell";
+  piercing_shotgun_shell.operation = "piercing-shotgun-shell";
   piercing_shotgun_shell.type = "tool";
   piercing_shotgun_shell.inputs = {};
   piercing_shotgun_shell.inTypes = {};
@@ -3299,17 +3176,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   piercing_shotgun_shell.inputs.push_back(ins);
   piercing_shotgun_shell.inTypes.push_back("steel-plate");
-  sort (piercing_shotgun_shell.inputs.begin(),piercing_shotgun_shell.inputs.end());
   sort (piercing_shotgun_shell.inTypes.begin(),piercing_shotgun_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "piercing-shotgun-shell";
   piercing_shotgun_shell.outputs.push_back(outs);
-  sort (piercing_shotgun_shell.outputs.begin(),piercing_shotgun_shell.outputs.end());
   factorio.push_back(piercing_shotgun_shell);
 
   Tool pipe;
   pipe.name = "pipe";
   pipe.id = "pipe";
+  pipe.operation = "pipe";
   pipe.type = "tool";
   pipe.inputs = {};
   pipe.inTypes = {};
@@ -3319,17 +3195,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   pipe.inputs.push_back(ins);
   pipe.inTypes.push_back("iron-plate");
-  sort (pipe.inputs.begin(),pipe.inputs.end());
   sort (pipe.inTypes.begin(),pipe.inTypes.end());
   outs.label = "output1";
   outs.type = "pipe";
   pipe.outputs.push_back(outs);
-  sort (pipe.outputs.begin(),pipe.outputs.end());
   factorio.push_back(pipe);
 
   Tool pipe_to_ground;
   pipe_to_ground.name = "pipe-to-ground";
   pipe_to_ground.id = "pipe-to-ground";
+  pipe_to_ground.operation = "pipe-to-ground";
   pipe_to_ground.type = "tool";
   pipe_to_ground.inputs = {};
   pipe_to_ground.inTypes = {};
@@ -3343,17 +3218,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   pipe_to_ground.inputs.push_back(ins);
   pipe_to_ground.inTypes.push_back("iron-plate");
-  sort (pipe_to_ground.inputs.begin(),pipe_to_ground.inputs.end());
   sort (pipe_to_ground.inTypes.begin(),pipe_to_ground.inTypes.end());
   outs.label = "output1";
   outs.type = "pipe-to-ground";
   pipe_to_ground.outputs.push_back(outs);
-  sort (pipe_to_ground.outputs.begin(),pipe_to_ground.outputs.end());
   factorio.push_back(pipe_to_ground);
 
   Tool pistol;
   pistol.name = "pistol";
   pistol.id = "pistol";
+  pistol.operation = "pistol";
   pistol.type = "tool";
   pistol.inputs = {};
   pistol.inTypes = {};
@@ -3367,17 +3241,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   pistol.inputs.push_back(ins);
   pistol.inTypes.push_back("iron-plate");
-  sort (pistol.inputs.begin(),pistol.inputs.end());
   sort (pistol.inTypes.begin(),pistol.inTypes.end());
   outs.label = "output1";
   outs.type = "pistol";
   pistol.outputs.push_back(outs);
-  sort (pistol.outputs.begin(),pistol.outputs.end());
   factorio.push_back(pistol);
 
   Tool plastic_bar;
   plastic_bar.name = "plastic-bar";
   plastic_bar.id = "plastic-bar";
+  plastic_bar.operation = "plastic-bar";
   plastic_bar.type = "tool";
   plastic_bar.inputs = {};
   plastic_bar.inTypes = {};
@@ -3391,17 +3264,16 @@ vector<Tool> Factorio() {
   ins.type = "coal";
   plastic_bar.inputs.push_back(ins);
   plastic_bar.inTypes.push_back("coal");
-  sort (plastic_bar.inputs.begin(),plastic_bar.inputs.end());
   sort (plastic_bar.inTypes.begin(),plastic_bar.inTypes.end());
   outs.label = "output1";
   outs.type = "plastic-bar";
   plastic_bar.outputs.push_back(outs);
-  sort (plastic_bar.outputs.begin(),plastic_bar.outputs.end());
   factorio.push_back(plastic_bar);
 
   Tool player_port;
   player_port.name = "player-port";
   player_port.id = "player-port";
+  player_port.operation = "player-port";
   player_port.type = "tool";
   player_port.inputs = {};
   player_port.inTypes = {};
@@ -3419,17 +3291,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   player_port.inputs.push_back(ins);
   player_port.inTypes.push_back("iron-plate");
-  sort (player_port.inputs.begin(),player_port.inputs.end());
   sort (player_port.inTypes.begin(),player_port.inTypes.end());
   outs.label = "output1";
   outs.type = "player-port";
   player_port.outputs.push_back(outs);
-  sort (player_port.outputs.begin(),player_port.outputs.end());
   factorio.push_back(player_port);
 
   Tool poison_capsule;
   poison_capsule.name = "poison-capsule";
   poison_capsule.id = "poison-capsule";
+  poison_capsule.operation = "poison-capsule";
   poison_capsule.type = "tool";
   poison_capsule.inputs = {};
   poison_capsule.inTypes = {};
@@ -3447,17 +3318,16 @@ vector<Tool> Factorio() {
   ins.type = "coal";
   poison_capsule.inputs.push_back(ins);
   poison_capsule.inTypes.push_back("coal");
-  sort (poison_capsule.inputs.begin(),poison_capsule.inputs.end());
   sort (poison_capsule.inTypes.begin(),poison_capsule.inTypes.end());
   outs.label = "output1";
   outs.type = "poison-capsule";
   poison_capsule.outputs.push_back(outs);
-  sort (poison_capsule.outputs.begin(),poison_capsule.outputs.end());
   factorio.push_back(poison_capsule);
 
   Tool power_armor;
   power_armor.name = "power-armor";
   power_armor.id = "power-armor";
+  power_armor.operation = "power-armor";
   power_armor.type = "tool";
   power_armor.inputs = {};
   power_armor.inTypes = {};
@@ -3475,17 +3345,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   power_armor.inputs.push_back(ins);
   power_armor.inTypes.push_back("steel-plate");
-  sort (power_armor.inputs.begin(),power_armor.inputs.end());
   sort (power_armor.inTypes.begin(),power_armor.inTypes.end());
   outs.label = "output1";
   outs.type = "power-armor";
   power_armor.outputs.push_back(outs);
-  sort (power_armor.outputs.begin(),power_armor.outputs.end());
   factorio.push_back(power_armor);
 
   Tool power_armor_mk2;
   power_armor_mk2.name = "power-armor-mk2";
   power_armor_mk2.id = "power-armor-mk2";
+  power_armor_mk2.operation = "power-armor-mk2";
   power_armor_mk2.type = "tool";
   power_armor_mk2.inputs = {};
   power_armor_mk2.inTypes = {};
@@ -3511,17 +3380,16 @@ vector<Tool> Factorio() {
   ins.type = "low-density-structure";
   power_armor_mk2.inputs.push_back(ins);
   power_armor_mk2.inTypes.push_back("low-density-structure");
-  sort (power_armor_mk2.inputs.begin(),power_armor_mk2.inputs.end());
   sort (power_armor_mk2.inTypes.begin(),power_armor_mk2.inTypes.end());
   outs.label = "output1";
   outs.type = "power-armor-mk2";
   power_armor_mk2.outputs.push_back(outs);
-  sort (power_armor_mk2.outputs.begin(),power_armor_mk2.outputs.end());
   factorio.push_back(power_armor_mk2);
 
   Tool power_switch;
   power_switch.name = "power-switch";
   power_switch.id = "power-switch";
+  power_switch.operation = "power-switch";
   power_switch.type = "tool";
   power_switch.inputs = {};
   power_switch.inTypes = {};
@@ -3539,17 +3407,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   power_switch.inputs.push_back(ins);
   power_switch.inTypes.push_back("electronic-circuit");
-  sort (power_switch.inputs.begin(),power_switch.inputs.end());
   sort (power_switch.inTypes.begin(),power_switch.inTypes.end());
   outs.label = "output1";
   outs.type = "power-switch";
   power_switch.outputs.push_back(outs);
-  sort (power_switch.outputs.begin(),power_switch.outputs.end());
   factorio.push_back(power_switch);
 
   Tool processing_unit;
   processing_unit.name = "processing-unit";
   processing_unit.id = "processing-unit";
+  processing_unit.operation = "processing-unit";
   processing_unit.type = "tool";
   processing_unit.inputs = {};
   processing_unit.inTypes = {};
@@ -3567,17 +3434,16 @@ vector<Tool> Factorio() {
   ins.type = "sulfuric-acid";
   processing_unit.inputs.push_back(ins);
   processing_unit.inTypes.push_back("sulfuric-acid");
-  sort (processing_unit.inputs.begin(),processing_unit.inputs.end());
   sort (processing_unit.inTypes.begin(),processing_unit.inTypes.end());
   outs.label = "output1";
   outs.type = "processing-unit";
   processing_unit.outputs.push_back(outs);
-  sort (processing_unit.outputs.begin(),processing_unit.outputs.end());
   factorio.push_back(processing_unit);
 
   Tool production_science_pack;
   production_science_pack.name = "production-science-pack";
   production_science_pack.id = "production-science-pack";
+  production_science_pack.operation = "production-science-pack";
   production_science_pack.type = "tool";
   production_science_pack.inputs = {};
   production_science_pack.inTypes = {};
@@ -3595,17 +3461,16 @@ vector<Tool> Factorio() {
   ins.type = "rail";
   production_science_pack.inputs.push_back(ins);
   production_science_pack.inTypes.push_back("rail");
-  sort (production_science_pack.inputs.begin(),production_science_pack.inputs.end());
   sort (production_science_pack.inTypes.begin(),production_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "production-science-pack";
   production_science_pack.outputs.push_back(outs);
-  sort (production_science_pack.outputs.begin(),production_science_pack.outputs.end());
   factorio.push_back(production_science_pack);
 
   Tool productivity_module;
   productivity_module.name = "productivity-module";
   productivity_module.id = "productivity-module";
+  productivity_module.operation = "productivity-module";
   productivity_module.type = "tool";
   productivity_module.inputs = {};
   productivity_module.inTypes = {};
@@ -3619,17 +3484,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   productivity_module.inputs.push_back(ins);
   productivity_module.inTypes.push_back("electronic-circuit");
-  sort (productivity_module.inputs.begin(),productivity_module.inputs.end());
   sort (productivity_module.inTypes.begin(),productivity_module.inTypes.end());
   outs.label = "output1";
   outs.type = "productivity-module";
   productivity_module.outputs.push_back(outs);
-  sort (productivity_module.outputs.begin(),productivity_module.outputs.end());
   factorio.push_back(productivity_module);
 
   Tool productivity_module_2;
   productivity_module_2.name = "productivity-module-2";
   productivity_module_2.id = "productivity-module-2";
+  productivity_module_2.operation = "productivity-module-2";
   productivity_module_2.type = "tool";
   productivity_module_2.inputs = {};
   productivity_module_2.inTypes = {};
@@ -3647,17 +3511,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   productivity_module_2.inputs.push_back(ins);
   productivity_module_2.inTypes.push_back("processing-unit");
-  sort (productivity_module_2.inputs.begin(),productivity_module_2.inputs.end());
   sort (productivity_module_2.inTypes.begin(),productivity_module_2.inTypes.end());
   outs.label = "output1";
   outs.type = "productivity-module-2";
   productivity_module_2.outputs.push_back(outs);
-  sort (productivity_module_2.outputs.begin(),productivity_module_2.outputs.end());
   factorio.push_back(productivity_module_2);
 
   Tool productivity_module_3;
   productivity_module_3.name = "productivity-module-3";
   productivity_module_3.id = "productivity-module-3";
+  productivity_module_3.operation = "productivity-module-3";
   productivity_module_3.type = "tool";
   productivity_module_3.inputs = {};
   productivity_module_3.inTypes = {};
@@ -3675,17 +3538,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   productivity_module_3.inputs.push_back(ins);
   productivity_module_3.inTypes.push_back("processing-unit");
-  sort (productivity_module_3.inputs.begin(),productivity_module_3.inputs.end());
   sort (productivity_module_3.inTypes.begin(),productivity_module_3.inTypes.end());
   outs.label = "output1";
   outs.type = "productivity-module-3";
   productivity_module_3.outputs.push_back(outs);
-  sort (productivity_module_3.outputs.begin(),productivity_module_3.outputs.end());
   factorio.push_back(productivity_module_3);
 
   Tool programmable_speaker;
   programmable_speaker.name = "programmable-speaker";
   programmable_speaker.id = "programmable-speaker";
+  programmable_speaker.operation = "programmable-speaker";
   programmable_speaker.type = "tool";
   programmable_speaker.inputs = {};
   programmable_speaker.inTypes = {};
@@ -3707,17 +3569,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   programmable_speaker.inputs.push_back(ins);
   programmable_speaker.inTypes.push_back("electronic-circuit");
-  sort (programmable_speaker.inputs.begin(),programmable_speaker.inputs.end());
   sort (programmable_speaker.inTypes.begin(),programmable_speaker.inTypes.end());
   outs.label = "output1";
   outs.type = "programmable-speaker";
   programmable_speaker.outputs.push_back(outs);
-  sort (programmable_speaker.outputs.begin(),programmable_speaker.outputs.end());
   factorio.push_back(programmable_speaker);
 
   Tool pump;
   pump.name = "pump";
   pump.id = "pump";
+  pump.operation = "pump";
   pump.type = "tool";
   pump.inputs = {};
   pump.inTypes = {};
@@ -3735,17 +3596,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   pump.inputs.push_back(ins);
   pump.inTypes.push_back("pipe");
-  sort (pump.inputs.begin(),pump.inputs.end());
   sort (pump.inTypes.begin(),pump.inTypes.end());
   outs.label = "output1";
   outs.type = "pump";
   pump.outputs.push_back(outs);
-  sort (pump.outputs.begin(),pump.outputs.end());
   factorio.push_back(pump);
 
   Tool pumpjack;
   pumpjack.name = "pumpjack";
   pumpjack.id = "pumpjack";
+  pumpjack.operation = "pumpjack";
   pumpjack.type = "tool";
   pumpjack.inputs = {};
   pumpjack.inTypes = {};
@@ -3767,17 +3627,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   pumpjack.inputs.push_back(ins);
   pumpjack.inTypes.push_back("pipe");
-  sort (pumpjack.inputs.begin(),pumpjack.inputs.end());
   sort (pumpjack.inTypes.begin(),pumpjack.inTypes.end());
   outs.label = "output1";
   outs.type = "pumpjack";
   pumpjack.outputs.push_back(outs);
-  sort (pumpjack.outputs.begin(),pumpjack.outputs.end());
   factorio.push_back(pumpjack);
 
   Tool radar;
   radar.name = "radar";
   radar.id = "radar";
+  radar.operation = "radar";
   radar.type = "tool";
   radar.inputs = {};
   radar.inTypes = {};
@@ -3795,17 +3654,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   radar.inputs.push_back(ins);
   radar.inTypes.push_back("iron-plate");
-  sort (radar.inputs.begin(),radar.inputs.end());
   sort (radar.inTypes.begin(),radar.inTypes.end());
   outs.label = "output1";
   outs.type = "radar";
   radar.outputs.push_back(outs);
-  sort (radar.outputs.begin(),radar.outputs.end());
   factorio.push_back(radar);
 
   Tool rail;
   rail.name = "rail";
   rail.id = "rail";
+  rail.operation = "rail";
   rail.type = "tool";
   rail.inputs = {};
   rail.inTypes = {};
@@ -3823,17 +3681,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   rail.inputs.push_back(ins);
   rail.inTypes.push_back("steel-plate");
-  sort (rail.inputs.begin(),rail.inputs.end());
   sort (rail.inTypes.begin(),rail.inTypes.end());
   outs.label = "output1";
   outs.type = "rail";
   rail.outputs.push_back(outs);
-  sort (rail.outputs.begin(),rail.outputs.end());
   factorio.push_back(rail);
 
   Tool rail_chain_signal;
   rail_chain_signal.name = "rail-chain-signal";
   rail_chain_signal.id = "rail-chain-signal";
+  rail_chain_signal.operation = "rail-chain-signal";
   rail_chain_signal.type = "tool";
   rail_chain_signal.inputs = {};
   rail_chain_signal.inTypes = {};
@@ -3847,17 +3704,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   rail_chain_signal.inputs.push_back(ins);
   rail_chain_signal.inTypes.push_back("iron-plate");
-  sort (rail_chain_signal.inputs.begin(),rail_chain_signal.inputs.end());
   sort (rail_chain_signal.inTypes.begin(),rail_chain_signal.inTypes.end());
   outs.label = "output1";
   outs.type = "rail-chain-signal";
   rail_chain_signal.outputs.push_back(outs);
-  sort (rail_chain_signal.outputs.begin(),rail_chain_signal.outputs.end());
   factorio.push_back(rail_chain_signal);
 
   Tool rail_signal;
   rail_signal.name = "rail-signal";
   rail_signal.id = "rail-signal";
+  rail_signal.operation = "rail-signal";
   rail_signal.type = "tool";
   rail_signal.inputs = {};
   rail_signal.inTypes = {};
@@ -3871,17 +3727,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   rail_signal.inputs.push_back(ins);
   rail_signal.inTypes.push_back("iron-plate");
-  sort (rail_signal.inputs.begin(),rail_signal.inputs.end());
   sort (rail_signal.inTypes.begin(),rail_signal.inTypes.end());
   outs.label = "output1";
   outs.type = "rail-signal";
   rail_signal.outputs.push_back(outs);
-  sort (rail_signal.outputs.begin(),rail_signal.outputs.end());
   factorio.push_back(rail_signal);
 
   Tool railgun;
   railgun.name = "railgun";
   railgun.id = "railgun";
+  railgun.operation = "railgun";
   railgun.type = "tool";
   railgun.inputs = {};
   railgun.inTypes = {};
@@ -3903,17 +3758,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   railgun.inputs.push_back(ins);
   railgun.inTypes.push_back("advanced-circuit");
-  sort (railgun.inputs.begin(),railgun.inputs.end());
   sort (railgun.inTypes.begin(),railgun.inTypes.end());
   outs.label = "output1";
   outs.type = "railgun";
   railgun.outputs.push_back(outs);
-  sort (railgun.outputs.begin(),railgun.outputs.end());
   factorio.push_back(railgun);
 
   Tool railgun_dart;
   railgun_dart.name = "railgun-dart";
   railgun_dart.id = "railgun-dart";
+  railgun_dart.operation = "railgun-dart";
   railgun_dart.type = "tool";
   railgun_dart.inputs = {};
   railgun_dart.inTypes = {};
@@ -3927,17 +3781,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   railgun_dart.inputs.push_back(ins);
   railgun_dart.inTypes.push_back("electronic-circuit");
-  sort (railgun_dart.inputs.begin(),railgun_dart.inputs.end());
   sort (railgun_dart.inTypes.begin(),railgun_dart.inTypes.end());
   outs.label = "output1";
   outs.type = "railgun-dart";
   railgun_dart.outputs.push_back(outs);
-  sort (railgun_dart.outputs.begin(),railgun_dart.outputs.end());
   factorio.push_back(railgun_dart);
 
   Tool red_wire;
   red_wire.name = "red-wire";
   red_wire.id = "red-wire";
+  red_wire.operation = "red-wire";
   red_wire.type = "tool";
   red_wire.inputs = {};
   red_wire.inTypes = {};
@@ -3951,17 +3804,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   red_wire.inputs.push_back(ins);
   red_wire.inTypes.push_back("copper-cable");
-  sort (red_wire.inputs.begin(),red_wire.inputs.end());
   sort (red_wire.inTypes.begin(),red_wire.inTypes.end());
   outs.label = "output1";
   outs.type = "red-wire";
   red_wire.outputs.push_back(outs);
-  sort (red_wire.outputs.begin(),red_wire.outputs.end());
   factorio.push_back(red_wire);
 
   Tool refined_concrete;
   refined_concrete.name = "refined-concrete";
   refined_concrete.id = "refined-concrete";
+  refined_concrete.operation = "refined-concrete";
   refined_concrete.type = "tool";
   refined_concrete.inputs = {};
   refined_concrete.inTypes = {};
@@ -3983,17 +3835,16 @@ vector<Tool> Factorio() {
   ins.type = "water";
   refined_concrete.inputs.push_back(ins);
   refined_concrete.inTypes.push_back("water");
-  sort (refined_concrete.inputs.begin(),refined_concrete.inputs.end());
   sort (refined_concrete.inTypes.begin(),refined_concrete.inTypes.end());
   outs.label = "output1";
   outs.type = "refined-concrete";
   refined_concrete.outputs.push_back(outs);
-  sort (refined_concrete.outputs.begin(),refined_concrete.outputs.end());
   factorio.push_back(refined_concrete);
 
   Tool refined_hazard_concrete;
   refined_hazard_concrete.name = "refined-hazard-concrete";
   refined_hazard_concrete.id = "refined-hazard-concrete";
+  refined_hazard_concrete.operation = "refined-hazard-concrete";
   refined_hazard_concrete.type = "tool";
   refined_hazard_concrete.inputs = {};
   refined_hazard_concrete.inTypes = {};
@@ -4003,17 +3854,16 @@ vector<Tool> Factorio() {
   ins.type = "refined-concrete";
   refined_hazard_concrete.inputs.push_back(ins);
   refined_hazard_concrete.inTypes.push_back("refined-concrete");
-  sort (refined_hazard_concrete.inputs.begin(),refined_hazard_concrete.inputs.end());
   sort (refined_hazard_concrete.inTypes.begin(),refined_hazard_concrete.inTypes.end());
   outs.label = "output1";
   outs.type = "refined-hazard-concrete";
   refined_hazard_concrete.outputs.push_back(outs);
-  sort (refined_hazard_concrete.outputs.begin(),refined_hazard_concrete.outputs.end());
   factorio.push_back(refined_hazard_concrete);
 
   Tool repair_pack;
   repair_pack.name = "repair-pack";
   repair_pack.id = "repair-pack";
+  repair_pack.operation = "repair-pack";
   repair_pack.type = "tool";
   repair_pack.inputs = {};
   repair_pack.inTypes = {};
@@ -4027,17 +3877,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   repair_pack.inputs.push_back(ins);
   repair_pack.inTypes.push_back("iron-gear-wheel");
-  sort (repair_pack.inputs.begin(),repair_pack.inputs.end());
   sort (repair_pack.inTypes.begin(),repair_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "repair-pack";
   repair_pack.outputs.push_back(outs);
-  sort (repair_pack.outputs.begin(),repair_pack.outputs.end());
   factorio.push_back(repair_pack);
 
   Tool roboport;
   roboport.name = "roboport";
   roboport.id = "roboport";
+  roboport.operation = "roboport";
   roboport.type = "tool";
   roboport.inputs = {};
   roboport.inTypes = {};
@@ -4055,17 +3904,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   roboport.inputs.push_back(ins);
   roboport.inTypes.push_back("advanced-circuit");
-  sort (roboport.inputs.begin(),roboport.inputs.end());
   sort (roboport.inTypes.begin(),roboport.inTypes.end());
   outs.label = "output1";
   outs.type = "roboport";
   roboport.outputs.push_back(outs);
-  sort (roboport.outputs.begin(),roboport.outputs.end());
   factorio.push_back(roboport);
 
   Tool rocket;
   rocket.name = "rocket";
   rocket.id = "rocket";
+  rocket.operation = "rocket";
   rocket.type = "tool";
   rocket.inputs = {};
   rocket.inTypes = {};
@@ -4083,17 +3931,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   rocket.inputs.push_back(ins);
   rocket.inTypes.push_back("iron-plate");
-  sort (rocket.inputs.begin(),rocket.inputs.end());
   sort (rocket.inTypes.begin(),rocket.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket";
   rocket.outputs.push_back(outs);
-  sort (rocket.outputs.begin(),rocket.outputs.end());
   factorio.push_back(rocket);
 
   Tool rocket_control_unit;
   rocket_control_unit.name = "rocket-control-unit";
   rocket_control_unit.id = "rocket-control-unit";
+  rocket_control_unit.operation = "rocket-control-unit";
   rocket_control_unit.type = "tool";
   rocket_control_unit.inputs = {};
   rocket_control_unit.inTypes = {};
@@ -4107,17 +3954,16 @@ vector<Tool> Factorio() {
   ins.type = "speed-module";
   rocket_control_unit.inputs.push_back(ins);
   rocket_control_unit.inTypes.push_back("speed-module");
-  sort (rocket_control_unit.inputs.begin(),rocket_control_unit.inputs.end());
   sort (rocket_control_unit.inTypes.begin(),rocket_control_unit.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket-control-unit";
   rocket_control_unit.outputs.push_back(outs);
-  sort (rocket_control_unit.outputs.begin(),rocket_control_unit.outputs.end());
   factorio.push_back(rocket_control_unit);
 
   Tool rocket_fuel;
   rocket_fuel.name = "rocket-fuel";
   rocket_fuel.id = "rocket-fuel";
+  rocket_fuel.operation = "rocket-fuel";
   rocket_fuel.type = "tool";
   rocket_fuel.inputs = {};
   rocket_fuel.inTypes = {};
@@ -4131,17 +3977,16 @@ vector<Tool> Factorio() {
   ins.type = "light-oil";
   rocket_fuel.inputs.push_back(ins);
   rocket_fuel.inTypes.push_back("light-oil");
-  sort (rocket_fuel.inputs.begin(),rocket_fuel.inputs.end());
   sort (rocket_fuel.inTypes.begin(),rocket_fuel.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket-fuel";
   rocket_fuel.outputs.push_back(outs);
-  sort (rocket_fuel.outputs.begin(),rocket_fuel.outputs.end());
   factorio.push_back(rocket_fuel);
 
   Tool rocket_launcher;
   rocket_launcher.name = "rocket-launcher";
   rocket_launcher.id = "rocket-launcher";
+  rocket_launcher.operation = "rocket-launcher";
   rocket_launcher.type = "tool";
   rocket_launcher.inputs = {};
   rocket_launcher.inTypes = {};
@@ -4159,17 +4004,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   rocket_launcher.inputs.push_back(ins);
   rocket_launcher.inTypes.push_back("electronic-circuit");
-  sort (rocket_launcher.inputs.begin(),rocket_launcher.inputs.end());
   sort (rocket_launcher.inTypes.begin(),rocket_launcher.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket-launcher";
   rocket_launcher.outputs.push_back(outs);
-  sort (rocket_launcher.outputs.begin(),rocket_launcher.outputs.end());
   factorio.push_back(rocket_launcher);
 
   Tool rocket_part;
   rocket_part.name = "rocket-part";
   rocket_part.id = "rocket-part";
+  rocket_part.operation = "rocket-part";
   rocket_part.type = "tool";
   rocket_part.inputs = {};
   rocket_part.inTypes = {};
@@ -4187,17 +4031,16 @@ vector<Tool> Factorio() {
   ins.type = "rocket-fuel";
   rocket_part.inputs.push_back(ins);
   rocket_part.inTypes.push_back("rocket-fuel");
-  sort (rocket_part.inputs.begin(),rocket_part.inputs.end());
   sort (rocket_part.inTypes.begin(),rocket_part.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket-part";
   rocket_part.outputs.push_back(outs);
-  sort (rocket_part.outputs.begin(),rocket_part.outputs.end());
   factorio.push_back(rocket_part);
 
   Tool rocket_silo;
   rocket_silo.name = "rocket-silo";
   rocket_silo.id = "rocket-silo";
+  rocket_silo.operation = "rocket-silo";
   rocket_silo.type = "tool";
   rocket_silo.inputs = {};
   rocket_silo.inTypes = {};
@@ -4223,17 +4066,16 @@ vector<Tool> Factorio() {
   ins.type = "electric-engine-unit";
   rocket_silo.inputs.push_back(ins);
   rocket_silo.inTypes.push_back("electric-engine-unit");
-  sort (rocket_silo.inputs.begin(),rocket_silo.inputs.end());
   sort (rocket_silo.inTypes.begin(),rocket_silo.inTypes.end());
   outs.label = "output1";
   outs.type = "rocket-silo";
   rocket_silo.outputs.push_back(outs);
-  sort (rocket_silo.outputs.begin(),rocket_silo.outputs.end());
   factorio.push_back(rocket_silo);
 
   Tool satellite;
   satellite.name = "satellite";
   satellite.id = "satellite";
+  satellite.operation = "satellite";
   satellite.type = "tool";
   satellite.inputs = {};
   satellite.inTypes = {};
@@ -4263,17 +4105,16 @@ vector<Tool> Factorio() {
   ins.type = "rocket-fuel";
   satellite.inputs.push_back(ins);
   satellite.inTypes.push_back("rocket-fuel");
-  sort (satellite.inputs.begin(),satellite.inputs.end());
   sort (satellite.inTypes.begin(),satellite.inTypes.end());
   outs.label = "output1";
   outs.type = "satellite";
   satellite.outputs.push_back(outs);
-  sort (satellite.outputs.begin(),satellite.outputs.end());
   factorio.push_back(satellite);
 
   Tool shotgun;
   shotgun.name = "shotgun";
   shotgun.id = "shotgun";
+  shotgun.operation = "shotgun";
   shotgun.type = "tool";
   shotgun.inputs = {};
   shotgun.inTypes = {};
@@ -4295,17 +4136,16 @@ vector<Tool> Factorio() {
   ins.type = "wood";
   shotgun.inputs.push_back(ins);
   shotgun.inTypes.push_back("wood");
-  sort (shotgun.inputs.begin(),shotgun.inputs.end());
   sort (shotgun.inTypes.begin(),shotgun.inTypes.end());
   outs.label = "output1";
   outs.type = "shotgun";
   shotgun.outputs.push_back(outs);
-  sort (shotgun.outputs.begin(),shotgun.outputs.end());
   factorio.push_back(shotgun);
 
   Tool shotgun_shell;
   shotgun_shell.name = "shotgun-shell";
   shotgun_shell.id = "shotgun-shell";
+  shotgun_shell.operation = "shotgun-shell";
   shotgun_shell.type = "tool";
   shotgun_shell.inputs = {};
   shotgun_shell.inTypes = {};
@@ -4319,17 +4159,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   shotgun_shell.inputs.push_back(ins);
   shotgun_shell.inTypes.push_back("iron-plate");
-  sort (shotgun_shell.inputs.begin(),shotgun_shell.inputs.end());
   sort (shotgun_shell.inTypes.begin(),shotgun_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "shotgun-shell";
   shotgun_shell.outputs.push_back(outs);
-  sort (shotgun_shell.outputs.begin(),shotgun_shell.outputs.end());
   factorio.push_back(shotgun_shell);
 
   Tool slowdown_capsule;
   slowdown_capsule.name = "slowdown-capsule";
   slowdown_capsule.id = "slowdown-capsule";
+  slowdown_capsule.operation = "slowdown-capsule";
   slowdown_capsule.type = "tool";
   slowdown_capsule.inputs = {};
   slowdown_capsule.inTypes = {};
@@ -4347,17 +4186,16 @@ vector<Tool> Factorio() {
   ins.type = "coal";
   slowdown_capsule.inputs.push_back(ins);
   slowdown_capsule.inTypes.push_back("coal");
-  sort (slowdown_capsule.inputs.begin(),slowdown_capsule.inputs.end());
   sort (slowdown_capsule.inTypes.begin(),slowdown_capsule.inTypes.end());
   outs.label = "output1";
   outs.type = "slowdown-capsule";
   slowdown_capsule.outputs.push_back(outs);
-  sort (slowdown_capsule.outputs.begin(),slowdown_capsule.outputs.end());
   factorio.push_back(slowdown_capsule);
 
   Tool small_electric_pole;
   small_electric_pole.name = "small-electric-pole";
   small_electric_pole.id = "small-electric-pole";
+  small_electric_pole.operation = "small-electric-pole";
   small_electric_pole.type = "tool";
   small_electric_pole.inputs = {};
   small_electric_pole.inTypes = {};
@@ -4371,17 +4209,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-cable";
   small_electric_pole.inputs.push_back(ins);
   small_electric_pole.inTypes.push_back("copper-cable");
-  sort (small_electric_pole.inputs.begin(),small_electric_pole.inputs.end());
   sort (small_electric_pole.inTypes.begin(),small_electric_pole.inTypes.end());
   outs.label = "output1";
   outs.type = "small-electric-pole";
   small_electric_pole.outputs.push_back(outs);
-  sort (small_electric_pole.outputs.begin(),small_electric_pole.outputs.end());
   factorio.push_back(small_electric_pole);
 
   Tool small_lamp;
   small_lamp.name = "small-lamp";
   small_lamp.id = "small-lamp";
+  small_lamp.operation = "small-lamp";
   small_lamp.type = "tool";
   small_lamp.inputs = {};
   small_lamp.inTypes = {};
@@ -4399,17 +4236,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   small_lamp.inputs.push_back(ins);
   small_lamp.inTypes.push_back("iron-plate");
-  sort (small_lamp.inputs.begin(),small_lamp.inputs.end());
   sort (small_lamp.inTypes.begin(),small_lamp.inTypes.end());
   outs.label = "output1";
   outs.type = "small-lamp";
   small_lamp.outputs.push_back(outs);
-  sort (small_lamp.outputs.begin(),small_lamp.outputs.end());
   factorio.push_back(small_lamp);
 
   Tool small_plane;
   small_plane.name = "small-plane";
   small_plane.id = "small-plane";
+  small_plane.operation = "small-plane";
   small_plane.type = "tool";
   small_plane.inputs = {};
   small_plane.inTypes = {};
@@ -4431,17 +4267,16 @@ vector<Tool> Factorio() {
   ins.type = "battery";
   small_plane.inputs.push_back(ins);
   small_plane.inTypes.push_back("battery");
-  sort (small_plane.inputs.begin(),small_plane.inputs.end());
   sort (small_plane.inTypes.begin(),small_plane.inTypes.end());
   outs.label = "output1";
   outs.type = "small-plane";
   small_plane.outputs.push_back(outs);
-  sort (small_plane.outputs.begin(),small_plane.outputs.end());
   factorio.push_back(small_plane);
 
   Tool solar_panel;
   solar_panel.name = "solar-panel";
   solar_panel.id = "solar-panel";
+  solar_panel.operation = "solar-panel";
   solar_panel.type = "tool";
   solar_panel.inputs = {};
   solar_panel.inTypes = {};
@@ -4459,17 +4294,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   solar_panel.inputs.push_back(ins);
   solar_panel.inTypes.push_back("copper-plate");
-  sort (solar_panel.inputs.begin(),solar_panel.inputs.end());
   sort (solar_panel.inTypes.begin(),solar_panel.inTypes.end());
   outs.label = "output1";
   outs.type = "solar-panel";
   solar_panel.outputs.push_back(outs);
-  sort (solar_panel.outputs.begin(),solar_panel.outputs.end());
   factorio.push_back(solar_panel);
 
   Tool solar_panel_equipment;
   solar_panel_equipment.name = "solar-panel-equipment";
   solar_panel_equipment.id = "solar-panel-equipment";
+  solar_panel_equipment.operation = "solar-panel-equipment";
   solar_panel_equipment.type = "tool";
   solar_panel_equipment.inputs = {};
   solar_panel_equipment.inTypes = {};
@@ -4487,17 +4321,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   solar_panel_equipment.inputs.push_back(ins);
   solar_panel_equipment.inTypes.push_back("steel-plate");
-  sort (solar_panel_equipment.inputs.begin(),solar_panel_equipment.inputs.end());
   sort (solar_panel_equipment.inTypes.begin(),solar_panel_equipment.inTypes.end());
   outs.label = "output1";
   outs.type = "solar-panel-equipment";
   solar_panel_equipment.outputs.push_back(outs);
-  sort (solar_panel_equipment.outputs.begin(),solar_panel_equipment.outputs.end());
   factorio.push_back(solar_panel_equipment);
 
   Tool solid_fuel_from_heavy_oil;
   solid_fuel_from_heavy_oil.name = "solid-fuel-from-heavy-oil";
   solid_fuel_from_heavy_oil.id = "solid-fuel-from-heavy-oil";
+  solid_fuel_from_heavy_oil.operation = "solid-fuel-from-heavy-oil";
   solid_fuel_from_heavy_oil.type = "tool";
   solid_fuel_from_heavy_oil.inputs = {};
   solid_fuel_from_heavy_oil.inTypes = {};
@@ -4507,17 +4340,16 @@ vector<Tool> Factorio() {
   ins.type = "heavy-oil";
   solid_fuel_from_heavy_oil.inputs.push_back(ins);
   solid_fuel_from_heavy_oil.inTypes.push_back("heavy-oil");
-  sort (solid_fuel_from_heavy_oil.inputs.begin(),solid_fuel_from_heavy_oil.inputs.end());
   sort (solid_fuel_from_heavy_oil.inTypes.begin(),solid_fuel_from_heavy_oil.inTypes.end());
   outs.label = "output1";
   outs.type = "solid-fuel";
   solid_fuel_from_heavy_oil.outputs.push_back(outs);
-  sort (solid_fuel_from_heavy_oil.outputs.begin(),solid_fuel_from_heavy_oil.outputs.end());
   factorio.push_back(solid_fuel_from_heavy_oil);
 
   Tool solid_fuel_from_light_oil;
   solid_fuel_from_light_oil.name = "solid-fuel-from-light-oil";
   solid_fuel_from_light_oil.id = "solid-fuel-from-light-oil";
+  solid_fuel_from_light_oil.operation = "solid-fuel-from-light-oil";
   solid_fuel_from_light_oil.type = "tool";
   solid_fuel_from_light_oil.inputs = {};
   solid_fuel_from_light_oil.inTypes = {};
@@ -4527,17 +4359,16 @@ vector<Tool> Factorio() {
   ins.type = "light-oil";
   solid_fuel_from_light_oil.inputs.push_back(ins);
   solid_fuel_from_light_oil.inTypes.push_back("light-oil");
-  sort (solid_fuel_from_light_oil.inputs.begin(),solid_fuel_from_light_oil.inputs.end());
   sort (solid_fuel_from_light_oil.inTypes.begin(),solid_fuel_from_light_oil.inTypes.end());
   outs.label = "output1";
   outs.type = "solid-fuel";
   solid_fuel_from_light_oil.outputs.push_back(outs);
-  sort (solid_fuel_from_light_oil.outputs.begin(),solid_fuel_from_light_oil.outputs.end());
   factorio.push_back(solid_fuel_from_light_oil);
 
   Tool solid_fuel_from_petroleum_gas;
   solid_fuel_from_petroleum_gas.name = "solid-fuel-from-petroleum-gas";
   solid_fuel_from_petroleum_gas.id = "solid-fuel-from-petroleum-gas";
+  solid_fuel_from_petroleum_gas.operation = "solid-fuel-from-petroleum-gas";
   solid_fuel_from_petroleum_gas.type = "tool";
   solid_fuel_from_petroleum_gas.inputs = {};
   solid_fuel_from_petroleum_gas.inTypes = {};
@@ -4547,17 +4378,16 @@ vector<Tool> Factorio() {
   ins.type = "petroleum-gas";
   solid_fuel_from_petroleum_gas.inputs.push_back(ins);
   solid_fuel_from_petroleum_gas.inTypes.push_back("petroleum-gas");
-  sort (solid_fuel_from_petroleum_gas.inputs.begin(),solid_fuel_from_petroleum_gas.inputs.end());
   sort (solid_fuel_from_petroleum_gas.inTypes.begin(),solid_fuel_from_petroleum_gas.inTypes.end());
   outs.label = "output1";
   outs.type = "solid-fuel";
   solid_fuel_from_petroleum_gas.outputs.push_back(outs);
-  sort (solid_fuel_from_petroleum_gas.outputs.begin(),solid_fuel_from_petroleum_gas.outputs.end());
   factorio.push_back(solid_fuel_from_petroleum_gas);
 
   Tool speed_module;
   speed_module.name = "speed-module";
   speed_module.id = "speed-module";
+  speed_module.operation = "speed-module";
   speed_module.type = "tool";
   speed_module.inputs = {};
   speed_module.inTypes = {};
@@ -4571,17 +4401,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   speed_module.inputs.push_back(ins);
   speed_module.inTypes.push_back("electronic-circuit");
-  sort (speed_module.inputs.begin(),speed_module.inputs.end());
   sort (speed_module.inTypes.begin(),speed_module.inTypes.end());
   outs.label = "output1";
   outs.type = "speed-module";
   speed_module.outputs.push_back(outs);
-  sort (speed_module.outputs.begin(),speed_module.outputs.end());
   factorio.push_back(speed_module);
 
   Tool speed_module_2;
   speed_module_2.name = "speed-module-2";
   speed_module_2.id = "speed-module-2";
+  speed_module_2.operation = "speed-module-2";
   speed_module_2.type = "tool";
   speed_module_2.inputs = {};
   speed_module_2.inTypes = {};
@@ -4599,17 +4428,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   speed_module_2.inputs.push_back(ins);
   speed_module_2.inTypes.push_back("processing-unit");
-  sort (speed_module_2.inputs.begin(),speed_module_2.inputs.end());
   sort (speed_module_2.inTypes.begin(),speed_module_2.inTypes.end());
   outs.label = "output1";
   outs.type = "speed-module-2";
   speed_module_2.outputs.push_back(outs);
-  sort (speed_module_2.outputs.begin(),speed_module_2.outputs.end());
   factorio.push_back(speed_module_2);
 
   Tool speed_module_3;
   speed_module_3.name = "speed-module-3";
   speed_module_3.id = "speed-module-3";
+  speed_module_3.operation = "speed-module-3";
   speed_module_3.type = "tool";
   speed_module_3.inputs = {};
   speed_module_3.inTypes = {};
@@ -4627,17 +4455,16 @@ vector<Tool> Factorio() {
   ins.type = "processing-unit";
   speed_module_3.inputs.push_back(ins);
   speed_module_3.inTypes.push_back("processing-unit");
-  sort (speed_module_3.inputs.begin(),speed_module_3.inputs.end());
   sort (speed_module_3.inTypes.begin(),speed_module_3.inTypes.end());
   outs.label = "output1";
   outs.type = "speed-module-3";
   speed_module_3.outputs.push_back(outs);
-  sort (speed_module_3.outputs.begin(),speed_module_3.outputs.end());
   factorio.push_back(speed_module_3);
 
   Tool spidertron;
   spidertron.name = "spidertron";
   spidertron.id = "spidertron";
+  spidertron.operation = "spidertron";
   spidertron.type = "tool";
   spidertron.inputs = {};
   spidertron.inTypes = {};
@@ -4675,17 +4502,16 @@ vector<Tool> Factorio() {
   ins.type = "raw-fish";
   spidertron.inputs.push_back(ins);
   spidertron.inTypes.push_back("raw-fish");
-  sort (spidertron.inputs.begin(),spidertron.inputs.end());
   sort (spidertron.inTypes.begin(),spidertron.inTypes.end());
   outs.label = "output1";
   outs.type = "spidertron";
   spidertron.outputs.push_back(outs);
-  sort (spidertron.outputs.begin(),spidertron.outputs.end());
   factorio.push_back(spidertron);
 
   Tool splitter;
   splitter.name = "splitter";
   splitter.id = "splitter";
+  splitter.operation = "splitter";
   splitter.type = "tool";
   splitter.inputs = {};
   splitter.inTypes = {};
@@ -4703,17 +4529,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   splitter.inputs.push_back(ins);
   splitter.inTypes.push_back("transport-belt");
-  sort (splitter.inputs.begin(),splitter.inputs.end());
   sort (splitter.inTypes.begin(),splitter.inTypes.end());
   outs.label = "output1";
   outs.type = "splitter";
   splitter.outputs.push_back(outs);
-  sort (splitter.outputs.begin(),splitter.outputs.end());
   factorio.push_back(splitter);
 
   Tool stack_filter_inserter;
   stack_filter_inserter.name = "stack-filter-inserter";
   stack_filter_inserter.id = "stack-filter-inserter";
+  stack_filter_inserter.operation = "stack-filter-inserter";
   stack_filter_inserter.type = "tool";
   stack_filter_inserter.inputs = {};
   stack_filter_inserter.inTypes = {};
@@ -4727,17 +4552,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   stack_filter_inserter.inputs.push_back(ins);
   stack_filter_inserter.inTypes.push_back("electronic-circuit");
-  sort (stack_filter_inserter.inputs.begin(),stack_filter_inserter.inputs.end());
   sort (stack_filter_inserter.inTypes.begin(),stack_filter_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "stack-filter-inserter";
   stack_filter_inserter.outputs.push_back(outs);
-  sort (stack_filter_inserter.outputs.begin(),stack_filter_inserter.outputs.end());
   factorio.push_back(stack_filter_inserter);
 
   Tool stack_inserter;
   stack_inserter.name = "stack-inserter";
   stack_inserter.id = "stack-inserter";
+  stack_inserter.operation = "stack-inserter";
   stack_inserter.type = "tool";
   stack_inserter.inputs = {};
   stack_inserter.inTypes = {};
@@ -4759,17 +4583,16 @@ vector<Tool> Factorio() {
   ins.type = "fast-inserter";
   stack_inserter.inputs.push_back(ins);
   stack_inserter.inTypes.push_back("fast-inserter");
-  sort (stack_inserter.inputs.begin(),stack_inserter.inputs.end());
   sort (stack_inserter.inTypes.begin(),stack_inserter.inTypes.end());
   outs.label = "output1";
   outs.type = "stack-inserter";
   stack_inserter.outputs.push_back(outs);
-  sort (stack_inserter.outputs.begin(),stack_inserter.outputs.end());
   factorio.push_back(stack_inserter);
 
   Tool steam_engine;
   steam_engine.name = "steam-engine";
   steam_engine.id = "steam-engine";
+  steam_engine.operation = "steam-engine";
   steam_engine.type = "tool";
   steam_engine.inputs = {};
   steam_engine.inTypes = {};
@@ -4787,17 +4610,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   steam_engine.inputs.push_back(ins);
   steam_engine.inTypes.push_back("iron-plate");
-  sort (steam_engine.inputs.begin(),steam_engine.inputs.end());
   sort (steam_engine.inTypes.begin(),steam_engine.inTypes.end());
   outs.label = "output1";
   outs.type = "steam-engine";
   steam_engine.outputs.push_back(outs);
-  sort (steam_engine.outputs.begin(),steam_engine.outputs.end());
   factorio.push_back(steam_engine);
 
   Tool steam_turbine;
   steam_turbine.name = "steam-turbine";
   steam_turbine.id = "steam-turbine";
+  steam_turbine.operation = "steam-turbine";
   steam_turbine.type = "tool";
   steam_turbine.inputs = {};
   steam_turbine.inTypes = {};
@@ -4815,17 +4637,16 @@ vector<Tool> Factorio() {
   ins.type = "pipe";
   steam_turbine.inputs.push_back(ins);
   steam_turbine.inTypes.push_back("pipe");
-  sort (steam_turbine.inputs.begin(),steam_turbine.inputs.end());
   sort (steam_turbine.inTypes.begin(),steam_turbine.inTypes.end());
   outs.label = "output1";
   outs.type = "steam-turbine";
   steam_turbine.outputs.push_back(outs);
-  sort (steam_turbine.outputs.begin(),steam_turbine.outputs.end());
   factorio.push_back(steam_turbine);
 
   Tool steel_chest;
   steel_chest.name = "steel-chest";
   steel_chest.id = "steel-chest";
+  steel_chest.operation = "steel-chest";
   steel_chest.type = "tool";
   steel_chest.inputs = {};
   steel_chest.inTypes = {};
@@ -4835,17 +4656,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   steel_chest.inputs.push_back(ins);
   steel_chest.inTypes.push_back("steel-plate");
-  sort (steel_chest.inputs.begin(),steel_chest.inputs.end());
   sort (steel_chest.inTypes.begin(),steel_chest.inTypes.end());
   outs.label = "output1";
   outs.type = "steel-chest";
   steel_chest.outputs.push_back(outs);
-  sort (steel_chest.outputs.begin(),steel_chest.outputs.end());
   factorio.push_back(steel_chest);
 
   Tool steel_furnace;
   steel_furnace.name = "steel-furnace";
   steel_furnace.id = "steel-furnace";
+  steel_furnace.operation = "steel-furnace";
   steel_furnace.type = "tool";
   steel_furnace.inputs = {};
   steel_furnace.inTypes = {};
@@ -4859,17 +4679,16 @@ vector<Tool> Factorio() {
   ins.type = "stone-brick";
   steel_furnace.inputs.push_back(ins);
   steel_furnace.inTypes.push_back("stone-brick");
-  sort (steel_furnace.inputs.begin(),steel_furnace.inputs.end());
   sort (steel_furnace.inTypes.begin(),steel_furnace.inTypes.end());
   outs.label = "output1";
   outs.type = "steel-furnace";
   steel_furnace.outputs.push_back(outs);
-  sort (steel_furnace.outputs.begin(),steel_furnace.outputs.end());
   factorio.push_back(steel_furnace);
 
   Tool steel_plate;
   steel_plate.name = "steel-plate";
   steel_plate.id = "steel-plate";
+  steel_plate.operation = "steel-plate";
   steel_plate.type = "tool";
   steel_plate.inputs = {};
   steel_plate.inTypes = {};
@@ -4879,17 +4698,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   steel_plate.inputs.push_back(ins);
   steel_plate.inTypes.push_back("iron-plate");
-  sort (steel_plate.inputs.begin(),steel_plate.inputs.end());
   sort (steel_plate.inTypes.begin(),steel_plate.inTypes.end());
   outs.label = "output1";
   outs.type = "steel-plate";
   steel_plate.outputs.push_back(outs);
-  sort (steel_plate.outputs.begin(),steel_plate.outputs.end());
   factorio.push_back(steel_plate);
 
   Tool stone_brick;
   stone_brick.name = "stone-brick";
   stone_brick.id = "stone-brick";
+  stone_brick.operation = "stone-brick";
   stone_brick.type = "tool";
   stone_brick.inputs = {};
   stone_brick.inTypes = {};
@@ -4899,17 +4717,16 @@ vector<Tool> Factorio() {
   ins.type = "stone";
   stone_brick.inputs.push_back(ins);
   stone_brick.inTypes.push_back("stone");
-  sort (stone_brick.inputs.begin(),stone_brick.inputs.end());
   sort (stone_brick.inTypes.begin(),stone_brick.inTypes.end());
   outs.label = "output1";
   outs.type = "stone-brick";
   stone_brick.outputs.push_back(outs);
-  sort (stone_brick.outputs.begin(),stone_brick.outputs.end());
   factorio.push_back(stone_brick);
 
   Tool stone_furnace;
   stone_furnace.name = "stone-furnace";
   stone_furnace.id = "stone-furnace";
+  stone_furnace.operation = "stone-furnace";
   stone_furnace.type = "tool";
   stone_furnace.inputs = {};
   stone_furnace.inTypes = {};
@@ -4919,17 +4736,16 @@ vector<Tool> Factorio() {
   ins.type = "stone";
   stone_furnace.inputs.push_back(ins);
   stone_furnace.inTypes.push_back("stone");
-  sort (stone_furnace.inputs.begin(),stone_furnace.inputs.end());
   sort (stone_furnace.inTypes.begin(),stone_furnace.inTypes.end());
   outs.label = "output1";
   outs.type = "stone-furnace";
   stone_furnace.outputs.push_back(outs);
-  sort (stone_furnace.outputs.begin(),stone_furnace.outputs.end());
   factorio.push_back(stone_furnace);
 
   Tool stone_wall;
   stone_wall.name = "stone-wall";
   stone_wall.id = "stone-wall";
+  stone_wall.operation = "stone-wall";
   stone_wall.type = "tool";
   stone_wall.inputs = {};
   stone_wall.inTypes = {};
@@ -4939,17 +4755,16 @@ vector<Tool> Factorio() {
   ins.type = "stone-brick";
   stone_wall.inputs.push_back(ins);
   stone_wall.inTypes.push_back("stone-brick");
-  sort (stone_wall.inputs.begin(),stone_wall.inputs.end());
   sort (stone_wall.inTypes.begin(),stone_wall.inTypes.end());
   outs.label = "output1";
   outs.type = "stone-wall";
   stone_wall.outputs.push_back(outs);
-  sort (stone_wall.outputs.begin(),stone_wall.outputs.end());
   factorio.push_back(stone_wall);
 
   Tool storage_tank;
   storage_tank.name = "storage-tank";
   storage_tank.id = "storage-tank";
+  storage_tank.operation = "storage-tank";
   storage_tank.type = "tool";
   storage_tank.inputs = {};
   storage_tank.inTypes = {};
@@ -4963,17 +4778,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   storage_tank.inputs.push_back(ins);
   storage_tank.inTypes.push_back("steel-plate");
-  sort (storage_tank.inputs.begin(),storage_tank.inputs.end());
   sort (storage_tank.inTypes.begin(),storage_tank.inTypes.end());
   outs.label = "output1";
   outs.type = "storage-tank";
   storage_tank.outputs.push_back(outs);
-  sort (storage_tank.outputs.begin(),storage_tank.outputs.end());
   factorio.push_back(storage_tank);
 
   Tool submachine_gun;
   submachine_gun.name = "submachine-gun";
   submachine_gun.id = "submachine-gun";
+  submachine_gun.operation = "submachine-gun";
   submachine_gun.type = "tool";
   submachine_gun.inputs = {};
   submachine_gun.inTypes = {};
@@ -4991,17 +4805,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-plate";
   submachine_gun.inputs.push_back(ins);
   submachine_gun.inTypes.push_back("iron-plate");
-  sort (submachine_gun.inputs.begin(),submachine_gun.inputs.end());
   sort (submachine_gun.inTypes.begin(),submachine_gun.inTypes.end());
   outs.label = "output1";
   outs.type = "submachine-gun";
   submachine_gun.outputs.push_back(outs);
-  sort (submachine_gun.outputs.begin(),submachine_gun.outputs.end());
   factorio.push_back(submachine_gun);
 
   Tool substation;
   substation.name = "substation";
   substation.id = "substation";
+  substation.operation = "substation";
   substation.type = "tool";
   substation.inputs = {};
   substation.inTypes = {};
@@ -5019,17 +4832,16 @@ vector<Tool> Factorio() {
   ins.type = "copper-plate";
   substation.inputs.push_back(ins);
   substation.inTypes.push_back("copper-plate");
-  sort (substation.inputs.begin(),substation.inputs.end());
   sort (substation.inTypes.begin(),substation.inTypes.end());
   outs.label = "output1";
   outs.type = "substation";
   substation.outputs.push_back(outs);
-  sort (substation.outputs.begin(),substation.outputs.end());
   factorio.push_back(substation);
 
   Tool sulfur;
   sulfur.name = "sulfur";
   sulfur.id = "sulfur";
+  sulfur.operation = "sulfur";
   sulfur.type = "tool";
   sulfur.inputs = {};
   sulfur.inTypes = {};
@@ -5043,17 +4855,16 @@ vector<Tool> Factorio() {
   ins.type = "petroleum-gas";
   sulfur.inputs.push_back(ins);
   sulfur.inTypes.push_back("petroleum-gas");
-  sort (sulfur.inputs.begin(),sulfur.inputs.end());
   sort (sulfur.inTypes.begin(),sulfur.inTypes.end());
   outs.label = "output1";
   outs.type = "sulfur";
   sulfur.outputs.push_back(outs);
-  sort (sulfur.outputs.begin(),sulfur.outputs.end());
   factorio.push_back(sulfur);
 
   Tool sulfuric_acid;
   sulfuric_acid.name = "sulfuric-acid";
   sulfuric_acid.id = "sulfuric-acid";
+  sulfuric_acid.operation = "sulfuric-acid";
   sulfuric_acid.type = "tool";
   sulfuric_acid.inputs = {};
   sulfuric_acid.inTypes = {};
@@ -5071,17 +4882,16 @@ vector<Tool> Factorio() {
   ins.type = "water";
   sulfuric_acid.inputs.push_back(ins);
   sulfuric_acid.inTypes.push_back("water");
-  sort (sulfuric_acid.inputs.begin(),sulfuric_acid.inputs.end());
   sort (sulfuric_acid.inTypes.begin(),sulfuric_acid.inTypes.end());
   outs.label = "output1";
   outs.type = "sulfuric-acid";
   sulfuric_acid.outputs.push_back(outs);
-  sort (sulfuric_acid.outputs.begin(),sulfuric_acid.outputs.end());
   factorio.push_back(sulfuric_acid);
 
   Tool tank;
   tank.name = "tank";
   tank.id = "tank";
+  tank.operation = "tank";
   tank.type = "tool";
   tank.inputs = {};
   tank.inTypes = {};
@@ -5103,17 +4913,16 @@ vector<Tool> Factorio() {
   ins.type = "advanced-circuit";
   tank.inputs.push_back(ins);
   tank.inTypes.push_back("advanced-circuit");
-  sort (tank.inputs.begin(),tank.inputs.end());
   sort (tank.inTypes.begin(),tank.inTypes.end());
   outs.label = "output1";
   outs.type = "tank";
   tank.outputs.push_back(outs);
-  sort (tank.outputs.begin(),tank.outputs.end());
   factorio.push_back(tank);
 
   Tool train_stop;
   train_stop.name = "train-stop";
   train_stop.id = "train-stop";
+  train_stop.operation = "train-stop";
   train_stop.type = "tool";
   train_stop.inputs = {};
   train_stop.inTypes = {};
@@ -5135,17 +4944,16 @@ vector<Tool> Factorio() {
   ins.type = "steel-plate";
   train_stop.inputs.push_back(ins);
   train_stop.inTypes.push_back("steel-plate");
-  sort (train_stop.inputs.begin(),train_stop.inputs.end());
   sort (train_stop.inTypes.begin(),train_stop.inTypes.end());
   outs.label = "output1";
   outs.type = "train-stop";
   train_stop.outputs.push_back(outs);
-  sort (train_stop.outputs.begin(),train_stop.outputs.end());
   factorio.push_back(train_stop);
 
   Tool transport_belt;
   transport_belt.name = "transport-belt";
   transport_belt.id = "transport-belt";
+  transport_belt.operation = "transport-belt";
   transport_belt.type = "tool";
   transport_belt.inputs = {};
   transport_belt.inTypes = {};
@@ -5159,17 +4967,16 @@ vector<Tool> Factorio() {
   ins.type = "iron-gear-wheel";
   transport_belt.inputs.push_back(ins);
   transport_belt.inTypes.push_back("iron-gear-wheel");
-  sort (transport_belt.inputs.begin(),transport_belt.inputs.end());
   sort (transport_belt.inTypes.begin(),transport_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "transport-belt";
   transport_belt.outputs.push_back(outs);
-  sort (transport_belt.outputs.begin(),transport_belt.outputs.end());
   factorio.push_back(transport_belt);
 
   Tool underground_belt;
   underground_belt.name = "underground-belt";
   underground_belt.id = "underground-belt";
+  underground_belt.operation = "underground-belt";
   underground_belt.type = "tool";
   underground_belt.inputs = {};
   underground_belt.inTypes = {};
@@ -5183,17 +4990,16 @@ vector<Tool> Factorio() {
   ins.type = "transport-belt";
   underground_belt.inputs.push_back(ins);
   underground_belt.inTypes.push_back("transport-belt");
-  sort (underground_belt.inputs.begin(),underground_belt.inputs.end());
   sort (underground_belt.inTypes.begin(),underground_belt.inTypes.end());
   outs.label = "output1";
   outs.type = "underground-belt";
   underground_belt.outputs.push_back(outs);
-  sort (underground_belt.outputs.begin(),underground_belt.outputs.end());
   factorio.push_back(underground_belt);
 
   Tool uranium_cannon_shell;
   uranium_cannon_shell.name = "uranium-cannon-shell";
   uranium_cannon_shell.id = "uranium-cannon-shell";
+  uranium_cannon_shell.operation = "uranium-cannon-shell";
   uranium_cannon_shell.type = "tool";
   uranium_cannon_shell.inputs = {};
   uranium_cannon_shell.inTypes = {};
@@ -5207,17 +5013,16 @@ vector<Tool> Factorio() {
   ins.type = "uranium-238";
   uranium_cannon_shell.inputs.push_back(ins);
   uranium_cannon_shell.inTypes.push_back("uranium-238");
-  sort (uranium_cannon_shell.inputs.begin(),uranium_cannon_shell.inputs.end());
   sort (uranium_cannon_shell.inTypes.begin(),uranium_cannon_shell.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-cannon-shell";
   uranium_cannon_shell.outputs.push_back(outs);
-  sort (uranium_cannon_shell.outputs.begin(),uranium_cannon_shell.outputs.end());
   factorio.push_back(uranium_cannon_shell);
 
   Tool uranium_fuel_cell;
   uranium_fuel_cell.name = "uranium-fuel-cell";
   uranium_fuel_cell.id = "uranium-fuel-cell";
+  uranium_fuel_cell.operation = "uranium-fuel-cell";
   uranium_fuel_cell.type = "tool";
   uranium_fuel_cell.inputs = {};
   uranium_fuel_cell.inTypes = {};
@@ -5235,17 +5040,16 @@ vector<Tool> Factorio() {
   ins.type = "uranium-238";
   uranium_fuel_cell.inputs.push_back(ins);
   uranium_fuel_cell.inTypes.push_back("uranium-238");
-  sort (uranium_fuel_cell.inputs.begin(),uranium_fuel_cell.inputs.end());
   sort (uranium_fuel_cell.inTypes.begin(),uranium_fuel_cell.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-fuel-cell";
   uranium_fuel_cell.outputs.push_back(outs);
-  sort (uranium_fuel_cell.outputs.begin(),uranium_fuel_cell.outputs.end());
   factorio.push_back(uranium_fuel_cell);
 
   Tool uranium_processing;
   uranium_processing.name = "uranium-processing";
   uranium_processing.id = "uranium-processing";
+  uranium_processing.operation = "uranium-processing";
   uranium_processing.type = "tool";
   uranium_processing.inputs = {};
   uranium_processing.inTypes = {};
@@ -5255,7 +5059,6 @@ vector<Tool> Factorio() {
   ins.type = "uranium-ore";
   uranium_processing.inputs.push_back(ins);
   uranium_processing.inTypes.push_back("uranium-ore");
-  sort (uranium_processing.inputs.begin(),uranium_processing.inputs.end());
   sort (uranium_processing.inTypes.begin(),uranium_processing.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-235";
@@ -5263,12 +5066,12 @@ vector<Tool> Factorio() {
   outs.label = "output2";
   outs.type = "uranium-238";
   uranium_processing.outputs.push_back(outs);
-  sort (uranium_processing.outputs.begin(),uranium_processing.outputs.end());
   factorio.push_back(uranium_processing);
 
   Tool uranium_rounds_magazine;
   uranium_rounds_magazine.name = "uranium-rounds-magazine";
   uranium_rounds_magazine.id = "uranium-rounds-magazine";
+  uranium_rounds_magazine.operation = "uranium-rounds-magazine";
   uranium_rounds_magazine.type = "tool";
   uranium_rounds_magazine.inputs = {};
   uranium_rounds_magazine.inTypes = {};
@@ -5282,17 +5085,16 @@ vector<Tool> Factorio() {
   ins.type = "uranium-238";
   uranium_rounds_magazine.inputs.push_back(ins);
   uranium_rounds_magazine.inTypes.push_back("uranium-238");
-  sort (uranium_rounds_magazine.inputs.begin(),uranium_rounds_magazine.inputs.end());
   sort (uranium_rounds_magazine.inTypes.begin(),uranium_rounds_magazine.inTypes.end());
   outs.label = "output1";
   outs.type = "uranium-rounds-magazine";
   uranium_rounds_magazine.outputs.push_back(outs);
-  sort (uranium_rounds_magazine.outputs.begin(),uranium_rounds_magazine.outputs.end());
   factorio.push_back(uranium_rounds_magazine);
 
   Tool utility_science_pack;
   utility_science_pack.name = "utility-science-pack";
   utility_science_pack.id = "utility-science-pack";
+  utility_science_pack.operation = "utility-science-pack";
   utility_science_pack.type = "tool";
   utility_science_pack.inputs = {};
   utility_science_pack.inTypes = {};
@@ -5310,17 +5112,16 @@ vector<Tool> Factorio() {
   ins.type = "flying-robot-frame";
   utility_science_pack.inputs.push_back(ins);
   utility_science_pack.inTypes.push_back("flying-robot-frame");
-  sort (utility_science_pack.inputs.begin(),utility_science_pack.inputs.end());
   sort (utility_science_pack.inTypes.begin(),utility_science_pack.inTypes.end());
   outs.label = "output1";
   outs.type = "utility-science-pack";
   utility_science_pack.outputs.push_back(outs);
-  sort (utility_science_pack.outputs.begin(),utility_science_pack.outputs.end());
   factorio.push_back(utility_science_pack);
 
   Tool wooden_chest;
   wooden_chest.name = "wooden-chest";
   wooden_chest.id = "wooden-chest";
+  wooden_chest.operation = "wooden-chest";
   wooden_chest.type = "tool";
   wooden_chest.inputs = {};
   wooden_chest.inTypes = {};
@@ -5330,17 +5131,16 @@ vector<Tool> Factorio() {
   ins.type = "wood";
   wooden_chest.inputs.push_back(ins);
   wooden_chest.inTypes.push_back("wood");
-  sort (wooden_chest.inputs.begin(),wooden_chest.inputs.end());
   sort (wooden_chest.inTypes.begin(),wooden_chest.inTypes.end());
   outs.label = "output1";
   outs.type = "wooden-chest";
   wooden_chest.outputs.push_back(outs);
-  sort (wooden_chest.outputs.begin(),wooden_chest.outputs.end());
   factorio.push_back(wooden_chest);
 
   Tool burner_inserter_upgrade;
   burner_inserter_upgrade.name = "burner-inserter-upgrade";
   burner_inserter_upgrade.id = "burner-inserter-upgrade";
+  burner_inserter_upgrade.operation = "burner-inserter-upgrade";
   burner_inserter_upgrade.type = "tool";
   burner_inserter_upgrade.inputs = {};
   burner_inserter_upgrade.inTypes = {};
@@ -5354,17 +5154,16 @@ vector<Tool> Factorio() {
   ins.type = "electronic-circuit";
   burner_inserter_upgrade.inputs.push_back(ins);
   burner_inserter_upgrade.inTypes.push_back("electronic-circuit");
-  sort (burner_inserter_upgrade.inputs.begin(),burner_inserter_upgrade.inputs.end());
   sort (burner_inserter_upgrade.inTypes.begin(),burner_inserter_upgrade.inTypes.end());
   outs.label = "output1";
   outs.type = "inserter";
   burner_inserter_upgrade.outputs.push_back(outs);
-  sort (burner_inserter_upgrade.outputs.begin(),burner_inserter_upgrade.outputs.end());
   factorio.push_back(burner_inserter_upgrade);
 
   Tool burner_mining_drill_upgrade;
   burner_mining_drill_upgrade.name = "burner-mining-drill-upgrade";
   burner_mining_drill_upgrade.id = "burner-mining-drill-upgrade";
+  burner_mining_drill_upgrade.operation = "burner-mining-drill-upgrade";
   burner_mining_drill_upgrade.type = "tool";
   burner_mining_drill_upgrade.inputs = {};
   burner_mining_drill_upgrade.inTypes = {};
@@ -5378,172 +5177,160 @@ vector<Tool> Factorio() {
   ins.type = "burner-mining-drill";
   burner_mining_drill_upgrade.inputs.push_back(ins);
   burner_mining_drill_upgrade.inTypes.push_back("burner-mining-drill");
-  sort (burner_mining_drill_upgrade.inputs.begin(),burner_mining_drill_upgrade.inputs.end());
   sort (burner_mining_drill_upgrade.inTypes.begin(),burner_mining_drill_upgrade.inTypes.end());
   outs.label = "output1";
   outs.type = "electric-mining-drill";
   burner_mining_drill_upgrade.outputs.push_back(outs);
-  sort (burner_mining_drill_upgrade.outputs.begin(),burner_mining_drill_upgrade.outputs.end());
   factorio.push_back(burner_mining_drill_upgrade);
 
   Tool iron_ore;
   iron_ore.name = "iron-ore";
   iron_ore.id = "iron-ore";
+  iron_ore.operation = "iron-ore";
   iron_ore.type = "resource";
   iron_ore.inputs = {};
   iron_ore.inTypes = {};
   iron_ore.outputs = {};
 
-  sort (iron_ore.inputs.begin(),iron_ore.inputs.end());
   sort (iron_ore.inTypes.begin(),iron_ore.inTypes.end());
   outs.label = "outpu1";
   outs.type = "iron-ore";
   iron_ore.outputs.push_back(outs);
-  sort (iron_ore.outputs.begin(),iron_ore.outputs.end());
   factorio.push_back(iron_ore);
 
   Tool copper_ore;
   copper_ore.name = "copper-ore";
   copper_ore.id = "copper-ore";
+  copper_ore.operation = "copper-ore";
   copper_ore.type = "resource";
   copper_ore.inputs = {};
   copper_ore.inTypes = {};
   copper_ore.outputs = {};
 
-  sort (copper_ore.inputs.begin(),copper_ore.inputs.end());
   sort (copper_ore.inTypes.begin(),copper_ore.inTypes.end());
   outs.label = "outpu1";
   outs.type = "copper-ore";
   copper_ore.outputs.push_back(outs);
-  sort (copper_ore.outputs.begin(),copper_ore.outputs.end());
   factorio.push_back(copper_ore);
 
   Tool coal;
   coal.name = "coal";
   coal.id = "coal";
+  coal.operation = "coal";
   coal.type = "resource";
   coal.inputs = {};
   coal.inTypes = {};
   coal.outputs = {};
 
-  sort (coal.inputs.begin(),coal.inputs.end());
   sort (coal.inTypes.begin(),coal.inTypes.end());
   outs.label = "outpu1";
   outs.type = "coal";
   coal.outputs.push_back(outs);
-  sort (coal.outputs.begin(),coal.outputs.end());
   factorio.push_back(coal);
 
   Tool stone;
   stone.name = "stone";
   stone.id = "stone";
+  stone.operation = "stone";
   stone.type = "resource";
   stone.inputs = {};
   stone.inTypes = {};
   stone.outputs = {};
 
-  sort (stone.inputs.begin(),stone.inputs.end());
   sort (stone.inTypes.begin(),stone.inTypes.end());
   outs.label = "outpu1";
   outs.type = "stone";
   stone.outputs.push_back(outs);
-  sort (stone.outputs.begin(),stone.outputs.end());
   factorio.push_back(stone);
 
   Tool wood;
   wood.name = "wood";
   wood.id = "wood";
+  wood.operation = "wood";
   wood.type = "resource";
   wood.inputs = {};
   wood.inTypes = {};
   wood.outputs = {};
 
-  sort (wood.inputs.begin(),wood.inputs.end());
   sort (wood.inTypes.begin(),wood.inTypes.end());
   outs.label = "outpu1";
   outs.type = "wood";
   wood.outputs.push_back(outs);
-  sort (wood.outputs.begin(),wood.outputs.end());
   factorio.push_back(wood);
 
   Tool heavy_oil;
   heavy_oil.name = "heavy-oil";
   heavy_oil.id = "heavy-oil";
+  heavy_oil.operation = "heavy-oil";
   heavy_oil.type = "resource";
   heavy_oil.inputs = {};
   heavy_oil.inTypes = {};
   heavy_oil.outputs = {};
 
-  sort (heavy_oil.inputs.begin(),heavy_oil.inputs.end());
   sort (heavy_oil.inTypes.begin(),heavy_oil.inTypes.end());
   outs.label = "outpu1";
   outs.type = "heavy-oil";
   heavy_oil.outputs.push_back(outs);
-  sort (heavy_oil.outputs.begin(),heavy_oil.outputs.end());
   factorio.push_back(heavy_oil);
 
   Tool crude_oil;
   crude_oil.name = "crude-oil";
   crude_oil.id = "crude-oil";
+  crude_oil.operation = "crude-oil";
   crude_oil.type = "resource";
   crude_oil.inputs = {};
   crude_oil.inTypes = {};
   crude_oil.outputs = {};
 
-  sort (crude_oil.inputs.begin(),crude_oil.inputs.end());
   sort (crude_oil.inTypes.begin(),crude_oil.inTypes.end());
   outs.label = "outpu1";
   outs.type = "crude-oil";
   crude_oil.outputs.push_back(outs);
-  sort (crude_oil.outputs.begin(),crude_oil.outputs.end());
   factorio.push_back(crude_oil);
 
   Tool light_oil;
   light_oil.name = "light-oil";
   light_oil.id = "light-oil";
+  light_oil.operation = "light-oil";
   light_oil.type = "resource";
   light_oil.inputs = {};
   light_oil.inTypes = {};
   light_oil.outputs = {};
 
-  sort (light_oil.inputs.begin(),light_oil.inputs.end());
   sort (light_oil.inTypes.begin(),light_oil.inTypes.end());
   outs.label = "outpu1";
   outs.type = "light-oil";
   light_oil.outputs.push_back(outs);
-  sort (light_oil.outputs.begin(),light_oil.outputs.end());
   factorio.push_back(light_oil);
 
   Tool water;
   water.name = "water";
   water.id = "water";
+  water.operation = "water";
   water.type = "resource";
   water.inputs = {};
   water.inTypes = {};
   water.outputs = {};
 
-  sort (water.inputs.begin(),water.inputs.end());
   sort (water.inTypes.begin(),water.inTypes.end());
   outs.label = "outpu1";
   outs.type = "water";
   water.outputs.push_back(outs);
-  sort (water.outputs.begin(),water.outputs.end());
   factorio.push_back(water);
 
   Tool petroleum_gas;
   petroleum_gas.name = "petroleum-gas";
   petroleum_gas.id = "petroleum-gas";
+  petroleum_gas.operation = "petroleum-gas";
   petroleum_gas.type = "resource";
   petroleum_gas.inputs = {};
   petroleum_gas.inTypes = {};
   petroleum_gas.outputs = {};
 
-  sort (petroleum_gas.inputs.begin(),petroleum_gas.inputs.end());
   sort (petroleum_gas.inTypes.begin(),petroleum_gas.inTypes.end());
   outs.label = "outpu1";
   outs.type = "petroleum-gas";
   petroleum_gas.outputs.push_back(outs);
-  sort (petroleum_gas.outputs.begin(),petroleum_gas.outputs.end());
   factorio.push_back(petroleum_gas);
   return factorio;
 }

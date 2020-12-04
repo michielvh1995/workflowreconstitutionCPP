@@ -7,6 +7,7 @@
 #include <algorithm> // for
 #include <iostream>  // cout etc
 #include <map>       // dictionaries
+#include <chrono>		 // Timing execution time
 
 
 using namespace std;
@@ -15,7 +16,13 @@ using namespace std;
 // =============== Here we set our constants ================
 // ==========================================================
 
-#define MAXINT 1E8
+#define MAXINT      1E8
+#define maxPlat     10
+#define maxGen      25
+#define mutChance   0.5
+#define xoChance    1.0
+#define parentsCompete true
+#define POOLSIZE    1000
 
 // ==========================================================
 // =============== Common objects and classes ===============
@@ -28,16 +35,19 @@ struct Input {
 
 // Struct for tools
 struct Tool {
-	string name, type, id;
-	vector<string> operations, inTypes;
+	string name, type, id, operation;
+	vector<string> inTypes;
 	vector<Input> inputs, outputs;
 
 	inline bool operator ==(Tool a) {
 	  // printf("Operations 0:");
 	  // printf("%s\n", operations[0].c_str());
 	  // fflush(stdout);
-	  // return operations[0] == a.operations[0];
-	  return name == a.name;
+	  return operation == a.operation;
+	  // return name == a.name;
+	}
+	inline bool operator <(Tool a) {
+	  return name < a.name;
 	}
 };
 
@@ -58,10 +68,8 @@ vector<T> Slice(vector<T>& source, int from, int to) {
 
   // Create and fill in the output vector
   vector<T> res = vector<T>(end-start);
-  
+
   copy(start, end, res.begin());
 
   return res;
 }
-
-
