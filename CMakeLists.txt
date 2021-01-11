@@ -17,3 +17,9 @@ add_executable(reconstitute ${SOURCES})
 
 # Followed this tutorial on:
 # http://derekmolloy.ie/hello-world-introductions-to-cmake/
+
+
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(reconstitute PUBLIC OpenMP::OpenMP_CXX)
+endif()

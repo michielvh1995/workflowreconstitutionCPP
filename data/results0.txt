@@ -1,0 +1,31 @@
+Entered 2 arguments
+TODO:
+ * Generate Trees (at random)
+ * More fitness functions
+
+Get the data-set:
+Retrieved 213 tools
+
+Factorio, Correctness + LD, EPO, ECO, generate random replace, 2-1-tournament 25 repeats
+1000 & 213 & 0.00 & 1.00 & 6 & 1 & 2.00 & 0.72s \\
+10000 & 213 & 0.00 & 1.00 & 6 & 1 & 2.00 & 7.65s \\
+25000 & 213 & 0.00 & 1.00 & 6 & 1 & 2.00 & 18.35s \\
+100000 & 213 & 0.00 & 1.00 & 6 & 1 & 2.00 & 108.35s \\
+
+Factorio, Correctness + LD, EPO, ECO, generate random replace, 2-1-tournament 25 repeats
+1000 & 213 & 0.00 & 0.50 & 6 & 1 & 2.12 & 0.60s \\
+10000 & 213 & 0.00 & 0.50 & 6 & 1 & 2.00 & 6.60s \\
+25000 & 213 & 0.00 & 0.50 & 6 & 1 & 2.00 & 16.53s \\
+100000 & 213 & 0.00 & 0.50 & 6 & 1 & 2.00 & 65.71s \\
+
+Factorio, Correctness + LD, EPO, ECO, generate random, 2-1-tournament 25 repeats
+1000 & 213 & 0.00 & 1.00 & 6 & 1 & 20.00 & 1.16s \\
+10000 & 213 & 0.00 & 1.00 & 6 & 1 & 16.08 & 13.47s \\
+25000 & 213 & 0.00 & 1.00 & 6 & 1 & 14.32 & 28.17s \\
+100000 & 213 & 0.00 & 1.00 & 6 & 1 & 13.92 & 111.71s \\ 
+
+Factorio, Correctness + LD, EPO, ECO, generate random, 2-1-tournament 25 repeats
+1000 & 213 & 0.00 & 0.50 & 6 & 1 & 20.60 & 0.88s \\
+10000 & 213 & 0.00 & 0.50 & 6 & 1 & 16.60 & 9.11s \\
+25000 & 213 & 0.00 & 0.50 & 6 & 1 & 14.36 & 25.40s \\
+100000 & 213 & 0.00 & 0.50 & 6 & 1 & 14.56 & 107.50s \\

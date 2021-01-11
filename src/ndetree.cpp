@@ -1,6 +1,6 @@
 #include "ndetree.h"
 
-static bool subTreeSort(Tool i, Tool j) { return i.name < j.name; }
+static bool subTreeSort(Tool i, Tool j) { return i.operation < j.operation; }
 
 void NDETree::CalculateLD() {
   // For each layer, create its own vector
@@ -23,18 +23,19 @@ void NDETree::CalcAddLayerDecomposition(NDETree &goal) {
 
   // Now we check per depth what the difference is between the levels
   vector<Tool> diff;
-  for(auto d= 0; d < min(mdepth, goal.mdepth); d++) {
-    set_symmetric_difference(LD[d].begin(),
-
+  for(auto d= 0; d < min(mdepth, goal.mdepth); d++)
+    set_symmetric_difference(
+	 LD[d].begin(),
 	 LD[d].end(),
 	 goal.LD[d].begin(),
 	 goal.LD[d].end(),
 	 inserter(diff, diff.begin())
     );
-    // And update the fitness value with the difference
-    Fitness += diff.size();
-  }
   
+  // And update the fitness value with the difference
+  Fitness += diff.size();
+  diff.clear();
+
   // Now we add the cost of the levels that are missing in either tree:
   if(mdepth > goal.mdepth) for(auto d = goal.mdepth; d < mdepth; ++d) Fitness += LD[d].size();
   if(mdepth < goal.mdepth) for(auto d = mdepth; d < goal.mdepth; ++d) Fitness += goal.LD[d].size(); 

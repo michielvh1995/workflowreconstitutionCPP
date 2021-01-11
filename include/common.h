@@ -1,6 +1,6 @@
 #define COMMON true
 
-#include <stdlib.h>  // rand
+#include <stdlib.h>  // rand, atoi
 #include <time.h>    // time
 #include <string>    // string
 #include <vector>    // vector
@@ -8,21 +8,14 @@
 #include <iostream>  // cout etc
 #include <map>       // dictionaries
 #include <chrono>		 // Timing execution time
-
+#include <numeric>	 // Accumulate
 
 using namespace std;
 
 // ==========================================================
 // =============== Here we set our constants ================
 // ==========================================================
-
-#define MAXINT      1E8
-#define maxPlat     10
-#define maxGen      25
-#define mutChance   0.5
-#define xoChance    1.0
-#define parentsCompete true
-#define POOLSIZE    1000
+#define MAXINT			1E8
 
 // ==========================================================
 // =============== Common objects and classes ===============

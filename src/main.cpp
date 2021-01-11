@@ -1,10 +1,23 @@
-#ifndef COMMON
-#include "common.h"
+#define maxPlat     10
+#define maxGen      100
+#define REPEATS     25
+#define parentsCompete true
+
+bool verbose     = false;
+int  POOLSIZE    = 250;
+float mutChance  = 0.1;
+float xoChance   = 1.0;
+
+/*
+ What we output:
+ % PopSize, p(mut), p(x), tree size, tools missing count, calcTime, avg fitness
+*/
+
+#ifndef MAIN
+#include "main.h"
 #endif
 
-#ifndef NDE
-#include "ndetree.h"
-#endif
+#include "generators.h"
 
 // =============================================================
 // ======================== Import Data ========================
@@ -15,8 +28,6 @@
 
 // ImageMagick
 // #include "../data/imagemagickGenerator.cpp"
-
-
 
 // =============================================================
 // ================= Set the genetic operators =================
@@ -45,7 +56,7 @@ vector<NDETree> Select(vector<NDETree> *pool) {
 //
 //
 NDETree CrossOver(NDETree* p1, NDETree* p2) {
-  if(((float) (rand() % 100))/100 < xoChance)
+  if(((float) (rand() % 1000))/1000 < xoChance)
     return NDETree::ECO(p1, p2);
   return *(p1);
 }
@@ -53,7 +64,7 @@ NDETree CrossOver(NDETree* p1, NDETree* p2) {
 // This function mutates a single individual tree into the other
 void Mutate(NDETree* tree) {
   // Determine whether or not we will mutate
-  if(((float) (rand() % 100))/100 > mutChance) return;
+  if(((float) (rand() % 1000))/1000 > mutChance) return;
 
 
   // Get two random indices
@@ -77,84 +88,13 @@ void Fitness(NDETree *tree, NDETree& goal){
   tree->CalcAddLayerDecomposition(goal);
 }
 
-bool treeCompare(const NDETree& a, const NDETree& b)
-{
-    // smallest comes first
-    return a.Fitness < b.Fitness;
-}
-
-
-NDETree GenerateRandomTree(int mdepth, int size, vector<Tool> toolset, Tool root) {
-  // Set the root node
-  vector<Tool> tools = {root};
-  vector<int> depths = {0};
-
-  // Now to calculate the rest...
-  int depth = 1;
-  for(auto i = 1; i < size; ++i) {
-    // Insert a random tool
-    tools.push_back(toolset[rand() % toolset.size()]);
-    depths.push_back(depth);
-
-    // Now to calculate the depth of the next node
-    if(rand() % 2) depth = min(depth+1, mdepth);
-    else if (rand() % 2) depth = max(depth-1,1);
-  }
-
-  return NDETree(tools, depths);
-}
-
-vector<NDETree> GenerateInitialPopRandomly(vector<Tool> toolset, NDETree goal) {
-  vector<NDETree> pool;
-  for (auto i = 0; i< POOLSIZE; ++i) {
-    // Determine what the maximum depth is, this is done by taking the depth of the original
-    //  then it is changed according to its depth/size
-    int mdepth = *max_element(goal.Depths.begin(), goal.Depths.end());
-    int diff = rand() % ((2*mdepth)/goal.Depths.size()) - (mdepth/goal.Depths.size());
-    mdepth += diff;
-    auto tree = GenerateRandomTree(mdepth, goal.Tools.size(), toolset, goal.Tools[0]);
-    pool.push_back(tree);
-  }
-  return pool;
-}
-
-vector<NDETree> GenerateInitialPopOriginalOnly(vector<Tool> toolset, NDETree goal) {
-  // Generate the initial population by copying the goal tree a million times
-  vector<NDETree> pool;
-
-  for (auto i = 0; i< POOLSIZE; ++i) pool.push_back(NDETree::Copy(goal));
-
-  return pool;
-}
-
-vector<NDETree> GenerateInitialPopRandomReplace(map<string, Tool> toolbox, vector<Tool> toolset, NDETree goal) {
-  // Generate the initial population by copying the goal tree a million times
-  //  however, this function also checks whether or not the tree has missing tools. Those are randomly filled in
-  vector<NDETree> pool;
-  vector<int> missingInds;
-
-  // Gather which tools are missing
-  for(auto i = 0; i < goal.Tools.size(); ++i)
-     if (toolbox.count(goal.Tools[i].name) == 0)
-       missingInds.push_back(i);
-
-  for (auto i = 0; i < POOLSIZE; ++i) {
-    auto tree = NDETree::Copy(goal);
-
-    for(auto j : missingInds) {
-      tree.Tools[j] = toolset[rand() % toolset.size()];
-    }
-    pool.push_back(tree);
-  }
-
-  return pool;
-}
-
 // =============================================================
 // ================== The Genetic Game itself ==================
 // =============================================================
 
-NDETree Play(vector<NDETree> pool, NDETree& goal) {
+NDETree Play(vector<NDETree> pool, NDETree& goal, bool verbose = true) {
+  if(verbose)
+    printf("Parameters:\n popsize: %d, p(xo) %.2f, p(mut) %.2f \n\n", POOLSIZE, xoChance, mutChance);
 
   vector<NDETree> parents;
   vector<NDETree> children;
@@ -165,9 +105,8 @@ NDETree Play(vector<NDETree> pool, NDETree& goal) {
   int lastbest = MAXINT;
 
   // Play the genetic game
-  fflush(stdout);
-
   while (Stop(generation, lastbest, pool[0].Fitness, platSize)) {
+    // printf("start\n");
     // TIMING
     auto t1 = std::chrono::high_resolution_clock::now();
 
@@ -177,6 +116,7 @@ NDETree Play(vector<NDETree> pool, NDETree& goal) {
     // Generate the offspring
     for (auto i = 0; i < parents.size()/2; i++) {
       // printf("Begin with individual %d\n", i);
+      //printf("preXO\n");
 
       // perform crossover
       NDETree c1 = CrossOver(&parents[i*2], &parents[i*2 +1]);
@@ -186,6 +126,8 @@ NDETree Play(vector<NDETree> pool, NDETree& goal) {
       // mutate both
       Mutate(&c1);
       Mutate(&c2);
+
+      //printf("preF %d // %d\n", c1.Tools.size(), c2.Tools.size());
 
       // printf("Post mutation\n");
       // Calculate their fitness
@@ -210,16 +152,18 @@ NDETree Play(vector<NDETree> pool, NDETree& goal) {
 
     // Reset the children list for the next generation
     children.clear();
-    printf("Generation %d's best has fitness %d\n", generation, pool[0].Fitness);
 
     // Update plateau values and the generation
     if(lastbest <= pool[0].Fitness) platSize++;
     else lastbest = pool[0].Fitness;
 
     // TIMING
-    auto t2 = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-    printf("  Generation %d took %.3f ms\n", generation, ((float)duration)/1000);
+    if(verbose) {
+        printf("Generation %d's best has fitness %d\n", generation, pool[0].Fitness);
+      auto t2 = std::chrono::high_resolution_clock::now();
+      auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+      printf("  Generation %d took %.3f ms\n", generation, ((float)duration)/1000);
+    }
     // ENDTIMING
 
     generation++;
@@ -229,15 +173,55 @@ NDETree Play(vector<NDETree> pool, NDETree& goal) {
   return pool[0];
 }
 
-int main() {
+double average(vector<int> v) {
+  double sum;
+  for (auto i : v) sum += i;
+
+  return (sum/v.size());
+
+}
+
+
+vector<float> RunGame(vector<NDETree> pool, NDETree goal, vector<Tool> tools, int repeats, bool verbose = true) {
+  vector<int> fitnesses(repeats);
+  auto t1 = std::chrono::high_resolution_clock::now();
+
+  for(auto i =0; i< repeats; ++i) {
+
+    auto tree = Play(pool, goal, verbose = verbose);
+    Fitness(&tree, goal);
+
+    if(verbose) {
+      auto t2 = std::chrono::high_resolution_clock::now();
+      auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+      printf("Found solution: ");
+      tree.Print();
+      printf("Calculating this tree took %.3f seconds\n", ((float)duration)/1000000);
+    }
+
+    fitnesses[i] = tree.Fitness;
+  }
+  auto t2 = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+
+  // Output the average fitness and the average time per found solution
+  return { average(fitnesses), ((float)duration)/(1000000 * repeats) };
+}
+
+
+
+int main(int argc, char **argv) {
   // =============================================================
   // =================== Initalize some values ===================
   // =============================================================
+  printf("Entered %d arguments \n", argc);
+
+  mutChance = atof(argv[1]);
 
   // Seed the random
   srand(time(0));
 
-  printf("TODO: \n * Generate Trees (at random)\n * More fitness functions \n\n");
+  printf("TODO: \n * Subtree Exchange \n * Edit distance \n * More fitness functions \n\n");
 
 
   // =============================================================
@@ -254,40 +238,92 @@ int main() {
 
   printf("Retrieved %d tools\n\n", dataset.size());
 
+
+  // Try removing a single item from the datasets
+  tools.erase(tools.begin() + 36);
+  dataset.erase("copper-cable");
+
+  // .. and introduce a replacement part
+  Tool copper_cable;
+  copper_cable.name = "copper-cable-alt";
+  copper_cable.id = "copper-cable-alt";
+  copper_cable.operation = "copper-cable";
+  copper_cable.type = "tool";
+  copper_cable.inputs = {};
+  copper_cable.inTypes = {};
+  copper_cable.outputs = {};
+
+  Input ins, outs;
+
+  ins.label = "input1";
+  ins.type = "iron-plate";
+  copper_cable.inputs.push_back(ins);
+  copper_cable.inTypes.push_back("copper-plate");
+  sort (copper_cable.inTypes.begin(),copper_cable.inTypes.end());
+  outs.label = "output1";
+  outs.type = "copper-cable";
+  copper_cable.outputs.push_back(outs);
+
+  tools.push_back(copper_cable);
+  dataset["copper-cable-alt"] = copper_cable;
+
   // =============================================================
   // Create the tree
   // =============================================================
 
+  //
+
   NDETree goal({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["copper-ore"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,3,1,2});
   goal.CalculateLD();
-  Fitness(&goal, goal);
-
-  NDETree testyboi({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,1,2});
-
-  Fitness(&testyboi, goal);
-
-  printf("Goal fitness:%d\n", goal.Fitness);
-  printf("testy fitness:%d\n", testyboi.Fitness);
-
-  printf("Parameters:\n popsize: %d, p(xo) %.2f, p(mut) %.2f \n\n", POOLSIZE, xoChance, mutChance);
-
-  // Try removing a single item from the datasets
-  //tools.erase(tools.begin() + 36);
-  //dataset.erase("copper-cable");
-
-  //auto pool = GenerateInitialPopRandomly(tools, goal);
+  goal.Fitness = 0;
+  vector<NDETree> pool;
+  vector<float> res;
+  // auto pool = GenerateInitialPopRandomly(tools, goal);
   // auto pool = GenerateInitialPopOriginalOnly(tools, goal);
-  auto pool = GenerateInitialPopRandomReplace(dataset, tools, goal);
 
-  auto t1 = std::chrono::high_resolution_clock::now();
-  auto tree = Play(pool, goal);
-  auto t2 = std::chrono::high_resolution_clock::now();
-  auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-  printf("Calculating this tree took %.3f seconds\n", ((float)duration)/1000000);
+  auto sizes   = { 1000, 10000, 25000 };
+  vector<float> chances = { 0, 0.1, 0.25, 0.5 };
+  vector<float> xhances = { 1, 0.5 };
+  /*
+   What we output:
+   % PopSize, p(mut), p(x), tree size, tools missing count, avg fitness, avg calcTime
 
-  tree.Print();
-  Fitness(&tree, goal);
-  printf("Fitness: %d\n", tree.Fitness);
+  // 25 * 120 * 2 * 4
 
+  POOLSIZE = 10000;
+  mutChance = 0.1;
+  xoChance = 0.5;
+  verbose = true;
+  */
+  
+  printf("POOLSIZE, data set size, mutation chance, crossover chance, workflow size, missing tools, average fitness, average time");
+  for (auto px : xhances) {
+    xoChance = px;
+    for (auto s: sizes) {
+      POOLSIZE = s;
+      pool = GenerateInitialPopRandomReplace(dataset, tools, goal);
+      res = RunGame(pool, goal, tools, REPEATS, verbose);
+
+      printf("Factorio, Correctness + LD, EPO, ECO, generate random replace, 2-1-tournament %d repeats\n", REPEATS);
+      printf("%d & %d & %.2f & %.2f & %d & %d & %.2f & %.2fs \\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), 1, res[0], res[1]);
+      fflush(stdout);
+    }
+
+    printf("\n");
+
+    for (auto s: sizes) {
+      POOLSIZE = s;
+
+      // Create the pool
+      pool = GenerateInitialPopRandomly(tools, goal);
+      // Calculate the average fitness and calculation time
+      res = RunGame(pool, goal, tools, REPEATS, verbose);
+
+      // Output
+      printf("Factorio, Correctness + LD, EPO, ECO, generate random, 2-1-tournament %d repeats\n", REPEATS);
+      printf("%d & %d & %.2f & %.2f & %d & %d & %.2f & %.2fs \\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), 1, res[0], res[1]);
+      fflush(stdout);
+    }
+  }
   return 0;
 }
