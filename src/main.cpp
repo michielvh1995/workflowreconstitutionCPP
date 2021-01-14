@@ -1,9 +1,10 @@
 #define maxPlat     10
 #define maxGen      100
-#define REPEATS     25
+
 #define parentsCompete true
 
-bool verbose     = false;
+int REPEATS      = 1;
+bool verbose     = true;
 int  POOLSIZE    = 250;
 float mutChance  = 0.1;
 float xoChance   = 1.0;
@@ -210,13 +211,29 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, vector<Tool> tools, in
 
 
 
+// Commandline arguments will be:
+// None: reverts to default values
+// Otherwise:
+// Poolsize, xof, pmut, pxo
 int main(int argc, char **argv) {
   // =============================================================
   // =================== Initalize some values ===================
   // =============================================================
   printf("Entered %d arguments \n", argc);
+  fflush(stdout);
 
-  mutChance = atof(argv[1]);
+  char* mutf;
+  char* xof;
+
+  if (argc > 1) {
+    POOLSIZE = atof(argv[1]);
+    xof = argv[2];
+    mutChance = atof(argv[3]);
+    xoChance = atof(argv[4]);
+  }
+
+  printf("Loaded succesfully");
+  fflush(stdout);
 
   // Seed the random
   srand(time(0));
@@ -272,58 +289,22 @@ int main(int argc, char **argv) {
   // =============================================================
 
   //
-
   NDETree goal({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["copper-ore"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,3,1,2});
   goal.CalculateLD();
   goal.Fitness = 0;
   vector<NDETree> pool;
   vector<float> res;
-  // auto pool = GenerateInitialPopRandomly(tools, goal);
-  // auto pool = GenerateInitialPopOriginalOnly(tools, goal);
 
-  auto sizes   = { 1000, 10000, 25000 };
-  vector<float> chances = { 0, 0.1, 0.25, 0.5 };
-  vector<float> xhances = { 1, 0.5 };
-  /*
-   What we output:
-   % PopSize, p(mut), p(x), tree size, tools missing count, avg fitness, avg calcTime
+    // auto pool = GenerateInitialPopRandomly(tools, goal);
+    // auto pool = GenerateInitialPopOriginalOnly(tools, goal);
 
-  // 25 * 120 * 2 * 4
-
-  POOLSIZE = 10000;
-  mutChance = 0.1;
-  xoChance = 0.5;
-  verbose = true;
-  */
-  
   printf("POOLSIZE, data set size, mutation chance, crossover chance, workflow size, missing tools, average fitness, average time");
-  for (auto px : xhances) {
-    xoChance = px;
-    for (auto s: sizes) {
-      POOLSIZE = s;
-      pool = GenerateInitialPopRandomReplace(dataset, tools, goal);
-      res = RunGame(pool, goal, tools, REPEATS, verbose);
+  pool = GenerateInitialPopRandomReplace(dataset, tools, goal);
+  res = RunGame(pool, goal, tools, REPEATS, verbose);
 
-      printf("Factorio, Correctness + LD, EPO, ECO, generate random replace, 2-1-tournament %d repeats\n", REPEATS);
-      printf("%d & %d & %.2f & %.2f & %d & %d & %.2f & %.2fs \\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), 1, res[0], res[1]);
-      fflush(stdout);
-    }
+  printf("Factorio, Correctness + LD, EPO, ECO, generate random replace, 2-1-tournament %d repeats\n", REPEATS);
+  printf("%d & %d & %.2f & %.2f & %d & %d & %.2f & %.2fs \\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), 1, res[0], res[1]);
+  fflush(stdout);
 
-    printf("\n");
-
-    for (auto s: sizes) {
-      POOLSIZE = s;
-
-      // Create the pool
-      pool = GenerateInitialPopRandomly(tools, goal);
-      // Calculate the average fitness and calculation time
-      res = RunGame(pool, goal, tools, REPEATS, verbose);
-
-      // Output
-      printf("Factorio, Correctness + LD, EPO, ECO, generate random, 2-1-tournament %d repeats\n", REPEATS);
-      printf("%d & %d & %.2f & %.2f & %d & %d & %.2f & %.2fs \\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), 1, res[0], res[1]);
-      fflush(stdout);
-    }
-  }
   return 0;
 }

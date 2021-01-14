@@ -85,7 +85,7 @@ void NDETree::CalcAddSubTreeCorrectness(int ind) {
 	 inserter(diff, diff.begin())
   );
   // And update the fitness value with the difference
-  Fitness += diff.size();
+  Fitness += diff.size() << 1;
 };
 
 // Calculates the length of a subtree with root at a given index
