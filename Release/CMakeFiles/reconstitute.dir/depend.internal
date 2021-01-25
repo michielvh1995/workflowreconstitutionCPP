@@ -6,8 +6,14 @@ CMakeFiles/reconstitute.dir/src/Generators.cpp.o
  ../include/main.h
  ../include/ndetree.h
  /home/michiel/Documents/uni/scriptie/cpp/src/Generators.cpp
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o
+ ../include/common.h
+ ../include/fitness.h
+ ../include/ndetree.h
+ /home/michiel/Documents/uni/scriptie/cpp/src/fitness.cpp
 CMakeFiles/reconstitute.dir/src/main.cpp.o
  ../include/common.h
+ ../include/fitness.h
  ../include/generators.h
  ../include/main.h
  ../include/ndetree.h

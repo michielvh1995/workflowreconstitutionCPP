@@ -81,9 +81,33 @@ CMakeFiles/reconstitute.dir/src/Generators.cpp.o.provides: CMakeFiles/reconstitu
 CMakeFiles/reconstitute.dir/src/Generators.cpp.o.provides.build: CMakeFiles/reconstitute.dir/src/Generators.cpp.o
 
 
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: CMakeFiles/reconstitute.dir/flags.make
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: ../src/fitness.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reconstitute.dir/src/fitness.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reconstitute.dir/src/fitness.cpp.o -c /home/michiel/Documents/uni/scriptie/cpp/src/fitness.cpp
+
+CMakeFiles/reconstitute.dir/src/fitness.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reconstitute.dir/src/fitness.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/michiel/Documents/uni/scriptie/cpp/src/fitness.cpp > CMakeFiles/reconstitute.dir/src/fitness.cpp.i
+
+CMakeFiles/reconstitute.dir/src/fitness.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reconstitute.dir/src/fitness.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michiel/Documents/uni/scriptie/cpp/src/fitness.cpp -o CMakeFiles/reconstitute.dir/src/fitness.cpp.s
+
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o.requires:
+
+.PHONY : CMakeFiles/reconstitute.dir/src/fitness.cpp.o.requires
+
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o.provides: CMakeFiles/reconstitute.dir/src/fitness.cpp.o.requires
+	$(MAKE) -f CMakeFiles/reconstitute.dir/build.make CMakeFiles/reconstitute.dir/src/fitness.cpp.o.provides.build
+.PHONY : CMakeFiles/reconstitute.dir/src/fitness.cpp.o.provides
+
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o.provides.build: CMakeFiles/reconstitute.dir/src/fitness.cpp.o
+
+
 CMakeFiles/reconstitute.dir/src/main.cpp.o: CMakeFiles/reconstitute.dir/flags.make
 CMakeFiles/reconstitute.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/reconstitute.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reconstitute.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reconstitute.dir/src/main.cpp.o -c /home/michiel/Documents/uni/scriptie/cpp/src/main.cpp
 
 CMakeFiles/reconstitute.dir/src/main.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/reconstitute.dir/src/main.cpp.o.provides.build: CMakeFiles/reconstitu
 
 CMakeFiles/reconstitute.dir/src/ndetree.cpp.o: CMakeFiles/reconstitute.dir/flags.make
 CMakeFiles/reconstitute.dir/src/ndetree.cpp.o: ../src/ndetree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/reconstitute.dir/src/ndetree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/reconstitute.dir/src/ndetree.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reconstitute.dir/src/ndetree.cpp.o -c /home/michiel/Documents/uni/scriptie/cpp/src/ndetree.cpp
 
 CMakeFiles/reconstitute.dir/src/ndetree.cpp.i: cmake_force
@@ -132,6 +156,7 @@ CMakeFiles/reconstitute.dir/src/ndetree.cpp.o.provides.build: CMakeFiles/reconst
 # Object files for target reconstitute
 reconstitute_OBJECTS = \
 "CMakeFiles/reconstitute.dir/src/Generators.cpp.o" \
+"CMakeFiles/reconstitute.dir/src/fitness.cpp.o" \
 "CMakeFiles/reconstitute.dir/src/main.cpp.o" \
 "CMakeFiles/reconstitute.dir/src/ndetree.cpp.o"
 
@@ -139,13 +164,14 @@ reconstitute_OBJECTS = \
 reconstitute_EXTERNAL_OBJECTS =
 
 reconstitute: CMakeFiles/reconstitute.dir/src/Generators.cpp.o
+reconstitute: CMakeFiles/reconstitute.dir/src/fitness.cpp.o
 reconstitute: CMakeFiles/reconstitute.dir/src/main.cpp.o
 reconstitute: CMakeFiles/reconstitute.dir/src/ndetree.cpp.o
 reconstitute: CMakeFiles/reconstitute.dir/build.make
 reconstitute: /usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so
 reconstitute: /usr/lib/x86_64-linux-gnu/libpthread.so
 reconstitute: CMakeFiles/reconstitute.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable reconstitute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/michiel/Documents/uni/scriptie/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable reconstitute"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/reconstitute.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +180,7 @@ CMakeFiles/reconstitute.dir/build: reconstitute
 .PHONY : CMakeFiles/reconstitute.dir/build
 
 CMakeFiles/reconstitute.dir/requires: CMakeFiles/reconstitute.dir/src/Generators.cpp.o.requires
+CMakeFiles/reconstitute.dir/requires: CMakeFiles/reconstitute.dir/src/fitness.cpp.o.requires
 CMakeFiles/reconstitute.dir/requires: CMakeFiles/reconstitute.dir/src/main.cpp.o.requires
 CMakeFiles/reconstitute.dir/requires: CMakeFiles/reconstitute.dir/src/ndetree.cpp.o.requires
 

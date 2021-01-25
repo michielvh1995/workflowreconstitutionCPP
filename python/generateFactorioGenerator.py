@@ -131,10 +131,10 @@ print("  // Now we add all the tools to the list")
 
 def PrintOutput(inputs, recipe, ind = 2):
     for input in inputs:
-        print(' ' * ind + 'outs.label = "' + input['label'] + '";')
-        print(' ' * ind + 'outs.type = "'  + input['type']  + '";')
-        print(' ' * ind + recipe+'.outputs.push_back(outs);')
-    #print(' '*ind + 'sort ('+ recipe+'.outputs.begin(),' + recipe+'.outputs.end());' )
+        #print(' ' * ind + 'outs.label = "' + input['label'] + '";')
+        #print(' ' * ind + 'outs.type = "'  + input['type']  + '";')
+        #print(' ' * ind + recipe+'.outputs.push_back(outs);')
+        print(' ' * ind + recipe+'.output = "'+input['type']+'";')
 
 def PrintInput(inputs, recipe, ind = 2):
     for input in inputs:
@@ -150,13 +150,12 @@ for t in tools:
     print(('  Tool ' +t['id']+ ';').replace('-', '_'))
     print('  ' +t['id'].replace('-', '_')+'.name = "' +t['id']+ '";')
     print('  ' +t['id'].replace('-', '_')+'.id = "' +t['id']+ '";')
-    print('  ' +t['id'].replace('-', '_')+'.operation = "' +t['id']+ '";')
+    print('  ' +t['id'].replace('-', '_')+'.operations = {"' +t['id']+ '"};')
     # Type of the tool is either input or a tool
     print('  ' +t['id'].replace('-', '_')+'.type = "' +t['type']+ '";')
 
     print('  ' +t['id'].replace('-', '_')+'.inputs = {};')
     print('  ' +t['id'].replace('-', '_')+'.inTypes = {};')
-    print('  ' +t['id'].replace('-', '_')+'.outputs = {};')
     print()
 
     PrintInput (t['inputs'], t['id'].replace('-', '_'))

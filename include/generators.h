@@ -32,6 +32,7 @@ vector<NDETree> GenerateInitialPopRandomly(vector<Tool> toolset, NDETree goal) {
     // Determine what the maximum depth is, this is done by taking the depth of the original
     //  then it is changed according to its depth/size
     int mdepth = *max_element(goal.Depths.begin(), goal.Depths.end());
+
     int diff = rand() % ((2*mdepth)/goal.Depths.size()) - (mdepth/goal.Depths.size());
     mdepth += diff;
     auto tree = GenerateRandomTree(mdepth, goal.Tools.size(), toolset, goal.Tools[0]);
@@ -57,8 +58,7 @@ vector<NDETree> GenerateInitialPopRandomReplace(map<string, Tool> toolbox, vecto
 
   // Gather which tools are missing
   for(auto i = 0; i < goal.Tools.size(); ++i)
-     if (toolbox.count(goal.Tools[i].name) == 0)
-       missingInds.push_back(i);
+     if (toolbox.count(goal.Tools[i].name) == 0) missingInds.push_back(i);
 
   for (auto i = 0; i < POOLSIZE; ++i) {
     auto tree = NDETree::Copy(goal);

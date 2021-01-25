@@ -150,6 +150,33 @@ src/Generators.cpp.s:
 	$(MAKE) -f CMakeFiles/reconstitute.dir/build.make CMakeFiles/reconstitute.dir/src/Generators.cpp.s
 .PHONY : src/Generators.cpp.s
 
+src/fitness.o: src/fitness.cpp.o
+
+.PHONY : src/fitness.o
+
+# target to build an object file
+src/fitness.cpp.o:
+	$(MAKE) -f CMakeFiles/reconstitute.dir/build.make CMakeFiles/reconstitute.dir/src/fitness.cpp.o
+.PHONY : src/fitness.cpp.o
+
+src/fitness.i: src/fitness.cpp.i
+
+.PHONY : src/fitness.i
+
+# target to preprocess a source file
+src/fitness.cpp.i:
+	$(MAKE) -f CMakeFiles/reconstitute.dir/build.make CMakeFiles/reconstitute.dir/src/fitness.cpp.i
+.PHONY : src/fitness.cpp.i
+
+src/fitness.s: src/fitness.cpp.s
+
+.PHONY : src/fitness.s
+
+# target to generate assembly for a file
+src/fitness.cpp.s:
+	$(MAKE) -f CMakeFiles/reconstitute.dir/build.make CMakeFiles/reconstitute.dir/src/fitness.cpp.s
+.PHONY : src/fitness.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -216,6 +243,9 @@ help:
 	@echo "... src/Generators.o"
 	@echo "... src/Generators.i"
 	@echo "... src/Generators.s"
+	@echo "... src/fitness.o"
+	@echo "... src/fitness.i"
+	@echo "... src/fitness.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

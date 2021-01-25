@@ -6,7 +6,13 @@ CMakeFiles/reconstitute.dir/src/Generators.cpp.o: ../include/main.h
 CMakeFiles/reconstitute.dir/src/Generators.cpp.o: ../include/ndetree.h
 CMakeFiles/reconstitute.dir/src/Generators.cpp.o: ../src/Generators.cpp
 
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: ../include/common.h
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: ../include/fitness.h
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: ../include/ndetree.h
+CMakeFiles/reconstitute.dir/src/fitness.cpp.o: ../src/fitness.cpp
+
 CMakeFiles/reconstitute.dir/src/main.cpp.o: ../include/common.h
+CMakeFiles/reconstitute.dir/src/main.cpp.o: ../include/fitness.h
 CMakeFiles/reconstitute.dir/src/main.cpp.o: ../include/generators.h
 CMakeFiles/reconstitute.dir/src/main.cpp.o: ../include/main.h
 CMakeFiles/reconstitute.dir/src/main.cpp.o: ../include/ndetree.h

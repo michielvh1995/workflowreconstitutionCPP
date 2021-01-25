@@ -2,13 +2,14 @@
 
 #include <stdlib.h>  // rand, atoi
 #include <time.h>    // time
-#include <string>    // string
+#include <string.h>  // string
 #include <vector>    // vector
 #include <algorithm> // for
 #include <iostream>  // cout etc
 #include <map>       // dictionaries
-#include <chrono>		 // Timing execution time
-#include <numeric>	 // Accumulate
+#include <chrono>    // Timing execution time
+#include <numeric>   // Accumulate
+#include <random>    // additional RNG functionality
 
 using namespace std;
 
@@ -28,16 +29,21 @@ struct Input {
 
 // Struct for tools
 struct Tool {
-	string name, type, id, operation;
-	vector<string> inTypes;
-	vector<Input> inputs, outputs;
+	string name, type, id, output;
+	vector<string> inTypes, operations;
+	vector<Input> inputs;
 
 	inline bool operator ==(Tool a) {
 	  // printf("Operations 0:");
 	  // printf("%s\n", operations[0].c_str());
 	  // fflush(stdout);
-	  return operation == a.operation;
+	  return operations[0] == a.operations[0];
 	  // return name == a.name;
+	}
+	inline bool operator != (Tool a) {
+	  if (operations.size() != a.operations.size()) return true;
+	  for(auto i = 0; i < operations.size(); i++) if(operations[i] != a.operations[i]) return true;
+	  return false;
 	}
 	inline bool operator <(Tool a) {
 	  return name < a.name;

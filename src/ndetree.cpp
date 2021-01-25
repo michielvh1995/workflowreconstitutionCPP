@@ -1,92 +1,26 @@
 #include "ndetree.h"
 
-static bool subTreeSort(Tool i, Tool j) { return i.operation < j.operation; }
+static vector<Tool> _ntools = {};
+static vector<int> _ndepths = {};
 
-void NDETree::CalculateLD() {
+static default_random_engine rng;
+
+static bool subTreeSort(Tool i, Tool j) { return i.operations[0] < j.operations[0]; }
+
+void NDETree::CalculateOperatorLD() {
   // For each layer, create its own vector
-  for(auto i = 0; i < mdepth; ++i) {
-       vector<Tool> level;
-       // Now add this to the vector
-       for(auto j = 0; j<Tools.size(); j++) 
-          if(Depths[j] == i) level.push_back(Tools[j]);
+  for(auto i = 0; i < mdepth+1; ++i)
+    oLD.push_back(vector<string>());
 
-     // Sort the vector
-     sort(level.begin(), level.end(), subTreeSort);
-     LD.push_back(level);
+  for(auto i = 0; i < Tools.size(); ++i) {
+    for(auto t: Tools[i].operations) {
+      oLD[Depths[i]].push_back(string(t));
+    }
   }
+
+  for(auto i = 0; i < mdepth+1; ++i)
+    sort(oLD[i].begin(), oLD[i].end());
 }
-
-void NDETree::CalcAddLayerDecomposition(NDETree &goal) {
-  // Calculate the layer decomposed difference between the goal tree and this tree
-  // Step 1: Get per tree each layer at each depth
-  CalculateLD();
-
-  // Now we check per depth what the difference is between the levels
-  vector<Tool> diff;
-  for(auto d= 0; d < min(mdepth, goal.mdepth); d++)
-    set_symmetric_difference(
-	 LD[d].begin(),
-	 LD[d].end(),
-	 goal.LD[d].begin(),
-	 goal.LD[d].end(),
-	 inserter(diff, diff.begin())
-    );
-  
-  // And update the fitness value with the difference
-  Fitness += diff.size();
-  diff.clear();
-
-  // Now we add the cost of the levels that are missing in either tree:
-  if(mdepth > goal.mdepth) for(auto d = goal.mdepth; d < mdepth; ++d) Fitness += LD[d].size();
-  if(mdepth < goal.mdepth) for(auto d = mdepth; d < goal.mdepth; ++d) Fitness += goal.LD[d].size(); 
-}
-
-
-void NDETree::CalcAddSubTreeCorrectness(int ind) {
-  // Calculate whether the subtree starting at index ind is correct
-
-  int d = Depths[ind];	// The depth of the node
-  int td = d + 1;	// The target depth
-
-  // First we check if we are dealing with a leaf:
-  if (Tools[ind].inTypes.size() == 0) {
-
-     // Are there nodes below this one?
-     for(int i = ind + 1; i < Depths.size();i++) {
-         if(i == Tools.size()) return; // bug catcher for if it is the last element of the tree
-	       if(Depths[i] < td) return; // If the subtree ends
- 	       if(Depths[i] > d) {	// Punish for each node below
-		     CalcAddSubTreeCorrectness(i);
-		     Fitness += 1;
-	     }
-     }
-     return;
-  }
-  // Now check how many inputs we got, and how many we are missing
-  vector<string> ins;
-  for(auto i = ind + 1; i < Depths.size();i++) {
-    if(ind == Depths.size()-1) break; // bug catcher for if it is the last element of the tree
-    if(Depths[i] < td) break; 	// If the subtree ends
-    if(Depths[i] == td) {        // Get each child node
-       CalcAddSubTreeCorrectness(i); // Calculate the added fitness for these
-       ins.push_back(Tools[i].outputs[0].type);
-     }
-  }
-
-  sort(ins.begin(), ins.end());
-
-  // Calculate the difference between the two lists
-  vector<string> diff;
-
-  set_symmetric_difference(ins.begin(),
-	 ins.end(),
-	 Tools[ind].inTypes.begin(),
-	 Tools[ind].inTypes.end(),
-	 inserter(diff, diff.begin())
-  );
-  // And update the fitness value with the difference
-  Fitness += diff.size() << 1;
-};
 
 // Calculates the length of a subtree with root at a given index
 // Inputs : int : ind	: The index of the root of the subtree
@@ -228,18 +162,110 @@ NDETree NDETree::ECO(NDETree* base, NDETree* ref) {
   // printf("EECO step begins:\n");
   for(int i = 0; i < c; i++) {
      // Perform the ECO step
-     _ECOStep(fab, ref);
+     fab = _ECOStep(fab, ref);
   }
-
-  return NDETree(base->Tools, base->Depths);
+//  fab.CalculateOperatorLD();
+  return fab;
 }
 
+// To determine if we have something at the top level
+bool isOne(int x) { return x == 1; }
 
-//static NDETree SubTreeExchange(NDETree* a, NDETree* b) {
+NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
   // Perform crossover by exchaging random subtrees
   // We will only use lvel one subtrees... for now?
-  //
-//}
+  // Step one is to find how many subtrees we want:
+  // printf("SUBTREEEXCHANGE\n");
+  // fflush(stdout);
+
+  int na = count(a->Depths.begin(), a->Depths.end(), 1);
+  int nb = count(b->Depths.begin(), b->Depths.end(), 1);
+  int c = 0;
+  
+  // printf("counts are made: na %d, nb %d \n", na, nb);
+  // fflush(stdout);
+  
+  // Determine which one is the lowest, then add a random amount to that.
+  // This way we can get a value between na and nb
+  if (na == nb) c = na;
+  else if (na > nb)
+    c = nb + rand() % (na-nb);
+  else
+    c = na + rand() % (nb-na);
+
+  // printf("ranDONE\n");
+  // fflush(stdout);
+
+  // The next step is to determine how many per tree:
+  int ca = c >> 1; // Take half, ignoring the odd/even part
+  int cb = c - ca; // Take the rest, automatically taking an odd number in account
+
+  // Now we find the subtrees
+  vector<int> indsA = {};
+  vector<int> indsB = {};
+
+  for(auto i = 0; i < a->size(); i++)
+     if (a->Depths[i] == 1) indsA.push_back(i);
+
+  for(auto i = 0; i < b->size(); i++)
+     if (b->Depths[i] == 1) indsB.push_back(i);
+  printf("Indices got\n");
+  fflush(stdout);
+
+  // Now we take the indices at random from each tree and copy them to the child!
+  shuffle(indsA.begin(), indsA.end(), rng);
+  shuffle(indsB.begin(), indsB.end(), rng);
+  
+  printf("Chachaslide\n");
+  fflush(stdout);
+
+  // Now we get the subtrees and fill in the new list:
+  vector<int> lensA = {}, lensB = {};
+  lensA.clear();
+  lensB.clear();
+
+
+  // Retrieve the subtree lengths:
+  for(auto i = 0; i < ca; i++)
+     lensA.push_back(a->GetSubTreeLength(indsA[i]));
+
+  for(auto i = 0; i < cb; i++)
+     lensB.push_back(b->GetSubTreeLength(indsB[i]));
+  
+
+  printf("Lengthsgot\n");
+  fflush(stdout);
+  
+  // And now we extract the subtrees:
+  _ntools.clear();
+  _ndepths.clear();
+
+  _ntools.push_back(a->Tools[0]);
+  _ndepths.push_back(0);
+
+
+  for(auto i = 0; i < ca; i++) {
+     _ntools.insert(_ntools.end(), a->Tools.begin() + indsA[i], a->Tools.begin() + indsA[i]+lensA[i]);
+     _ndepths.insert(_ndepths.end(), a->Depths.begin() + indsA[i], a->Depths.begin() + indsA[i]+lensA[i]);
+  }
+
+  printf("ca tools, done\n");
+  fflush(stdout); 
+
+  // In the next two lines there is a bug possbiel, somehow...
+  for(auto i = 0; i < cb; i++) {
+     _ntools.insert(_ntools.end(),b->Tools.begin() + indsB[i], b->Tools.begin() + indsB[i] + lensB[i]);
+     _ndepths.insert(_ndepths.end(), b->Depths.begin() + indsB[i], b->Depths.begin() + indsB[i] + lensB[i]);
+  }
+  
+  printf("DONE\n");
+  fflush(stdout);
+  // And now we generate a new individual and return it!
+  return NDETree(_ntools, _ndepths);
+
+  // Preferably we keep the subtrees unique...
+
+}
 
 // ==========================================================
 // ==================== Additional Tools ====================

@@ -11,7 +11,7 @@ stdlib.h
 -
 time.h
 -
-string
+string.h
 -
 vector
 -
@@ -25,6 +25,14 @@ chrono
 -
 numeric
 -
+random
+-
+
+../include/fitness.h
+ndetree.h
+../include/ndetree.h
+common.h
+../include/common.h
 
 ../include/generators.h
 
@@ -46,11 +54,17 @@ common.h
 main.h
 /home/michiel/Documents/uni/scriptie/cpp/src/main.h
 
+/home/michiel/Documents/uni/scriptie/cpp/src/fitness.cpp
+fitness.h
+/home/michiel/Documents/uni/scriptie/cpp/src/fitness.h
+
 /home/michiel/Documents/uni/scriptie/cpp/src/main.cpp
 main.h
 /home/michiel/Documents/uni/scriptie/cpp/src/main.h
 generators.h
 /home/michiel/Documents/uni/scriptie/cpp/src/generators.h
+fitness.h
+/home/michiel/Documents/uni/scriptie/cpp/src/fitness.h
 ../data/factorioGenerator.cpp
 /home/michiel/Documents/uni/scriptie/cpp/data/factorioGenerator.cpp
 operators/tournament.cpp

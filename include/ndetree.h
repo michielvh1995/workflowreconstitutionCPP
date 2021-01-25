@@ -13,25 +13,29 @@ public:
      Fitness = MAXINT;
 
      // Set the maximum depth of the tree
-     mdepth = *max_element(depths.begin(), depths.end())+1;
+     mdepth = *max_element(depths.begin(), depths.end());
   };
+
 
   // Public variables
   int Fitness;
   int mdepth;
-  
+
   // The layer decomposition
-  vector<vector<Tool>> LD;
+  vector<vector<string>> oLD;
   vector<Tool> Tools;
   vector<int> Depths;
 
   // Helper functions
-  void CalculateLD();
+  void CalculateOperatorLD();
   void MoveSubTree(int from, int to);
   int GetSubTreeLength(int ind);
   void Print();
 
+
   static NDETree Copy(NDETree tree) { return NDETree(tree.Tools, tree.Depths); }
+
+  int size() { return Tools.size(); }
 
   // =================================================================
   // ====================== Operators ================================
@@ -45,11 +49,7 @@ public:
 
   // The fitness functions
   void CalcAddSubTreeCorrectness(int ind = 0);
-  void CalcAddEditDistance(NDETree &goal);
-  void CalcAddLayerDecomposition(NDETree &goal);
 
   // Class Operators
   bool operator<(const NDETree b) { return Fitness < b.Fitness;}
-
-private:
 };
