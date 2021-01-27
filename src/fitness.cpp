@@ -35,8 +35,6 @@ int FitnessCalculator::CalculateLDValue(NDETree* tree) {
      for(auto d = tree->mdepth; d < Goal.mdepth; ++d)
 	 fitness += Goal.oLD[d].size();
   }
-  // We have a bug somewhere...
-  // Sometimes the returned fitness value is far, far below zero, but not nearly an underflow
   if (false && fitness < 0) {
      printf("The error has occured: fitness value is %d! The faulty tree is: \n", fitness);
      tree->Print();

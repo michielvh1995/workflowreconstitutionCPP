@@ -100,9 +100,9 @@ void Fitness(FitnessCalculator &fc, NDETree *tree, NDETree& goal){
   tree->Fitness = 0;
   if(FITNESS == 'a' || FITNESS == 'b' || FITNESS == 'l') // All, set B or LD
     tree->Fitness += fc.CalculateLDValue(tree);
-  if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c')  // All, set B or Correctness
-    tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
-  if(FITNESS == 'a' || FITNESS == 's')                   // All or size
+  if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c' || FITNESS == 'd') // All, set B/d or Correctness
+    tree->Fitness += 2 * fc.CalculateSubTreeCorrectness(tree);
+  if(FITNESS == 'a' || FITNESS == 's' || FITNESS == 'd') // All, set d or size
     tree->Fitness += fc.CalculateSizeDifference(tree);
   //if(FTNESS == 'a' || FITNESS == 'e')                  // All or EditDistance
   //  printf("Editdistance!");
@@ -133,7 +133,7 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
 
     // Get the parent pool
     parents = Select(&pool);
-    printf("FOund parents\n");
+    //printf("FOund parents\n");
 
     // Generate the offspring
     for (auto i = 0; i < parents.size()/2; i++) {
@@ -212,8 +212,28 @@ static bool treeComp(NDETree& a, NDETree& b) {
 }
 
 bool compareSolution(map<string, Tool>& dataset, NDETree& tree) {
-  NDETree goal({dataset["electronic-circuit"], dataset["iron-cable"], dataset["iron-plate"], dataset["iron-ore"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,3,1,2});
-  return treeComp(goal, tree);
+  // Their operator LD should be the same, soo....
+  NDETree goal(
+		  { dataset["electronic-circuit"], 
+		      dataset["copper-cable-alt"], 
+		        dataset["iron-plate"], 
+			  dataset["iron-ore"], 
+		      dataset["iron-plate"], 
+		        dataset["iron-ore"]},
+		  { 0, 1, 2, 3, 1, 2}
+	      );
+
+  NDETree goalalt(
+	{ dataset["electronic-circuit"],
+	    dataset["iron-plate"],
+	        dataset["iron-ore"],
+	    dataset["copper-cable-alt"],
+	      dataset["iron-plate"],
+	        dataset["iron-ore"] }, 
+	{ 0, 1, 2, 1, 2, 3}
+    );
+  
+  return treeComp(goal, tree) || treeComp(goalalt, tree);
 }
 
 // Returns a tuple with the average fitness values and the average time cost to find the solution
@@ -353,9 +373,9 @@ int main(int argc, char **argv) {
   FitnessCalculator test(goal);
   
   // Let's try generating a pool completely at random
-  pool = GenerateInitialPopRandomly(tools, goal);
+//  pool = GenerateInitialPopRandomly(tools, goal);
 
-//  pool = GenerateInitialPopRandomReplace(usableTools, tools, goal);
+  pool = GenerateInitialPopRandomReplace(usableTools, tools, goal);
   res = RunGame(pool, goal, REPEATS, test, xof, usableTools, verbose);
 
   printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2]);

@@ -1,4 +1,4 @@
-echo "Poolsize, count, pmut, pxo, goal.Tools.size(), xof, fof, avg fitness, avgtime, corrects" > preliminary.csv
+echo "Poolsize & count & pmut & pxo & goal.Tools.size() & xof & fof & avg fitness & avgtime & corrects" > preliminary.csv
 chmod +x ./test/testa.sh
 ./test/testa.sh &
 chmod +x ./test/testb.sh
@@ -11,4 +11,6 @@ chmod +x ./test/testc.sh
 chmod +x ./test/tests.sh
 ./test/tests.sh &
 chmod +x ./test/teste.sh
-./test/teste.sh
+./test/teste.sh &
+chmod +x ./test/testd.sh
+./test/testd.sh

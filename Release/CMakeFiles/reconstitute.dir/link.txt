@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/reconstitute.dir/src/Generators.cpp.o CMakeFiles/reconstitute.dir/src/fitness.cpp.o CMakeFiles/reconstitute.dir/src/main.cpp.o CMakeFiles/reconstitute.dir/src/ndetree.cpp.o  -o reconstitute /usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so -lpthread 

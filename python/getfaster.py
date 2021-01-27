@@ -4,16 +4,18 @@ from numpy import mean
 
 arr = {}
 
+print("Average test time per poolsize and crossover function")
+
 with open("preliminary.csv",'r') as fil:
     reader = csv.DictReader(fil, delimiter = '&', skipinitialspace=True)
     for line in reader:
-        if line["Poolsize"] in arr:
-            if line["xof"] in arr[line["Poolsize"]]:
-                arr[line["Poolsize"]][line["xof"]].append(float(line['avgtime'][:-2]))
+        if line["Poolsize "] in arr:
+            if line["xof "] in arr[line["Poolsize "]]:
+                arr[line["Poolsize "]][line["xof "]].append(float(line['avgtime '][:-2]))
             else:
-                arr[line["Poolsize"]][line["xof"]] = [float(line["avgtime"][:-2])]
+                arr[line["Poolsize "]][line["xof "]] = [float(line["avgtime "][:-2])]
         else:
-            arr[line["Poolsize"]] = { line["xof"] : [float(line["avgtime"][:-2])] }
+            arr[line["Poolsize "]] = { line["xof "] : [float(line["avgtime "][:-2])] }
 
 avgs = {}
 for i in arr:

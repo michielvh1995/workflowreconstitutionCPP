@@ -209,15 +209,15 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
 
   for(auto i = 0; i < b->size(); i++)
      if (b->Depths[i] == 1) indsB.push_back(i);
-  printf("Indices got\n");
-  fflush(stdout);
+//  printf("Indices got\n");
+//  fflush(stdout);
 
   // Now we take the indices at random from each tree and copy them to the child!
   shuffle(indsA.begin(), indsA.end(), rng);
   shuffle(indsB.begin(), indsB.end(), rng);
   
-  printf("Chachaslide\n");
-  fflush(stdout);
+//  printf("Chachaslide\n");
+//  fflush(stdout);
 
   // Now we get the subtrees and fill in the new list:
   vector<int> lensA = {}, lensB = {};
@@ -233,8 +233,8 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
      lensB.push_back(b->GetSubTreeLength(indsB[i]));
   
 
-  printf("Lengthsgot\n");
-  fflush(stdout);
+//  printf("Lengthsgot\n");
+//  fflush(stdout);
   
   // And now we extract the subtrees:
   _ntools.clear();
@@ -244,22 +244,25 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
   _ndepths.push_back(0);
 
 
-  for(auto i = 0; i < ca; i++) {
-     _ntools.insert(_ntools.end(), a->Tools.begin() + indsA[i], a->Tools.begin() + indsA[i]+lensA[i]);
-     _ndepths.insert(_ndepths.end(), a->Depths.begin() + indsA[i], a->Depths.begin() + indsA[i]+lensA[i]);
-  }
+  for(auto i = 0; i < ca; i++) 
+    if(lensA[i] > 0)
+    {
+      _ntools.insert(_ntools.end(), a->Tools.begin() + indsA[i], a->Tools.begin() + indsA[i]+lensA[i]);
+      _ndepths.insert(_ndepths.end(), a->Depths.begin() + indsA[i], a->Depths.begin() + indsA[i]+lensA[i]);
+    }
 
-  printf("ca tools, done\n");
-  fflush(stdout); 
-
-  // In the next two lines there is a bug possbiel, somehow...
-  for(auto i = 0; i < cb; i++) {
-     _ntools.insert(_ntools.end(),b->Tools.begin() + indsB[i], b->Tools.begin() + indsB[i] + lensB[i]);
-     _ndepths.insert(_ndepths.end(), b->Depths.begin() + indsB[i], b->Depths.begin() + indsB[i] + lensB[i]);
-  }
+  // printf("ca tools, done\n");
+  // fflush(stdout); 
+  // In the next two lines there is a bug possbile, somehow...
+  for(auto i = 0; i < cb; i++) 
+     if(lensB[i] > 0)
+     {
+       _ntools.insert(_ntools.end(), b->Tools.begin() + indsB[i], b->Tools.begin() + indsB[i] + lensB[i]);
+       _ndepths.insert(_ndepths.end(), b->Depths.begin() + indsB[i], b->Depths.begin() + indsB[i] + lensB[i]);
+     }
   
-  printf("DONE\n");
-  fflush(stdout);
+//  printf("DONE\n");
+//  fflush(stdout);
   // And now we generate a new individual and return it!
   return NDETree(_ntools, _ndepths);
 

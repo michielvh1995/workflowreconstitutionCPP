@@ -3,7 +3,7 @@ import sys
 # This script is used to generate the runscript of my program
 # We first need to generate the arrays for the parameters:
 pops = [25000, 10000, 2500, 1000] # popsizes
-fofs = ['a','b', 'l', 'c', 's', 'e'] # Fitness functions: LD, Correct, Size, Edit
+fofs = ['a','b', 'l', 'c', 's', 'e', 'd'] # Fitness functions: LD, Correct, Size, Edit, set D
 xofs = ['e', 's']      # Crossover functions: ECO//Subtree exchange
 pmut = [0, 0.05, 0.1, 0.25, 0.5]  # mutation chance
 pxo  = [0, 0.1,  0.25, 0.5, 1]    # crossover chance
@@ -35,7 +35,7 @@ for f in fofs:
     
 
 # Some useful information:
-print('echo "Poolsize, count, pmut, pxo, goal.Tools.size(), xof, fof, avg fitness, avgtime, corrects" > preliminary.csv')
+print('echo "Poolsize & count & pmut & pxo & goal.Tools.size() & xof & fof & avg fitness & avgtime & corrects" > preliminary.csv')
 
 for f in fofs[:3]:
     print("chmod +x ./test/test"+ f + ".sh")
