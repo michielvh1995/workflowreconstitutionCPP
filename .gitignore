@@ -1,3 +1,7 @@
 build/*
 Release/*
 data/*.txt
+
+
+test/*
+*.sh
