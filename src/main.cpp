@@ -31,11 +31,7 @@ char SUBCONST    = 's';
 // ======================== Import Data ========================
 // =============================================================
 
-// Factorio
-#include "../data/factorioGenerator.cpp"
-
-// ImageMagick
-// #include "../data/imagemagickGenerator.cpp"
+#include "handletoolsets.h"
 
 // =============================================================
 // ================= Set the genetic operators =================
@@ -101,7 +97,7 @@ void Fitness(FitnessCalculator &fc, NDETree *tree, NDETree& goal){
   if(FITNESS == 'a' || FITNESS == 'b' || FITNESS == 'l') // All, set B or LD
     tree->Fitness += fc.CalculateLDValue(tree);
   if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c' || FITNESS == 'd') // All, set B/d or Correctness
-    tree->Fitness += 2 * fc.CalculateSubTreeCorrectness(tree);
+    tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
   if(FITNESS == 'a' || FITNESS == 's' || FITNESS == 'd') // All, set d or size
     tree->Fitness += fc.CalculateSizeDifference(tree);
   //if(FTNESS == 'a' || FITNESS == 'e')                  // All or EditDistance
@@ -145,7 +141,7 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
       NDETree c1 = CrossOver(&parents[i*2], &parents[i*2 +1], xof);
       NDETree c2 = CrossOver(&parents[i*2 +1], &parents[i*2], xof);
       // printf("Post crossover\n");
-      
+
       // mutate both
       Mutate(&c1);
       Mutate(&c2);
@@ -201,49 +197,14 @@ double average(vector<int> v) {
 
 }
 
-static bool treeComp(NDETree& a, NDETree& b) {
-  if (a.size() != b.size()) return false;
-  
-  // There exist no tool comparison..
-  for(auto i = 0; i < a.size(); i++)
-    if(a.Tools[i] != b.Tools[i] || a.Depths[i] != b.Depths[i]) return false;
-
-  return true;
-}
-
-bool compareSolution(map<string, Tool>& dataset, NDETree& tree) {
-  // Their operator LD should be the same, soo....
-  NDETree goal(
-		  { dataset["electronic-circuit"], 
-		      dataset["copper-cable-alt"], 
-		        dataset["iron-plate"], 
-			  dataset["iron-ore"], 
-		      dataset["iron-plate"], 
-		        dataset["iron-ore"]},
-		  { 0, 1, 2, 3, 1, 2}
-	      );
-
-  NDETree goalalt(
-	{ dataset["electronic-circuit"],
-	    dataset["iron-plate"],
-	        dataset["iron-ore"],
-	    dataset["copper-cable-alt"],
-	      dataset["iron-plate"],
-	        dataset["iron-ore"] }, 
-	{ 0, 1, 2, 1, 2, 3}
-    );
-  
-  return treeComp(goal, tree) || treeComp(goalalt, tree);
-}
-
 // Returns a tuple with the average fitness values and the average time cost to find the solution
-vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCalculator &fc, char xof, map<string, Tool>& dataset, bool verbose = true) {
+vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCalculator &fc, char xof, DataHandler& dh, bool verbose = true) {
   int fitsum = 0; // Sum of the fitnesses
 
   // Keeping track of calculation time
   auto t1 = std::chrono::high_resolution_clock::now();
 
-  float foundcount = 0; 
+  float foundcount = 0;
 
   for(auto i =0; i< repeats; ++i) {
     auto tree = Play(pool, goal, fc, xof, verbose = verbose);
@@ -251,17 +212,18 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCa
     if(verbose) {
       auto t2 = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-      printf("Generated solution: ");
+      printf("Generated solution: \n");
       tree.Print();
       printf("Calculating this tree took %.3f seconds\n", ((float)duration)/1000000);
     }
 
     fitsum += tree.Fitness;
-    if(compareSolution(dataset, tree)) {
+    tree.SubTreeSort(0);
+    if(dh.CheckSolution(tree)) {
       foundcount += 1;
-      
-      if(verbose) 
-	printf("Found the %.0fth solution!\n", foundcount);	       
+
+      if(verbose)
+	      printf("Found the %.0fth solution!\n", foundcount);
     }
   }
   auto t2 = std::chrono::high_resolution_clock::now();
@@ -282,6 +244,7 @@ int main(int argc, char **argv) {
   // =================== Initalize some values ===================
   // =============================================================
   char xof = ECOCONST;
+  string ts = PRELIMINARY;
 
   if (argc > 1) {
     POOLSIZE = atof(argv[1]);
@@ -302,6 +265,8 @@ int main(int argc, char **argv) {
        REPEATS = atof(argv[++i]);
     else if(strcmp(argv[i], "-f") == 0)
        FITNESS = argv[++i][0];
+    else if(strcmp(argv[i], "-t") == 0)
+       ts = string(argv[++i]);
   }
 
   // Seed the random
@@ -315,71 +280,42 @@ int main(int argc, char **argv) {
   // =============================================================
   // Retrieve the dataset
   auto t1 = std::chrono::high_resolution_clock::now();
-  vector<Tool> tools = Factorio();
+
+  // auto forbidden = { string("copper-cable") };
+  auto forbidden = { string("user-input-string") };
+  DataHandler data = DataHandler(ts, forbidden);
+
+  vector<Tool> tools = data.tools;
+  // for(auto t: tools) printf("%s\n", t.name.c_str());
 
 
-  // Turn the vector of tools into a dictionary
-  auto dataset = map<string, Tool>();
-  for(auto t : tools)
-    dataset[t.name.c_str()] = t;
-
-  auto t2 = std::chrono::high_resolution_clock::now();
-  auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-
-  // printf("Retrieved %d tools in %.3f seconds \n\n", dataset.size(), ((float)duration)/1000000);
-
+  auto usableTools = data.toolset;
 
   // =============================================================
-  // Create the tree
+  // Retrieve the tree
   // =============================================================
 
-  //
-
-  fflush(stdout);
-  NDETree goal({dataset["electronic-circuit"], dataset["copper-cable"], dataset["copper-plate"], dataset["copper-ore"], dataset["iron-plate"], dataset["iron-ore"]}, {0,1,2,3,1,2});
-  goal.Fitness = 0;
-  vector<NDETree> pool;
-  vector<float> res;
-
-  // Try removing a single item from the datasets
-  auto forbidden = { string("copper-cable") };
-  tools.erase(tools.begin() + 36);
-
-  auto usableTools = map<string, Tool>();
-  for (auto t : tools)
-    for(auto n : forbidden)
-      if(n != t.name)
-        usableTools[t.name.c_str()] = t;
-
-  // .. and introduce a replacement part
-  Tool iron_cable;
-  iron_cable.name = "iron-cable";
-  iron_cable.id = "copper-cable-alt";
-  iron_cable.operations = {"copper-cable"};
-  iron_cable.type = "tool";
-  iron_cable.inTypes = {"iron-plate"};
-  iron_cable.output = "copper-cable";
-
-  Input ins;
-  ins.label = "input1";
-  ins.type = "iron-plate";
-
-  iron_cable.inputs = {ins};
-
-  usableTools["copper-cable-alt"] = iron_cable;
-  tools.push_back(iron_cable);
-
+  NDETree goal = data.GetTree();
+  
+//  printf("Before:  ");
+//  goal.Print();
+//  goal.SubTreeSort(0);
+//  printf("After:  ");
+//  goal.Print();
+  
   // The fitness calculator object
   FitnessCalculator test(goal);
-  
+
   // Let's try generating a pool completely at random
 //  pool = GenerateInitialPopRandomly(tools, goal);
 
-  pool = GenerateInitialPopRandomReplace(usableTools, tools, goal);
-  res = RunGame(pool, goal, REPEATS, test, xof, usableTools, verbose);
+  vector<NDETree> pool = GenerateInitialPopRandomReplace(usableTools, tools, goal);
+  vector<float> res = RunGame(pool, goal, REPEATS, test, xof, data, verbose);
 
   printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2]);
   fflush(stdout);
+
+
 
   return 0;
 }

@@ -5,7 +5,77 @@ static vector<int> _ndepths = {};
 
 static default_random_engine rng;
 
-static bool subTreeSort(Tool i, Tool j) { return i.operations[0] < j.operations[0]; }
+// Used to reversely sort the tree's nodes
+static bool subSort(NDETree& a, NDETree& b) {
+  return b.Tools[0].id > a.Tools[0].id;
+}
+
+NDETree NDETree::subTreeSortHelper(int pid) {
+  vector<int> cindexes = {};
+  int depth = Depths[pid];
+     
+  // If we have leaf nodes we've reached maximum recursion depth
+  if(depth > Depths[pid +1] || pid == size()-1) {
+//     printf("Found a leaf: \n");
+//     NDETree({ Tools[pid] }, { Depths[pid] }).Print();
+
+     return NDETree({ Tools[pid] }, { Depths[pid] });
+
+  }
+  
+  //printf("Let's get to work!\n");  
+  // Get per parent its children and sort them:
+  for(auto i = pid; i < Tools.size(); i++) {
+    // Find all children at a specific depth
+     
+    while(Depths[++i] > depth && i <Tools.size()) {
+      //printf("  Parent: %d, child? %d, depth: %d\n", pid, i, Depths[i]);
+      if(Depths[i] == depth + 1)
+         cindexes.push_back(i);
+    }
+  }
+  
+  // If we have no children, we are done with this tree, really.
+  if(cindexes.size() == 0)
+     return NDETree({Tools[pid]}, {Depths[pid]});
+
+  //printf("Now we're cooking with all %d of our children\n", cindexes.size());
+  // Receiver array:
+  vector<NDETree> childlist = {};
+  
+  // Get all children in this array
+  for(auto t : cindexes) 
+      childlist.push_back(subTreeSortHelper(t));
+  
+  //printf("Sort the childlist!: %d\n", childlist.size());
+  sort(childlist.begin(), childlist.end(), &subSort);
+  
+  vector<Tool> newTs = {Tools[pid]};
+  vector<int> newDs = {Depths[pid]};
+  
+  //printf("Let's recreate: Node id: %d, child count: %d\n", pid, childlist.size());
+  // Recreate and resort the tool and depths lists
+  for(auto t: childlist)
+  {
+    newTs.insert(newTs.end(), t.Tools.begin(), t.Tools.end());
+    newDs.insert(newDs.end(), t.Depths.begin(), t.Depths.end());
+  }
+
+  return NDETree(newTs, newDs);
+  
+}
+
+
+void NDETree::SubTreeSort(int pid) {
+   auto newt = subTreeSortHelper(pid);
+
+   Tools = newt.Tools;
+   Depths = newt.Depths;
+}
+
+
+
+
 
 void NDETree::CalculateOperatorLD() {
   // For each layer, create its own vector
@@ -275,8 +345,7 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
 // ==========================================================
 
 void NDETree::Print() {
-  for(auto i = 0; i < Depths.size(); i++) {
-     printf("(%s, %d) ", Tools[i].name.c_str(), Depths[i]);
-  }
+  for(auto i = 0; i < Depths.size(); i++) 
+     printf("(%s, %d) ", Tools[i].name.c_str(), Depths[i]); 
   printf("\n");
 }

@@ -17,6 +17,12 @@ using namespace std;
 // =============== Here we set our constants ================
 // ==========================================================
 #define MAXINT			1E8
+#define PRELIMINARY             "p"
+#define FACTORIO                "f"
+#define EMBOSS	                "e"
+#define IMAGEMAGICK             "i"
+
+
 
 // ==========================================================
 // =============== Common objects and classes ===============
@@ -34,17 +40,20 @@ struct Tool {
 	vector<Input> inputs;
 
 	inline bool operator ==(Tool a) {
-	  // printf("Operations 0:");
-	  // printf("%s\n", operations[0].c_str());
-	  // fflush(stdout);
 	  return operations[0] == a.operations[0];
-	  // return name == a.name;
 	}
+
 	inline bool operator != (Tool a) {
-	  if (operations.size() != a.operations.size()) return true;
-	  for(auto i = 0; i < operations.size(); i++) if(operations[i] != a.operations[i]) return true;
+	  if (operations.size() != a.operations.size()) // Requires the same amount
+	      return true;
+	  
+	  for(auto i = 0; i < operations.size(); i++)   // And the same operations
+	   if(operations[i] != a.operations[i])
+	      return true;
+	  
 	  return false;
 	}
+
 	inline bool operator <(Tool a) {
 	  return name < a.name;
 	}

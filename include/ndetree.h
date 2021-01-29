@@ -29,6 +29,7 @@ public:
   // Helper functions
   void CalculateOperatorLD();
   void MoveSubTree(int from, int to);
+  void SubTreeSort(int pid);
   int GetSubTreeLength(int ind);
   void Print();
 
@@ -52,4 +53,6 @@ public:
 
   // Class Operators
   bool operator<(const NDETree b) { return Fitness < b.Fitness;}
+private:
+  NDETree subTreeSortHelper(int pid);
 };

@@ -2,13 +2,10 @@
 
 int FitnessCalculator::CalculateLDValue(NDETree* tree) {
   // Calculates the Layer Decomposition value of the tree
-  if(true || !tree->oLD.size())  
-  {	  tree->CalculateOperatorLD();
-    // printf("Calculated OLD\n");
-  }
+  if(true || !tree->oLD.size())
+     tree->CalculateOperatorLD();
   
-  int fitness = 0;
-  
+  int fitness = 0; 
   
   // Check per depths what the difference is:
   for(auto d = 0; d < min(tree->mdepth, Goal.mdepth); d++) {
@@ -23,24 +20,14 @@ int FitnessCalculator::CalculateLDValue(NDETree* tree) {
      fitness += diff.size();
   }
   
-  // The bug occurs in this part
-  if(tree->mdepth > Goal.mdepth) {
-     //printf("tree depth: %d goal depth: %d\n", tree.mdepth, Goal.mdepth);
-     for(auto d = Goal.mdepth; d < tree->mdepth; ++d) { 
+  if(tree->mdepth > Goal.mdepth) 
+     for(auto d = Goal.mdepth; d < tree->mdepth; ++d)  
 	fitness += tree->oLD[d].size();
-       // printf("l%d: %s\n", d, tree.oLD[d][0].c_str());
-     }
-  }
-  else if(tree->mdepth < Goal.mdepth) {
+      
+  else if(tree->mdepth < Goal.mdepth)
      for(auto d = tree->mdepth; d < Goal.mdepth; ++d)
 	 fitness += Goal.oLD[d].size();
-  }
-  if (false && fitness < 0) {
-     printf("The error has occured: fitness value is %d! The faulty tree is: \n", fitness);
-     tree->Print();
-     printf( "\n");
-     fflush(stdout);
-  }
+  
   return fitness;
 }
 
