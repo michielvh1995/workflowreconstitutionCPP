@@ -88,7 +88,7 @@ void Mutate(NDETree* tree) {
 // Automatically updates the tree's fitness value
 // Inputs :  NDETree*  : Takes a pointer to an NDETree object
 // Outputs: Void
-void Fitness(FitnessCalculator &fc, NDETree *tree, NDETree& goal){
+void Fitness(FitnessCalculator &fc, NDETree *tree){
   // Reset this one, as it might have changed during mutation
   tree->mdepth = *max_element(tree->Depths.begin(), tree->Depths.end());
 
@@ -147,8 +147,8 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
       Mutate(&c2);
 
       // Calculate their fitness
-      Fitness(fc, &c1, goal);
-      Fitness(fc, &c2, goal);
+      Fitness(fc, &c1);
+      Fitness(fc, &c2);
 
       // printf("Fitness got\n");
       // Add them to the list
@@ -234,6 +234,12 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCa
 }
 
 
+vector<string> getForbidden(string ts) {
+  if(ts == PRELIMINARY)
+    return { string("copper-cable") };
+  if(ts == IMAGEMAGICK)
+    return { string("user-input-string") };
+}
 
 // Commandline arguments will be:
 // None: reverts to default values
@@ -281,9 +287,7 @@ int main(int argc, char **argv) {
   // Retrieve the dataset
   auto t1 = std::chrono::high_resolution_clock::now();
 
-  // auto forbidden = { string("copper-cable") };
-  auto forbidden = { string("user-input-string") };
-  DataHandler data = DataHandler(ts, forbidden);
+  DataHandler data = DataHandler(ts, getForbidden(ts));
 
   vector<Tool> tools = data.tools;
   // for(auto t: tools) printf("%s\n", t.name.c_str());
@@ -296,16 +300,10 @@ int main(int argc, char **argv) {
   // =============================================================
 
   NDETree goal = data.GetTree();
-  
-//  printf("Before:  ");
-//  goal.Print();
-//  goal.SubTreeSort(0);
-//  printf("After:  ");
-//  goal.Print();
-  
+ 
   // The fitness calculator object
   FitnessCalculator test(goal);
-
+  
   // Let's try generating a pool completely at random
 //  pool = GenerateInitialPopRandomly(tools, goal);
 

@@ -156,16 +156,77 @@ private:
 
   NDETree _getImageMagickTree() {
     // What tree do we want for ImageMagick?
-    int n = 1;
-    auto tools = { dataset["imagemagick-draw-circle"], dataset["imagemagick-new"], dataset["user-input-int"], dataset["user-input-int"], dataset["user-input-string"], dataset["user-input-int"], dataset["user-input-int"]};
-    auto depths = { 0, 1 , 2, 2, 2, 1, 1};
+    auto tools = {
+     dataset["imagemagick-draw-square"],             // Draw upper rectangle
+       dataset["user-input-int"], dataset["user-input-int"], 
+       dataset["user-input-int"], dataset["user-input-int"], 
+       dataset["user-input-string"],
+       dataset["select-colour"],
+         dataset["user-input-string"],
+       dataset["imagemagick-draw-square"],           // Draw lower rectangle
+         dataset["user-input-int"], dataset["user-input-int"], 
+         dataset["user-input-int"], dataset["user-input-int"], 
+         dataset["user-input-string"],
+         dataset["select-colour"], 
+           dataset["user-input-string"],
+         dataset["imagemagick-new"],     // Make a new white image
+	   dataset["user-input-int"],
+	   dataset["user-input-int"],
+	   dataset["user-input-string"],
+    };
 
+    auto depths = { 
+     0, 1, 1, 1, 1, 1, 1, 2,    // Draw the upper rectangle
+        1, 2, 2, 2, 2, 2, 2, 3,  // Draw the lower rectangle
+	   2, 3, 3, 3             // Get the new image with a white background
+     };
 
     return NDETree(tools, depths);
   }
 
   bool _checkImageMagickSolution(NDETree tree) {
-    auto g = _getImageMagickTree();
+    auto tools = {
+     dataset["imagemagick-draw-square"],             // Draw upper rectangle
+       dataset["user-input-int"], dataset["user-input-int"], 
+       dataset["user-input-int"], dataset["user-input-int"], 
+       dataset["str-parse-int"],
+         dataset["user-input-int"],
+       dataset["select-colour"],
+         dataset["str-parse-int"],
+           dataset["user-input-int"],
+       dataset["imagemagick-draw-square"],           // Draw lower rectangle
+         dataset["user-input-int"], dataset["user-input-int"], 
+         dataset["user-input-int"], dataset["user-input-int"], 
+         dataset["str-parse-int"],
+           dataset["user-input-int"],
+         dataset["select-colour"], 
+           dataset["str-parse-int"],
+             dataset["user-input-int"],
+         dataset["imagemagick-new"],     // Make a new white image
+	   dataset["user-input-int"],
+	   dataset["user-input-int"],
+           dataset["str-parse-int"],
+             dataset["user-input-int"],
+    };
+
+    auto depths = { 
+     0, 1, 1, 1, 1, 1, 2, 1, 2, 3,    // Draw the upper rectangle
+        1, 2, 2, 2, 2, 2, 3, 2, 3, 4,  // Draw the lower rectangle
+	   2, 3, 3, 3, 4               // Get the new image with a white background
+     };
+
+    // Generate the goal tree
+    NDETree g(tools, depths);
+
+    // Sort and compare the trees
+    g.SubTreeSort(0);
+    tree.SubTreeSort(0);
+    
+    printf("\n\n\n");
+    g.Print();
+    tree.Print();
+    printf("\n\n\n");
+    
     return treeComp(g, tree);
   }
 

@@ -43,8 +43,7 @@ int FitnessCalculator::CalculateSubTreeCorrectness(NDETree* tree) {
     diff.clear();
     int i = j;
  
-    //printf("a");
-    //fflush(stdout);  
+    // Get the available input nodes of this one
     while(i+1 < tree->Depths.size() & tree->Depths[++i] > tree->Depths[j] )
       if(tree->Depths[i] == tree->Depths[j]+1)
       {  //printf("Tree.depth.size: %d", tree.Depths.size());
@@ -53,8 +52,6 @@ int FitnessCalculator::CalculateSubTreeCorrectness(NDETree* tree) {
 	 given.push_back(tree->Tools[i].output);
       }
     
-    //printf("g ");
-    //fflush(stdout);
     // Sort this array
     sort(given.begin(), given.end());
     
@@ -66,7 +63,7 @@ int FitnessCalculator::CalculateSubTreeCorrectness(NDETree* tree) {
         tree->Tools[j].inTypes.end(),
         inserter(diff, diff.begin())
      );
-    
+
     
     fitness += diff.size();
   }

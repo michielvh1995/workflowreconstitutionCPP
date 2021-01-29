@@ -257,6 +257,18 @@ vector<Tool> imagemagick() {
   imagemagick_draw_square.inputs.push_back(ins);
   imagemagick_draw_square.inTypes.push_back("integer");
   ins.label = "input4";
+  ins.type = "integer";
+  imagemagick_draw_square.inputs.push_back(ins);
+  imagemagick_draw_square.inTypes.push_back("integer");
+  ins.label = "input5";
+  ins.type = "integer";
+  imagemagick_draw_square.inputs.push_back(ins);
+  imagemagick_draw_square.inTypes.push_back("integer");
+  ins.label = "input6";
+  ins.type = "colour";
+  imagemagick_draw_square.inputs.push_back(ins);
+  imagemagick_draw_square.inTypes.push_back("colour");
+  ins.label = "input7";
   ins.type = "string";
   imagemagick_draw_square.inputs.push_back(ins);
   imagemagick_draw_square.inTypes.push_back("string");
@@ -371,5 +383,21 @@ vector<Tool> imagemagick() {
   sort (str_parse_int.inTypes.begin(),str_parse_int.inTypes.end());
   str_parse_int.output = "string";
   imagemagick.push_back(str_parse_int);
+
+  Tool select_colour;
+  select_colour.name = "select-colour";
+  select_colour.id = "select-colour";
+  select_colour.operations = {"select-colour"};
+  select_colour.type = "tool";
+  select_colour.inputs = {};
+  select_colour.inTypes = {};
+
+  ins.label = "input1";
+  ins.type = "string";
+  select_colour.inputs.push_back(ins);
+  select_colour.inTypes.push_back("string");
+  sort (select_colour.inTypes.begin(),select_colour.inTypes.end());
+  select_colour.output = "colour";
+  imagemagick.push_back(select_colour);
   return imagemagick;
 }
