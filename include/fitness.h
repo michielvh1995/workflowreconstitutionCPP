@@ -14,9 +14,11 @@ class FitnessCalculator {
     vector<string> diff, given;  
   public:
     NDETree Goal;
+    
     FitnessCalculator(NDETree goal) : Goal(goal), diff(goal.size()) {
       Goal.CalculateOperatorLD();
     };
+    //~FitnessCalculator() {}
     
     int CalculateEditDistance(NDETree *tree);
     int CalculateLDValue(NDETree* tree);

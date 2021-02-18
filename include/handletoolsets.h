@@ -2,10 +2,12 @@
 #include "common.h"
 #endif
 
-#include "../data/imagemagickGenerator.cpp"
-#include "../data/factorioGenerator.cpp"
+#include "../src/datagenerators/imagemagickGenerator.cpp"
 
+#include "../src/datagenerators/factorioGenerator.cpp"
+#include "../src/datagenerators/factorioSolution.cpp"
 
+#include "../src/datagenerators/embossGenerator.cpp"
 
 // To compare whether two workflows are exactly the same
 static bool treeComp(NDETree& a, NDETree& b) {
@@ -21,10 +23,20 @@ static bool treeComp(NDETree& a, NDETree& b) {
 
 class DataHandler {
 public:
-    DataHandler(string toolsetname, vector<string> forbiddentools) {
+    DataHandler(string toolsetname, vector<string> forbiddentools, char casenum) {
+
+    // Store the name of the required toolset	
+    cn = casenum;
     tsn = toolsetname;
-    
-    if(toolsetname == FACTORIO || toolsetname == PRELIMINARY) {
+
+    // Now select which toolset we use and create it
+    if(toolsetname == FACTORIO) {
+       tools = _getFactorio();
+       
+       for(auto t : FactorioSolution())
+	 tools.push_back(t);
+    } 
+    else if(toolsetname == PRELIMINARY) {
        tools = _getFactorio();
        ExpandFactoriotoolset();
     }
@@ -36,27 +48,49 @@ public:
     // Initialize the datasets
     dataset = map<string, Tool>();
     toolset = map<string, Tool>();
-
+    
     // Toolset is the pruned dataset, where the broken tools are removed from
     for(auto t: tools) {
-       for(auto n : forbiddentools)
-          if(n != t.id)
-            toolset[t.id.c_str()] = t;
+       toolset[t.id.c_str()] = t;
        dataset[t.id.c_str()] = t;
     }
+    
+    for(auto n : forbiddentools) {
+	toolset.erase(toolset.find(n));
 
-    for(auto n : forbiddentools)
 	tools.erase(remove_if(begin(tools), end(tools), [n](Tool const& u)
         {
            return u.id == n;
         }), end(tools));
+    }
   }
 
-  NDETree GetTree() {
+  NDETree GetTree(char casenum) {
     if (tsn == PRELIMINARY)
       return _getPreliminaryTree();
     else if (tsn == IMAGEMAGICK)
-      return _getImageMagickTree();
+    {  
+       if(casenum == '1') return _getIMCone();
+       if(casenum == '2') return _getIMCtwo();
+       if(casenum == '3') return _getIMCthree();
+       if(casenum == '4') return _getIMCfour();
+    }
+    else if (tsn == FACTORIO)
+      return _getFactorioTree();
+  }
+  
+  // Solution helepr for the check solution function
+  NDETree _getSolution() {
+    if (tsn == IMAGEMAGICK)
+    {  
+       if(cn == '1') return _getIMSone();
+       if(cn == '2') return _getIMStwo();
+       if(cn == '3') return _getIMSthree();
+       if(cn == '4') return _getIMSfour();
+    }
+    else if (tsn == FACTORIO)
+      return _getFactorioTree();
+
   }
 
 
@@ -78,7 +112,6 @@ public:
 
     toolset["copper-cable-alt"] = iron_cable;
     tools.push_back(iron_cable);
-
   }
 
   bool CheckSolution(NDETree& tree) {
@@ -88,12 +121,24 @@ public:
 //    if(tsn == FACTORIO)
 //      return _checkFactorioSolution(tree);
 
-    if(tsn == IMAGEMAGICK)
-      return _checkImageMagickSolution(tree);
+    if(tsn == IMAGEMAGICK) {
+       tree.CalculateOperatorLD();
+       auto control = _getSolution();
+       control.CalculateOperatorLD();
+
+       // Unfortunately this piece of code has to be copied every single case.. I think
+       for(auto d = 0; d < control.oLD.size(); d++)
+         for(auto i = 0; i < control.oLD[d].size(); i++) 
+            if(control.oLD[d][i] != tree.oLD[d][i]) 
+               return false;
+
+
+       return true;
+    }
 
     return false;
   }
-
+  char cn;
   map<string, Tool> dataset, toolset;
   vector<Tool> tools;
 
@@ -149,87 +194,165 @@ private:
     return goal;
   }
 
+  // =============================================================
+  // ========================= Factorio ==========================
+  // =============================================================
+
+
+  NDETree _getFactorioTree() {
+     auto tools = {
+       dataset["laser-turret"],
+         dataset["electronic-circuit"],
+	   dataset["iron-plate"],
+	     dataset["iron-ore"],
+	   dataset["copper-cable"],
+	     dataset["copper-plate"],
+	       dataset["copper-ore"],
+       dataset["steel-plate"],
+         dataset["iron-plate"],
+	   dataset["iron-ore"],
+
+       dataset["battery"],
+	 dataset["iron-plate"],
+	   dataset["iron-ore"],
+	 dataset["copper-plate"],
+	   dataset["copper-ore"],
+	 dataset["sulfuric-acid"],
+	   dataset["iron-plate"],
+	     dataset["iron-ore"],
+	   dataset["water"],
+	   dataset["sulfur"],
+	     dataset["petroleum-gas"],
+	     dataset["water"]
+     };
+
+     auto depths = {
+       0, 1, 2, 3, 2, 3, 4,
+          1, 2, 3,
+	  1, 2, 3, // Battery begins here
+	     2, 3,
+	     2, 3, 4,
+	        3,
+	        3, 4, 4
+     };
+
+     NDETree goal(tools, depths);
+     goal.Fitness = 0;
+     return goal;
+  }
 
   // =============================================================
   // ======================== ImageMagick ========================
   // =============================================================
+  NDETree _getIMCone() {
+    return _getIMStwo();
+  }
 
-  NDETree _getImageMagickTree() {
-    // What tree do we want for ImageMagick?
+  NDETree _getIMSone() {
     auto tools = {
-     dataset["imagemagick-draw-square"],             // Draw upper rectangle
-       dataset["user-input-int"], dataset["user-input-int"], 
-       dataset["user-input-int"], dataset["user-input-int"], 
-       dataset["user-input-string"],
-       dataset["select-colour"],
-         dataset["user-input-string"],
-       dataset["imagemagick-draw-square"],           // Draw lower rectangle
-         dataset["user-input-int"], dataset["user-input-int"], 
-         dataset["user-input-int"], dataset["user-input-int"], 
-         dataset["user-input-string"],
-         dataset["select-colour"], 
-           dataset["user-input-string"],
-         dataset["imagemagick-new"],     // Make a new white image
-	   dataset["user-input-int"],
-	   dataset["user-input-int"],
-	   dataset["user-input-string"],
+      dataset["imagemagick-draw-rectangle"],
+        dataset["imagemagick-new"],
+          dataset["user-input-string"],
+          dataset["user-input-int"],
+	  dataset["select-colour-string"],
+	    dataset["user-input-string"]
     };
-
-    auto depths = { 
-     0, 1, 1, 1, 1, 1, 1, 2,    // Draw the upper rectangle
-        1, 2, 2, 2, 2, 2, 2, 3,  // Draw the lower rectangle
-	   2, 3, 3, 3             // Get the new image with a white background
-     };
-
+    auto depths = {
+      0, 1, 2, 2, 2, 3
+    };
+    
     return NDETree(tools, depths);
   }
 
-  bool _checkImageMagickSolution(NDETree tree) {
+  // The tree for case two:
+  // We have our one-bar flag tool
+  NDETree _getIMCtwo() {
     auto tools = {
-     dataset["imagemagick-draw-square"],             // Draw upper rectangle
-       dataset["user-input-int"], dataset["user-input-int"], 
-       dataset["user-input-int"], dataset["user-input-int"], 
-       dataset["str-parse-int"],
-         dataset["user-input-int"],
-       dataset["select-colour"],
-         dataset["str-parse-int"],
-           dataset["user-input-int"],
-       dataset["imagemagick-draw-square"],           // Draw lower rectangle
-         dataset["user-input-int"], dataset["user-input-int"], 
-         dataset["user-input-int"], dataset["user-input-int"], 
-         dataset["str-parse-int"],
-           dataset["user-input-int"],
-         dataset["select-colour"], 
-           dataset["str-parse-int"],
-             dataset["user-input-int"],
-         dataset["imagemagick-new"],     // Make a new white image
-	   dataset["user-input-int"],
-	   dataset["user-input-int"],
-           dataset["str-parse-int"],
-             dataset["user-input-int"],
+      dataset["create-flag-two-op"],
+        dataset["user-input-string"],
+	dataset["user-input-int"],
+	dataset["select-colour-string"],
+	  dataset["user-input-string"]
     };
-
-    auto depths = { 
-     0, 1, 1, 1, 1, 1, 2, 1, 2, 3,    // Draw the upper rectangle
-        1, 2, 2, 2, 2, 2, 3, 2, 3, 4,  // Draw the lower rectangle
-	   2, 3, 3, 3, 4               // Get the new image with a white background
-     };
-
-    // Generate the goal tree
-    NDETree g(tools, depths);
-
-    // Sort and compare the trees
-    g.SubTreeSort(0);
-    tree.SubTreeSort(0);
+    auto depths = {
+      0, 1, 1, 1, 2
+    };
     
-    printf("\n\n\n");
-    g.Print();
-    tree.Print();
-    printf("\n\n\n");
-    
-    return treeComp(g, tree);
+    return NDETree(tools, depths);
   }
 
+  NDETree _getIMStwo() {
+    auto tools = {
+      dataset["imagemagick-draw-square"],
+        dataset["imagemagick-new"],
+          dataset["user-input-string"],
+          dataset["user-input-int"],
+	  dataset["select-colour-string"],
+	    dataset["user-input-string"]
+    };
+    auto depths = {
+      0, 1, 2, 2, 2, 3
+    };
+    
+    return NDETree(tools, depths);
+  }
+
+
+  // Get the tree for case three:
+  // We have our Dutch flag tool (replaced by 2 draw squares)
+  NDETree _getIMCthree(){
+    auto tools = {
+      dataset["create-flag-three-op"],
+        dataset["user-input-string"],
+	dataset["user-input-int"],
+	dataset["select-colour-string"],
+	  dataset["user-input-string"]
+    };
+    auto depths = {
+      0, 1, 1, 1, 2
+    };
+    
+    return NDETree(tools, depths);
+  };
+
+  NDETree _getIMSthree() {
+    return _getIMCfour();
+  }
+ 
+ // Get the tree for case four: 
+  NDETree _getIMCfour() {
+    auto tools = {
+      dataset["imagemagick-draw-square"],
+        dataset["imagemagick-draw-square"],
+          dataset["imagemagick-new"],
+            dataset["user-input-string"],
+            dataset["user-input-int"],
+	    dataset["select-colour-string"],
+	      dataset["user-input-string"]
+    };
+    auto depths = {
+      0, 1, 2, 3, 3, 3, 4
+    };
+    
+    return NDETree(tools, depths);
+  }
+
+  NDETree _getIMSfour() {
+    auto tools = {
+      dataset["draw-square"],
+        dataset["draw-square"],
+          dataset["imagemagick-new"],
+            dataset["user-input-string"],
+            dataset["user-input-int"],
+	    dataset["select-colour-rgb"],
+	      dataset["user-input-int"]
+    };
+    auto depths = {
+      0, 1, 2, 3, 3, 3, 4
+    };
+    
+    return NDETree(tools, depths);
+  }
 
 
 };

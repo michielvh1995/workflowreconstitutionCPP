@@ -1,4 +1,4 @@
-#define maxPlat     10
+#define maxPlat     20
 #define maxGen      100
 
 #define parentsCompete true
@@ -14,6 +14,9 @@ float xoChance   = 1.0;
 
 char ECOCONST    = 'e';
 char SUBCONST    = 's';
+char CASE        = '1';
+char GENERATOR   = 'd';
+
 
 /*
  What we output:
@@ -71,16 +74,26 @@ NDETree CrossOver(NDETree* p1, NDETree* p2, char xof) {
 // This function mutates a single individual tree into the other
 void Mutate(NDETree* tree) {
   // Determine whether or not we will mutate
-  if(((float) (rand() % 1000))/1000 > mutChance) return;
+  if(((float) (rand() % 1000)) / 1000 > mutChance) return;
 
   // Get two random indices
-  int ind1, ind2;
+  int ind1 = 0, ind2 = 1;
 
-  ind1 = rand() % (tree->Depths.size()-1) + 1; // we don't want to take the root node as swap-away
-  ind2 = rand() % tree->Depths.size();
+  // printf("Tree size: %d \n", tree->Depths.size());
+  //printf("\n");
+  
+  if(tree->Depths.size() > 1)
+    ind1 = rand() % (tree->Depths.size() - 1) + 1; // we don't want to take the root node as swap-away
+  if(tree->Depths.size() > 1)
+    ind2 = rand() %  tree->Depths.size();
+  
+  // Do we get past
+  // printf("Indices: %d, %d, tree length: %d \n", ind1, ind2, tree->Depths.size());
+  // This is just a dumb check to catch a dumb case...
+  if(ind1 ==0 && ind2 == 1) return;
 
   while(ind1 == ind2) ind2 = rand() % tree->Depths.size();
-
+  
   tree->EPO(ind1, ind2);
 }
 
@@ -94,12 +107,20 @@ void Fitness(FitnessCalculator &fc, NDETree *tree){
 
   // Reset fitness and recalculate it
   tree->Fitness = 0;
+  if(FITNESS == 'z') { 
+    tree->Fitness += fc.CalculateSubTreeCorrectness(tree) * 4;
+    tree->Fitness += fc.CalculateSizeDifference(tree);
+    tree->Fitness += fc.CalculateLDValue(tree);
+    return;
+  }
   if(FITNESS == 'a' || FITNESS == 'b' || FITNESS == 'l') // All, set B or LD
     tree->Fitness += fc.CalculateLDValue(tree);
   if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c' || FITNESS == 'd') // All, set B/d or Correctness
-    tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
+  {  tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
+  }
   if(FITNESS == 'a' || FITNESS == 's' || FITNESS == 'd') // All, set d or size
-    tree->Fitness += fc.CalculateSizeDifference(tree);
+  {    tree->Fitness += fc.CalculateSizeDifference(tree) ;
+  }
   //if(FTNESS == 'a' || FITNESS == 'e')                  // All or EditDistance
   //  printf("Editdistance!");
 }
@@ -129,7 +150,8 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
 
     // Get the parent pool
     parents = Select(&pool);
-    //printf("FOund parents\n");
+//    if(verbose)
+  //    printf("Parents selected\n");
 
     // Generate the offspring
     for (auto i = 0; i < parents.size()/2; i++) {
@@ -137,20 +159,20 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
       //printf("preXO\n");
 
       // perform crossover
-      // printf("Precrossover\n");
       NDETree c1 = CrossOver(&parents[i*2], &parents[i*2 +1], xof);
       NDETree c2 = CrossOver(&parents[i*2 +1], &parents[i*2], xof);
-      // printf("Post crossover\n");
+      // printf("They crossed the line\n");
 
       // mutate both
       Mutate(&c1);
       Mutate(&c2);
-
+      // printf("Mutats everywhere\n");
+      	
       // Calculate their fitness
       Fitness(fc, &c1);
       Fitness(fc, &c2);
+      // printf("Kast status achieved \n");
 
-      // printf("Fitness got\n");
       // Add them to the list
       children.push_back(c1);
       children.push_back(c2);
@@ -160,6 +182,9 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
       children.push_back(parents[i*2+1]);
       #endif
     }
+  
+    if(verbose)
+      printf("Generation calculation done\n");
 
     // Sort the children vector and store the first N in the pool vector
     sort(children.begin(), children.end(), treeCompare);
@@ -209,7 +234,7 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCa
   for(auto i =0; i< repeats; ++i) {
     auto tree = Play(pool, goal, fc, xof, verbose = verbose);
 
-    if(verbose) {
+    if(verbose || true) {
       auto t2 = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
       printf("Generated solution: \n");
@@ -218,7 +243,7 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCa
     }
 
     fitsum += tree.Fitness;
-    tree.SubTreeSort(0);
+    //tree.SubTreeSort(0);
     if(dh.CheckSolution(tree)) {
       foundcount += 1;
 
@@ -237,8 +262,36 @@ vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCa
 vector<string> getForbidden(string ts) {
   if(ts == PRELIMINARY)
     return { string("copper-cable") };
-  if(ts == IMAGEMAGICK)
-    return { string("user-input-string") };
+  else if(ts == IMAGEMAGICK) {
+    if(CASE == '1')
+      return { string("imagemagick-draw-square") };
+    if(CASE == '2')
+      return { string("create-flag-two-op"), string("create-flag-three-op") };
+    if(CASE == '3')
+      return { string("create-flag-two-op"), string("create-flag-three-op") };
+    if(CASE == '4')
+      return { string("select-colour-string") };
+  } else if(ts == FACTORIO) {
+    if(CASE == '1')
+      return { string("sulfur") };
+    if(CASE == '2')
+      return { string("steel-plate"), string("form-steel") };
+    if(CASE == '3')
+      return { string("steel-plate"), string("recover-steel") };
+    if(CASE == '4')
+      return { string("electronic-circuit") };
+  } else if(ts == EMBOSS) {
+  }
+  return { string("nonne") };
+}
+
+// Switch function for generating the population pool
+vector<NDETree> getPopulation(map<string, Tool> usableTools, vector<Tool> tools, NDETree goal) {
+  if(GENERATOR == 'r') {
+    printf("There is a bug with random generation!! \n");
+    return GenerateInitialPopRandomly(tools, goal);
+  } // Default is to generate it using randomreplace
+  return GenerateInitialPopRandomReplace(usableTools, tools, goal);
 }
 
 // Commandline arguments will be:
@@ -273,6 +326,11 @@ int main(int argc, char **argv) {
        FITNESS = argv[++i][0];
     else if(strcmp(argv[i], "-t") == 0)
        ts = string(argv[++i]);
+    else if(strcmp(argv[i], "-c") == 0)
+       CASE = argv[++i][0];
+    else if(strcmp(argv[i], "-g") == 0)
+       GENERATOR = argv[++i][0];
+
   }
 
   // Seed the random
@@ -286,9 +344,9 @@ int main(int argc, char **argv) {
   // =============================================================
   // Retrieve the dataset
   auto t1 = std::chrono::high_resolution_clock::now();
-
-  DataHandler data = DataHandler(ts, getForbidden(ts));
-
+  DataHandler data = DataHandler(ts, getForbidden(ts), CASE);
+  
+  // printf("Retrieved the tools! \n");
   vector<Tool> tools = data.tools;
   // for(auto t: tools) printf("%s\n", t.name.c_str());
 
@@ -299,7 +357,13 @@ int main(int argc, char **argv) {
   // Retrieve the tree
   // =============================================================
 
-  NDETree goal = data.GetTree();
+  NDETree goal = data.GetTree(CASE);
+  if(verbose) {  
+     printf("\nTrying to reconstitute this workflow: \n");
+     goal.Print();
+  }
+
+
  
   // The fitness calculator object
   FitnessCalculator test(goal);
@@ -307,13 +371,15 @@ int main(int argc, char **argv) {
   // Let's try generating a pool completely at random
 //  pool = GenerateInitialPopRandomly(tools, goal);
 
-  vector<NDETree> pool = GenerateInitialPopRandomReplace(usableTools, tools, goal);
+  vector<NDETree> pool = getPopulation(usableTools, tools, goal);
+//  for(auto t:pool)
+//     t.Print();
+
   vector<float> res = RunGame(pool, goal, REPEATS, test, xof, data, verbose);
-
-  printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2]);
+  
+  // Poolsize, size of toolset, p(mut), p(xo), goal-tree size, crossover function, fitness function, avg fitness, avg calctime, optimals found, testcase
+  printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f & %c\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2], CASE);
   fflush(stdout);
-
-
 
   return 0;
 }
