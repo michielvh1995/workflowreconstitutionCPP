@@ -55,4 +55,5 @@ public:
   bool operator<(const NDETree b) { return Fitness < b.Fitness;}
 private:
   NDETree subTreeSortHelper(int pid);
+//  vector<int> lensA, lensB, indsA, indsB;
 };

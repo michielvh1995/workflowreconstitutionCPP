@@ -1,4 +1,4 @@
-#define maxPlat     20
+#define maxPlat     10
 #define maxGen      100
 
 #define parentsCompete true

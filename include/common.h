@@ -37,7 +37,7 @@ struct Input {
 struct Tool {
 	string name, type, id, output;
 	vector<string> inTypes, operations;
-	vector<Input> inputs;
+	vector<Input> inputs, outputs;
 
 	inline bool operator ==(Tool a) {
 	  if(operations.size() != a.operations.size()) return false;
@@ -67,7 +67,7 @@ struct Tool {
 	}
 
 	inline bool operator <(Tool a) {
-	  return name < a.name;
+	  return id < a.id;
 	}
 };
 

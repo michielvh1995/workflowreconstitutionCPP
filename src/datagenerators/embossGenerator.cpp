@@ -2,4285 +2,4741 @@
 #include "common.h" 
 #endif
 
-vector<Tool> emboss() {
-  vector<Tool> emboss;
+vector<Tool> biotools() {
+
+// The retrieved biotools toolset consisted of 1817 tools.
+
+  vector<Tool> biotools;
   Input ins;
   Input outs;
   // Now we add all the tools to the list
 
-  Tool aaindexextract;
-  aaindexextract.name = "aaindexextract";
-  aaindexextract.id = "aaindexextract";
-  aaindexextract.operations = {"aaindexextract"};
-  aaindexextract.type = "tool";
-  aaindexextract.inputs = {};
-  aaindexextract.inTypes = {};
+  Tool _2d_page;
+  _2d_page.id = "_2d_page";
+  _2d_page.operations = {"_2d_page"};
+  _2d_page.type = "tool";
 
-  sort (aaindexextract.inTypes.begin(),aaindexextract.inTypes.end());
-  aaindexextract.output = "http://edamontology.org/data_1501";
-  emboss.push_back(aaindexextract);
+  _2d_page.inTypes = {};
+  _2d_page.inTypes.push_back("http://edamontology.org/data_0897");
+  _2d_page.inTypes.push_back("http://edamontology.org/data_0942");
+  _2d_page.inTypes.push_back("http://edamontology.org/data_1528");
+  sort (_2d_page.inTypes.begin(),_2d_page.inTypes.end());
+  _2d_page.output = "http://edamontology.org/data_3021";
+  _2d_page.output = "http://edamontology.org/data_2373";
+  _2d_page.output = "http://edamontology.org/data_2091";
+  _2d_page.output = "http://edamontology.org/data_1519";
+  _2d_page.output = "http://edamontology.org/data_1528";
+  biotools.push_back(_2d_page);
 
-  Tool abiview;
-  abiview.name = "abiview";
-  abiview.id = "abiview";
-  abiview.operations = {"abiview"};
-  abiview.type = "tool";
-  abiview.inputs = {};
-  abiview.inTypes = {};
+  Tool _4dxpress;
+  _4dxpress.id = "_4dxpress";
+  _4dxpress.operations = {"_4dxpress"};
+  _4dxpress.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  abiview.inputs.push_back(ins);
-  abiview.inTypes.push_back("http://edamontology.org/data_2887");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2168";
-  abiview.inputs.push_back(ins);
-  abiview.inTypes.push_back("http://edamontology.org/data_2168");
-  sort (abiview.inTypes.begin(),abiview.inTypes.end());
-  abiview.output = "http://edamontology.org/data_0924";
-  emboss.push_back(abiview);
+  _4dxpress.inTypes = {};
+  _4dxpress.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (_4dxpress.inTypes.begin(),_4dxpress.inTypes.end());
+  _4dxpress.output = "http://edamontology.org/data_1033";
+  _4dxpress.output = "http://edamontology.org/data_1796";
+  _4dxpress.output = "http://edamontology.org/data_1026";
+  biotools.push_back(_4dxpress);
 
-  Tool acdc;
-  acdc.name = "acdc";
-  acdc.id = "acdc";
-  acdc.operations = {"acdc"};
-  acdc.type = "tool";
-  acdc.inputs = {};
-  acdc.inTypes = {};
+  Tool BISE;
+  BISE.id = "BISE";
+  BISE.operations = {"BISE"};
+  BISE.type = "tool";
 
-  sort (acdc.inTypes.begin(),acdc.inTypes.end());
-  emboss.push_back(acdc);
+  BISE.inTypes = {};
+  BISE.inTypes.push_back("http://edamontology.org/data_3669");
+  BISE.inTypes.push_back("http://edamontology.org/data_1731");
+  BISE.inTypes.push_back("http://edamontology.org/data_2337");
+  BISE.inTypes.push_back("http://edamontology.org/data_0949");
+  sort (BISE.inTypes.begin(),BISE.inTypes.end());
+  BISE.output = "http://edamontology.org/data_0968";
+  BISE.output = "http://edamontology.org/data_0966";
+  biotools.push_back(BISE);
 
-  Tool acdpretty;
-  acdpretty.name = "acdpretty";
-  acdpretty.id = "acdpretty";
-  acdpretty.operations = {"acdpretty"};
-  acdpretty.type = "tool";
-  acdpretty.inputs = {};
-  acdpretty.inTypes = {};
+  Tool BeanMine;
+  BeanMine.id = "BeanMine";
+  BeanMine.operations = {"BeanMine"};
+  BeanMine.type = "tool";
 
-  sort (acdpretty.inTypes.begin(),acdpretty.inTypes.end());
-  emboss.push_back(acdpretty);
+  BeanMine.inTypes = {};
+  BeanMine.inTypes.push_back("http://edamontology.org/data_3753");
+  BeanMine.inTypes.push_back("http://edamontology.org/data_3786");
+  BeanMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (BeanMine.inTypes.begin(),BeanMine.inTypes.end());
+  BeanMine.output = "http://edamontology.org/data_1255";
+  BeanMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(BeanMine);
 
-  Tool acdtable;
-  acdtable.name = "acdtable";
-  acdtable.id = "acdtable";
-  acdtable.operations = {"acdtable"};
-  acdtable.type = "tool";
-  acdtable.inputs = {};
-  acdtable.inTypes = {};
+  Tool BovineMine;
+  BovineMine.id = "BovineMine";
+  BovineMine.operations = {"BovineMine"};
+  BovineMine.type = "tool";
 
-  sort (acdtable.inTypes.begin(),acdtable.inTypes.end());
-  emboss.push_back(acdtable);
+  BovineMine.inTypes = {};
+  BovineMine.inTypes.push_back("http://edamontology.org/data_3753");
+  BovineMine.inTypes.push_back("http://edamontology.org/data_3786");
+  BovineMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (BovineMine.inTypes.begin(),BovineMine.inTypes.end());
+  BovineMine.output = "http://edamontology.org/data_1255";
+  BovineMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(BovineMine);
 
-  Tool acdtrace;
-  acdtrace.name = "acdtrace";
-  acdtrace.id = "acdtrace";
-  acdtrace.operations = {"acdtrace"};
-  acdtrace.type = "tool";
-  acdtrace.inputs = {};
-  acdtrace.inTypes = {};
+  Tool CHOmine;
+  CHOmine.id = "CHOmine";
+  CHOmine.operations = {"CHOmine"};
+  CHOmine.type = "tool";
 
-  sort (acdtrace.inTypes.begin(),acdtrace.inTypes.end());
-  emboss.push_back(acdtrace);
+  CHOmine.inTypes = {};
+  CHOmine.inTypes.push_back("http://edamontology.org/data_3753");
+  CHOmine.inTypes.push_back("http://edamontology.org/data_3786");
+  CHOmine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (CHOmine.inTypes.begin(),CHOmine.inTypes.end());
+  CHOmine.output = "http://edamontology.org/data_1255";
+  CHOmine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(CHOmine);
 
-  Tool acdvalid;
-  acdvalid.name = "acdvalid";
-  acdvalid.id = "acdvalid";
-  acdvalid.operations = {"acdvalid"};
-  acdvalid.type = "tool";
-  acdvalid.inputs = {};
-  acdvalid.inTypes = {};
+  Tool ChickpeaMine;
+  ChickpeaMine.id = "ChickpeaMine";
+  ChickpeaMine.operations = {"ChickpeaMine"};
+  ChickpeaMine.type = "tool";
 
-  sort (acdvalid.inTypes.begin(),acdvalid.inTypes.end());
-  emboss.push_back(acdvalid);
+  ChickpeaMine.inTypes = {};
+  ChickpeaMine.inTypes.push_back("http://edamontology.org/data_3753");
+  ChickpeaMine.inTypes.push_back("http://edamontology.org/data_3786");
+  ChickpeaMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (ChickpeaMine.inTypes.begin(),ChickpeaMine.inTypes.end());
+  ChickpeaMine.output = "http://edamontology.org/data_1255";
+  ChickpeaMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(ChickpeaMine);
 
-  Tool aligncopy;
-  aligncopy.name = "aligncopy";
-  aligncopy.id = "aligncopy";
-  aligncopy.operations = {"aligncopy"};
-  aligncopy.type = "tool";
-  aligncopy.inputs = {};
-  aligncopy.inTypes = {};
+  Tool CoBAMP;
+  CoBAMP.id = "CoBAMP";
+  CoBAMP.operations = {"CoBAMP"};
+  CoBAMP.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0863";
-  aligncopy.inputs.push_back(ins);
-  aligncopy.inTypes.push_back("http://edamontology.org/data_0863");
-  sort (aligncopy.inTypes.begin(),aligncopy.inTypes.end());
-  aligncopy.output = "http://edamontology.org/data_0863";
-  emboss.push_back(aligncopy);
+  CoBAMP.inTypes = {};
+  CoBAMP.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (CoBAMP.inTypes.begin(),CoBAMP.inTypes.end());
+  CoBAMP.output = "http://edamontology.org/data_2600";
+  biotools.push_back(CoBAMP);
 
-  Tool aligncopypair;
-  aligncopypair.name = "aligncopypair";
-  aligncopypair.id = "aligncopypair";
-  aligncopypair.operations = {"aligncopypair"};
-  aligncopypair.type = "tool";
-  aligncopypair.inputs = {};
-  aligncopypair.inTypes = {};
+  Tool CoExpresso;
+  CoExpresso.id = "CoExpresso";
+  CoExpresso.operations = {"CoExpresso"};
+  CoExpresso.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  aligncopypair.inputs.push_back(ins);
-  aligncopypair.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (aligncopypair.inTypes.begin(),aligncopypair.inTypes.end());
-  aligncopypair.output = "http://edamontology.org/data_0863";
-  emboss.push_back(aligncopypair);
+  CoExpresso.inTypes = {};
+  CoExpresso.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (CoExpresso.inTypes.begin(),CoExpresso.inTypes.end());
+  CoExpresso.output = "http://edamontology.org/data_3021";
+  CoExpresso.output = "http://edamontology.org/data_2295";
+  biotools.push_back(CoExpresso);
 
-  Tool antigenic;
-  antigenic.name = "antigenic";
-  antigenic.id = "antigenic";
-  antigenic.operations = {"antigenic"};
-  antigenic.type = "tool";
-  antigenic.inputs = {};
-  antigenic.inTypes = {};
+  Tool ComplexBrowser;
+  ComplexBrowser.id = "ComplexBrowser";
+  ComplexBrowser.operations = {"ComplexBrowser"};
+  ComplexBrowser.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1534";
-  antigenic.inputs.push_back(ins);
-  antigenic.inTypes.push_back("http://edamontology.org/data_1534");
-  sort (antigenic.inTypes.begin(),antigenic.inTypes.end());
-  antigenic.output = "http://edamontology.org/data_2886";
-  emboss.push_back(antigenic);
+  ComplexBrowser.inTypes = {};
+  ComplexBrowser.inTypes.push_back("http://edamontology.org/data_0896");
+  ComplexBrowser.inTypes.push_back("http://edamontology.org/data_2048");
+  ComplexBrowser.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (ComplexBrowser.inTypes.begin(),ComplexBrowser.inTypes.end());
+  ComplexBrowser.output = "http://edamontology.org/data_2603";
+  ComplexBrowser.output = "http://edamontology.org/data_0906";
+  biotools.push_back(ComplexBrowser);
+
+  Tool CowpeaMine;
+  CowpeaMine.id = "CowpeaMine";
+  CowpeaMine.operations = {"CowpeaMine"};
+  CowpeaMine.type = "tool";
+
+  CowpeaMine.inTypes = {};
+  CowpeaMine.inTypes.push_back("http://edamontology.org/data_3753");
+  CowpeaMine.inTypes.push_back("http://edamontology.org/data_3786");
+  CowpeaMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (CowpeaMine.inTypes.begin(),CowpeaMine.inTypes.end());
+  CowpeaMine.output = "http://edamontology.org/data_1255";
+  CowpeaMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(CowpeaMine);
+
+  Tool FASTA_API_EBI;
+  FASTA_API_EBI.id = "FASTA_API_EBI";
+  FASTA_API_EBI.operations = {"FASTA_API_EBI"};
+  FASTA_API_EBI.type = "tool";
+
+  FASTA_API_EBI.inTypes = {};
+  FASTA_API_EBI.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (FASTA_API_EBI.inTypes.begin(),FASTA_API_EBI.inTypes.end());
+  FASTA_API_EBI.output = "http://edamontology.org/data_2044";
+  biotools.push_back(FASTA_API_EBI);
+
+  Tool FASTA_EBI;
+  FASTA_EBI.id = "FASTA_EBI";
+  FASTA_EBI.operations = {"FASTA_EBI"};
+  FASTA_EBI.type = "tool";
+
+  FASTA_EBI.inTypes = {};
+  FASTA_EBI.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (FASTA_EBI.inTypes.begin(),FASTA_EBI.inTypes.end());
+  FASTA_EBI.output = "http://edamontology.org/data_2044";
+  biotools.push_back(FASTA_EBI);
+
+  Tool Fcirc;
+  Fcirc.id = "Fcirc";
+  Fcirc.operations = {"Fcirc"};
+  Fcirc.type = "tool";
+
+  Fcirc.inTypes = {};
+  Fcirc.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (Fcirc.inTypes.begin(),Fcirc.inTypes.end());
+  Fcirc.output = "http://edamontology.org/data_3495";
+  biotools.push_back(Fcirc);
+
+  Tool GrapeMine;
+  GrapeMine.id = "GrapeMine";
+  GrapeMine.operations = {"GrapeMine"};
+  GrapeMine.type = "tool";
+
+  GrapeMine.inTypes = {};
+  GrapeMine.inTypes.push_back("http://edamontology.org/data_3753");
+  GrapeMine.inTypes.push_back("http://edamontology.org/data_3786");
+  GrapeMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (GrapeMine.inTypes.begin(),GrapeMine.inTypes.end());
+  GrapeMine.output = "http://edamontology.org/data_1255";
+  GrapeMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(GrapeMine);
+
+  Tool HumanMine;
+  HumanMine.id = "HumanMine";
+  HumanMine.operations = {"HumanMine"};
+  HumanMine.type = "tool";
+
+  HumanMine.inTypes = {};
+  HumanMine.inTypes.push_back("http://edamontology.org/data_3753");
+  HumanMine.inTypes.push_back("http://edamontology.org/data_3786");
+  HumanMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (HumanMine.inTypes.begin(),HumanMine.inTypes.end());
+  HumanMine.output = "http://edamontology.org/data_1255";
+  HumanMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(HumanMine);
+
+  Tool HymenopteraMine;
+  HymenopteraMine.id = "HymenopteraMine";
+  HymenopteraMine.operations = {"HymenopteraMine"};
+  HymenopteraMine.type = "tool";
+
+  HymenopteraMine.inTypes = {};
+  HymenopteraMine.inTypes.push_back("http://edamontology.org/data_3753");
+  HymenopteraMine.inTypes.push_back("http://edamontology.org/data_3786");
+  HymenopteraMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (HymenopteraMine.inTypes.begin(),HymenopteraMine.inTypes.end());
+  HymenopteraMine.output = "http://edamontology.org/data_1255";
+  HymenopteraMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(HymenopteraMine);
+
+  Tool IMGT_2Dstructure_DB;
+  IMGT_2Dstructure_DB.id = "IMGT_2Dstructure_DB";
+  IMGT_2Dstructure_DB.operations = {"IMGT_2Dstructure_DB"};
+  IMGT_2Dstructure_DB.type = "tool";
+
+  IMGT_2Dstructure_DB.inTypes = {};
+  IMGT_2Dstructure_DB.inTypes.push_back("http://edamontology.org/data_2955");
+  IMGT_2Dstructure_DB.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (IMGT_2Dstructure_DB.inTypes.begin(),IMGT_2Dstructure_DB.inTypes.end());
+  IMGT_2Dstructure_DB.output = "http://edamontology.org/data_0842";
+  IMGT_2Dstructure_DB.output = "http://edamontology.org/data_0968";
+  IMGT_2Dstructure_DB.output = "http://edamontology.org/data_2858";
+  biotools.push_back(IMGT_2Dstructure_DB);
+
+  Tool IMGT_DomainDisplay;
+  IMGT_DomainDisplay.id = "IMGT_DomainDisplay";
+  IMGT_DomainDisplay.operations = {"IMGT_DomainDisplay"};
+  IMGT_DomainDisplay.type = "tool";
+
+  IMGT_DomainDisplay.inTypes = {};
+  IMGT_DomainDisplay.inTypes.push_back("http://edamontology.org/data_2976");
+  sort (IMGT_DomainDisplay.inTypes.begin(),IMGT_DomainDisplay.inTypes.end());
+  IMGT_DomainDisplay.output = "http://edamontology.org/data_0968";
+  IMGT_DomainDisplay.output = "http://edamontology.org/data_0842";
+  biotools.push_back(IMGT_DomainDisplay);
+
+  Tool IMGT_GENE_DB;
+  IMGT_GENE_DB.id = "IMGT_GENE_DB";
+  IMGT_GENE_DB.operations = {"IMGT_GENE_DB"};
+  IMGT_GENE_DB.type = "tool";
+
+  IMGT_GENE_DB.inTypes = {};
+  IMGT_GENE_DB.inTypes.push_back("http://edamontology.org/data_2080");
+  IMGT_GENE_DB.inTypes.push_back("http://edamontology.org/data_0916");
+  IMGT_GENE_DB.inTypes.push_back("http://edamontology.org/data_2044");
+  sort (IMGT_GENE_DB.inTypes.begin(),IMGT_GENE_DB.inTypes.end());
+  IMGT_GENE_DB.output = "http://edamontology.org/data_0842";
+  IMGT_GENE_DB.output = "http://edamontology.org/data_0968";
+  IMGT_GENE_DB.output = "http://edamontology.org/data_2858";
+  IMGT_GENE_DB.output = "http://edamontology.org/data_2299";
+  biotools.push_back(IMGT_GENE_DB);
+
+  Tool IMGT_GeneFrequency;
+  IMGT_GeneFrequency.id = "IMGT_GeneFrequency";
+  IMGT_GeneFrequency.operations = {"IMGT_GeneFrequency"};
+  IMGT_GeneFrequency.type = "tool";
+
+  IMGT_GeneFrequency.inTypes = {};
+  IMGT_GeneFrequency.inTypes.push_back("http://edamontology.org/data_0842");
+  sort (IMGT_GeneFrequency.inTypes.begin(),IMGT_GeneFrequency.inTypes.end());
+  IMGT_GeneFrequency.output = "http://edamontology.org/data_0842";
+  IMGT_GeneFrequency.output = "http://edamontology.org/data_0968";
+  biotools.push_back(IMGT_GeneFrequency);
+
+  Tool IMGT_GeneInfo;
+  IMGT_GeneInfo.id = "IMGT_GeneInfo";
+  IMGT_GeneInfo.operations = {"IMGT_GeneInfo"};
+  IMGT_GeneInfo.type = "tool";
+
+  IMGT_GeneInfo.inTypes = {};
+  IMGT_GeneInfo.inTypes.push_back("http://edamontology.org/data_1278");
+  IMGT_GeneInfo.inTypes.push_back("http://edamontology.org/data_2977");
+  sort (IMGT_GeneInfo.inTypes.begin(),IMGT_GeneInfo.inTypes.end());
+  IMGT_GeneInfo.output = "http://edamontology.org/data_0968";
+  biotools.push_back(IMGT_GeneInfo);
+
+  Tool IMGT_HighV_QUEST;
+  IMGT_HighV_QUEST.id = "IMGT_HighV_QUEST";
+  IMGT_HighV_QUEST.operations = {"IMGT_HighV_QUEST"};
+  IMGT_HighV_QUEST.type = "tool";
+
+  IMGT_HighV_QUEST.inTypes = {};
+  IMGT_HighV_QUEST.inTypes.push_back("http://edamontology.org/data_3779");
+  IMGT_HighV_QUEST.inTypes.push_back("http://edamontology.org/data_1255");
+  IMGT_HighV_QUEST.inTypes.push_back("http://edamontology.org/data_2955");
+  sort (IMGT_HighV_QUEST.inTypes.begin(),IMGT_HighV_QUEST.inTypes.end());
+  IMGT_HighV_QUEST.output = "http://edamontology.org/data_2977";
+  biotools.push_back(IMGT_HighV_QUEST);
+
+  Tool IMGT_JunctionAnalysis;
+  IMGT_JunctionAnalysis.id = "IMGT_JunctionAnalysis";
+  IMGT_JunctionAnalysis.operations = {"IMGT_JunctionAnalysis"};
+  IMGT_JunctionAnalysis.type = "tool";
+
+  IMGT_JunctionAnalysis.inTypes = {};
+  IMGT_JunctionAnalysis.inTypes.push_back("http://edamontology.org/data_0863");
+  IMGT_JunctionAnalysis.inTypes.push_back("http://edamontology.org/data_0867");
+  sort (IMGT_JunctionAnalysis.inTypes.begin(),IMGT_JunctionAnalysis.inTypes.end());
+  IMGT_JunctionAnalysis.output = "http://edamontology.org/data_2977";
+  biotools.push_back(IMGT_JunctionAnalysis);
+
+  Tool IMGT_LIGM_DB;
+  IMGT_LIGM_DB.id = "IMGT_LIGM_DB";
+  IMGT_LIGM_DB.operations = {"IMGT_LIGM_DB"};
+  IMGT_LIGM_DB.type = "tool";
+
+  IMGT_LIGM_DB.inTypes = {};
+  IMGT_LIGM_DB.inTypes.push_back("http://edamontology.org/data_2080");
+  sort (IMGT_LIGM_DB.inTypes.begin(),IMGT_LIGM_DB.inTypes.end());
+  IMGT_LIGM_DB.output = "http://edamontology.org/data_0842";
+  IMGT_LIGM_DB.output = "http://edamontology.org/data_1103";
+  IMGT_LIGM_DB.output = "http://edamontology.org/data_0968";
+  IMGT_LIGM_DB.output = "http://edamontology.org/data_2858";
+  biotools.push_back(IMGT_LIGM_DB);
+
+  Tool IMGT_PRIMER_DB;
+  IMGT_PRIMER_DB.id = "IMGT_PRIMER_DB";
+  IMGT_PRIMER_DB.operations = {"IMGT_PRIMER_DB"};
+  IMGT_PRIMER_DB.type = "tool";
+
+  IMGT_PRIMER_DB.inTypes = {};
+  IMGT_PRIMER_DB.inTypes.push_back("http://edamontology.org/data_2977");
+  sort (IMGT_PRIMER_DB.inTypes.begin(),IMGT_PRIMER_DB.inTypes.end());
+  IMGT_PRIMER_DB.output = "http://edamontology.org/data_2977";
+  biotools.push_back(IMGT_PRIMER_DB);
+
+  Tool IMGT_PhyloGene;
+  IMGT_PhyloGene.id = "IMGT_PhyloGene";
+  IMGT_PhyloGene.operations = {"IMGT_PhyloGene"};
+  IMGT_PhyloGene.type = "tool";
+
+  IMGT_PhyloGene.inTypes = {};
+  IMGT_PhyloGene.inTypes.push_back("http://edamontology.org/data_2523");
+  IMGT_PhyloGene.inTypes.push_back("http://edamontology.org/data_0867");
+  sort (IMGT_PhyloGene.inTypes.begin(),IMGT_PhyloGene.inTypes.end());
+  IMGT_PhyloGene.output = "http://edamontology.org/data_0968";
+  IMGT_PhyloGene.output = "http://edamontology.org/data_2299";
+  IMGT_PhyloGene.output = "http://edamontology.org/data_2858";
+  biotools.push_back(IMGT_PhyloGene);
+
+  Tool IMGT_StructuralQuery;
+  IMGT_StructuralQuery.id = "IMGT_StructuralQuery";
+  IMGT_StructuralQuery.operations = {"IMGT_StructuralQuery"};
+  IMGT_StructuralQuery.type = "tool";
+
+  IMGT_StructuralQuery.inTypes = {};
+  IMGT_StructuralQuery.inTypes.push_back("http://edamontology.org/data_0883");
+  sort (IMGT_StructuralQuery.inTypes.begin(),IMGT_StructuralQuery.inTypes.end());
+  IMGT_StructuralQuery.output = "http://edamontology.org/data_0968";
+  biotools.push_back(IMGT_StructuralQuery);
+
+  Tool IMGT_mAb_DB;
+  IMGT_mAb_DB.id = "IMGT_mAb_DB";
+  IMGT_mAb_DB.operations = {"IMGT_mAb_DB"};
+  IMGT_mAb_DB.type = "tool";
+
+  IMGT_mAb_DB.inTypes = {};
+  IMGT_mAb_DB.inTypes.push_back("http://edamontology.org/data_2080");
+  sort (IMGT_mAb_DB.inTypes.begin(),IMGT_mAb_DB.inTypes.end());
+  IMGT_mAb_DB.output = "http://edamontology.org/data_0842";
+  biotools.push_back(IMGT_mAb_DB);
+
+  Tool IndigoMine;
+  IndigoMine.id = "IndigoMine";
+  IndigoMine.operations = {"IndigoMine"};
+  IndigoMine.type = "tool";
+
+  IndigoMine.inTypes = {};
+  IndigoMine.inTypes.push_back("http://edamontology.org/data_3753");
+  IndigoMine.inTypes.push_back("http://edamontology.org/data_3786");
+  IndigoMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (IndigoMine.inTypes.begin(),IndigoMine.inTypes.end());
+  IndigoMine.output = "http://edamontology.org/data_1255";
+  IndigoMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(IndigoMine);
+
+  Tool LegumeMine;
+  LegumeMine.id = "LegumeMine";
+  LegumeMine.operations = {"LegumeMine"};
+  LegumeMine.type = "tool";
+
+  LegumeMine.inTypes = {};
+  LegumeMine.inTypes.push_back("http://edamontology.org/data_3753");
+  LegumeMine.inTypes.push_back("http://edamontology.org/data_3786");
+  LegumeMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (LegumeMine.inTypes.begin(),LegumeMine.inTypes.end());
+  LegumeMine.output = "http://edamontology.org/data_1255";
+  LegumeMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(LegumeMine);
+
+  Tool LocustMine;
+  LocustMine.id = "LocustMine";
+  LocustMine.operations = {"LocustMine"};
+  LocustMine.type = "tool";
+
+  LocustMine.inTypes = {};
+  LocustMine.inTypes.push_back("http://edamontology.org/data_3753");
+  LocustMine.inTypes.push_back("http://edamontology.org/data_3786");
+  LocustMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (LocustMine.inTypes.begin(),LocustMine.inTypes.end());
+  LocustMine.output = "http://edamontology.org/data_1255";
+  LocustMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(LocustMine);
+
+  Tool MMseqs2;
+  MMseqs2.id = "MMseqs2";
+  MMseqs2.operations = {"MMseqs2"};
+  MMseqs2.type = "tool";
+
+  MMseqs2.inTypes = {};
+  MMseqs2.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (MMseqs2.inTypes.begin(),MMseqs2.inTypes.end());
+  MMseqs2.output = "http://edamontology.org/data_0850";
+  biotools.push_back(MMseqs2);
+
+  Tool MaizeMine;
+  MaizeMine.id = "MaizeMine";
+  MaizeMine.operations = {"MaizeMine"};
+  MaizeMine.type = "tool";
+
+  MaizeMine.inTypes = {};
+  MaizeMine.inTypes.push_back("http://edamontology.org/data_3753");
+  MaizeMine.inTypes.push_back("http://edamontology.org/data_3786");
+  MaizeMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (MaizeMine.inTypes.begin(),MaizeMine.inTypes.end());
+  MaizeMine.output = "http://edamontology.org/data_1255";
+  MaizeMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(MaizeMine);
+
+  Tool MedicMine;
+  MedicMine.id = "MedicMine";
+  MedicMine.operations = {"MedicMine"};
+  MedicMine.type = "tool";
+
+  MedicMine.inTypes = {};
+  MedicMine.inTypes.push_back("http://edamontology.org/data_3753");
+  MedicMine.inTypes.push_back("http://edamontology.org/data_3786");
+  MedicMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (MedicMine.inTypes.begin(),MedicMine.inTypes.end());
+  MedicMine.output = "http://edamontology.org/data_1255";
+  MedicMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(MedicMine);
+
+  Tool MiXCR;
+  MiXCR.id = "MiXCR";
+  MiXCR.operations = {"MiXCR"};
+  MiXCR.type = "tool";
+
+  MiXCR.inTypes = {};
+  MiXCR.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (MiXCR.inTypes.begin(),MiXCR.inTypes.end());
+  MiXCR.output = "http://edamontology.org/data_2044";
+  biotools.push_back(MiXCR);
+
+  Tool MicroScope_platform;
+  MicroScope_platform.id = "MicroScope_platform";
+  MicroScope_platform.operations = {"MicroScope_platform"};
+  MicroScope_platform.type = "tool";
+
+  MicroScope_platform.inTypes = {};
+  MicroScope_platform.inTypes.push_back("http://edamontology.org/data_3002");
+  sort (MicroScope_platform.inTypes.begin(),MicroScope_platform.inTypes.end());
+  MicroScope_platform.output = "http://edamontology.org/data_0925";
+  MicroScope_platform.output = "http://edamontology.org/data_1098";
+  biotools.push_back(MicroScope_platform);
+
+  Tool ModMine;
+  ModMine.id = "ModMine";
+  ModMine.operations = {"ModMine"};
+  ModMine.type = "tool";
+
+  ModMine.inTypes = {};
+  ModMine.inTypes.push_back("http://edamontology.org/data_3753");
+  ModMine.inTypes.push_back("http://edamontology.org/data_3786");
+  ModMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (ModMine.inTypes.begin(),ModMine.inTypes.end());
+  ModMine.output = "http://edamontology.org/data_1255";
+  ModMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(ModMine);
+
+  Tool OakMine;
+  OakMine.id = "OakMine";
+  OakMine.operations = {"OakMine"};
+  OakMine.type = "tool";
+
+  OakMine.inTypes = {};
+  OakMine.inTypes.push_back("http://edamontology.org/data_3753");
+  OakMine.inTypes.push_back("http://edamontology.org/data_3786");
+  OakMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (OakMine.inTypes.begin(),OakMine.inTypes.end());
+  OakMine.output = "http://edamontology.org/data_1255";
+  OakMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(OakMine);
+
+  Tool Ocean_Gene_Atlas;
+  Ocean_Gene_Atlas.id = "Ocean_Gene_Atlas";
+  Ocean_Gene_Atlas.operations = {"Ocean_Gene_Atlas"};
+  Ocean_Gene_Atlas.type = "tool";
+
+  Ocean_Gene_Atlas.inTypes = {};
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_0863");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_2977");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_2976");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_0872");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_0857");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_3736");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_2884");
+  Ocean_Gene_Atlas.inTypes.push_back("http://edamontology.org/data_2968");
+  sort (Ocean_Gene_Atlas.inTypes.begin(),Ocean_Gene_Atlas.inTypes.end());
+  Ocean_Gene_Atlas.output = "http://edamontology.org/data_2977";
+  Ocean_Gene_Atlas.output = "http://edamontology.org/data_2976";
+  Ocean_Gene_Atlas.output = "http://edamontology.org/data_1364";
+  Ocean_Gene_Atlas.output = "http://edamontology.org/data_1138";
+  Ocean_Gene_Atlas.output = "http://edamontology.org/data_2295";
+  biotools.push_back(Ocean_Gene_Atlas);
+
+  Tool PathwayCommons_SPARQL_endpoint;
+  PathwayCommons_SPARQL_endpoint.id = "PathwayCommons_SPARQL_endpoint";
+  PathwayCommons_SPARQL_endpoint.operations = {"PathwayCommons_SPARQL_endpoint"};
+  PathwayCommons_SPARQL_endpoint.type = "tool";
+
+  PathwayCommons_SPARQL_endpoint.inTypes = {};
+  PathwayCommons_SPARQL_endpoint.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (PathwayCommons_SPARQL_endpoint.inTypes.begin(),PathwayCommons_SPARQL_endpoint.inTypes.end());
+  PathwayCommons_SPARQL_endpoint.output = "http://edamontology.org/data_3786";
+  biotools.push_back(PathwayCommons_SPARQL_endpoint);
+
+  Tool PeanutMine;
+  PeanutMine.id = "PeanutMine";
+  PeanutMine.operations = {"PeanutMine"};
+  PeanutMine.type = "tool";
+
+  PeanutMine.inTypes = {};
+  PeanutMine.inTypes.push_back("http://edamontology.org/data_3753");
+  PeanutMine.inTypes.push_back("http://edamontology.org/data_3786");
+  PeanutMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (PeanutMine.inTypes.begin(),PeanutMine.inTypes.end());
+  PeanutMine.output = "http://edamontology.org/data_1255";
+  PeanutMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(PeanutMine);
+
+  Tool PhytoMine;
+  PhytoMine.id = "PhytoMine";
+  PhytoMine.operations = {"PhytoMine"};
+  PhytoMine.type = "tool";
+
+  PhytoMine.inTypes = {};
+  PhytoMine.inTypes.push_back("http://edamontology.org/data_3753");
+  PhytoMine.inTypes.push_back("http://edamontology.org/data_3786");
+  PhytoMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (PhytoMine.inTypes.begin(),PhytoMine.inTypes.end());
+  PhytoMine.output = "http://edamontology.org/data_1255";
+  PhytoMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(PhytoMine);
+
+  Tool PlanMine;
+  PlanMine.id = "PlanMine";
+  PlanMine.operations = {"PlanMine"};
+  PlanMine.type = "tool";
+
+  PlanMine.inTypes = {};
+  PlanMine.inTypes.push_back("http://edamontology.org/data_3753");
+  PlanMine.inTypes.push_back("http://edamontology.org/data_3786");
+  PlanMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (PlanMine.inTypes.begin(),PlanMine.inTypes.end());
+  PlanMine.output = "http://edamontology.org/data_1255";
+  PlanMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(PlanMine);
+
+  Tool Proteo3Dnet;
+  Proteo3Dnet.id = "Proteo3Dnet";
+  Proteo3Dnet.operations = {"Proteo3Dnet"};
+  Proteo3Dnet.type = "tool";
+
+  Proteo3Dnet.inTypes = {};
+  Proteo3Dnet.inTypes.push_back("http://edamontology.org/data_2600");
+  Proteo3Dnet.inTypes.push_back("http://edamontology.org/data_3021");
+  Proteo3Dnet.inTypes.push_back("http://edamontology.org/data_1127");
+  Proteo3Dnet.inTypes.push_back("http://edamontology.org/data_2628");
+  sort (Proteo3Dnet.inTypes.begin(),Proteo3Dnet.inTypes.end());
+  Proteo3Dnet.output = "http://edamontology.org/data_3021";
+  Proteo3Dnet.output = "http://edamontology.org/data_2976";
+  biotools.push_back(Proteo3Dnet);
+
+  Tool Query_Tabular;
+  Query_Tabular.id = "Query_Tabular";
+  Query_Tabular.operations = {"Query_Tabular"};
+  Query_Tabular.type = "tool";
+
+  Query_Tabular.inTypes = {};
+  Query_Tabular.inTypes.push_back("http://edamontology.org/data_3671");
+  sort (Query_Tabular.inTypes.begin(),Query_Tabular.inTypes.end());
+  Query_Tabular.output = "http://edamontology.org/data_3671";
+  biotools.push_back(Query_Tabular);
+
+  Tool RatMine;
+  RatMine.id = "RatMine";
+  RatMine.operations = {"RatMine"};
+  RatMine.type = "tool";
+
+  RatMine.inTypes = {};
+  RatMine.inTypes.push_back("http://edamontology.org/data_3753");
+  RatMine.inTypes.push_back("http://edamontology.org/data_3786");
+  RatMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (RatMine.inTypes.begin(),RatMine.inTypes.end());
+  RatMine.output = "http://edamontology.org/data_1255";
+  RatMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(RatMine);
+
+  Tool RepetDB;
+  RepetDB.id = "RepetDB";
+  RepetDB.operations = {"RepetDB"};
+  RepetDB.type = "tool";
+
+  RepetDB.inTypes = {};
+  RepetDB.inTypes.push_back("http://edamontology.org/data_3753");
+  RepetDB.inTypes.push_back("http://edamontology.org/data_3786");
+  RepetDB.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (RepetDB.inTypes.begin(),RepetDB.inTypes.end());
+  RepetDB.output = "http://edamontology.org/data_1255";
+  RepetDB.output = "http://edamontology.org/data_2353";
+  biotools.push_back(RepetDB);
+
+  Tool SoyMine;
+  SoyMine.id = "SoyMine";
+  SoyMine.operations = {"SoyMine"};
+  SoyMine.type = "tool";
+
+  SoyMine.inTypes = {};
+  SoyMine.inTypes.push_back("http://edamontology.org/data_3753");
+  SoyMine.inTypes.push_back("http://edamontology.org/data_3786");
+  SoyMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (SoyMine.inTypes.begin(),SoyMine.inTypes.end());
+  SoyMine.output = "http://edamontology.org/data_1255";
+  SoyMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(SoyMine);
+
+  Tool TARA_BLAST_Service;
+  TARA_BLAST_Service.id = "TARA_BLAST_Service";
+  TARA_BLAST_Service.operations = {"TARA_BLAST_Service"};
+  TARA_BLAST_Service.type = "tool";
+
+  TARA_BLAST_Service.inTypes = {};
+  TARA_BLAST_Service.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (TARA_BLAST_Service.inTypes.begin(),TARA_BLAST_Service.inTypes.end());
+  TARA_BLAST_Service.output = "http://edamontology.org/data_2044";
+  biotools.push_back(TARA_BLAST_Service);
+
+  Tool ThaleMine;
+  ThaleMine.id = "ThaleMine";
+  ThaleMine.operations = {"ThaleMine"};
+  ThaleMine.type = "tool";
+
+  ThaleMine.inTypes = {};
+  ThaleMine.inTypes.push_back("http://edamontology.org/data_3753");
+  ThaleMine.inTypes.push_back("http://edamontology.org/data_3786");
+  ThaleMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (ThaleMine.inTypes.begin(),ThaleMine.inTypes.end());
+  ThaleMine.output = "http://edamontology.org/data_1255";
+  ThaleMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(ThaleMine);
+
+  Tool WheatMine;
+  WheatMine.id = "WheatMine";
+  WheatMine.operations = {"WheatMine"};
+  WheatMine.type = "tool";
+
+  WheatMine.inTypes = {};
+  WheatMine.inTypes.push_back("http://edamontology.org/data_3753");
+  WheatMine.inTypes.push_back("http://edamontology.org/data_3786");
+  WheatMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (WheatMine.inTypes.begin(),WheatMine.inTypes.end());
+  WheatMine.output = "http://edamontology.org/data_1255";
+  WheatMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(WheatMine);
+
+  Tool WormMine;
+  WormMine.id = "WormMine";
+  WormMine.operations = {"WormMine"};
+  WormMine.type = "tool";
+
+  WormMine.inTypes = {};
+  WormMine.inTypes.push_back("http://edamontology.org/data_3753");
+  WormMine.inTypes.push_back("http://edamontology.org/data_3786");
+  WormMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (WormMine.inTypes.begin(),WormMine.inTypes.end());
+  WormMine.output = "http://edamontology.org/data_1255";
+  WormMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(WormMine);
+
+  Tool XenMine;
+  XenMine.id = "XenMine";
+  XenMine.operations = {"XenMine"};
+  XenMine.type = "tool";
+
+  XenMine.inTypes = {};
+  XenMine.inTypes.push_back("http://edamontology.org/data_3753");
+  XenMine.inTypes.push_back("http://edamontology.org/data_3786");
+  XenMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (XenMine.inTypes.begin(),XenMine.inTypes.end());
+  XenMine.output = "http://edamontology.org/data_1255";
+  XenMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(XenMine);
+
+  Tool YeastMine;
+  YeastMine.id = "YeastMine";
+  YeastMine.operations = {"YeastMine"};
+  YeastMine.type = "tool";
+
+  YeastMine.inTypes = {};
+  YeastMine.inTypes.push_back("http://edamontology.org/data_3753");
+  YeastMine.inTypes.push_back("http://edamontology.org/data_3786");
+  YeastMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (YeastMine.inTypes.begin(),YeastMine.inTypes.end());
+  YeastMine.output = "http://edamontology.org/data_1255";
+  YeastMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(YeastMine);
+
+  Tool ZebrafishMine;
+  ZebrafishMine.id = "ZebrafishMine";
+  ZebrafishMine.operations = {"ZebrafishMine"};
+  ZebrafishMine.type = "tool";
+
+  ZebrafishMine.inTypes = {};
+  ZebrafishMine.inTypes.push_back("http://edamontology.org/data_3753");
+  ZebrafishMine.inTypes.push_back("http://edamontology.org/data_3786");
+  ZebrafishMine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (ZebrafishMine.inTypes.begin(),ZebrafishMine.inTypes.end());
+  ZebrafishMine.output = "http://edamontology.org/data_1255";
+  ZebrafishMine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(ZebrafishMine);
+
+  Tool abs;
+  abs.id = "abs";
+  abs.operations = {"abs"};
+  abs.type = "tool";
+
+  abs.inTypes = {};
+  abs.inTypes.push_back("http://edamontology.org/data_1276");
+  sort (abs.inTypes.begin(),abs.inTypes.end());
+  abs.output = "http://edamontology.org/data_2741";
+  abs.output = "http://edamontology.org/data_1077";
+  abs.output = "http://edamontology.org/data_2299";
+  biotools.push_back(abs);
+
+  Tool aceview;
+  aceview.id = "aceview";
+  aceview.operations = {"aceview"};
+  aceview.type = "tool";
+
+  aceview.inTypes = {};
+  aceview.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (aceview.inTypes.begin(),aceview.inTypes.end());
+  aceview.output = "http://edamontology.org/data_1045";
+  aceview.output = "http://edamontology.org/data_1026";
+  biotools.push_back(aceview);
+
+  Tool action;
+  action.id = "action";
+  action.operations = {"action"};
+  action.type = "tool";
+
+  action.inTypes = {};
+  action.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (action.inTypes.begin(),action.inTypes.end());
+  action.output = "http://edamontology.org/data_3112";
+  biotools.push_back(action);
+
+  Tool aftol;
+  aftol.id = "aftol";
+  aftol.operations = {"aftol"};
+  aftol.type = "tool";
+
+  aftol.inTypes = {};
+  aftol.inTypes.push_back("http://edamontology.org/data_2530");
+  sort (aftol.inTypes.begin(),aftol.inTypes.end());
+  aftol.output = "http://edamontology.org/data_1870";
+  aftol.output = "http://edamontology.org/data_1045";
+  biotools.push_back(aftol);
+
+  Tool akid;
+  akid.id = "akid";
+  akid.operations = {"akid"};
+  akid.type = "tool";
+
+  akid.inTypes = {};
+  akid.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (akid.inTypes.begin(),akid.inTypes.end());
+  akid.output = "http://edamontology.org/data_2974";
+  biotools.push_back(akid);
+
+  Tool alfred;
+  alfred.id = "alfred";
+  alfred.operations = {"alfred"};
+  alfred.type = "tool";
+
+  alfred.inTypes = {};
+  alfred.inTypes.push_back("http://edamontology.org/data_2526");
+  sort (alfred.inTypes.begin(),alfred.inTypes.end());
+  alfred.output = "http://edamontology.org/data_1916";
+  biotools.push_back(alfred);
+
+  Tool alignmentcomparator;
+  alignmentcomparator.id = "alignmentcomparator";
+  alignmentcomparator.operations = {"alignmentcomparator"};
+  alignmentcomparator.type = "tool";
+
+  alignmentcomparator.inTypes = {};
+  alignmentcomparator.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (alignmentcomparator.inTypes.begin(),alignmentcomparator.inTypes.end());
+  alignmentcomparator.output = "http://edamontology.org/data_0863";
+  biotools.push_back(alignmentcomparator);
+
+  Tool allergome;
+  allergome.id = "allergome";
+  allergome.operations = {"allergome"};
+  allergome.type = "tool";
+
+  allergome.inTypes = {};
+  allergome.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (allergome.inTypes.begin(),allergome.inTypes.end());
+  allergome.output = "http://edamontology.org/data_0842";
+  biotools.push_back(allergome);
+
+  Tool amped;
+  amped.id = "amped";
+  amped.operations = {"amped"};
+  amped.type = "tool";
+
+  amped.inTypes = {};
+  amped.inTypes.push_back("http://edamontology.org/data_0850");
+  sort (amped.inTypes.begin(),amped.inTypes.end());
+  amped.output = "http://edamontology.org/data_2531";
+  biotools.push_back(amped);
+
+  Tool amypdb;
+  amypdb.id = "amypdb";
+  amypdb.operations = {"amypdb"};
+  amypdb.type = "tool";
+
+  amypdb.inTypes = {};
+  amypdb.inTypes.push_back("http://edamontology.org/data_1233");
+  sort (amypdb.inTypes.begin(),amypdb.inTypes.end());
+  amypdb.output = "http://edamontology.org/data_1093";
+  amypdb.output = "http://edamontology.org/data_2976";
+  biotools.push_back(amypdb);
+
+  Tool aramemnon;
+  aramemnon.id = "aramemnon";
+  aramemnon.operations = {"aramemnon"};
+  aramemnon.type = "tool";
+
+  aramemnon.inTypes = {};
+  aramemnon.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (aramemnon.inTypes.begin(),aramemnon.inTypes.end());
+  aramemnon.output = "http://edamontology.org/data_1895";
+  biotools.push_back(aramemnon);
+
+  Tool artic;
+  artic.id = "artic";
+  artic.operations = {"artic"};
+  artic.type = "tool";
+
+  artic.inTypes = {};
+  artic.inTypes.push_back("http://edamontology.org/data_1383");
+  artic.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (artic.inTypes.begin(),artic.inTypes.end());
+  artic.output = "http://edamontology.org/data_3494";
+  artic.output = "http://edamontology.org/data_2012";
+  biotools.push_back(artic);
+
+  Tool askomics;
+  askomics.id = "askomics";
+  askomics.operations = {"askomics"};
+  askomics.type = "tool";
+
+  askomics.inTypes = {};
+  askomics.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (askomics.inTypes.begin(),askomics.inTypes.end());
+  askomics.output = "http://edamontology.org/data_1255";
+  askomics.output = "http://edamontology.org/data_2353";
+  askomics.output = "http://edamontology.org/data_2526";
+  biotools.push_back(askomics);
+
+  Tool aspicdb;
+  aspicdb.id = "aspicdb";
+  aspicdb.operations = {"aspicdb"};
+  aspicdb.type = "tool";
+
+  aspicdb.inTypes = {};
+  aspicdb.inTypes.push_back("http://edamontology.org/data_3134");
+  sort (aspicdb.inTypes.begin(),aspicdb.inTypes.end());
+  aspicdb.output = "http://edamontology.org/data_1026";
+  aspicdb.output = "http://edamontology.org/data_0968";
+  aspicdb.output = "http://edamontology.org/data_0582";
+  biotools.push_back(aspicdb);
 
   Tool assemblyget;
-  assemblyget.name = "assemblyget";
   assemblyget.id = "assemblyget";
   assemblyget.operations = {"assemblyget"};
   assemblyget.type = "tool";
-  assemblyget.inputs = {};
-  assemblyget.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  assemblyget.inputs.push_back(ins);
+  assemblyget.inTypes = {};
   assemblyget.inTypes.push_back("http://edamontology.org/data_0849");
   sort (assemblyget.inTypes.begin(),assemblyget.inTypes.end());
   assemblyget.output = "http://edamontology.org/data_0925";
-  emboss.push_back(assemblyget);
-
-  Tool backtranambig;
-  backtranambig.name = "backtranambig";
-  backtranambig.id = "backtranambig";
-  backtranambig.operations = {"backtranambig"};
-  backtranambig.type = "tool";
-  backtranambig.inputs = {};
-  backtranambig.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  backtranambig.inputs.push_back(ins);
-  backtranambig.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (backtranambig.inTypes.begin(),backtranambig.inTypes.end());
-  backtranambig.output = "http://edamontology.org/data_2886";
-  emboss.push_back(backtranambig);
-
-  Tool backtranambig_ebi;
-  backtranambig_ebi.name = "backtranambig-ebi";
-  backtranambig_ebi.id = "backtranambig-ebi";
-  backtranambig_ebi.operations = {"backtranambig-ebi"};
-  backtranambig_ebi.type = "tool";
-  backtranambig_ebi.inputs = {};
-  backtranambig_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2977";
-  backtranambig_ebi.inputs.push_back(ins);
-  backtranambig_ebi.inTypes.push_back("http://edamontology.org/data_2977");
-  sort (backtranambig_ebi.inTypes.begin(),backtranambig_ebi.inTypes.end());
-  backtranambig_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(backtranambig_ebi);
-
-  Tool backtranseq;
-  backtranseq.name = "backtranseq";
-  backtranseq.id = "backtranseq";
-  backtranseq.operations = {"backtranseq"};
-  backtranseq.type = "tool";
-  backtranseq.inputs = {};
-  backtranseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  backtranseq.inputs.push_back(ins);
-  backtranseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (backtranseq.inTypes.begin(),backtranseq.inTypes.end());
-  backtranseq.output = "http://edamontology.org/data_2886";
-  backtranseq.output = "http://edamontology.org/data_1597";
-  emboss.push_back(backtranseq);
-
-  Tool backtranseq_ebi;
-  backtranseq_ebi.name = "backtranseq-ebi";
-  backtranseq_ebi.id = "backtranseq-ebi";
-  backtranseq_ebi.operations = {"backtranseq-ebi"};
-  backtranseq_ebi.type = "tool";
-  backtranseq_ebi.inputs = {};
-  backtranseq_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2977";
-  backtranseq_ebi.inputs.push_back(ins);
-  backtranseq_ebi.inTypes.push_back("http://edamontology.org/data_2977");
-  sort (backtranseq_ebi.inTypes.begin(),backtranseq_ebi.inTypes.end());
-  backtranseq_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(backtranseq_ebi);
-
-  Tool banana;
-  banana.name = "banana";
-  banana.id = "banana";
-  banana.operations = {"banana"};
-  banana.type = "tool";
-  banana.inputs = {};
-  banana.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0912";
-  banana.inputs.push_back(ins);
-  banana.inTypes.push_back("http://edamontology.org/data_0912");
-  sort (banana.inTypes.begin(),banana.inTypes.end());
-  banana.output = "http://edamontology.org/data_0849";
-  banana.output = "http://edamontology.org/data_1590";
-  emboss.push_back(banana);
-
-  Tool biosed;
-  biosed.name = "biosed";
-  biosed.id = "biosed";
-  biosed.operations = {"biosed"};
-  biosed.type = "tool";
-  biosed.inputs = {};
-  biosed.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  biosed.inputs.push_back(ins);
-  biosed.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (biosed.inTypes.begin(),biosed.inTypes.end());
-  biosed.output = "http://edamontology.org/data_0849";
-  emboss.push_back(biosed);
-
-  Tool btwisted;
-  btwisted.name = "btwisted";
-  btwisted.id = "btwisted";
-  btwisted.operations = {"btwisted"};
-  btwisted.type = "tool";
-  btwisted.inputs = {};
-  btwisted.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0912";
-  btwisted.inputs.push_back(ins);
-  btwisted.inTypes.push_back("http://edamontology.org/data_0912");
-  sort (btwisted.inTypes.begin(),btwisted.inTypes.end());
-  btwisted.output = "http://edamontology.org/data_0849";
-  btwisted.output = "http://edamontology.org/data_1589";
-  btwisted.output = "http://edamontology.org/data_1588";
-  emboss.push_back(btwisted);
-
-  Tool cachedas;
-  cachedas.name = "cachedas";
-  cachedas.id = "cachedas";
-  cachedas.operations = {"cachedas"};
-  cachedas.type = "tool";
-  cachedas.inputs = {};
-  cachedas.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  cachedas.inputs.push_back(ins);
-  cachedas.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (cachedas.inTypes.begin(),cachedas.inTypes.end());
-  emboss.push_back(cachedas);
-
-  Tool cachedbfetch;
-  cachedbfetch.name = "cachedbfetch";
-  cachedbfetch.id = "cachedbfetch";
-  cachedbfetch.operations = {"cachedbfetch"};
-  cachedbfetch.type = "tool";
-  cachedbfetch.inputs = {};
-  cachedbfetch.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  cachedbfetch.inputs.push_back(ins);
-  cachedbfetch.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (cachedbfetch.inTypes.begin(),cachedbfetch.inTypes.end());
-  emboss.push_back(cachedbfetch);
-
-  Tool cacheebeyesearch;
-  cacheebeyesearch.name = "cacheebeyesearch";
-  cacheebeyesearch.id = "cacheebeyesearch";
-  cacheebeyesearch.operations = {"cacheebeyesearch"};
-  cacheebeyesearch.type = "tool";
-  cacheebeyesearch.inputs = {};
-  cacheebeyesearch.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  cacheebeyesearch.inputs.push_back(ins);
-  cacheebeyesearch.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (cacheebeyesearch.inTypes.begin(),cacheebeyesearch.inTypes.end());
-  emboss.push_back(cacheebeyesearch);
-
-  Tool cacheensembl;
-  cacheensembl.name = "cacheensembl";
-  cacheensembl.id = "cacheensembl";
-  cacheensembl.operations = {"cacheensembl"};
-  cacheensembl.type = "tool";
-  cacheensembl.inputs = {};
-  cacheensembl.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  cacheensembl.inputs.push_back(ins);
-  cacheensembl.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (cacheensembl.inTypes.begin(),cacheensembl.inTypes.end());
-  emboss.push_back(cacheensembl);
-
-  Tool cai;
-  cai.name = "cai";
-  cai.id = "cai";
-  cai.operations = {"cai"};
-  cai.type = "tool";
-  cai.inputs = {};
-  cai.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2865";
-  cai.inputs.push_back(ins);
-  cai.inTypes.push_back("http://edamontology.org/data_2865");
-  sort (cai.inTypes.begin(),cai.inTypes.end());
-  cai.output = "http://edamontology.org/data_2887";
-  cai.output = "http://edamontology.org/data_1597";
-  emboss.push_back(cai);
-
-  Tool chaos;
-  chaos.name = "chaos";
-  chaos.id = "chaos";
-  chaos.operations = {"chaos"};
-  chaos.type = "tool";
-  chaos.inputs = {};
-  chaos.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2166";
-  chaos.inputs.push_back(ins);
-  chaos.inTypes.push_back("http://edamontology.org/data_2166");
-  sort (chaos.inTypes.begin(),chaos.inTypes.end());
-  chaos.output = "http://edamontology.org/data_2887";
-  emboss.push_back(chaos);
-
-  Tool charge;
-  charge.name = "charge";
-  charge.id = "charge";
-  charge.operations = {"charge"};
-  charge.type = "tool";
-  charge.inputs = {};
-  charge.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1523";
-  charge.inputs.push_back(ins);
-  charge.inTypes.push_back("http://edamontology.org/data_1523");
-  sort (charge.inTypes.begin(),charge.inTypes.end());
-  charge.output = "http://edamontology.org/data_2886";
-  charge.output = "http://edamontology.org/data_1502";
-  emboss.push_back(charge);
-
-  Tool checktrans;
-  checktrans.name = "checktrans";
-  checktrans.id = "checktrans";
-  checktrans.operations = {"checktrans"};
-  checktrans.type = "tool";
-  checktrans.inputs = {};
-  checktrans.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  checktrans.inputs.push_back(ins);
-  checktrans.inTypes.push_back("http://edamontology.org/data_1276");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0849";
-  checktrans.inputs.push_back(ins);
-  checktrans.inTypes.push_back("http://edamontology.org/data_0849");
-  ins.label = "output2";
-  ins.type = "http://edamontology.org/data_1277";
-  checktrans.inputs.push_back(ins);
-  checktrans.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (checktrans.inTypes.begin(),checktrans.inTypes.end());
-  checktrans.output = "http://edamontology.org/data_2886";
-  emboss.push_back(checktrans);
-
-  Tool chips;
-  chips.name = "chips";
-  chips.id = "chips";
-  chips.operations = {"chips"};
-  chips.type = "tool";
-  chips.inputs = {};
-  chips.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2865";
-  chips.inputs.push_back(ins);
-  chips.inTypes.push_back("http://edamontology.org/data_2865");
-  sort (chips.inTypes.begin(),chips.inTypes.end());
-  chips.output = "http://edamontology.org/data_2887";
-  emboss.push_back(chips);
-
-  Tool cirdna;
-  cirdna.name = "cirdna";
-  cirdna.id = "cirdna";
-  cirdna.operations = {"cirdna"};
-  cirdna.type = "tool";
-  cirdna.inputs = {};
-  cirdna.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1278";
-  cirdna.inputs.push_back(ins);
-  cirdna.inTypes.push_back("http://edamontology.org/data_1278");
-  sort (cirdna.inTypes.begin(),cirdna.inTypes.end());
-  emboss.push_back(cirdna);
-
-  Tool codcmp;
-  codcmp.name = "codcmp";
-  codcmp.id = "codcmp";
-  codcmp.operations = {"codcmp"};
-  codcmp.type = "tool";
-  codcmp.inputs = {};
-  codcmp.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1602";
-  codcmp.inputs.push_back(ins);
-  codcmp.inTypes.push_back("http://edamontology.org/data_1602");
-  sort (codcmp.inTypes.begin(),codcmp.inTypes.end());
-  codcmp.output = "http://edamontology.org/data_1597";
-  codcmp.output = "http://edamontology.org/data_1597";
-  emboss.push_back(codcmp);
-
-  Tool codcopy;
-  codcopy.name = "codcopy";
-  codcopy.id = "codcopy";
-  codcopy.operations = {"codcopy"};
-  codcopy.type = "tool";
-  codcopy.inputs = {};
-  codcopy.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1597";
-  codcopy.inputs.push_back(ins);
-  codcopy.inTypes.push_back("http://edamontology.org/data_1597");
-  sort (codcopy.inTypes.begin(),codcopy.inTypes.end());
-  codcopy.output = "http://edamontology.org/data_1597";
-  emboss.push_back(codcopy);
-
-  Tool coderet;
-  coderet.name = "coderet";
-  coderet.id = "coderet";
-  coderet.operations = {"coderet"};
-  coderet.type = "tool";
-  coderet.inputs = {};
-  coderet.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  coderet.inputs.push_back(ins);
-  coderet.inTypes.push_back("http://edamontology.org/data_2887");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2886";
-  coderet.inputs.push_back(ins);
-  coderet.inTypes.push_back("http://edamontology.org/data_2886");
-  sort (coderet.inTypes.begin(),coderet.inTypes.end());
-  coderet.output = "http://edamontology.org/data_2887";
-  emboss.push_back(coderet);
-
-  Tool compseq;
-  compseq.name = "compseq";
-  compseq.id = "compseq";
-  compseq.operations = {"compseq"};
-  compseq.type = "tool";
-  compseq.inputs = {};
-  compseq.inTypes = {};
-
-  sort (compseq.inTypes.begin(),compseq.inTypes.end());
-  compseq.output = "http://edamontology.org/data_0849";
-  compseq.output = "http://edamontology.org/data_1261";
-  emboss.push_back(compseq);
-
-  Tool cons;
-  cons.name = "cons";
-  cons.id = "cons";
-  cons.operations = {"cons"};
-  cons.type = "tool";
-  cons.inputs = {};
-  cons.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  cons.inputs.push_back(ins);
-  cons.inTypes.push_back("http://edamontology.org/data_0849");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0848";
-  cons.inputs.push_back(ins);
-  cons.inTypes.push_back("http://edamontology.org/data_0848");
-  sort (cons.inTypes.begin(),cons.inTypes.end());
-  cons.output = "http://edamontology.org/data_0863";
-  cons.output = "http://edamontology.org/data_0874";
-  emboss.push_back(cons);
-
-  Tool consambig;
-  consambig.name = "consambig";
-  consambig.id = "consambig";
-  consambig.operations = {"consambig"};
-  consambig.type = "tool";
-  consambig.inputs = {};
-  consambig.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  consambig.inputs.push_back(ins);
-  consambig.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (consambig.inTypes.begin(),consambig.inTypes.end());
-  consambig.output = "http://edamontology.org/data_0863";
-  emboss.push_back(consambig);
-
-  Tool cpgplot;
-  cpgplot.name = "cpgplot";
-  cpgplot.id = "cpgplot";
-  cpgplot.operations = {"cpgplot"};
-  cpgplot.type = "tool";
-  cpgplot.inputs = {};
-  cpgplot.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  cpgplot.inputs.push_back(ins);
-  cpgplot.inTypes.push_back("http://edamontology.org/data_1276");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2968";
-  cpgplot.inputs.push_back(ins);
-  cpgplot.inTypes.push_back("http://edamontology.org/data_2968");
-  ins.label = "output2";
-  ins.type = "http://edamontology.org/data_1276";
-  cpgplot.inputs.push_back(ins);
-  cpgplot.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (cpgplot.inTypes.begin(),cpgplot.inTypes.end());
-  cpgplot.output = "http://edamontology.org/data_2887";
-  emboss.push_back(cpgplot);
-
-  Tool cpgplot_ebi;
-  cpgplot_ebi.name = "cpgplot-ebi";
-  cpgplot_ebi.id = "cpgplot-ebi";
-  cpgplot_ebi.operations = {"cpgplot-ebi"};
-  cpgplot_ebi.type = "tool";
-  cpgplot_ebi.inputs = {};
-  cpgplot_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  cpgplot_ebi.inputs.push_back(ins);
-  cpgplot_ebi.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (cpgplot_ebi.inTypes.begin(),cpgplot_ebi.inTypes.end());
-  cpgplot_ebi.output = "http://edamontology.org/data_2977";
-  emboss.push_back(cpgplot_ebi);
-
-  Tool cpgreport;
-  cpgreport.name = "cpgreport";
-  cpgreport.id = "cpgreport";
-  cpgreport.operations = {"cpgreport"};
-  cpgreport.type = "tool";
-  cpgreport.inputs = {};
-  cpgreport.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  cpgreport.inputs.push_back(ins);
-  cpgreport.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (cpgreport.inTypes.begin(),cpgreport.inTypes.end());
-  cpgreport.output = "http://edamontology.org/data_2887";
-  emboss.push_back(cpgreport);
-
-  Tool cusp;
-  cusp.name = "cusp";
-  cusp.id = "cusp";
-  cusp.operations = {"cusp"};
-  cusp.type = "tool";
-  cusp.inputs = {};
-  cusp.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1597";
-  cusp.inputs.push_back(ins);
-  cusp.inTypes.push_back("http://edamontology.org/data_1597");
-  sort (cusp.inTypes.begin(),cusp.inTypes.end());
-  cusp.output = "http://edamontology.org/data_2887";
-  emboss.push_back(cusp);
-
-  Tool cutgextract;
-  cutgextract.name = "cutgextract";
-  cutgextract.id = "cutgextract";
-  cutgextract.operations = {"cutgextract"};
-  cutgextract.type = "tool";
-  cutgextract.inputs = {};
-  cutgextract.inTypes = {};
-
-  sort (cutgextract.inTypes.begin(),cutgextract.inTypes.end());
-  cutgextract.output = "http://edamontology.org/data_1597";
-  emboss.push_back(cutgextract);
-
-  Tool cutseq;
-  cutseq.name = "cutseq";
-  cutseq.id = "cutseq";
-  cutseq.operations = {"cutseq"};
-  cutseq.type = "tool";
-  cutseq.inputs = {};
-  cutseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  cutseq.inputs.push_back(ins);
-  cutseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (cutseq.inTypes.begin(),cutseq.inTypes.end());
-  cutseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(cutseq);
-
-  Tool dan;
-  dan.name = "dan";
-  dan.id = "dan";
-  dan.operations = {"dan"};
-  dan.type = "tool";
-  dan.inputs = {};
-  dan.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2968";
-  dan.inputs.push_back(ins);
-  dan.inTypes.push_back("http://edamontology.org/data_2968");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_1583";
-  dan.inputs.push_back(ins);
-  dan.inTypes.push_back("http://edamontology.org/data_1583");
-  sort (dan.inTypes.begin(),dan.inTypes.end());
-  dan.output = "http://edamontology.org/data_2887";
-  emboss.push_back(dan);
-
-  Tool dbiblast;
-  dbiblast.name = "dbiblast";
-  dbiblast.id = "dbiblast";
-  dbiblast.operations = {"dbiblast"};
-  dbiblast.type = "tool";
-  dbiblast.inputs = {};
-  dbiblast.inTypes = {};
-
-  sort (dbiblast.inTypes.begin(),dbiblast.inTypes.end());
-  emboss.push_back(dbiblast);
-
-  Tool dbifasta;
-  dbifasta.name = "dbifasta";
-  dbifasta.id = "dbifasta";
-  dbifasta.operations = {"dbifasta"};
-  dbifasta.type = "tool";
-  dbifasta.inputs = {};
-  dbifasta.inTypes = {};
-
-  sort (dbifasta.inTypes.begin(),dbifasta.inTypes.end());
-  emboss.push_back(dbifasta);
-
-  Tool dbiflat;
-  dbiflat.name = "dbiflat";
-  dbiflat.id = "dbiflat";
-  dbiflat.operations = {"dbiflat"};
-  dbiflat.type = "tool";
-  dbiflat.inputs = {};
-  dbiflat.inTypes = {};
-
-  sort (dbiflat.inTypes.begin(),dbiflat.inTypes.end());
-  emboss.push_back(dbiflat);
-
-  Tool dbigcg;
-  dbigcg.name = "dbigcg";
-  dbigcg.id = "dbigcg";
-  dbigcg.operations = {"dbigcg"};
-  dbigcg.type = "tool";
-  dbigcg.inputs = {};
-  dbigcg.inTypes = {};
-
-  sort (dbigcg.inTypes.begin(),dbigcg.inTypes.end());
-  emboss.push_back(dbigcg);
-
-  Tool dbtell;
-  dbtell.name = "dbtell";
-  dbtell.id = "dbtell";
-  dbtell.operations = {"dbtell"};
-  dbtell.type = "tool";
-  dbtell.inputs = {};
-  dbtell.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  dbtell.inputs.push_back(ins);
-  dbtell.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (dbtell.inTypes.begin(),dbtell.inTypes.end());
-  emboss.push_back(dbtell);
-
-  Tool dbxcompress;
-  dbxcompress.name = "dbxcompress";
-  dbxcompress.id = "dbxcompress";
-  dbxcompress.operations = {"dbxcompress"};
-  dbxcompress.type = "tool";
-  dbxcompress.inputs = {};
-  dbxcompress.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  dbxcompress.inputs.push_back(ins);
-  dbxcompress.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (dbxcompress.inTypes.begin(),dbxcompress.inTypes.end());
-  emboss.push_back(dbxcompress);
-
-  Tool dbxedam;
-  dbxedam.name = "dbxedam";
-  dbxedam.id = "dbxedam";
-  dbxedam.operations = {"dbxedam"};
-  dbxedam.type = "tool";
-  dbxedam.inputs = {};
-  dbxedam.inTypes = {};
-
-  sort (dbxedam.inTypes.begin(),dbxedam.inTypes.end());
-  emboss.push_back(dbxedam);
-
-  Tool dbxfasta;
-  dbxfasta.name = "dbxfasta";
-  dbxfasta.id = "dbxfasta";
-  dbxfasta.operations = {"dbxfasta"};
-  dbxfasta.type = "tool";
-  dbxfasta.inputs = {};
-  dbxfasta.inTypes = {};
-
-  sort (dbxfasta.inTypes.begin(),dbxfasta.inTypes.end());
-  emboss.push_back(dbxfasta);
-
-  Tool dbxflat;
-  dbxflat.name = "dbxflat";
-  dbxflat.id = "dbxflat";
-  dbxflat.operations = {"dbxflat"};
-  dbxflat.type = "tool";
-  dbxflat.inputs = {};
-  dbxflat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  dbxflat.inputs.push_back(ins);
-  dbxflat.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (dbxflat.inTypes.begin(),dbxflat.inTypes.end());
-  emboss.push_back(dbxflat);
-
-  Tool dbxgcg;
-  dbxgcg.name = "dbxgcg";
-  dbxgcg.id = "dbxgcg";
-  dbxgcg.operations = {"dbxgcg"};
-  dbxgcg.type = "tool";
-  dbxgcg.inputs = {};
-  dbxgcg.inTypes = {};
-
-  sort (dbxgcg.inTypes.begin(),dbxgcg.inTypes.end());
-  emboss.push_back(dbxgcg);
-
-  Tool dbxobo;
-  dbxobo.name = "dbxobo";
-  dbxobo.id = "dbxobo";
-  dbxobo.operations = {"dbxobo"};
-  dbxobo.type = "tool";
-  dbxobo.inputs = {};
-  dbxobo.inTypes = {};
-
-  sort (dbxobo.inTypes.begin(),dbxobo.inTypes.end());
-  emboss.push_back(dbxobo);
-
-  Tool dbxreport;
-  dbxreport.name = "dbxreport";
-  dbxreport.id = "dbxreport";
-  dbxreport.operations = {"dbxreport"};
-  dbxreport.type = "tool";
-  dbxreport.inputs = {};
-  dbxreport.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  dbxreport.inputs.push_back(ins);
-  dbxreport.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (dbxreport.inTypes.begin(),dbxreport.inTypes.end());
-  emboss.push_back(dbxreport);
-
-  Tool dbxresource;
-  dbxresource.name = "dbxresource";
-  dbxresource.id = "dbxresource";
-  dbxresource.operations = {"dbxresource"};
-  dbxresource.type = "tool";
-  dbxresource.inputs = {};
-  dbxresource.inTypes = {};
-
-  sort (dbxresource.inTypes.begin(),dbxresource.inTypes.end());
-  emboss.push_back(dbxresource);
-
-  Tool dbxstat;
-  dbxstat.name = "dbxstat";
-  dbxstat.id = "dbxstat";
-  dbxstat.operations = {"dbxstat"};
-  dbxstat.type = "tool";
-  dbxstat.inputs = {};
-  dbxstat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  dbxstat.inputs.push_back(ins);
-  dbxstat.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (dbxstat.inTypes.begin(),dbxstat.inTypes.end());
-  emboss.push_back(dbxstat);
-
-  Tool dbxtax;
-  dbxtax.name = "dbxtax";
-  dbxtax.id = "dbxtax";
-  dbxtax.operations = {"dbxtax"};
-  dbxtax.type = "tool";
-  dbxtax.inputs = {};
-  dbxtax.inTypes = {};
-
-  sort (dbxtax.inTypes.begin(),dbxtax.inTypes.end());
-  emboss.push_back(dbxtax);
-
-  Tool dbxuncompress;
-  dbxuncompress.name = "dbxuncompress";
-  dbxuncompress.id = "dbxuncompress";
-  dbxuncompress.operations = {"dbxuncompress"};
-  dbxuncompress.type = "tool";
-  dbxuncompress.inputs = {};
-  dbxuncompress.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  dbxuncompress.inputs.push_back(ins);
-  dbxuncompress.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (dbxuncompress.inTypes.begin(),dbxuncompress.inTypes.end());
-  emboss.push_back(dbxuncompress);
-
-  Tool degapseq;
-  degapseq.name = "degapseq";
-  degapseq.id = "degapseq";
-  degapseq.operations = {"degapseq"};
-  degapseq.type = "tool";
-  degapseq.inputs = {};
-  degapseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  degapseq.inputs.push_back(ins);
-  degapseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (degapseq.inTypes.begin(),degapseq.inTypes.end());
-  degapseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(degapseq);
-
-  Tool density;
-  density.name = "density";
-  density.id = "density";
-  density.operations = {"density"};
-  density.type = "tool";
-  density.inputs = {};
-  density.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2167";
-  density.inputs.push_back(ins);
-  density.inTypes.push_back("http://edamontology.org/data_2167");
-  sort (density.inTypes.begin(),density.inTypes.end());
-  density.output = "http://edamontology.org/data_2887";
-  emboss.push_back(density);
-
-  Tool descseq;
-  descseq.name = "descseq";
-  descseq.id = "descseq";
-  descseq.operations = {"descseq"};
-  descseq.type = "tool";
-  descseq.inputs = {};
-  descseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  descseq.inputs.push_back(ins);
-  descseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (descseq.inTypes.begin(),descseq.inTypes.end());
-  descseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(descseq);
-
-  Tool diffseq;
-  diffseq.name = "diffseq";
-  diffseq.id = "diffseq";
-  diffseq.operations = {"diffseq"};
-  diffseq.type = "tool";
-  diffseq.inputs = {};
-  diffseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  diffseq.inputs.push_back(ins);
-  diffseq.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (diffseq.inTypes.begin(),diffseq.inTypes.end());
-  diffseq.output = "http://edamontology.org/data_0849";
-  diffseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(diffseq);
-
-  Tool distmat;
-  distmat.name = "distmat";
-  distmat.id = "distmat";
-  distmat.operations = {"distmat"};
-  distmat.type = "tool";
-  distmat.inputs = {};
-  distmat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0870";
-  distmat.inputs.push_back(ins);
-  distmat.inTypes.push_back("http://edamontology.org/data_0870");
-  sort (distmat.inTypes.begin(),distmat.inTypes.end());
-  distmat.output = "http://edamontology.org/data_0863";
-  emboss.push_back(distmat);
-
-  Tool dotmatcher;
-  dotmatcher.name = "dotmatcher";
-  dotmatcher.id = "dotmatcher";
-  dotmatcher.operations = {"dotmatcher"};
-  dotmatcher.type = "tool";
-  dotmatcher.inputs = {};
-  dotmatcher.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0862";
-  dotmatcher.inputs.push_back(ins);
-  dotmatcher.inTypes.push_back("http://edamontology.org/data_0862");
-  sort (dotmatcher.inTypes.begin(),dotmatcher.inTypes.end());
-  dotmatcher.output = "http://edamontology.org/data_0849";
-  dotmatcher.output = "http://edamontology.org/data_0849";
-  dotmatcher.output = "http://edamontology.org/data_0874";
-  emboss.push_back(dotmatcher);
-
-  Tool dotpath;
-  dotpath.name = "dotpath";
-  dotpath.id = "dotpath";
-  dotpath.operations = {"dotpath"};
-  dotpath.type = "tool";
-  dotpath.inputs = {};
-  dotpath.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0862";
-  dotpath.inputs.push_back(ins);
-  dotpath.inTypes.push_back("http://edamontology.org/data_0862");
-  sort (dotpath.inTypes.begin(),dotpath.inTypes.end());
-  dotpath.output = "http://edamontology.org/data_0849";
-  dotpath.output = "http://edamontology.org/data_0849";
-  emboss.push_back(dotpath);
-
-  Tool dottup;
-  dottup.name = "dottup";
-  dottup.id = "dottup";
-  dottup.operations = {"dottup"};
-  dottup.type = "tool";
-  dottup.inputs = {};
-  dottup.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0862";
-  dottup.inputs.push_back(ins);
-  dottup.inTypes.push_back("http://edamontology.org/data_0862");
-  sort (dottup.inTypes.begin(),dottup.inTypes.end());
-  dottup.output = "http://edamontology.org/data_0849";
-  dottup.output = "http://edamontology.org/data_0849";
-  emboss.push_back(dottup);
-
-  Tool dreg;
-  dreg.name = "dreg";
-  dreg.id = "dreg";
-  dreg.operations = {"dreg"};
-  dreg.type = "tool";
-  dreg.inputs = {};
-  dreg.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1114";
-  dreg.inputs.push_back(ins);
-  dreg.inTypes.push_back("http://edamontology.org/data_1114");
-  sort (dreg.inTypes.begin(),dreg.inTypes.end());
-  dreg.output = "http://edamontology.org/data_2887";
-  dreg.output = "http://edamontology.org/data_1352";
-  emboss.push_back(dreg);
-
-  Tool drfinddata;
-  drfinddata.name = "drfinddata";
-  drfinddata.id = "drfinddata";
-  drfinddata.operations = {"drfinddata"};
-  drfinddata.type = "tool";
-  drfinddata.inputs = {};
-  drfinddata.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drfinddata.inputs.push_back(ins);
-  drfinddata.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (drfinddata.inTypes.begin(),drfinddata.inTypes.end());
-  emboss.push_back(drfinddata);
-
-  Tool drfindformat;
-  drfindformat.name = "drfindformat";
-  drfindformat.id = "drfindformat";
-  drfindformat.operations = {"drfindformat"};
-  drfindformat.type = "tool";
-  drfindformat.inputs = {};
-  drfindformat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drfindformat.inputs.push_back(ins);
-  drfindformat.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (drfindformat.inTypes.begin(),drfindformat.inTypes.end());
-  emboss.push_back(drfindformat);
-
-  Tool drfindid;
-  drfindid.name = "drfindid";
-  drfindid.id = "drfindid";
-  drfindid.operations = {"drfindid"};
-  drfindid.type = "tool";
-  drfindid.inputs = {};
-  drfindid.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drfindid.inputs.push_back(ins);
-  drfindid.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (drfindid.inTypes.begin(),drfindid.inTypes.end());
-  emboss.push_back(drfindid);
-
-  Tool drfindresource;
-  drfindresource.name = "drfindresource";
-  drfindresource.id = "drfindresource";
-  drfindresource.operations = {"drfindresource"};
-  drfindresource.type = "tool";
-  drfindresource.inputs = {};
-  drfindresource.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drfindresource.inputs.push_back(ins);
-  drfindresource.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (drfindresource.inTypes.begin(),drfindresource.inTypes.end());
-  emboss.push_back(drfindresource);
-
-  Tool drget;
-  drget.name = "drget";
-  drget.id = "drget";
-  drget.operations = {"drget"};
-  drget.type = "tool";
-  drget.inputs = {};
-  drget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drget.inputs.push_back(ins);
-  drget.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (drget.inTypes.begin(),drget.inTypes.end());
-  drget.output = "http://edamontology.org/data_0957";
-  emboss.push_back(drget);
+  biotools.push_back(assemblyget);
+
+  Tool astd;
+  astd.id = "astd";
+  astd.operations = {"astd"};
+  astd.type = "tool";
+
+  astd.inTypes = {};
+  astd.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (astd.inTypes.begin(),astd.inTypes.end());
+  astd.output = "http://edamontology.org/data_1033";
+  biotools.push_back(astd);
+
+  Tool atcc;
+  atcc.id = "atcc";
+  atcc.operations = {"atcc"};
+  atcc.type = "tool";
+
+  atcc.inTypes = {};
+  atcc.inTypes.push_back("http://edamontology.org/data_0963");
+  sort (atcc.inTypes.begin(),atcc.inTypes.end());
+  atcc.output = "http://edamontology.org/data_0842";
+  biotools.push_back(atcc);
+
+  Tool atlasgeneticsoncology;
+  atlasgeneticsoncology.id = "atlasgeneticsoncology";
+  atlasgeneticsoncology.operations = {"atlasgeneticsoncology"};
+  atlasgeneticsoncology.type = "tool";
+
+  atlasgeneticsoncology.inTypes = {};
+  atlasgeneticsoncology.inTypes.push_back("http://edamontology.org/data_0971");
+  sort (atlasgeneticsoncology.inTypes.begin(),atlasgeneticsoncology.inTypes.end());
+  atlasgeneticsoncology.output = "http://edamontology.org/data_2080";
+  biotools.push_back(atlasgeneticsoncology);
+
+  Tool babelomics;
+  babelomics.id = "babelomics";
+  babelomics.operations = {"babelomics"};
+  babelomics.type = "tool";
+
+  babelomics.inTypes = {};
+  babelomics.inTypes.push_back("http://edamontology.org/data_0582");
+  babelomics.inTypes.push_back("http://edamontology.org/data_1636");
+  babelomics.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (babelomics.inTypes.begin(),babelomics.inTypes.end());
+  babelomics.output = "http://edamontology.org/data_3112";
+  babelomics.output = "http://edamontology.org/data_3110";
+  babelomics.output = "http://edamontology.org/data_2872";
+  babelomics.output = "http://edamontology.org/data_2082";
+  biotools.push_back(babelomics);
+
+  Tool bar;
+  bar.id = "bar";
+  bar.operations = {"bar"};
+  bar.type = "tool";
+
+  bar.inTypes = {};
+  bar.inTypes.push_back("http://edamontology.org/data_2048");
+  bar.inTypes.push_back("http://edamontology.org/data_3028");
+  sort (bar.inTypes.begin(),bar.inTypes.end());
+  bar.output = "http://edamontology.org/data_3021";
+  biotools.push_back(bar);
+
+  Tool base;
+  base.id = "base";
+  base.operations = {"base"};
+  base.type = "tool";
+
+  base.inTypes = {};
+  base.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (base.inTypes.begin(),base.inTypes.end());
+  base.output = "http://edamontology.org/data_2603";
+  biotools.push_back(base);
+
+  Tool bcheck_rnpb;
+  bcheck_rnpb.id = "bcheck_rnpb";
+  bcheck_rnpb.operations = {"bcheck_rnpb"};
+  bcheck_rnpb.type = "tool";
+
+  bcheck_rnpb.inTypes = {};
+  bcheck_rnpb.inTypes.push_back("http://edamontology.org/data_3496");
+  sort (bcheck_rnpb.inTypes.begin(),bcheck_rnpb.inTypes.end());
+  bcheck_rnpb.output = "http://edamontology.org/data_3497";
+  biotools.push_back(bcheck_rnpb);
+
+  Tool bedtools_bamtobed;
+  bedtools_bamtobed.id = "bedtools_bamtobed";
+  bedtools_bamtobed.operations = {"bedtools_bamtobed"};
+  bedtools_bamtobed.type = "tool";
+
+  bedtools_bamtobed.inTypes = {};
+  bedtools_bamtobed.inTypes.push_back("http://edamontology.org/data_3002");
+  sort (bedtools_bamtobed.inTypes.begin(),bedtools_bamtobed.inTypes.end());
+  bedtools_bamtobed.output = "http://edamontology.org/data_0924";
+  biotools.push_back(bedtools_bamtobed);
+
+  Tool bedtools_intersectbed_bam;
+  bedtools_intersectbed_bam.id = "bedtools_intersectbed_bam";
+  bedtools_intersectbed_bam.operations = {"bedtools_intersectbed_bam"};
+  bedtools_intersectbed_bam.type = "tool";
+
+  bedtools_intersectbed_bam.inTypes = {};
+  bedtools_intersectbed_bam.inTypes.push_back("http://edamontology.org/data_0924");
+  sort (bedtools_intersectbed_bam.inTypes.begin(),bedtools_intersectbed_bam.inTypes.end());
+  bedtools_intersectbed_bam.output = "http://edamontology.org/data_0924";
+  bedtools_intersectbed_bam.output = "http://edamontology.org/data_3002";
+  biotools.push_back(bedtools_intersectbed_bam);
+
+  Tool bgee;
+  bgee.id = "bgee";
+  bgee.operations = {"bgee"};
+  bgee.type = "tool";
+
+  bgee.inTypes = {};
+  bgee.inTypes.push_back("http://edamontology.org/data_0916");
+  bgee.inTypes.push_back("http://edamontology.org/data_0928");
+  bgee.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (bgee.inTypes.begin(),bgee.inTypes.end());
+  bgee.output = "http://edamontology.org/data_3021";
+  bgee.output = "http://edamontology.org/data_1033";
+  bgee.output = "http://edamontology.org/data_2299";
+  biotools.push_back(bgee);
+
+  Tool bindingdb;
+  bindingdb.id = "bindingdb";
+  bindingdb.operations = {"bindingdb"};
+  bindingdb.type = "tool";
+
+  bindingdb.inTypes = {};
+  bindingdb.inTypes.push_back("http://edamontology.org/data_1566");
+  sort (bindingdb.inTypes.begin(),bindingdb.inTypes.end());
+  bindingdb.output = "http://edamontology.org/data_3021";
+  biotools.push_back(bindingdb);
+
+  Tool biobb;
+  biobb.id = "biobb";
+  biobb.operations = {"biobb"};
+  biobb.type = "tool";
+
+  biobb.inTypes = {};
+  biobb.inTypes.push_back("http://edamontology.org/data_3842");
+  sort (biobb.inTypes.begin(),biobb.inTypes.end());
+  biobb.output = "http://edamontology.org/data_0883";
+  biotools.push_back(biobb);
+
+  Tool bionda;
+  bionda.id = "bionda";
+  bionda.operations = {"bionda"};
+  bionda.type = "tool";
+
+  bionda.inTypes = {};
+  bionda.inTypes.push_back("http://edamontology.org/data_2526");
+  bionda.inTypes.push_back("http://edamontology.org/data_2526");
+  sort (bionda.inTypes.begin(),bionda.inTypes.end());
+  bionda.output = "http://edamontology.org/data_2353";
+  bionda.output = "http://edamontology.org/data_2091";
+  bionda.output = "http://edamontology.org/data_0976";
+  bionda.output = "http://edamontology.org/data_2007";
+  bionda.output = "http://edamontology.org/data_2099";
+  biotools.push_back(bionda);
+
+  Tool bionode;
+  bionode.id = "bionode";
+  bionode.operations = {"bionode"};
+  bionode.type = "tool";
+
+  bionode.inTypes = {};
+  bionode.inTypes.push_back("http://edamontology.org/data_2526");
+  sort (bionode.inTypes.begin(),bionode.inTypes.end());
+  bionode.output = "http://edamontology.org/data_2526";
+  biotools.push_back(bionode);
+
+  Tool bipa;
+  bipa.id = "bipa";
+  bipa.operations = {"bipa"};
+  bipa.type = "tool";
+
+  bipa.inTypes = {};
+  bipa.inTypes.push_back("http://edamontology.org/data_0906");
+  sort (bipa.inTypes.begin(),bipa.inTypes.end());
+  bipa.output = "http://edamontology.org/data_1127";
+  biotools.push_back(bipa);
+
+  Tool bips;
+  bips.id = "bips";
+  bips.operations = {"bips"};
+  bips.type = "tool";
+
+  bips.inTypes = {};
+  bips.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (bips.inTypes.begin(),bips.inTypes.end());
+  bips.output = "http://edamontology.org/data_2974";
+  biotools.push_back(bips);
+
+  Tool birte;
+  birte.id = "birte";
+  birte.operations = {"birte"};
+  birte.type = "tool";
+
+  birte.inTypes = {};
+  birte.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (birte.inTypes.begin(),birte.inTypes.end());
+  birte.output = "http://edamontology.org/data_2600";
+  birte.output = "http://edamontology.org/data_1234";
+  biotools.push_back(birte);
+
+  Tool blackfan_anemia;
+  blackfan_anemia.id = "blackfan_anemia";
+  blackfan_anemia.operations = {"blackfan_anemia"};
+  blackfan_anemia.type = "tool";
+
+  blackfan_anemia.inTypes = {};
+  blackfan_anemia.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (blackfan_anemia.inTypes.begin(),blackfan_anemia.inTypes.end());
+  blackfan_anemia.output = "http://edamontology.org/data_1026";
+  biotools.push_back(blackfan_anemia);
+
+  Tool blast;
+  blast.id = "blast";
+  blast.operations = {"blast"};
+  blast.type = "tool";
+
+  blast.inTypes = {};
+  blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast.inTypes.begin(),blast.inTypes.end());
+  blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blast);
+
+  Tool blast2srs;
+  blast2srs.id = "blast2srs";
+  blast2srs.operations = {"blast2srs"};
+  blast2srs.type = "tool";
+
+  blast2srs.inTypes = {};
+  blast2srs.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast2srs.inTypes.begin(),blast2srs.inTypes.end());
+  blast2srs.output = "http://edamontology.org/data_2044";
+  blast2srs.output = "http://edamontology.org/data_0968";
+  biotools.push_back(blast2srs);
+
+  Tool blast_api_ebi;
+  blast_api_ebi.id = "blast_api_ebi";
+  blast_api_ebi.operations = {"blast_api_ebi"};
+  blast_api_ebi.type = "tool";
+
+  blast_api_ebi.inTypes = {};
+  blast_api_ebi.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast_api_ebi.inTypes.begin(),blast_api_ebi.inTypes.end());
+  blast_api_ebi.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blast_api_ebi);
+
+  Tool blast_betacoronavirus;
+  blast_betacoronavirus.id = "blast_betacoronavirus";
+  blast_betacoronavirus.operations = {"blast_betacoronavirus"};
+  blast_betacoronavirus.type = "tool";
+
+  blast_betacoronavirus.inTypes = {};
+  blast_betacoronavirus.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast_betacoronavirus.inTypes.begin(),blast_betacoronavirus.inTypes.end());
+  blast_betacoronavirus.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blast_betacoronavirus);
+
+  Tool blast_ebi;
+  blast_ebi.id = "blast_ebi";
+  blast_ebi.operations = {"blast_ebi"};
+  blast_ebi.type = "tool";
+
+  blast_ebi.inTypes = {};
+  blast_ebi.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast_ebi.inTypes.begin(),blast_ebi.inTypes.end());
+  blast_ebi.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blast_ebi);
+
+  Tool blast_sib;
+  blast_sib.id = "blast_sib";
+  blast_sib.operations = {"blast_sib"};
+  blast_sib.type = "tool";
+
+  blast_sib.inTypes = {};
+  blast_sib.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blast_sib.inTypes.begin(),blast_sib.inTypes.end());
+  blast_sib.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blast_sib);
+
+  Tool blastprodom;
+  blastprodom.id = "blastprodom";
+  blastprodom.operations = {"blastprodom"};
+  blastprodom.type = "tool";
+
+  blastprodom.inTypes = {};
+  blastprodom.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (blastprodom.inTypes.begin(),blastprodom.inTypes.end());
+  blastprodom.output = "http://edamontology.org/data_2044";
+  biotools.push_back(blastprodom);
+
+  Tool bowtie;
+  bowtie.id = "bowtie";
+  bowtie.operations = {"bowtie"};
+  bowtie.type = "tool";
+
+  bowtie.inTypes = {};
+  bowtie.inTypes.push_back("http://edamontology.org/data_0924");
+  bowtie.inTypes.push_back("http://edamontology.org/data_0006");
+  bowtie.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (bowtie.inTypes.begin(),bowtie.inTypes.end());
+  bowtie.output = "http://edamontology.org/data_0006";
+  bowtie.output = "http://edamontology.org/data_0006";
+  biotools.push_back(bowtie);
+
+  Tool brenda;
+  brenda.id = "brenda";
+  brenda.operations = {"brenda"};
+  brenda.type = "tool";
+
+  brenda.inTypes = {};
+  brenda.inTypes.push_back("http://edamontology.org/data_2291");
+  brenda.inTypes.push_back("http://edamontology.org/data_1127");
+  brenda.inTypes.push_back("http://edamontology.org/data_3021");
+  brenda.inTypes.push_back("http://edamontology.org/data_2108");
+  brenda.inTypes.push_back("http://edamontology.org/data_2342");
+  brenda.inTypes.push_back("http://edamontology.org/data_2365");
+  brenda.inTypes.push_back("http://edamontology.org/data_1046");
+  brenda.inTypes.push_back("http://edamontology.org/data_2909");
+  brenda.inTypes.push_back("http://edamontology.org/data_1179");
+  brenda.inTypes.push_back("http://edamontology.org/data_1039");
+  brenda.inTypes.push_back("http://edamontology.org/data_2700");
+  brenda.inTypes.push_back("http://edamontology.org/data_1012");
+  brenda.inTypes.push_back("http://edamontology.org/data_1011");
+  brenda.inTypes.push_back("http://edamontology.org/data_2024");
+  sort (brenda.inTypes.begin(),brenda.inTypes.end());
+  brenda.output = "http://edamontology.org/data_2909";
+  brenda.output = "http://edamontology.org/data_0990";
+  brenda.output = "http://edamontology.org/data_2299";
+  brenda.output = "http://edamontology.org/data_1127";
+  brenda.output = "http://edamontology.org/data_2291";
+  brenda.output = "http://edamontology.org/data_3021";
+  brenda.output = "http://edamontology.org/data_2108";
+  brenda.output = "http://edamontology.org/data_2342";
+  brenda.output = "http://edamontology.org/data_2365";
+  brenda.output = "http://edamontology.org/data_1187";
+  brenda.output = "http://edamontology.org/data_1046";
+  brenda.output = "http://edamontology.org/data_1179";
+  brenda.output = "http://edamontology.org/data_1051";
+  brenda.output = "http://edamontology.org/data_1012";
+  brenda.output = "http://edamontology.org/data_1011";
+  brenda.output = "http://edamontology.org/data_2024";
+  biotools.push_back(brenda);
+
+  Tool breseq_bam2aln;
+  breseq_bam2aln.id = "breseq_bam2aln";
+  breseq_bam2aln.operations = {"breseq_bam2aln"};
+  breseq_bam2aln.type = "tool";
+
+  breseq_bam2aln.inTypes = {};
+  breseq_bam2aln.inTypes.push_back("http://edamontology.org/data_2048");
+  breseq_bam2aln.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (breseq_bam2aln.inTypes.begin(),breseq_bam2aln.inTypes.end());
+  breseq_bam2aln.output = "http://edamontology.org/data_0924";
+  breseq_bam2aln.output = "http://edamontology.org/data_0863";
+  biotools.push_back(breseq_bam2aln);
+
+  Tool bridgedb;
+  bridgedb.id = "bridgedb";
+  bridgedb.operations = {"bridgedb"};
+  bridgedb.type = "tool";
+
+  bridgedb.inTypes = {};
+  bridgedb.inTypes.push_back("http://edamontology.org/data_1025");
+  sort (bridgedb.inTypes.begin(),bridgedb.inTypes.end());
+  bridgedb.output = "http://edamontology.org/data_1025";
+  biotools.push_back(bridgedb);
+
+  Tool bwa;
+  bwa.id = "bwa";
+  bwa.operations = {"bwa"};
+  bwa.type = "tool";
+
+  bwa.inTypes = {};
+  bwa.inTypes.push_back("http://edamontology.org/data_3210");
+  sort (bwa.inTypes.begin(),bwa.inTypes.end());
+  bwa.output = "http://edamontology.org/data_2044";
+  biotools.push_back(bwa);
+
+  Tool bwt_sw;
+  bwt_sw.id = "bwt_sw";
+  bwt_sw.operations = {"bwt_sw"};
+  bwt_sw.type = "tool";
+
+  bwt_sw.inTypes = {};
+  bwt_sw.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (bwt_sw.inTypes.begin(),bwt_sw.inTypes.end());
+  bwt_sw.output = "http://edamontology.org/data_2044";
+  biotools.push_back(bwt_sw);
+
+  Tool cabri;
+  cabri.id = "cabri";
+  cabri.operations = {"cabri"};
+  cabri.type = "tool";
+
+  cabri.inTypes = {};
+  cabri.inTypes.push_back("http://edamontology.org/data_0963");
+  sort (cabri.inTypes.begin(),cabri.inTypes.end());
+  cabri.output = "http://edamontology.org/data_2597";
+  cabri.output = "http://edamontology.org/data_2380";
+  biotools.push_back(cabri);
+
+  Tool calchas;
+  calchas.id = "calchas";
+  calchas.operations = {"calchas"};
+  calchas.type = "tool";
+
+  calchas.inTypes = {};
+  calchas.inTypes.push_back("http://edamontology.org/data_0977");
+  sort (calchas.inTypes.begin(),calchas.inTypes.end());
+  calchas.output = "http://edamontology.org/data_2526";
+  biotools.push_back(calchas);
+
+  Tool catdb;
+  catdb.id = "catdb";
+  catdb.operations = {"catdb"};
+  catdb.type = "tool";
+
+  catdb.inTypes = {};
+  catdb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (catdb.inTypes.begin(),catdb.inTypes.end());
+  catdb.output = "http://edamontology.org/data_2388";
+  biotools.push_back(catdb);
+
+  Tool cazy;
+  cazy.id = "cazy";
+  cazy.operations = {"cazy"};
+  cazy.type = "tool";
+
+  cazy.inTypes = {};
+  cazy.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (cazy.inTypes.begin(),cazy.inTypes.end());
+  cazy.output = "http://edamontology.org/data_2702";
+  biotools.push_back(cazy);
+
+  Tool ccap;
+  ccap.id = "ccap";
+  ccap.operations = {"ccap"};
+  ccap.type = "tool";
+
+  ccap.inTypes = {};
+  ccap.inTypes.push_back("http://edamontology.org/data_0963");
+  sort (ccap.inTypes.begin(),ccap.inTypes.end());
+  ccap.output = "http://edamontology.org/data_2778";
+  biotools.push_back(ccap);
+
+  Tool cdd;
+  cdd.id = "cdd";
+  cdd.operations = {"cdd"};
+  cdd.type = "tool";
+
+  cdd.inTypes = {};
+  cdd.inTypes.push_back("http://edamontology.org/data_1384");
+  sort (cdd.inTypes.begin(),cdd.inTypes.end());
+  cdd.output = "http://edamontology.org/data_2666";
+  biotools.push_back(cdd);
+
+  Tool cellalign;
+  cellalign.id = "cellalign";
+  cellalign.operations = {"cellalign"};
+  cellalign.type = "tool";
+
+  cellalign.inTypes = {};
+  cellalign.inTypes.push_back("http://edamontology.org/data_0867");
+  sort (cellalign.inTypes.begin(),cellalign.inTypes.end());
+  cellalign.output = "http://edamontology.org/data_3112";
+  cellalign.output = "http://edamontology.org/data_2337";
+  biotools.push_back(cellalign);
+
+  Tool cellcycledb;
+  cellcycledb.id = "cellcycledb";
+  cellcycledb.operations = {"cellcycledb"};
+  cellcycledb.type = "tool";
+
+  cellcycledb.inTypes = {};
+  cellcycledb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (cellcycledb.inTypes.begin(),cellcycledb.inTypes.end());
+  cellcycledb.output = "http://edamontology.org/data_1026";
+  biotools.push_back(cellcycledb);
+
+  Tool cellosaurus;
+  cellosaurus.id = "cellosaurus";
+  cellosaurus.operations = {"cellosaurus"};
+  cellosaurus.type = "tool";
+
+  cellosaurus.inTypes = {};
+  cellosaurus.inTypes.push_back("http://edamontology.org/data_0963");
+  sort (cellosaurus.inTypes.begin(),cellosaurus.inTypes.end());
+  cellosaurus.output = "http://edamontology.org/data_0842";
+  cellosaurus.output = "http://edamontology.org/data_3671";
+  biotools.push_back(cellosaurus);
+
+  Tool chebi;
+  chebi.id = "chebi";
+  chebi.operations = {"chebi"};
+  chebi.type = "tool";
+
+  chebi.inTypes = {};
+  chebi.inTypes.push_back("http://edamontology.org/data_0962");
+  sort (chebi.inTypes.begin(),chebi.inTypes.end());
+  chebi.output = "http://edamontology.org/data_1174";
+  biotools.push_back(chebi);
+
+  Tool chebi_ws;
+  chebi_ws.id = "chebi_ws";
+  chebi_ws.operations = {"chebi_ws"};
+  chebi_ws.type = "tool";
+
+  chebi_ws.inTypes = {};
+  chebi_ws.inTypes.push_back("http://edamontology.org/data_0962");
+  sort (chebi_ws.inTypes.begin(),chebi_ws.inTypes.end());
+  chebi_ws.output = "http://edamontology.org/data_1174";
+  biotools.push_back(chebi_ws);
+
+  Tool chembl_biologicals_blast_search;
+  chembl_biologicals_blast_search.id = "chembl_biologicals_blast_search";
+  chembl_biologicals_blast_search.operations = {"chembl_biologicals_blast_search"};
+  chembl_biologicals_blast_search.type = "tool";
+
+  chembl_biologicals_blast_search.inTypes = {};
+  chembl_biologicals_blast_search.inTypes.push_back("http://edamontology.org/data_0962");
+  sort (chembl_biologicals_blast_search.inTypes.begin(),chembl_biologicals_blast_search.inTypes.end());
+  chembl_biologicals_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(chembl_biologicals_blast_search);
+
+  Tool chembl_blast_search;
+  chembl_blast_search.id = "chembl_blast_search";
+  chembl_blast_search.operations = {"chembl_blast_search"};
+  chembl_blast_search.type = "tool";
+
+  chembl_blast_search.inTypes = {};
+  chembl_blast_search.inTypes.push_back("http://edamontology.org/data_0962");
+  sort (chembl_blast_search.inTypes.begin(),chembl_blast_search.inTypes.end());
+  chembl_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(chembl_blast_search);
+
+  Tool citexplore;
+  citexplore.id = "citexplore";
+  citexplore.operations = {"citexplore"};
+  citexplore.type = "tool";
+
+  citexplore.inTypes = {};
+  citexplore.inTypes.push_back("http://edamontology.org/data_3505");
+  sort (citexplore.inTypes.begin(),citexplore.inTypes.end());
+  citexplore.output = "http://edamontology.org/data_1187";
+  biotools.push_back(citexplore);
+
+  Tool cleanex;
+  cleanex.id = "cleanex";
+  cleanex.operations = {"cleanex"};
+  cleanex.type = "tool";
+
+  cleanex.inTypes = {};
+  cleanex.inTypes.push_back("http://edamontology.org/data_0928");
+  sort (cleanex.inTypes.begin(),cleanex.inTypes.end());
+  cleanex.output = "http://edamontology.org/data_2709";
+  biotools.push_back(cleanex);
+
+  Tool clima;
+  clima.id = "clima";
+  clima.operations = {"clima"};
+  clima.type = "tool";
+
+  clima.inTypes = {};
+  clima.inTypes.push_back("http://edamontology.org/data_0963");
+  sort (clima.inTypes.begin(),clima.inTypes.end());
+  clima.output = "http://edamontology.org/data_2317";
+  biotools.push_back(clima);
+
+  Tool cmd;
+  cmd.id = "cmd";
+  cmd.operations = {"cmd"};
+  cmd.type = "tool";
+
+  cmd.inTypes = {};
+  cmd.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (cmd.inTypes.begin(),cmd.inTypes.end());
+  cmd.output = "http://edamontology.org/data_0957";
+  biotools.push_back(cmd);
+
+  Tool cnorfeeder;
+  cnorfeeder.id = "cnorfeeder";
+  cnorfeeder.operations = {"cnorfeeder"};
+  cnorfeeder.type = "tool";
+
+  cnorfeeder.inTypes = {};
+  cnorfeeder.inTypes.push_back("http://edamontology.org/data_2984");
+  sort (cnorfeeder.inTypes.begin(),cnorfeeder.inTypes.end());
+  cnorfeeder.output = "http://edamontology.org/data_2600";
+  cnorfeeder.output = "http://edamontology.org/data_0905";
+  biotools.push_back(cnorfeeder);
+
+  Tool cogeme;
+  cogeme.id = "cogeme";
+  cogeme.operations = {"cogeme"};
+  cogeme.type = "tool";
+
+  cogeme.inTypes = {};
+  cogeme.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (cogeme.inTypes.begin(),cogeme.inTypes.end());
+  cogeme.output = "http://edamontology.org/data_2730";
+  biotools.push_back(cogeme);
+
+  Tool comparative_genometrics;
+  comparative_genometrics.id = "comparative_genometrics";
+  comparative_genometrics.operations = {"comparative_genometrics"};
+  comparative_genometrics.type = "tool";
+
+  comparative_genometrics.inTypes = {};
+  comparative_genometrics.inTypes.push_back("http://edamontology.org/data_3128");
+  sort (comparative_genometrics.inTypes.begin(),comparative_genometrics.inTypes.end());
+  comparative_genometrics.output = "http://edamontology.org/data_2787";
+  biotools.push_back(comparative_genometrics);
+
+  Tool compluyeast2dpage;
+  compluyeast2dpage.id = "compluyeast2dpage";
+  compluyeast2dpage.operations = {"compluyeast2dpage"};
+  compluyeast2dpage.type = "tool";
+
+  compluyeast2dpage.inTypes = {};
+  compluyeast2dpage.inTypes.push_back("http://edamontology.org/data_2531");
+  sort (compluyeast2dpage.inTypes.begin(),compluyeast2dpage.inTypes.end());
+  compluyeast2dpage.output = "http://edamontology.org/data_3021";
+  biotools.push_back(compluyeast2dpage);
+
+  Tool conoserver;
+  conoserver.id = "conoserver";
+  conoserver.operations = {"conoserver"};
+  conoserver.type = "tool";
+
+  conoserver.inTypes = {};
+  conoserver.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (conoserver.inTypes.begin(),conoserver.inTypes.end());
+  conoserver.output = "http://edamontology.org/data_2804";
+  biotools.push_back(conoserver);
+
+  Tool consensuspathdb;
+  consensuspathdb.id = "consensuspathdb";
+  consensuspathdb.operations = {"consensuspathdb"};
+  consensuspathdb.type = "tool";
+
+  consensuspathdb.inTypes = {};
+  consensuspathdb.inTypes.push_back("http://edamontology.org/data_0905");
+  sort (consensuspathdb.inTypes.begin(),consensuspathdb.inTypes.end());
+  consensuspathdb.output = "http://edamontology.org/data_2342";
+  biotools.push_back(consensuspathdb);
+
+  Tool contigtax;
+  contigtax.id = "contigtax";
+  contigtax.operations = {"contigtax"};
+  contigtax.type = "tool";
+
+  contigtax.inTypes = {};
+  contigtax.inTypes.push_back("http://edamontology.org/data_2526");
+  sort (contigtax.inTypes.begin(),contigtax.inTypes.end());
+  contigtax.output = "http://edamontology.org/data_0925";
+  biotools.push_back(contigtax);
+
+  Tool cornai;
+  cornai.id = "cornai";
+  cornai.operations = {"cornai"};
+  cornai.type = "tool";
+
+  cornai.inTypes = {};
+  cornai.inTypes.push_back("http://edamontology.org/data_2884");
+  cornai.inTypes.push_back("http://edamontology.org/data_1669");
+  cornai.inTypes.push_back("http://edamontology.org/data_1636");
+  cornai.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (cornai.inTypes.begin(),cornai.inTypes.end());
+  cornai.output = "http://edamontology.org/data_3108";
+  biotools.push_back(cornai);
+
+  Tool corum;
+  corum.id = "corum";
+  corum.operations = {"corum"};
+  corum.type = "tool";
+
+  corum.inTypes = {};
+  corum.inTypes.push_back("http://edamontology.org/data_1537");
+  sort (corum.inTypes.begin(),corum.inTypes.end());
+  corum.output = "http://edamontology.org/data_2713";
+  biotools.push_back(corum);
+
+  Tool cryptodb;
+  cryptodb.id = "cryptodb";
+  cryptodb.operations = {"cryptodb"};
+  cryptodb.type = "tool";
+
+  cryptodb.inTypes = {};
+  cryptodb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (cryptodb.inTypes.begin(),cryptodb.inTypes.end());
+  cryptodb.output = "http://edamontology.org/data_2295";
+  biotools.push_back(cryptodb);
+
+  Tool cuticledb;
+  cuticledb.id = "cuticledb";
+  cuticledb.operations = {"cuticledb"};
+  cuticledb.type = "tool";
+
+  cuticledb.inTypes = {};
+  cuticledb.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (cuticledb.inTypes.begin(),cuticledb.inTypes.end());
+  cuticledb.output = "http://edamontology.org/data_2715";
+  biotools.push_back(cuticledb);
+
+  Tool cygd;
+  cygd.id = "cygd";
+  cygd.operations = {"cygd"};
+  cygd.type = "tool";
+
+  cygd.inTypes = {};
+  cygd.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (cygd.inTypes.begin(),cygd.inTypes.end());
+  cygd.output = "http://edamontology.org/data_1026";
+  biotools.push_back(cygd);
+
+  Tool cyp11b1;
+  cyp11b1.id = "cyp11b1";
+  cyp11b1.operations = {"cyp11b1"};
+  cyp11b1.type = "tool";
+
+  cyp11b1.inTypes = {};
+  cyp11b1.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (cyp11b1.inTypes.begin(),cyp11b1.inTypes.end());
+  cyp11b1.output = "http://edamontology.org/data_1277";
+  biotools.push_back(cyp11b1);
+
+  Tool cyp21;
+  cyp21.id = "cyp21";
+  cyp21.operations = {"cyp21"};
+  cyp21.type = "tool";
+
+  cyp21.inTypes = {};
+  cyp21.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (cyp21.inTypes.begin(),cyp21.inTypes.end());
+  cyp21.output = "http://edamontology.org/data_1277";
+  biotools.push_back(cyp21);
+
+  Tool dbd;
+  dbd.id = "dbd";
+  dbd.operations = {"dbd"};
+  dbd.type = "tool";
+
+  dbd.inTypes = {};
+  dbd.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (dbd.inTypes.begin(),dbd.inTypes.end());
+  dbd.output = "http://edamontology.org/data_2716";
+  biotools.push_back(dbd);
+
+  Tool dbest;
+  dbest.id = "dbest";
+  dbest.operations = {"dbest"};
+  dbest.type = "tool";
+
+  dbest.inTypes = {};
+  dbest.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (dbest.inTypes.begin(),dbest.inTypes.end());
+  dbest.output = "http://edamontology.org/data_1105";
+  biotools.push_back(dbest);
+
+  Tool dbsts;
+  dbsts.id = "dbsts";
+  dbsts.operations = {"dbsts"};
+  dbsts.type = "tool";
+
+  dbsts.inTypes = {};
+  dbsts.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (dbsts.inTypes.begin(),dbsts.inTypes.end());
+  dbsts.output = "http://edamontology.org/data_2389";
+  biotools.push_back(dbsts);
+
+  Tool dcell;
+  dcell.id = "dcell";
+  dcell.operations = {"dcell"};
+  dcell.type = "tool";
+
+  dcell.inTypes = {};
+  dcell.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (dcell.inTypes.begin(),dcell.inTypes.end());
+  dcell.output = "http://edamontology.org/data_0976";
+  biotools.push_back(dcell);
+
+  Tool dictybase;
+  dictybase.id = "dictybase";
+  dictybase.operations = {"dictybase"};
+  dictybase.type = "tool";
+
+  dictybase.inTypes = {};
+  dictybase.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (dictybase.inTypes.begin(),dictybase.inTypes.end());
+  dictybase.output = "http://edamontology.org/data_2295";
+  biotools.push_back(dictybase);
+
+  Tool dictybase_update_2011;
+  dictybase_update_2011.id = "dictybase_update_2011";
+  dictybase_update_2011.operations = {"dictybase_update_2011"};
+  dictybase_update_2011.type = "tool";
+
+  dictybase_update_2011.inTypes = {};
+  dictybase_update_2011.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (dictybase_update_2011.inTypes.begin(),dictybase_update_2011.inTypes.end());
+  dictybase_update_2011.output = "http://edamontology.org/data_2295";
+  biotools.push_back(dictybase_update_2011);
+
+  Tool diffusion;
+  diffusion.id = "diffusion";
+  diffusion.operations = {"diffusion"};
+  diffusion.type = "tool";
+
+  diffusion.inTypes = {};
+  diffusion.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (diffusion.inTypes.begin(),diffusion.inTypes.end());
+  diffusion.output = "http://edamontology.org/data_1025";
+  biotools.push_back(diffusion);
+
+  Tool digenome_seq;
+  digenome_seq.id = "digenome_seq";
+  digenome_seq.operations = {"digenome_seq"};
+  digenome_seq.type = "tool";
+
+  digenome_seq.inTypes = {};
+  digenome_seq.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (digenome_seq.inTypes.begin(),digenome_seq.inTypes.end());
+  digenome_seq.output = "http://edamontology.org/data_0848";
+  biotools.push_back(digenome_seq);
+
+  Tool dima;
+  dima.id = "dima";
+  dima.operations = {"dima"};
+  dima.type = "tool";
+
+  dima.inTypes = {};
+  dima.inTypes.push_back("http://edamontology.org/data_0906");
+  sort (dima.inTypes.begin(),dima.inTypes.end());
+  dima.output = "http://edamontology.org/data_1138";
+  biotools.push_back(dima);
+
+  Tool diprodb;
+  diprodb.id = "diprodb";
+  diprodb.operations = {"diprodb"};
+  diprodb.type = "tool";
+
+  diprodb.inTypes = {};
+  diprodb.inTypes.push_back("http://edamontology.org/data_3128");
+  sort (diprodb.inTypes.begin(),diprodb.inTypes.end());
+  diprodb.output = "http://edamontology.org/data_2048";
+  biotools.push_back(diprodb);
+
+  Tool disprot;
+  disprot.id = "disprot";
+  disprot.operations = {"disprot"};
+  disprot.type = "tool";
+
+  disprot.inTypes = {};
+  disprot.inTypes.push_back("http://edamontology.org/data_1277");
+  disprot.inTypes.push_back("http://edamontology.org/data_1537");
+  sort (disprot.inTypes.begin(),disprot.inTypes.end());
+  disprot.output = "http://edamontology.org/data_3021";
+  disprot.output = "http://edamontology.org/data_2723";
+  disprot.output = "http://edamontology.org/data_1009";
+  biotools.push_back(disprot);
+
+  Tool dpvweb;
+  dpvweb.id = "dpvweb";
+  dpvweb.operations = {"dpvweb"};
+  dpvweb.type = "tool";
+
+  dpvweb.inTypes = {};
+  dpvweb.inTypes.push_back("http://edamontology.org/data_2530");
+  sort (dpvweb.inTypes.begin(),dpvweb.inTypes.end());
+  dpvweb.output = "http://edamontology.org/data_2836";
+  biotools.push_back(dpvweb);
 
   Tool drtext;
-  drtext.name = "drtext";
   drtext.id = "drtext";
   drtext.operations = {"drtext"};
   drtext.type = "tool";
-  drtext.inputs = {};
-  drtext.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  drtext.inputs.push_back(ins);
+  drtext.inTypes = {};
   drtext.inTypes.push_back("http://edamontology.org/data_0957");
   sort (drtext.inTypes.begin(),drtext.inTypes.end());
   drtext.output = "http://edamontology.org/data_0957";
-  emboss.push_back(drtext);
+  biotools.push_back(drtext);
 
-  Tool edamdef;
-  edamdef.name = "edamdef";
-  edamdef.id = "edamdef";
-  edamdef.operations = {"edamdef"};
-  edamdef.type = "tool";
-  edamdef.inputs = {};
-  edamdef.inTypes = {};
+  Tool drugebility_blast_search;
+  drugebility_blast_search.id = "drugebility_blast_search";
+  drugebility_blast_search.operations = {"drugebility_blast_search"};
+  drugebility_blast_search.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamdef.inputs.push_back(ins);
-  edamdef.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamdef.inTypes.begin(),edamdef.inTypes.end());
-  emboss.push_back(edamdef);
+  drugebility_blast_search.inTypes = {};
+  drugebility_blast_search.inTypes.push_back("http://edamontology.org/data_1566");
+  sort (drugebility_blast_search.inTypes.begin(),drugebility_blast_search.inTypes.end());
+  drugebility_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(drugebility_blast_search);
 
-  Tool edamhasinput;
-  edamhasinput.name = "edamhasinput";
-  edamhasinput.id = "edamhasinput";
-  edamhasinput.operations = {"edamhasinput"};
-  edamhasinput.type = "tool";
-  edamhasinput.inputs = {};
-  edamhasinput.inTypes = {};
+  Tool dssp;
+  dssp.id = "dssp";
+  dssp.operations = {"dssp"};
+  dssp.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamhasinput.inputs.push_back(ins);
-  edamhasinput.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamhasinput.inTypes.begin(),edamhasinput.inTypes.end());
-  emboss.push_back(edamhasinput);
+  dssp.inTypes = {};
+  dssp.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (dssp.inTypes.begin(),dssp.inTypes.end());
+  dssp.output = "http://edamontology.org/data_1127";
+  biotools.push_back(dssp);
 
-  Tool edamhasoutput;
-  edamhasoutput.name = "edamhasoutput";
-  edamhasoutput.id = "edamhasoutput";
-  edamhasoutput.operations = {"edamhasoutput"};
-  edamhasoutput.type = "tool";
-  edamhasoutput.inputs = {};
-  edamhasoutput.inTypes = {};
+  Tool echobase;
+  echobase.id = "echobase";
+  echobase.operations = {"echobase"};
+  echobase.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamhasoutput.inputs.push_back(ins);
-  edamhasoutput.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamhasoutput.inTypes.begin(),edamhasoutput.inTypes.end());
-  emboss.push_back(edamhasoutput);
+  echobase.inTypes = {};
+  echobase.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (echobase.inTypes.begin(),echobase.inTypes.end());
+  echobase.output = "http://edamontology.org/data_1026";
+  biotools.push_back(echobase);
 
-  Tool edamisformat;
-  edamisformat.name = "edamisformat";
-  edamisformat.id = "edamisformat";
-  edamisformat.operations = {"edamisformat"};
-  edamisformat.type = "tool";
-  edamisformat.inputs = {};
-  edamisformat.inTypes = {};
+  Tool ecid;
+  ecid.id = "ecid";
+  ecid.operations = {"ecid"};
+  ecid.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamisformat.inputs.push_back(ins);
-  edamisformat.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamisformat.inTypes.begin(),edamisformat.inTypes.end());
-  emboss.push_back(edamisformat);
+  ecid.inTypes = {};
+  ecid.inTypes.push_back("http://edamontology.org/data_2093");
+  sort (ecid.inTypes.begin(),ecid.inTypes.end());
+  ecid.output = "http://edamontology.org/data_0989";
+  biotools.push_back(ecid);
 
-  Tool edamisid;
-  edamisid.name = "edamisid";
-  edamisid.id = "edamisid";
-  edamisid.operations = {"edamisid"};
-  edamisid.type = "tool";
-  edamisid.inputs = {};
-  edamisid.inTypes = {};
+  Tool ecogene;
+  ecogene.id = "ecogene";
+  ecogene.operations = {"ecogene"};
+  ecogene.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamisid.inputs.push_back(ins);
-  edamisid.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamisid.inTypes.begin(),edamisid.inTypes.end());
-  emboss.push_back(edamisid);
+  ecogene.inTypes = {};
+  ecogene.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (ecogene.inTypes.begin(),ecogene.inTypes.end());
+  ecogene.output = "http://edamontology.org/data_1795";
+  biotools.push_back(ecogene);
 
-  Tool edamname;
-  edamname.name = "edamname";
-  edamname.id = "edamname";
-  edamname.operations = {"edamname"};
-  edamname.type = "tool";
-  edamname.inputs = {};
-  edamname.inTypes = {};
+  Tool edgar;
+  edgar.id = "edgar";
+  edgar.operations = {"edgar"};
+  edgar.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  edamname.inputs.push_back(ins);
-  edamname.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (edamname.inTypes.begin(),edamname.inTypes.end());
-  emboss.push_back(edamname);
+  edgar.inTypes = {};
+  edgar.inTypes.push_back("http://edamontology.org/data_1622");
+  sort (edgar.inTypes.begin(),edgar.inTypes.end());
+  edgar.output = "http://edamontology.org/data_3668";
+  biotools.push_back(edgar);
 
-  Tool edialign;
-  edialign.name = "edialign";
-  edialign.id = "edialign";
-  edialign.operations = {"edialign"};
-  edialign.type = "tool";
-  edialign.inputs = {};
-  edialign.inTypes = {};
+  Tool eds;
+  eds.id = "eds";
+  eds.operations = {"eds"};
+  eds.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0863";
-  edialign.inputs.push_back(ins);
-  edialign.inTypes.push_back("http://edamontology.org/data_0863");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0849";
-  edialign.inputs.push_back(ins);
-  edialign.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (edialign.inTypes.begin(),edialign.inTypes.end());
-  edialign.output = "http://edamontology.org/data_0849";
-  emboss.push_back(edialign);
+  eds.inTypes = {};
+  eds.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (eds.inTypes.begin(),eds.inTypes.end());
+  eds.output = "http://edamontology.org/data_1127";
+  biotools.push_back(eds);
 
-  Tool einverted;
-  einverted.name = "einverted";
-  einverted.id = "einverted";
-  einverted.operations = {"einverted"};
-  einverted.type = "tool";
-  einverted.inputs = {};
-  einverted.inTypes = {};
+  Tool effectiveccbd;
+  effectiveccbd.id = "effectiveccbd";
+  effectiveccbd.operations = {"effectiveccbd"};
+  effectiveccbd.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  einverted.inputs.push_back(ins);
-  einverted.inTypes.push_back("http://edamontology.org/data_2048");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0849";
-  einverted.inputs.push_back(ins);
-  einverted.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (einverted.inTypes.begin(),einverted.inTypes.end());
-  einverted.output = "http://edamontology.org/data_2887";
-  emboss.push_back(einverted);
+  effectiveccbd.inTypes = {};
+  effectiveccbd.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (effectiveccbd.inTypes.begin(),effectiveccbd.inTypes.end());
+  effectiveccbd.output = "http://edamontology.org/data_2976";
+  biotools.push_back(effectiveccbd);
 
-  Tool embossdata;
-  embossdata.name = "embossdata";
-  embossdata.id = "embossdata";
-  embossdata.operations = {"embossdata"};
-  embossdata.type = "tool";
-  embossdata.inputs = {};
-  embossdata.inTypes = {};
+  Tool ega;
+  ega.id = "ega";
+  ega.operations = {"ega"};
+  ega.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  embossdata.inputs.push_back(ins);
-  embossdata.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (embossdata.inTypes.begin(),embossdata.inTypes.end());
-  emboss.push_back(embossdata);
+  ega.inTypes = {};
+  ega.inTypes.push_back("http://edamontology.org/data_2531");
+  sort (ega.inTypes.begin(),ega.inTypes.end());
+  ega.output = "http://edamontology.org/data_2383";
+  biotools.push_back(ega);
 
-  Tool embossupdate;
-  embossupdate.name = "embossupdate";
-  embossupdate.id = "embossupdate";
-  embossupdate.operations = {"embossupdate"};
-  embossupdate.type = "tool";
-  embossupdate.inputs = {};
-  embossupdate.inTypes = {};
+  Tool eggnog;
+  eggnog.id = "eggnog";
+  eggnog.operations = {"eggnog"};
+  eggnog.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  embossupdate.inputs.push_back(ins);
-  embossupdate.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (embossupdate.inTypes.begin(),embossupdate.inTypes.end());
-  emboss.push_back(embossupdate);
+  eggnog.inTypes = {};
+  eggnog.inTypes.push_back("http://edamontology.org/data_1233");
+  eggnog.inTypes.push_back("http://edamontology.org/data_1384");
+  eggnog.inTypes.push_back("http://edamontology.org/data_0872");
+  eggnog.inTypes.push_back("http://edamontology.org/data_1364");
+  sort (eggnog.inTypes.begin(),eggnog.inTypes.end());
+  eggnog.output = "http://edamontology.org/data_2976";
+  biotools.push_back(eggnog);
 
-  Tool embossversion;
-  embossversion.name = "embossversion";
-  embossversion.id = "embossversion";
-  embossversion.operations = {"embossversion"};
-  embossversion.type = "tool";
-  embossversion.inputs = {};
-  embossversion.inTypes = {};
+  Tool egmrg;
+  egmrg.id = "egmrg";
+  egmrg.operations = {"egmrg"};
+  egmrg.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  embossversion.inputs.push_back(ins);
-  embossversion.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (embossversion.inTypes.begin(),embossversion.inTypes.end());
-  emboss.push_back(embossversion);
+  egmrg.inTypes = {};
+  egmrg.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (egmrg.inTypes.begin(),egmrg.inTypes.end());
+  egmrg.output = "http://edamontology.org/data_2299";
+  biotools.push_back(egmrg);
 
-  Tool emma;
-  emma.name = "emma";
-  emma.id = "emma";
-  emma.operations = {"emma"};
-  emma.type = "tool";
-  emma.inputs = {};
-  emma.inTypes = {};
+  Tool emap;
+  emap.id = "emap";
+  emap.operations = {"emap"};
+  emap.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  emma.inputs.push_back(ins);
-  emma.inTypes.push_back("http://edamontology.org/data_0849");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0872";
-  emma.inputs.push_back(ins);
-  emma.inTypes.push_back("http://edamontology.org/data_0872");
-  sort (emma.inTypes.begin(),emma.inTypes.end());
-  emma.output = "http://edamontology.org/data_0849";
-  emma.output = "http://edamontology.org/data_0872";
-  emma.output = "http://edamontology.org/data_0874";
-  emma.output = "http://edamontology.org/data_0874";
-  emboss.push_back(emma);
+  emap.inTypes = {};
+  emap.inTypes.push_back("http://edamontology.org/data_1713");
+  sort (emap.inTypes.begin(),emap.inTypes.end());
+  emap.output = "http://edamontology.org/data_1149";
+  biotools.push_back(emap);
 
-  Tool emowse;
-  emowse.name = "emowse";
-  emowse.id = "emowse";
-  emowse.operations = {"emowse"};
-  emowse.type = "tool";
-  emowse.inputs = {};
-  emowse.inTypes = {};
+  Tool ena_sequence_search;
+  ena_sequence_search.id = "ena_sequence_search";
+  ena_sequence_search.operations = {"ena_sequence_search"};
+  ena_sequence_search.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1262";
-  emowse.inputs.push_back(ins);
-  emowse.inTypes.push_back("http://edamontology.org/data_1262");
-  sort (emowse.inTypes.begin(),emowse.inTypes.end());
-  emowse.output = "http://edamontology.org/data_2886";
-  emowse.output = "http://edamontology.org/data_1519";
-  emowse.output = "http://edamontology.org/data_1505";
-  emowse.output = "http://edamontology.org/data_1519";
-  emboss.push_back(emowse);
+  ena_sequence_search.inTypes = {};
+  ena_sequence_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ena_sequence_search.inTypes.begin(),ena_sequence_search.inTypes.end());
+  ena_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ena_sequence_search);
 
-  Tool entret;
-  entret.name = "entret";
-  entret.id = "entret";
-  entret.operations = {"entret"};
-  entret.type = "tool";
-  entret.inputs = {};
-  entret.inTypes = {};
+  Tool ensembl_genomes_bacteria_blast;
+  ensembl_genomes_bacteria_blast.id = "ensembl_genomes_bacteria_blast";
+  ensembl_genomes_bacteria_blast.operations = {"ensembl_genomes_bacteria_blast"};
+  ensembl_genomes_bacteria_blast.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  entret.inputs.push_back(ins);
-  entret.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (entret.inTypes.begin(),entret.inTypes.end());
-  entret.output = "http://edamontology.org/data_0849";
-  emboss.push_back(entret);
+  ensembl_genomes_bacteria_blast.inTypes = {};
+  ensembl_genomes_bacteria_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_bacteria_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_bacteria_blast.inTypes.begin(),ensembl_genomes_bacteria_blast.inTypes.end());
+  ensembl_genomes_bacteria_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_bacteria_blast);
 
-  Tool epestfind;
-  epestfind.name = "epestfind";
-  epestfind.id = "epestfind";
-  epestfind.operations = {"epestfind"};
-  epestfind.type = "tool";
-  epestfind.inputs = {};
-  epestfind.inTypes = {};
+  Tool ensembl_genomes_bacteria_sequence_search;
+  ensembl_genomes_bacteria_sequence_search.id = "ensembl_genomes_bacteria_sequence_search";
+  ensembl_genomes_bacteria_sequence_search.operations = {"ensembl_genomes_bacteria_sequence_search"};
+  ensembl_genomes_bacteria_sequence_search.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  epestfind.inputs.push_back(ins);
-  epestfind.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (epestfind.inTypes.begin(),epestfind.inTypes.end());
-  epestfind.output = "http://edamontology.org/data_2886";
-  epestfind.output = "http://edamontology.org/data_1505";
-  emboss.push_back(epestfind);
+  ensembl_genomes_bacteria_sequence_search.inTypes = {};
+  ensembl_genomes_bacteria_sequence_search.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_bacteria_sequence_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_bacteria_sequence_search.inTypes.begin(),ensembl_genomes_bacteria_sequence_search.inTypes.end());
+  ensembl_genomes_bacteria_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_bacteria_sequence_search);
 
-  Tool eprimer3;
-  eprimer3.name = "eprimer3";
-  eprimer3.id = "eprimer3";
-  eprimer3.operations = {"eprimer3"};
-  eprimer3.type = "tool";
-  eprimer3.inputs = {};
-  eprimer3.inTypes = {};
+  Tool ensembl_genomes_fungi_blast;
+  ensembl_genomes_fungi_blast.id = "ensembl_genomes_fungi_blast";
+  ensembl_genomes_fungi_blast.operations = {"ensembl_genomes_fungi_blast"};
+  ensembl_genomes_fungi_blast.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  eprimer3.inputs.push_back(ins);
-  eprimer3.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (eprimer3.inTypes.begin(),eprimer3.inTypes.end());
-  eprimer3.output = "http://edamontology.org/data_2887";
-  eprimer3.output = "http://edamontology.org/data_0850";
-  eprimer3.output = "http://edamontology.org/data_0850";
-  emboss.push_back(eprimer3);
+  ensembl_genomes_fungi_blast.inTypes = {};
+  ensembl_genomes_fungi_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_fungi_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_fungi_blast.inTypes.begin(),ensembl_genomes_fungi_blast.inTypes.end());
+  ensembl_genomes_fungi_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_fungi_blast);
 
-  Tool eprimer32;
-  eprimer32.name = "eprimer32";
-  eprimer32.id = "eprimer32";
-  eprimer32.operations = {"eprimer32"};
-  eprimer32.type = "tool";
-  eprimer32.inputs = {};
-  eprimer32.inTypes = {};
+  Tool ensembl_genomes_fungi_sequence_search;
+  ensembl_genomes_fungi_sequence_search.id = "ensembl_genomes_fungi_sequence_search";
+  ensembl_genomes_fungi_sequence_search.operations = {"ensembl_genomes_fungi_sequence_search"};
+  ensembl_genomes_fungi_sequence_search.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  eprimer32.inputs.push_back(ins);
-  eprimer32.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (eprimer32.inTypes.begin(),eprimer32.inTypes.end());
-  eprimer32.output = "http://edamontology.org/data_2887";
-  eprimer32.output = "http://edamontology.org/data_0850";
-  eprimer32.output = "http://edamontology.org/data_0850";
-  emboss.push_back(eprimer32);
+  ensembl_genomes_fungi_sequence_search.inTypes = {};
+  ensembl_genomes_fungi_sequence_search.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_fungi_sequence_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_fungi_sequence_search.inTypes.begin(),ensembl_genomes_fungi_sequence_search.inTypes.end());
+  ensembl_genomes_fungi_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_fungi_sequence_search);
 
-  Tool equicktandem;
-  equicktandem.name = "equicktandem";
-  equicktandem.id = "equicktandem";
-  equicktandem.operations = {"equicktandem"};
-  equicktandem.type = "tool";
-  equicktandem.inputs = {};
-  equicktandem.inTypes = {};
+  Tool ensembl_genomes_metazoa_blast;
+  ensembl_genomes_metazoa_blast.id = "ensembl_genomes_metazoa_blast";
+  ensembl_genomes_metazoa_blast.operations = {"ensembl_genomes_metazoa_blast"};
+  ensembl_genomes_metazoa_blast.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2955";
-  equicktandem.inputs.push_back(ins);
-  equicktandem.inTypes.push_back("http://edamontology.org/data_2955");
-  sort (equicktandem.inTypes.begin(),equicktandem.inTypes.end());
-  equicktandem.output = "http://edamontology.org/data_2887";
-  emboss.push_back(equicktandem);
+  ensembl_genomes_metazoa_blast.inTypes = {};
+  ensembl_genomes_metazoa_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_metazoa_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_metazoa_blast.inTypes.begin(),ensembl_genomes_metazoa_blast.inTypes.end());
+  ensembl_genomes_metazoa_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_metazoa_blast);
+
+  Tool ensembl_genomes_metazoa_sequence_search;
+  ensembl_genomes_metazoa_sequence_search.id = "ensembl_genomes_metazoa_sequence_search";
+  ensembl_genomes_metazoa_sequence_search.operations = {"ensembl_genomes_metazoa_sequence_search"};
+  ensembl_genomes_metazoa_sequence_search.type = "tool";
+
+  ensembl_genomes_metazoa_sequence_search.inTypes = {};
+  ensembl_genomes_metazoa_sequence_search.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (ensembl_genomes_metazoa_sequence_search.inTypes.begin(),ensembl_genomes_metazoa_sequence_search.inTypes.end());
+  ensembl_genomes_metazoa_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_metazoa_sequence_search);
+
+  Tool ensembl_genomes_plants_blast;
+  ensembl_genomes_plants_blast.id = "ensembl_genomes_plants_blast";
+  ensembl_genomes_plants_blast.operations = {"ensembl_genomes_plants_blast"};
+  ensembl_genomes_plants_blast.type = "tool";
+
+  ensembl_genomes_plants_blast.inTypes = {};
+  ensembl_genomes_plants_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_plants_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_plants_blast.inTypes.begin(),ensembl_genomes_plants_blast.inTypes.end());
+  ensembl_genomes_plants_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_plants_blast);
+
+  Tool ensembl_genomes_plants_sequence_search;
+  ensembl_genomes_plants_sequence_search.id = "ensembl_genomes_plants_sequence_search";
+  ensembl_genomes_plants_sequence_search.operations = {"ensembl_genomes_plants_sequence_search"};
+  ensembl_genomes_plants_sequence_search.type = "tool";
+
+  ensembl_genomes_plants_sequence_search.inTypes = {};
+  ensembl_genomes_plants_sequence_search.inTypes.push_back("http://edamontology.org/data_0863");
+  ensembl_genomes_plants_sequence_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_genomes_plants_sequence_search.inTypes.begin(),ensembl_genomes_plants_sequence_search.inTypes.end());
+  ensembl_genomes_plants_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_plants_sequence_search);
+
+  Tool ensembl_genomes_protists_blast;
+  ensembl_genomes_protists_blast.id = "ensembl_genomes_protists_blast";
+  ensembl_genomes_protists_blast.operations = {"ensembl_genomes_protists_blast"};
+  ensembl_genomes_protists_blast.type = "tool";
+
+  ensembl_genomes_protists_blast.inTypes = {};
+  ensembl_genomes_protists_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (ensembl_genomes_protists_blast.inTypes.begin(),ensembl_genomes_protists_blast.inTypes.end());
+  ensembl_genomes_protists_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_protists_blast);
+
+  Tool ensembl_genomes_protists_sequence_search;
+  ensembl_genomes_protists_sequence_search.id = "ensembl_genomes_protists_sequence_search";
+  ensembl_genomes_protists_sequence_search.operations = {"ensembl_genomes_protists_sequence_search"};
+  ensembl_genomes_protists_sequence_search.type = "tool";
+
+  ensembl_genomes_protists_sequence_search.inTypes = {};
+  ensembl_genomes_protists_sequence_search.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (ensembl_genomes_protists_sequence_search.inTypes.begin(),ensembl_genomes_protists_sequence_search.inTypes.end());
+  ensembl_genomes_protists_sequence_search.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_genomes_protists_sequence_search);
+
+  Tool ensembl_sequence_search_blast;
+  ensembl_sequence_search_blast.id = "ensembl_sequence_search_blast";
+  ensembl_sequence_search_blast.operations = {"ensembl_sequence_search_blast"};
+  ensembl_sequence_search_blast.type = "tool";
+
+  ensembl_sequence_search_blast.inTypes = {};
+  ensembl_sequence_search_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (ensembl_sequence_search_blast.inTypes.begin(),ensembl_sequence_search_blast.inTypes.end());
+  ensembl_sequence_search_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ensembl_sequence_search_blast);
+
+  Tool entrez_protein_clusters;
+  entrez_protein_clusters.id = "entrez_protein_clusters";
+  entrez_protein_clusters.operations = {"entrez_protein_clusters"};
+  entrez_protein_clusters.type = "tool";
+
+  entrez_protein_clusters.inTypes = {};
+  entrez_protein_clusters.inTypes.push_back("http://edamontology.org/data_0907");
+  sort (entrez_protein_clusters.inTypes.begin(),entrez_protein_clusters.inTypes.end());
+  entrez_protein_clusters.output = "http://edamontology.org/data_1075";
+  biotools.push_back(entrez_protein_clusters);
+
+  Tool enzymeminer;
+  enzymeminer.id = "enzymeminer";
+  enzymeminer.operations = {"enzymeminer"};
+  enzymeminer.type = "tool";
+
+  enzymeminer.inTypes = {};
+  enzymeminer.inTypes.push_back("http://edamontology.org/data_1277");
+  enzymeminer.inTypes.push_back("http://edamontology.org/data_1233");
+  enzymeminer.inTypes.push_back("http://edamontology.org/data_1245");
+  sort (enzymeminer.inTypes.begin(),enzymeminer.inTypes.end());
+  enzymeminer.output = "http://edamontology.org/data_2976";
+  biotools.push_back(enzymeminer);
+
+  Tool eosc_pipeline_reproducibility;
+  eosc_pipeline_reproducibility.id = "eosc_pipeline_reproducibility";
+  eosc_pipeline_reproducibility.operations = {"eosc_pipeline_reproducibility"};
+  eosc_pipeline_reproducibility.type = "tool";
+
+  eosc_pipeline_reproducibility.inTypes = {};
+  eosc_pipeline_reproducibility.inTypes.push_back("http://edamontology.org/data_2044");
+  sort (eosc_pipeline_reproducibility.inTypes.begin(),eosc_pipeline_reproducibility.inTypes.end());
+  eosc_pipeline_reproducibility.output = "http://edamontology.org/data_2044";
+  biotools.push_back(eosc_pipeline_reproducibility);
 
   Tool est2genome;
-  est2genome.name = "est2genome";
   est2genome.id = "est2genome";
   est2genome.operations = {"est2genome"};
   est2genome.type = "tool";
-  est2genome.inputs = {};
-  est2genome.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  est2genome.inputs.push_back(ins);
+  est2genome.inTypes = {};
   est2genome.inTypes.push_back("http://edamontology.org/data_1276");
   sort (est2genome.inTypes.begin(),est2genome.inTypes.end());
   est2genome.output = "http://edamontology.org/data_2887";
   est2genome.output = "http://edamontology.org/data_2887";
-  emboss.push_back(est2genome);
+  biotools.push_back(est2genome);
 
-  Tool etandem;
-  etandem.name = "etandem";
-  etandem.id = "etandem";
-  etandem.operations = {"etandem"};
-  etandem.type = "tool";
-  etandem.inputs = {};
-  etandem.inTypes = {};
+  Tool ests_source;
+  ests_source.id = "ests_source";
+  ests_source.operations = {"ests_source"};
+  ests_source.type = "tool";
 
-  sort (etandem.inTypes.begin(),etandem.inTypes.end());
-  etandem.output = "http://edamontology.org/data_2887";
-  emboss.push_back(etandem);
+  ests_source.inTypes = {};
+  ests_source.inTypes.push_back("http://edamontology.org/data_3134");
+  sort (ests_source.inTypes.begin(),ests_source.inTypes.end());
+  ests_source.output = "http://edamontology.org/data_2704";
+  biotools.push_back(ests_source);
+
+  Tool euhcvdb;
+  euhcvdb.id = "euhcvdb";
+  euhcvdb.operations = {"euhcvdb"};
+  euhcvdb.type = "tool";
+
+  euhcvdb.inTypes = {};
+  euhcvdb.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (euhcvdb.inTypes.begin(),euhcvdb.inTypes.end());
+  euhcvdb.output = "http://edamontology.org/data_1097";
+  biotools.push_back(euhcvdb);
 
   Tool extractalign;
-  extractalign.name = "extractalign";
   extractalign.id = "extractalign";
   extractalign.operations = {"extractalign"};
   extractalign.type = "tool";
-  extractalign.inputs = {};
-  extractalign.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  extractalign.inputs.push_back(ins);
+  extractalign.inTypes = {};
   extractalign.inTypes.push_back("http://edamontology.org/data_0849");
   sort (extractalign.inTypes.begin(),extractalign.inTypes.end());
   extractalign.output = "http://edamontology.org/data_0863";
-  emboss.push_back(extractalign);
+  biotools.push_back(extractalign);
 
-  Tool extractfeat;
-  extractfeat.name = "extractfeat";
-  extractfeat.id = "extractfeat";
-  extractfeat.operations = {"extractfeat"};
-  extractfeat.type = "tool";
-  extractfeat.inputs = {};
-  extractfeat.inTypes = {};
+  Tool fasta;
+  fasta.id = "fasta";
+  fasta.operations = {"fasta"};
+  fasta.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  extractfeat.inputs.push_back(ins);
-  extractfeat.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (extractfeat.inTypes.begin(),extractfeat.inTypes.end());
-  extractfeat.output = "http://edamontology.org/data_0849";
-  emboss.push_back(extractfeat);
+  fasta.inTypes = {};
+  fasta.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (fasta.inTypes.begin(),fasta.inTypes.end());
+  fasta.output = "http://edamontology.org/data_2044";
+  biotools.push_back(fasta);
 
-  Tool extractseq;
-  extractseq.name = "extractseq";
-  extractseq.id = "extractseq";
-  extractseq.operations = {"extractseq"};
-  extractseq.type = "tool";
-  extractseq.inputs = {};
-  extractseq.inTypes = {};
+  Tool fastm_ebi;
+  fastm_ebi.id = "fastm_ebi";
+  fastm_ebi.operations = {"fastm_ebi"};
+  fastm_ebi.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  extractseq.inputs.push_back(ins);
-  extractseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (extractseq.inTypes.begin(),extractseq.inTypes.end());
-  extractseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(extractseq);
+  fastm_ebi.inTypes = {};
+  fastm_ebi.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (fastm_ebi.inTypes.begin(),fastm_ebi.inTypes.end());
+  fastm_ebi.output = "http://edamontology.org/data_2976";
+  biotools.push_back(fastm_ebi);
 
-  Tool featcopy;
-  featcopy.name = "featcopy";
-  featcopy.id = "featcopy";
-  featcopy.operations = {"featcopy"};
-  featcopy.type = "tool";
-  featcopy.inputs = {};
-  featcopy.inTypes = {};
+  Tool fireprot_asr;
+  fireprot_asr.id = "fireprot_asr";
+  fireprot_asr.operations = {"fireprot_asr"};
+  fireprot_asr.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  featcopy.inputs.push_back(ins);
-  featcopy.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (featcopy.inTypes.begin(),featcopy.inTypes.end());
-  featcopy.output = "http://edamontology.org/data_1255";
-  emboss.push_back(featcopy);
+  fireprot_asr.inTypes = {};
+  fireprot_asr.inTypes.push_back("http://edamontology.org/data_1384");
+  fireprot_asr.inTypes.push_back("http://edamontology.org/data_2976");
+  fireprot_asr.inTypes.push_back("http://edamontology.org/data_0872");
+  sort (fireprot_asr.inTypes.begin(),fireprot_asr.inTypes.end());
+  fireprot_asr.output = "http://edamontology.org/data_2976";
+  biotools.push_back(fireprot_asr);
 
-  Tool featmerge;
-  featmerge.name = "featmerge";
-  featmerge.id = "featmerge";
-  featmerge.operations = {"featmerge"};
-  featmerge.type = "tool";
-  featmerge.inputs = {};
-  featmerge.inTypes = {};
+  Tool flymine;
+  flymine.id = "flymine";
+  flymine.operations = {"flymine"};
+  flymine.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  featmerge.inputs.push_back(ins);
-  featmerge.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (featmerge.inTypes.begin(),featmerge.inTypes.end());
-  featmerge.output = "http://edamontology.org/data_1255";
-  emboss.push_back(featmerge);
+  flymine.inTypes = {};
+  flymine.inTypes.push_back("http://edamontology.org/data_3753");
+  flymine.inTypes.push_back("http://edamontology.org/data_3786");
+  flymine.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (flymine.inTypes.begin(),flymine.inTypes.end());
+  flymine.output = "http://edamontology.org/data_1255";
+  flymine.output = "http://edamontology.org/data_2353";
+  biotools.push_back(flymine);
 
-  Tool featreport;
-  featreport.name = "featreport";
-  featreport.id = "featreport";
-  featreport.operations = {"featreport"};
-  featreport.type = "tool";
-  featreport.inputs = {};
-  featreport.inTypes = {};
+  Tool fqextract;
+  fqextract.id = "fqextract";
+  fqextract.operations = {"fqextract"};
+  fqextract.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  featreport.inputs.push_back(ins);
-  featreport.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (featreport.inTypes.begin(),featreport.inTypes.end());
-  featreport.output = "http://edamontology.org/data_0849";
-  featreport.output = "http://edamontology.org/data_1255";
-  emboss.push_back(featreport);
+  fqextract.inTypes = {};
+  fqextract.inTypes.push_back("http://edamontology.org/data_0006");
+  fqextract.inTypes.push_back("http://edamontology.org/data_0006");
+  fqextract.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (fqextract.inTypes.begin(),fqextract.inTypes.end());
+  fqextract.output = "http://edamontology.org/data_0006";
+  fqextract.output = "http://edamontology.org/data_0006";
+  fqextract.output = "http://edamontology.org/data_0006";
+  fqextract.output = "http://edamontology.org/data_0006";
+  biotools.push_back(fqextract);
 
-  Tool feattext;
-  feattext.name = "feattext";
-  feattext.id = "feattext";
-  feattext.operations = {"feattext"};
-  feattext.type = "tool";
-  feattext.inputs = {};
-  feattext.inTypes = {};
+  Tool fungenes;
+  fungenes.id = "fungenes";
+  fungenes.operations = {"fungenes"};
+  fungenes.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  feattext.inputs.push_back(ins);
-  feattext.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (feattext.inTypes.begin(),feattext.inTypes.end());
-  feattext.output = "http://edamontology.org/data_1255";
-  emboss.push_back(feattext);
+  fungenes.inTypes = {};
+  fungenes.inTypes.push_back("http://edamontology.org/data_0928");
+  fungenes.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (fungenes.inTypes.begin(),fungenes.inTypes.end());
+  fungenes.output = "http://edamontology.org/data_0842";
+  biotools.push_back(fungenes);
 
-  Tool findkm;
-  findkm.name = "findkm";
-  findkm.id = "findkm";
-  findkm.operations = {"findkm"};
-  findkm.type = "tool";
-  findkm.inputs = {};
-  findkm.inTypes = {};
+  Tool g_blastn;
+  g_blastn.id = "g_blastn";
+  g_blastn.operations = {"g_blastn"};
+  g_blastn.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2978";
-  findkm.inputs.push_back(ins);
-  findkm.inTypes.push_back("http://edamontology.org/data_2978");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2025";
-  findkm.inputs.push_back(ins);
-  findkm.inTypes.push_back("http://edamontology.org/data_2025");
-  ins.label = "output2";
-  ins.type = "http://edamontology.org/data_2026";
-  findkm.inputs.push_back(ins);
-  findkm.inTypes.push_back("http://edamontology.org/data_2026");
-  sort (findkm.inTypes.begin(),findkm.inTypes.end());
-  findkm.output = "http://edamontology.org/data_2024";
-  emboss.push_back(findkm);
+  g_blastn.inTypes = {};
+  g_blastn.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (g_blastn.inTypes.begin(),g_blastn.inTypes.end());
+  g_blastn.output = "http://edamontology.org/data_2976";
+  biotools.push_back(g_blastn);
 
-  Tool freak;
-  freak.name = "freak";
-  freak.id = "freak";
-  freak.operations = {"freak"};
-  freak.type = "tool";
-  freak.inputs = {};
-  freak.inTypes = {};
+  Tool gconvert;
+  gconvert.id = "gconvert";
+  gconvert.operations = {"gconvert"};
+  gconvert.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2166";
-  freak.inputs.push_back(ins);
-  freak.inTypes.push_back("http://edamontology.org/data_2166");
-  sort (freak.inTypes.begin(),freak.inTypes.end());
-  freak.output = "http://edamontology.org/data_0849";
-  emboss.push_back(freak);
+  gconvert.inTypes = {};
+  gconvert.inTypes.push_back("http://edamontology.org/data_0842");
+  sort (gconvert.inTypes.begin(),gconvert.inTypes.end());
+  gconvert.output = "http://edamontology.org/data_0842";
+  biotools.push_back(gconvert);
 
-  Tool fuzznuc;
-  fuzznuc.name = "fuzznuc";
-  fuzznuc.id = "fuzznuc";
-  fuzznuc.operations = {"fuzznuc"};
-  fuzznuc.type = "tool";
-  fuzznuc.inputs = {};
-  fuzznuc.inTypes = {};
+  Tool gem3;
+  gem3.id = "gem3";
+  gem3.operations = {"gem3"};
+  gem3.type = "tool";
 
-  sort (fuzznuc.inTypes.begin(),fuzznuc.inTypes.end());
-  fuzznuc.output = "http://edamontology.org/data_2887";
-  fuzznuc.output = "http://edamontology.org/data_1353";
-  emboss.push_back(fuzznuc);
+  gem3.inTypes = {};
+  gem3.inTypes.push_back("http://edamontology.org/data_3671");
+  sort (gem3.inTypes.begin(),gem3.inTypes.end());
+  gem3.output = "http://edamontology.org/data_1193";
+  biotools.push_back(gem3);
 
-  Tool fuzzpro;
-  fuzzpro.name = "fuzzpro";
-  fuzzpro.id = "fuzzpro";
-  fuzzpro.operations = {"fuzzpro"};
-  fuzzpro.type = "tool";
-  fuzzpro.inputs = {};
-  fuzzpro.inTypes = {};
+  Tool genatlas;
+  genatlas.id = "genatlas";
+  genatlas.operations = {"genatlas"};
+  genatlas.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  fuzzpro.inputs.push_back(ins);
-  fuzzpro.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (fuzzpro.inTypes.begin(),fuzzpro.inTypes.end());
-  fuzzpro.output = "http://edamontology.org/data_1353";
-  emboss.push_back(fuzzpro);
+  genatlas.inTypes = {};
+  genatlas.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genatlas.inTypes.begin(),genatlas.inTypes.end());
+  genatlas.output = "http://edamontology.org/data_1026";
+  biotools.push_back(genatlas);
 
-  Tool fuzztran;
-  fuzztran.name = "fuzztran";
-  fuzztran.id = "fuzztran";
-  fuzztran.operations = {"fuzztran"};
-  fuzztran.type = "tool";
-  fuzztran.inputs = {};
-  fuzztran.inTypes = {};
+  Tool genbank;
+  genbank.id = "genbank";
+  genbank.operations = {"genbank"};
+  genbank.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1254";
-  fuzztran.inputs.push_back(ins);
-  fuzztran.inTypes.push_back("http://edamontology.org/data_1254");
-  sort (fuzztran.inTypes.begin(),fuzztran.inTypes.end());
-  fuzztran.output = "http://edamontology.org/data_2887";
-  fuzztran.output = "http://edamontology.org/data_1353";
-  emboss.push_back(fuzztran);
+  genbank.inTypes = {};
+  genbank.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (genbank.inTypes.begin(),genbank.inTypes.end());
+  genbank.output = "http://edamontology.org/data_1097";
+  biotools.push_back(genbank);
 
-  Tool garnier;
-  garnier.name = "garnier";
-  garnier.id = "garnier";
-  garnier.operations = {"garnier"};
-  garnier.type = "tool";
-  garnier.inputs = {};
-  garnier.inTypes = {};
+  Tool gene3d_structural;
+  gene3d_structural.id = "gene3d_structural";
+  gene3d_structural.operations = {"gene3d_structural"};
+  gene3d_structural.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  garnier.inputs.push_back(ins);
-  garnier.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (garnier.inTypes.begin(),garnier.inTypes.end());
-  garnier.output = "http://edamontology.org/data_2886";
-  emboss.push_back(garnier);
+  gene3d_structural.inTypes = {};
+  gene3d_structural.inTypes.push_back("http://edamontology.org/data_0907");
+  sort (gene3d_structural.inTypes.begin(),gene3d_structural.inTypes.end());
+  gene3d_structural.output = "http://edamontology.org/data_2701";
+  biotools.push_back(gene3d_structural);
 
-  Tool geecee;
-  geecee.name = "geecee";
-  geecee.id = "geecee";
-  geecee.operations = {"geecee"};
-  geecee.type = "tool";
-  geecee.inputs = {};
-  geecee.inTypes = {};
+  Tool genedb;
+  genedb.id = "genedb";
+  genedb.operations = {"genedb"};
+  genedb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  geecee.inputs.push_back(ins);
-  geecee.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (geecee.inTypes.begin(),geecee.inTypes.end());
-  geecee.output = "http://edamontology.org/data_2887";
-  emboss.push_back(geecee);
+  genedb.inTypes = {};
+  genedb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genedb.inTypes.begin(),genedb.inTypes.end());
+  genedb.output = "http://edamontology.org/data_1026";
+  biotools.push_back(genedb);
 
-  Tool getorf;
-  getorf.name = "getorf";
-  getorf.id = "getorf";
-  getorf.operations = {"getorf"};
-  getorf.type = "tool";
-  getorf.inputs = {};
-  getorf.inTypes = {};
+  Tool genefarm;
+  genefarm.id = "genefarm";
+  genefarm.operations = {"genefarm"};
+  genefarm.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2886";
-  getorf.inputs.push_back(ins);
-  getorf.inTypes.push_back("http://edamontology.org/data_2886");
-  sort (getorf.inTypes.begin(),getorf.inTypes.end());
-  getorf.output = "http://edamontology.org/data_2887";
-  emboss.push_back(getorf);
+  genefarm.inTypes = {};
+  genefarm.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genefarm.inTypes.begin(),genefarm.inTypes.end());
+  genefarm.output = "http://edamontology.org/data_2295";
+  biotools.push_back(genefarm);
 
-  Tool godef;
-  godef.name = "godef";
-  godef.id = "godef";
-  godef.operations = {"godef"};
-  godef.type = "tool";
-  godef.inputs = {};
-  godef.inTypes = {};
+  Tool genepublisher;
+  genepublisher.id = "genepublisher";
+  genepublisher.operations = {"genepublisher"};
+  genepublisher.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  godef.inputs.push_back(ins);
-  godef.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (godef.inTypes.begin(),godef.inTypes.end());
-  emboss.push_back(godef);
+  genepublisher.inTypes = {};
+  genepublisher.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genepublisher.inTypes.begin(),genepublisher.inTypes.end());
+  genepublisher.output = "http://edamontology.org/data_3110";
+  biotools.push_back(genepublisher);
 
-  Tool goname;
-  goname.name = "goname";
-  goname.id = "goname";
-  goname.operations = {"goname"};
-  goname.type = "tool";
-  goname.inputs = {};
-  goname.inTypes = {};
+  Tool genesnps;
+  genesnps.id = "genesnps";
+  genesnps.operations = {"genesnps"};
+  genesnps.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  goname.inputs.push_back(ins);
-  goname.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (goname.inTypes.begin(),goname.inTypes.end());
-  emboss.push_back(goname);
+  genesnps.inTypes = {};
+  genesnps.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (genesnps.inTypes.begin(),genesnps.inTypes.end());
+  genesnps.output = "http://edamontology.org/data_2805";
+  biotools.push_back(genesnps);
 
-  Tool helixturnhelix;
-  helixturnhelix.name = "helixturnhelix";
-  helixturnhelix.id = "helixturnhelix";
-  helixturnhelix.operations = {"helixturnhelix"};
-  helixturnhelix.type = "tool";
-  helixturnhelix.inputs = {};
-  helixturnhelix.inTypes = {};
+  Tool genevestigator;
+  genevestigator.id = "genevestigator";
+  genevestigator.operations = {"genevestigator"};
+  genevestigator.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  helixturnhelix.inputs.push_back(ins);
-  helixturnhelix.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (helixturnhelix.inTypes.begin(),helixturnhelix.inTypes.end());
-  helixturnhelix.output = "http://edamontology.org/data_2886";
-  emboss.push_back(helixturnhelix);
+  genevestigator.inTypes = {};
+  genevestigator.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genevestigator.inTypes.begin(),genevestigator.inTypes.end());
+  genevestigator.output = "http://edamontology.org/data_3021";
+  biotools.push_back(genevestigator);
 
-  Tool hmoment;
-  hmoment.name = "hmoment";
-  hmoment.id = "hmoment";
-  hmoment.operations = {"hmoment"};
-  hmoment.type = "tool";
-  hmoment.inputs = {};
-  hmoment.inTypes = {};
+  Tool genolist;
+  genolist.id = "genolist";
+  genolist.operations = {"genolist"};
+  genolist.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1520";
-  hmoment.inputs.push_back(ins);
-  hmoment.inTypes.push_back("http://edamontology.org/data_1520");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_1520";
-  hmoment.inputs.push_back(ins);
-  hmoment.inTypes.push_back("http://edamontology.org/data_1520");
-  sort (hmoment.inTypes.begin(),hmoment.inTypes.end());
-  hmoment.output = "http://edamontology.org/data_2886";
-  emboss.push_back(hmoment);
+  genolist.inTypes = {};
+  genolist.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (genolist.inTypes.begin(),genolist.inTypes.end());
+  genolist.output = "http://edamontology.org/data_2739";
+  biotools.push_back(genolist);
 
-  Tool iep;
-  iep.name = "iep";
-  iep.id = "iep";
-  iep.operations = {"iep"};
-  iep.type = "tool";
-  iep.inputs = {};
-  iep.inTypes = {};
+  Tool genomereviews;
+  genomereviews.id = "genomereviews";
+  genomereviews.operations = {"genomereviews"};
+  genomereviews.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1528";
-  iep.inputs.push_back(ins);
-  iep.inTypes.push_back("http://edamontology.org/data_1528");
-  sort (iep.inTypes.begin(),iep.inTypes.end());
-  iep.output = "http://edamontology.org/data_2886";
-  emboss.push_back(iep);
+  genomereviews.inTypes = {};
+  genomereviews.inTypes.push_back("http://edamontology.org/data_2711");
+  sort (genomereviews.inTypes.begin(),genomereviews.inTypes.end());
+  genomereviews.output = "http://edamontology.org/data_2751";
+  biotools.push_back(genomereviews);
 
-  Tool infoalign;
-  infoalign.name = "infoalign";
-  infoalign.id = "infoalign";
-  infoalign.operations = {"infoalign"};
-  infoalign.type = "tool";
-  infoalign.inputs = {};
-  infoalign.inTypes = {};
+  Tool genonets;
+  genonets.id = "genonets";
+  genonets.operations = {"genonets"};
+  genonets.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0867";
-  infoalign.inputs.push_back(ins);
-  infoalign.inTypes.push_back("http://edamontology.org/data_0867");
-  sort (infoalign.inTypes.begin(),infoalign.inTypes.end());
-  infoalign.output = "http://edamontology.org/data_0863";
-  infoalign.output = "http://edamontology.org/data_0874";
-  emboss.push_back(infoalign);
+  genonets.inTypes = {};
+  genonets.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (genonets.inTypes.begin(),genonets.inTypes.end());
+  genonets.output = "http://edamontology.org/data_0920";
+  biotools.push_back(genonets);
 
-  Tool infoassembly;
-  infoassembly.name = "infoassembly";
-  infoassembly.id = "infoassembly";
-  infoassembly.operations = {"infoassembly"};
-  infoassembly.type = "tool";
-  infoassembly.inputs = {};
-  infoassembly.inTypes = {};
+  Tool germ_line_v_genes;
+  germ_line_v_genes.id = "germ_line_v_genes";
+  germ_line_v_genes.operations = {"germ_line_v_genes"};
+  germ_line_v_genes.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  infoassembly.inputs.push_back(ins);
-  infoassembly.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (infoassembly.inTypes.begin(),infoassembly.inTypes.end());
-  infoassembly.output = "http://edamontology.org/data_0849";
-  emboss.push_back(infoassembly);
+  germ_line_v_genes.inTypes = {};
+  germ_line_v_genes.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (germ_line_v_genes.inTypes.begin(),germ_line_v_genes.inTypes.end());
+  germ_line_v_genes.output = "http://edamontology.org/data_2835";
+  biotools.push_back(germ_line_v_genes);
 
-  Tool infobase;
-  infobase.name = "infobase";
-  infobase.id = "infobase";
-  infobase.operations = {"infobase"};
-  infobase.type = "tool";
-  infobase.inputs = {};
-  infobase.inTypes = {};
+  Tool germonline;
+  germonline.id = "germonline";
+  germonline.operations = {"germonline"};
+  germonline.type = "tool";
 
-  sort (infobase.inTypes.begin(),infobase.inTypes.end());
-  emboss.push_back(infobase);
+  germonline.inTypes = {};
+  germonline.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (germonline.inTypes.begin(),germonline.inTypes.end());
+  germonline.output = "http://edamontology.org/data_1045";
+  germonline.output = "http://edamontology.org/data_1026";
+  biotools.push_back(germonline);
+
+  Tool getsequence;
+  getsequence.id = "getsequence";
+  getsequence.operations = {"getsequence"};
+  getsequence.type = "tool";
+
+  getsequence.inTypes = {};
+  getsequence.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (getsequence.inTypes.begin(),getsequence.inTypes.end());
+  getsequence.output = "http://edamontology.org/data_0863";
+  biotools.push_back(getsequence);
+
+  Tool giardiadb;
+  giardiadb.id = "giardiadb";
+  giardiadb.operations = {"giardiadb"};
+  giardiadb.type = "tool";
+
+  giardiadb.inTypes = {};
+  giardiadb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (giardiadb.inTypes.begin(),giardiadb.inTypes.end());
+  giardiadb.output = "http://edamontology.org/data_2295";
+  biotools.push_back(giardiadb);
+
+  Tool glycosciences;
+  glycosciences.id = "glycosciences";
+  glycosciences.operations = {"glycosciences"};
+  glycosciences.type = "tool";
+
+  glycosciences.inTypes = {};
+  glycosciences.inTypes.push_back("http://edamontology.org/data_2313");
+  sort (glycosciences.inTypes.begin(),glycosciences.inTypes.end());
+  glycosciences.output = "http://edamontology.org/data_2796";
+  biotools.push_back(glycosciences);
+
+  Tool gmap;
+  gmap.id = "gmap";
+  gmap.operations = {"gmap"};
+  gmap.type = "tool";
+
+  gmap.inTypes = {};
+  gmap.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (gmap.inTypes.begin(),gmap.inTypes.end());
+  gmap.output = "http://edamontology.org/data_0006";
+  gmap.output = "http://edamontology.org/data_0006";
+  gmap.output = "http://edamontology.org/data_0006";
+  gmap.output = "http://edamontology.org/data_0863";
+  biotools.push_back(gmap);
+
+  Tool gorth;
+  gorth.id = "gorth";
+  gorth.operations = {"gorth"};
+  gorth.type = "tool";
+
+  gorth.inTypes = {};
+  gorth.inTypes.push_back("http://edamontology.org/data_0842");
+  sort (gorth.inTypes.begin(),gorth.inTypes.end());
+  gorth.output = "http://edamontology.org/data_0842";
+  biotools.push_back(gorth);
+
+  Tool gpcr_sarfari_blast_search;
+  gpcr_sarfari_blast_search.id = "gpcr_sarfari_blast_search";
+  gpcr_sarfari_blast_search.operations = {"gpcr_sarfari_blast_search"};
+  gpcr_sarfari_blast_search.type = "tool";
+
+  gpcr_sarfari_blast_search.inTypes = {};
+  gpcr_sarfari_blast_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (gpcr_sarfari_blast_search.inTypes.begin(),gpcr_sarfari_blast_search.inTypes.end());
+  gpcr_sarfari_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(gpcr_sarfari_blast_search);
+
+  Tool gpcrdb;
+  gpcrdb.id = "gpcrdb";
+  gpcrdb.operations = {"gpcrdb"};
+  gpcrdb.type = "tool";
+
+  gpcrdb.inTypes = {};
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_1381");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_0857");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_1707");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_0872");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_2884");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_2886");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_1277");
+  gpcrdb.inTypes.push_back("http://edamontology.org/data_1460");
+  sort (gpcrdb.inTypes.begin(),gpcrdb.inTypes.end());
+  gpcrdb.output = "http://edamontology.org/data_1460";
+  gpcrdb.output = "http://edamontology.org/data_2974";
+  biotools.push_back(gpcrdb);
+
+  Tool gpcrs;
+  gpcrs.id = "gpcrs";
+  gpcrs.operations = {"gpcrs"};
+  gpcrs.type = "tool";
+
+  gpcrs.inTypes = {};
+  gpcrs.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (gpcrs.inTypes.begin(),gpcrs.inTypes.end());
+  gpcrs.output = "http://edamontology.org/data_1131";
+  biotools.push_back(gpcrs);
+
+  Tool grenits;
+  grenits.id = "grenits";
+  grenits.operations = {"grenits"};
+  grenits.type = "tool";
+
+  grenits.inTypes = {};
+  grenits.inTypes.push_back("http://edamontology.org/data_2884");
+  grenits.inTypes.push_back("http://edamontology.org/data_1772");
+  grenits.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (grenits.inTypes.begin(),grenits.inTypes.end());
+  grenits.output = "http://edamontology.org/data_0928";
+  biotools.push_back(grenits);
+
+  Tool gwfasta;
+  gwfasta.id = "gwfasta";
+  gwfasta.operations = {"gwfasta"};
+  gwfasta.type = "tool";
+
+  gwfasta.inTypes = {};
+  gwfasta.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (gwfasta.inTypes.begin(),gwfasta.inTypes.end());
+  gwfasta.output = "http://edamontology.org/data_2044";
+  biotools.push_back(gwfasta);
+
+  Tool h_blast;
+  h_blast.id = "h_blast";
+  h_blast.operations = {"h_blast"};
+  h_blast.type = "tool";
+
+  h_blast.inTypes = {};
+  h_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (h_blast.inTypes.begin(),h_blast.inTypes.end());
+  h_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(h_blast);
+
+  Tool h_invdb;
+  h_invdb.id = "h_invdb";
+  h_invdb.operations = {"h_invdb"};
+  h_invdb.type = "tool";
+
+  h_invdb.inTypes = {};
+  h_invdb.inTypes.push_back("http://edamontology.org/data_3134");
+  sort (h_invdb.inTypes.begin(),h_invdb.inTypes.end());
+  h_invdb.output = "http://edamontology.org/data_2770";
+  biotools.push_back(h_invdb);
+
+  Tool hexpochem;
+  hexpochem.id = "hexpochem";
+  hexpochem.operations = {"hexpochem"};
+  hexpochem.type = "tool";
+
+  hexpochem.inTypes = {};
+  hexpochem.inTypes.push_back("http://edamontology.org/data_0906");
+  hexpochem.inTypes.push_back("http://edamontology.org/data_1566");
+  sort (hexpochem.inTypes.begin(),hexpochem.inTypes.end());
+  hexpochem.output = "http://edamontology.org/data_0990";
+  biotools.push_back(hexpochem);
+
+  Tool hgnc;
+  hgnc.id = "hgnc";
+  hgnc.operations = {"hgnc"};
+  hgnc.type = "tool";
+
+  hgnc.inTypes = {};
+  hgnc.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (hgnc.inTypes.begin(),hgnc.inTypes.end());
+  hgnc.output = "http://edamontology.org/data_2298";
+  biotools.push_back(hgnc);
+
+  Tool hgv_lps;
+  hgv_lps.id = "hgv_lps";
+  hgv_lps.operations = {"hgv_lps"};
+  hgv_lps.type = "tool";
+
+  hgv_lps.inTypes = {};
+  hgv_lps.inTypes.push_back("http://edamontology.org/data_0006");
+  hgv_lps.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (hgv_lps.inTypes.begin(),hgv_lps.inTypes.end());
+  hgv_lps.output = "http://edamontology.org/data_0006";
+  biotools.push_back(hgv_lps);
+
+  Tool hogenom;
+  hogenom.id = "hogenom";
+  hogenom.operations = {"hogenom"};
+  hogenom.type = "tool";
+
+  hogenom.inTypes = {};
+  hogenom.inTypes.push_back("http://edamontology.org/data_0872");
+  sort (hogenom.inTypes.begin(),hogenom.inTypes.end());
+  hogenom.output = "http://edamontology.org/data_3021";
+  biotools.push_back(hogenom);
+
+  Tool hovergen;
+  hovergen.id = "hovergen";
+  hovergen.operations = {"hovergen"};
+  hovergen.type = "tool";
+
+  hovergen.inTypes = {};
+  hovergen.inTypes.push_back("http://edamontology.org/data_0872");
+  sort (hovergen.inTypes.begin(),hovergen.inTypes.end());
+  hovergen.output = "http://edamontology.org/data_3021";
+  biotools.push_back(hovergen);
+
+  Tool hs_blastn;
+  hs_blastn.id = "hs_blastn";
+  hs_blastn.operations = {"hs_blastn"};
+  hs_blastn.type = "tool";
+
+  hs_blastn.inTypes = {};
+  hs_blastn.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (hs_blastn.inTypes.begin(),hs_blastn.inTypes.end());
+  hs_blastn.output = "http://edamontology.org/data_2044";
+  biotools.push_back(hs_blastn);
+
+  Tool hssp;
+  hssp.id = "hssp";
+  hssp.operations = {"hssp"};
+  hssp.type = "tool";
+
+  hssp.inTypes = {};
+  hssp.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (hssp.inTypes.begin(),hssp.inTypes.end());
+  hssp.output = "http://edamontology.org/data_1127";
+  biotools.push_back(hssp);
+
+  Tool huge;
+  huge.id = "huge";
+  huge.operations = {"huge"};
+  huge.type = "tool";
+
+  huge.inTypes = {};
+  huge.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (huge.inTypes.begin(),huge.inTypes.end());
+  huge.output = "http://edamontology.org/data_2393";
+  biotools.push_back(huge);
+
+  Tool idbases;
+  idbases.id = "idbases";
+  idbases.operations = {"idbases"};
+  idbases.type = "tool";
+
+  idbases.inTypes = {};
+  idbases.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (idbases.inTypes.begin(),idbases.inTypes.end());
+  idbases.output = "http://edamontology.org/data_1025";
+  idbases.output = "http://edamontology.org/data_1097";
+  biotools.push_back(idbases);
+
+  Tool idrem;
+  idrem.id = "idrem";
+  idrem.operations = {"idrem"};
+  idrem.type = "tool";
+
+  idrem.inTypes = {};
+  idrem.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (idrem.inTypes.begin(),idrem.inTypes.end());
+  idrem.output = "http://edamontology.org/data_0954";
+  idrem.output = "http://edamontology.org/data_2603";
+  idrem.output = "http://edamontology.org/data_2600";
+  biotools.push_back(idrem);
+
+  Tool imgt_3dstructure;
+  imgt_3dstructure.id = "imgt_3dstructure";
+  imgt_3dstructure.operations = {"imgt_3dstructure"};
+  imgt_3dstructure.type = "tool";
+
+  imgt_3dstructure.inTypes = {};
+  imgt_3dstructure.inTypes.push_back("http://edamontology.org/data_2085");
+  imgt_3dstructure.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (imgt_3dstructure.inTypes.begin(),imgt_3dstructure.inTypes.end());
+  imgt_3dstructure.output = "http://edamontology.org/data_0842";
+  imgt_3dstructure.output = "http://edamontology.org/data_0968";
+  imgt_3dstructure.output = "http://edamontology.org/data_2858";
+  imgt_3dstructure.output = "http://edamontology.org/data_1127";
+  biotools.push_back(imgt_3dstructure);
+
+  Tool imgt_v_quest;
+  imgt_v_quest.id = "imgt_v_quest";
+  imgt_v_quest.operations = {"imgt_v_quest"};
+  imgt_v_quest.type = "tool";
+
+  imgt_v_quest.inTypes = {};
+  imgt_v_quest.inTypes.push_back("http://edamontology.org/data_0863");
+  imgt_v_quest.inTypes.push_back("http://edamontology.org/data_1255");
+  imgt_v_quest.inTypes.push_back("http://edamontology.org/data_2955");
+  sort (imgt_v_quest.inTypes.begin(),imgt_v_quest.inTypes.end());
+  imgt_v_quest.output = "http://edamontology.org/data_2977";
+  biotools.push_back(imgt_v_quest);
 
   Tool inforesidue;
-  inforesidue.name = "inforesidue";
   inforesidue.id = "inforesidue";
   inforesidue.operations = {"inforesidue"};
   inforesidue.type = "tool";
-  inforesidue.inputs = {};
-  inforesidue.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  inforesidue.inputs.push_back(ins);
+  inforesidue.inTypes = {};
   inforesidue.inTypes.push_back("http://edamontology.org/data_1276");
   sort (inforesidue.inTypes.begin(),inforesidue.inTypes.end());
   inforesidue.output = "http://edamontology.org/data_1502";
   inforesidue.output = "http://edamontology.org/data_1505";
-  emboss.push_back(inforesidue);
-
-  Tool infoseq;
-  infoseq.name = "infoseq";
-  infoseq.id = "infoseq";
-  infoseq.operations = {"infoseq"};
-  infoseq.type = "tool";
-  infoseq.inputs = {};
-  infoseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0850";
-  infoseq.inputs.push_back(ins);
-  infoseq.inTypes.push_back("http://edamontology.org/data_0850");
-  sort (infoseq.inTypes.begin(),infoseq.inTypes.end());
-  infoseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(infoseq);
-
-  Tool isochore;
-  isochore.name = "isochore";
-  isochore.id = "isochore";
-  isochore.operations = {"isochore"};
-  isochore.type = "tool";
-  isochore.inputs = {};
-  isochore.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  isochore.inputs.push_back(ins);
-  isochore.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (isochore.inTypes.begin(),isochore.inTypes.end());
-  isochore.output = "http://edamontology.org/data_2887";
-  emboss.push_back(isochore);
-
-  Tool jaspextract;
-  jaspextract.name = "jaspextract";
-  jaspextract.id = "jaspextract";
-  jaspextract.operations = {"jaspextract"};
-  jaspextract.type = "tool";
-  jaspextract.inputs = {};
-  jaspextract.inTypes = {};
-
-  sort (jaspextract.inTypes.begin(),jaspextract.inTypes.end());
-  emboss.push_back(jaspextract);
-
-  Tool jaspscan;
-  jaspscan.name = "jaspscan";
-  jaspscan.id = "jaspscan";
-  jaspscan.operations = {"jaspscan"};
-  jaspscan.type = "tool";
-  jaspscan.inputs = {};
-  jaspscan.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0916";
-  jaspscan.inputs.push_back(ins);
-  jaspscan.inTypes.push_back("http://edamontology.org/data_0916");
-  sort (jaspscan.inTypes.begin(),jaspscan.inTypes.end());
-  jaspscan.output = "http://edamontology.org/data_0849";
-  emboss.push_back(jaspscan);
-
-  Tool lindna;
-  lindna.name = "lindna";
-  lindna.id = "lindna";
-  lindna.operations = {"lindna"};
-  lindna.type = "tool";
-  lindna.inputs = {};
-  lindna.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1278";
-  lindna.inputs.push_back(ins);
-  lindna.inTypes.push_back("http://edamontology.org/data_1278");
-  sort (lindna.inTypes.begin(),lindna.inTypes.end());
-  emboss.push_back(lindna);
-
-  Tool listor;
-  listor.name = "listor";
-  listor.id = "listor";
-  listor.operations = {"listor"};
-  listor.type = "tool";
-  listor.inputs = {};
-  listor.inTypes = {};
-
-  sort (listor.inTypes.begin(),listor.inTypes.end());
-  listor.output = "http://edamontology.org/data_0849";
-  listor.output = "http://edamontology.org/data_0849";
-  emboss.push_back(listor);
-
-  Tool makenucseq;
-  makenucseq.name = "makenucseq";
-  makenucseq.id = "makenucseq";
-  makenucseq.operations = {"makenucseq"};
-  makenucseq.type = "tool";
-  makenucseq.inputs = {};
-  makenucseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  makenucseq.inputs.push_back(ins);
-  makenucseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (makenucseq.inTypes.begin(),makenucseq.inTypes.end());
-  makenucseq.output = "http://edamontology.org/data_1597";
-  emboss.push_back(makenucseq);
-
-  Tool makeprotseq;
-  makeprotseq.name = "makeprotseq";
-  makeprotseq.id = "makeprotseq";
-  makeprotseq.operations = {"makeprotseq"};
-  makeprotseq.type = "tool";
-  makeprotseq.inputs = {};
-  makeprotseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2886";
-  makeprotseq.inputs.push_back(ins);
-  makeprotseq.inTypes.push_back("http://edamontology.org/data_2886");
-  sort (makeprotseq.inTypes.begin(),makeprotseq.inTypes.end());
-  makeprotseq.output = "http://edamontology.org/data_0897";
-  emboss.push_back(makeprotseq);
-
-  Tool marscan;
-  marscan.name = "marscan";
-  marscan.id = "marscan";
-  marscan.operations = {"marscan"};
-  marscan.type = "tool";
-  marscan.inputs = {};
-  marscan.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  marscan.inputs.push_back(ins);
-  marscan.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (marscan.inTypes.begin(),marscan.inTypes.end());
-  marscan.output = "http://edamontology.org/data_2887";
-  emboss.push_back(marscan);
-
-  Tool maskambignuc;
-  maskambignuc.name = "maskambignuc";
-  maskambignuc.id = "maskambignuc";
-  maskambignuc.operations = {"maskambignuc"};
-  maskambignuc.type = "tool";
-  maskambignuc.inputs = {};
-  maskambignuc.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  maskambignuc.inputs.push_back(ins);
-  maskambignuc.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (maskambignuc.inTypes.begin(),maskambignuc.inTypes.end());
-  maskambignuc.output = "http://edamontology.org/data_2887";
-  emboss.push_back(maskambignuc);
-
-  Tool maskambigprot;
-  maskambigprot.name = "maskambigprot";
-  maskambigprot.id = "maskambigprot";
-  maskambigprot.operations = {"maskambigprot"};
-  maskambigprot.type = "tool";
-  maskambigprot.inputs = {};
-  maskambigprot.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  maskambigprot.inputs.push_back(ins);
-  maskambigprot.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (maskambigprot.inTypes.begin(),maskambigprot.inTypes.end());
-  maskambigprot.output = "http://edamontology.org/data_2886";
-  emboss.push_back(maskambigprot);
-
-  Tool maskfeat;
-  maskfeat.name = "maskfeat";
-  maskfeat.id = "maskfeat";
-  maskfeat.operations = {"maskfeat"};
-  maskfeat.type = "tool";
-  maskfeat.inputs = {};
-  maskfeat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  maskfeat.inputs.push_back(ins);
-  maskfeat.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (maskfeat.inTypes.begin(),maskfeat.inTypes.end());
-  maskfeat.output = "http://edamontology.org/data_0849";
-  emboss.push_back(maskfeat);
-
-  Tool maskseq;
-  maskseq.name = "maskseq";
-  maskseq.id = "maskseq";
-  maskseq.operations = {"maskseq"};
-  maskseq.type = "tool";
-  maskseq.inputs = {};
-  maskseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  maskseq.inputs.push_back(ins);
-  maskseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (maskseq.inTypes.begin(),maskseq.inTypes.end());
-  maskseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(maskseq);
-
-  Tool matcher;
-  matcher.name = "matcher";
-  matcher.id = "matcher";
-  matcher.operations = {"matcher"};
-  matcher.type = "tool";
-  matcher.inputs = {};
-  matcher.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  matcher.inputs.push_back(ins);
-  matcher.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (matcher.inTypes.begin(),matcher.inTypes.end());
-  matcher.output = "http://edamontology.org/data_0849";
-  matcher.output = "http://edamontology.org/data_0849";
-  matcher.output = "http://edamontology.org/data_0874";
-  emboss.push_back(matcher);
-
-  Tool matcher_ebi;
-  matcher_ebi.name = "matcher-ebi";
-  matcher_ebi.id = "matcher-ebi";
-  matcher_ebi.operations = {"matcher-ebi"};
-  matcher_ebi.type = "tool";
-  matcher_ebi.inputs = {};
-  matcher_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  matcher_ebi.inputs.push_back(ins);
-  matcher_ebi.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (matcher_ebi.inTypes.begin(),matcher_ebi.inTypes.end());
-  matcher_ebi.output = "http://edamontology.org/data_2044";
-  emboss.push_back(matcher_ebi);
-
-  Tool megamerger;
-  megamerger.name = "megamerger";
-  megamerger.id = "megamerger";
-  megamerger.operations = {"megamerger"};
-  megamerger.type = "tool";
-  megamerger.inputs = {};
-  megamerger.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  megamerger.inputs.push_back(ins);
-  megamerger.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (megamerger.inTypes.begin(),megamerger.inTypes.end());
-  megamerger.output = "http://edamontology.org/data_0849";
-  megamerger.output = "http://edamontology.org/data_0849";
-  emboss.push_back(megamerger);
-
-  Tool merger;
-  merger.name = "merger";
-  merger.id = "merger";
-  merger.operations = {"merger"};
-  merger.type = "tool";
-  merger.inputs = {};
-  merger.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  merger.inputs.push_back(ins);
-  merger.inTypes.push_back("http://edamontology.org/data_1381");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0849";
-  merger.inputs.push_back(ins);
-  merger.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (merger.inTypes.begin(),merger.inTypes.end());
-  merger.output = "http://edamontology.org/data_0849";
-  merger.output = "http://edamontology.org/data_0849";
-  merger.output = "http://edamontology.org/data_0874";
-  emboss.push_back(merger);
-
-  Tool msbar;
-  msbar.name = "msbar";
-  msbar.id = "msbar";
-  msbar.operations = {"msbar"};
-  msbar.type = "tool";
-  msbar.inputs = {};
-  msbar.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  msbar.inputs.push_back(ins);
-  msbar.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (msbar.inTypes.begin(),msbar.inTypes.end());
-  msbar.output = "http://edamontology.org/data_0849";
-  msbar.output = "http://edamontology.org/data_0849";
-  emboss.push_back(msbar);
-
-  Tool mwcontam;
-  mwcontam.name = "mwcontam";
-  mwcontam.id = "mwcontam";
-  mwcontam.operations = {"mwcontam"};
-  mwcontam.type = "tool";
-  mwcontam.inputs = {};
-  mwcontam.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1505";
-  mwcontam.inputs.push_back(ins);
-  mwcontam.inTypes.push_back("http://edamontology.org/data_1505");
-  sort (mwcontam.inTypes.begin(),mwcontam.inTypes.end());
-  mwcontam.output = "http://edamontology.org/data_1505";
-  emboss.push_back(mwcontam);
-
-  Tool mwfilter;
-  mwfilter.name = "mwfilter";
-  mwfilter.id = "mwfilter";
-  mwfilter.operations = {"mwfilter"};
-  mwfilter.type = "tool";
-  mwfilter.inputs = {};
-  mwfilter.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1505";
-  mwfilter.inputs.push_back(ins);
-  mwfilter.inTypes.push_back("http://edamontology.org/data_1505");
-  sort (mwfilter.inTypes.begin(),mwfilter.inTypes.end());
-  mwfilter.output = "http://edamontology.org/data_1505";
-  mwfilter.output = "http://edamontology.org/data_0944";
-  emboss.push_back(mwfilter);
-
-  Tool needle;
-  needle.name = "needle";
-  needle.id = "needle";
-  needle.operations = {"needle"};
-  needle.type = "tool";
-  needle.inputs = {};
-  needle.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  needle.inputs.push_back(ins);
-  needle.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (needle.inTypes.begin(),needle.inTypes.end());
-  needle.output = "http://edamontology.org/data_0849";
-  needle.output = "http://edamontology.org/data_0849";
-  needle.output = "http://edamontology.org/data_0874";
-  emboss.push_back(needle);
-
-  Tool needle_ebi;
-  needle_ebi.name = "needle-ebi";
-  needle_ebi.id = "needle-ebi";
-  needle_ebi.operations = {"needle-ebi"};
-  needle_ebi.type = "tool";
-  needle_ebi.inputs = {};
-  needle_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  needle_ebi.inputs.push_back(ins);
-  needle_ebi.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (needle_ebi.inTypes.begin(),needle_ebi.inTypes.end());
-  needle_ebi.output = "http://edamontology.org/data_2044";
-  emboss.push_back(needle_ebi);
-
-  Tool needleall;
-  needleall.name = "needleall";
-  needleall.id = "needleall";
-  needleall.operations = {"needleall"};
-  needleall.type = "tool";
-  needleall.inputs = {};
-  needleall.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  needleall.inputs.push_back(ins);
-  needleall.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (needleall.inTypes.begin(),needleall.inTypes.end());
-  needleall.output = "http://edamontology.org/data_0849";
-  needleall.output = "http://edamontology.org/data_0849";
-  needleall.output = "http://edamontology.org/data_0874";
-  emboss.push_back(needleall);
-
-  Tool newcpgreport;
-  newcpgreport.name = "newcpgreport";
-  newcpgreport.id = "newcpgreport";
-  newcpgreport.operations = {"newcpgreport"};
-  newcpgreport.type = "tool";
-  newcpgreport.inputs = {};
-  newcpgreport.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  newcpgreport.inputs.push_back(ins);
-  newcpgreport.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (newcpgreport.inTypes.begin(),newcpgreport.inTypes.end());
-  newcpgreport.output = "http://edamontology.org/data_2887";
-  emboss.push_back(newcpgreport);
-
-  Tool newcpgseek;
-  newcpgseek.name = "newcpgseek";
-  newcpgseek.id = "newcpgseek";
-  newcpgseek.operations = {"newcpgseek"};
-  newcpgseek.type = "tool";
-  newcpgseek.inputs = {};
-  newcpgseek.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  newcpgseek.inputs.push_back(ins);
-  newcpgseek.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (newcpgseek.inTypes.begin(),newcpgseek.inTypes.end());
-  newcpgseek.output = "http://edamontology.org/data_2887";
-  emboss.push_back(newcpgseek);
-
-  Tool newseq;
-  newseq.name = "newseq";
-  newseq.id = "newseq";
-  newseq.operations = {"newseq"};
-  newseq.type = "tool";
-  newseq.inputs = {};
-  newseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  newseq.inputs.push_back(ins);
-  newseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (newseq.inTypes.begin(),newseq.inTypes.end());
-  emboss.push_back(newseq);
-
-  Tool nohtml;
-  nohtml.name = "nohtml";
-  nohtml.id = "nohtml";
-  nohtml.operations = {"nohtml"};
-  nohtml.type = "tool";
-  nohtml.inputs = {};
-  nohtml.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  nohtml.inputs.push_back(ins);
-  nohtml.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (nohtml.inTypes.begin(),nohtml.inTypes.end());
-  nohtml.output = "http://edamontology.org/data_2048";
-  emboss.push_back(nohtml);
-
-  Tool noreturn;
-  noreturn.name = "noreturn";
-  noreturn.id = "noreturn";
-  noreturn.operations = {"noreturn"};
-  noreturn.type = "tool";
-  noreturn.inputs = {};
-  noreturn.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  noreturn.inputs.push_back(ins);
-  noreturn.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (noreturn.inTypes.begin(),noreturn.inTypes.end());
-  noreturn.output = "http://edamontology.org/data_2048";
-  emboss.push_back(noreturn);
-
-  Tool nospace;
-  nospace.name = "nospace";
-  nospace.id = "nospace";
-  nospace.operations = {"nospace"};
-  nospace.type = "tool";
-  nospace.inputs = {};
-  nospace.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  nospace.inputs.push_back(ins);
-  nospace.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (nospace.inTypes.begin(),nospace.inTypes.end());
-  nospace.output = "http://edamontology.org/data_2048";
-  emboss.push_back(nospace);
-
-  Tool notab;
-  notab.name = "notab";
-  notab.id = "notab";
-  notab.operations = {"notab"};
-  notab.type = "tool";
-  notab.inputs = {};
-  notab.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  notab.inputs.push_back(ins);
-  notab.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (notab.inTypes.begin(),notab.inTypes.end());
-  notab.output = "http://edamontology.org/data_2048";
-  emboss.push_back(notab);
-
-  Tool notseq;
-  notseq.name = "notseq";
-  notseq.id = "notseq";
-  notseq.operations = {"notseq"};
-  notseq.type = "tool";
-  notseq.inputs = {};
-  notseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  notseq.inputs.push_back(ins);
-  notseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (notseq.inTypes.begin(),notseq.inTypes.end());
-  notseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(notseq);
-
-  Tool nthseq;
-  nthseq.name = "nthseq";
-  nthseq.id = "nthseq";
-  nthseq.operations = {"nthseq"};
-  nthseq.type = "tool";
-  nthseq.inputs = {};
-  nthseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  nthseq.inputs.push_back(ins);
-  nthseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (nthseq.inTypes.begin(),nthseq.inTypes.end());
-  nthseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(nthseq);
-
-  Tool nthseqset;
-  nthseqset.name = "nthseqset";
-  nthseqset.id = "nthseqset";
-  nthseqset.operations = {"nthseqset"};
-  nthseqset.type = "tool";
-  nthseqset.inputs = {};
-  nthseqset.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  nthseqset.inputs.push_back(ins);
-  nthseqset.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (nthseqset.inTypes.begin(),nthseqset.inTypes.end());
-  nthseqset.output = "http://edamontology.org/data_0849";
-  emboss.push_back(nthseqset);
-
-  Tool octanol;
-  octanol.name = "octanol";
-  octanol.id = "octanol";
-  octanol.operations = {"octanol"};
-  octanol.type = "tool";
-  octanol.inputs = {};
-  octanol.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1522";
-  octanol.inputs.push_back(ins);
-  octanol.inTypes.push_back("http://edamontology.org/data_1522");
-  sort (octanol.inTypes.begin(),octanol.inTypes.end());
-  octanol.output = "http://edamontology.org/data_1507";
-  emboss.push_back(octanol);
-
-  Tool oddcomp;
-  oddcomp.name = "oddcomp";
-  oddcomp.id = "oddcomp";
-  oddcomp.operations = {"oddcomp"};
-  oddcomp.type = "tool";
-  oddcomp.inputs = {};
-  oddcomp.inTypes = {};
-
-  sort (oddcomp.inTypes.begin(),oddcomp.inTypes.end());
-  oddcomp.output = "http://edamontology.org/data_2886";
-  oddcomp.output = "http://edamontology.org/data_1261";
-  emboss.push_back(oddcomp);
-
-  Tool ontocount;
-  ontocount.name = "ontocount";
-  ontocount.id = "ontocount";
-  ontocount.operations = {"ontocount"};
-  ontocount.type = "tool";
-  ontocount.inputs = {};
-  ontocount.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  ontocount.inputs.push_back(ins);
-  ontocount.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (ontocount.inTypes.begin(),ontocount.inTypes.end());
-  emboss.push_back(ontocount);
-
-  Tool ontoget;
-  ontoget.name = "ontoget";
-  ontoget.id = "ontoget";
-  ontoget.operations = {"ontoget"};
-  ontoget.type = "tool";
-  ontoget.inputs = {};
-  ontoget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontoget.inputs.push_back(ins);
-  ontoget.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontoget.inTypes.begin(),ontoget.inTypes.end());
-  emboss.push_back(ontoget);
-
-  Tool ontogetcommon;
-  ontogetcommon.name = "ontogetcommon";
-  ontogetcommon.id = "ontogetcommon";
-  ontogetcommon.operations = {"ontogetcommon"};
-  ontogetcommon.type = "tool";
-  ontogetcommon.inputs = {};
-  ontogetcommon.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetcommon.inputs.push_back(ins);
-  ontogetcommon.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetcommon.inTypes.begin(),ontogetcommon.inTypes.end());
-  emboss.push_back(ontogetcommon);
-
-  Tool ontogetdown;
-  ontogetdown.name = "ontogetdown";
-  ontogetdown.id = "ontogetdown";
-  ontogetdown.operations = {"ontogetdown"};
-  ontogetdown.type = "tool";
-  ontogetdown.inputs = {};
-  ontogetdown.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetdown.inputs.push_back(ins);
-  ontogetdown.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetdown.inTypes.begin(),ontogetdown.inTypes.end());
-  emboss.push_back(ontogetdown);
-
-  Tool ontogetobsolete;
-  ontogetobsolete.name = "ontogetobsolete";
-  ontogetobsolete.id = "ontogetobsolete";
-  ontogetobsolete.operations = {"ontogetobsolete"};
-  ontogetobsolete.type = "tool";
-  ontogetobsolete.inputs = {};
-  ontogetobsolete.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetobsolete.inputs.push_back(ins);
-  ontogetobsolete.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetobsolete.inTypes.begin(),ontogetobsolete.inTypes.end());
-  emboss.push_back(ontogetobsolete);
-
-  Tool ontogetroot;
-  ontogetroot.name = "ontogetroot";
-  ontogetroot.id = "ontogetroot";
-  ontogetroot.operations = {"ontogetroot"};
-  ontogetroot.type = "tool";
-  ontogetroot.inputs = {};
-  ontogetroot.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetroot.inputs.push_back(ins);
-  ontogetroot.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetroot.inTypes.begin(),ontogetroot.inTypes.end());
-  emboss.push_back(ontogetroot);
-
-  Tool ontogetsibs;
-  ontogetsibs.name = "ontogetsibs";
-  ontogetsibs.id = "ontogetsibs";
-  ontogetsibs.operations = {"ontogetsibs"};
-  ontogetsibs.type = "tool";
-  ontogetsibs.inputs = {};
-  ontogetsibs.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetsibs.inputs.push_back(ins);
-  ontogetsibs.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetsibs.inTypes.begin(),ontogetsibs.inTypes.end());
-  emboss.push_back(ontogetsibs);
-
-  Tool ontogetup;
-  ontogetup.name = "ontogetup";
-  ontogetup.id = "ontogetup";
-  ontogetup.operations = {"ontogetup"};
-  ontogetup.type = "tool";
-  ontogetup.inputs = {};
-  ontogetup.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontogetup.inputs.push_back(ins);
-  ontogetup.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontogetup.inTypes.begin(),ontogetup.inTypes.end());
-  emboss.push_back(ontogetup);
-
-  Tool ontoisobsolete;
-  ontoisobsolete.name = "ontoisobsolete";
-  ontoisobsolete.id = "ontoisobsolete";
-  ontoisobsolete.operations = {"ontoisobsolete"};
-  ontoisobsolete.type = "tool";
-  ontoisobsolete.inputs = {};
-  ontoisobsolete.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2223";
-  ontoisobsolete.inputs.push_back(ins);
-  ontoisobsolete.inTypes.push_back("http://edamontology.org/data_2223");
-  sort (ontoisobsolete.inTypes.begin(),ontoisobsolete.inTypes.end());
-  emboss.push_back(ontoisobsolete);
-
-  Tool ontotext;
-  ontotext.name = "ontotext";
-  ontotext.id = "ontotext";
-  ontotext.operations = {"ontotext"};
-  ontotext.type = "tool";
-  ontotext.inputs = {};
-  ontotext.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0966";
-  ontotext.inputs.push_back(ins);
-  ontotext.inTypes.push_back("http://edamontology.org/data_0966");
-  sort (ontotext.inTypes.begin(),ontotext.inTypes.end());
-  emboss.push_back(ontotext);
-
-  Tool palindrome;
-  palindrome.name = "palindrome";
-  palindrome.id = "palindrome";
-  palindrome.operations = {"palindrome"};
-  palindrome.type = "tool";
-  palindrome.inputs = {};
-  palindrome.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  palindrome.inputs.push_back(ins);
-  palindrome.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (palindrome.inTypes.begin(),palindrome.inTypes.end());
-  palindrome.output = "http://edamontology.org/data_0849";
-  emboss.push_back(palindrome);
-
-  Tool pasteseq;
-  pasteseq.name = "pasteseq";
-  pasteseq.id = "pasteseq";
-  pasteseq.operations = {"pasteseq"};
-  pasteseq.type = "tool";
-  pasteseq.inputs = {};
-  pasteseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  pasteseq.inputs.push_back(ins);
-  pasteseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (pasteseq.inTypes.begin(),pasteseq.inTypes.end());
-  pasteseq.output = "http://edamontology.org/data_0849";
-  pasteseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(pasteseq);
-
-  Tool patmatdb;
-  patmatdb.name = "patmatdb";
-  patmatdb.id = "patmatdb";
-  patmatdb.operations = {"patmatdb"};
-  patmatdb.type = "tool";
-  patmatdb.inputs = {};
-  patmatdb.inTypes = {};
-
-  sort (patmatdb.inTypes.begin(),patmatdb.inTypes.end());
-  patmatdb.output = "http://edamontology.org/data_2886";
-  emboss.push_back(patmatdb);
-
-  Tool patmatmotifs;
-  patmatmotifs.name = "patmatmotifs";
-  patmatmotifs.id = "patmatmotifs";
-  patmatmotifs.operations = {"patmatmotifs"};
-  patmatmotifs.type = "tool";
-  patmatmotifs.inputs = {};
-  patmatmotifs.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  patmatmotifs.inputs.push_back(ins);
-  patmatmotifs.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (patmatmotifs.inTypes.begin(),patmatmotifs.inTypes.end());
-  patmatmotifs.output = "http://edamontology.org/data_0849";
-  emboss.push_back(patmatmotifs);
-
-  Tool pepcoil;
-  pepcoil.name = "pepcoil";
-  pepcoil.id = "pepcoil";
-  pepcoil.operations = {"pepcoil"};
-  pepcoil.type = "tool";
-  pepcoil.inputs = {};
-  pepcoil.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  pepcoil.inputs.push_back(ins);
-  pepcoil.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (pepcoil.inTypes.begin(),pepcoil.inTypes.end());
-  pepcoil.output = "http://edamontology.org/data_2886";
-  emboss.push_back(pepcoil);
-
-  Tool pepdigest;
-  pepdigest.name = "pepdigest";
-  pepdigest.id = "pepdigest";
-  pepdigest.operations = {"pepdigest"};
-  pepdigest.type = "tool";
-  pepdigest.inputs = {};
-  pepdigest.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  pepdigest.inputs.push_back(ins);
-  pepdigest.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (pepdigest.inTypes.begin(),pepdigest.inTypes.end());
-  pepdigest.output = "http://edamontology.org/data_0849";
-  pepdigest.output = "http://edamontology.org/data_1505";
-  emboss.push_back(pepdigest);
-
-  Tool pepinfo;
-  pepinfo.name = "pepinfo";
-  pepinfo.id = "pepinfo";
-  pepinfo.operations = {"pepinfo"};
-  pepinfo.type = "tool";
-  pepinfo.inputs = {};
-  pepinfo.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1522";
-  pepinfo.inputs.push_back(ins);
-  pepinfo.inTypes.push_back("http://edamontology.org/data_1522");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0897";
-  pepinfo.inputs.push_back(ins);
-  pepinfo.inTypes.push_back("http://edamontology.org/data_0897");
-  sort (pepinfo.inTypes.begin(),pepinfo.inTypes.end());
-  pepinfo.output = "http://edamontology.org/data_2886";
-  pepinfo.output = "http://edamontology.org/data_1502";
-  pepinfo.output = "http://edamontology.org/data_1506";
-  emboss.push_back(pepinfo);
-
-  Tool pepinfo_ebi;
-  pepinfo_ebi.name = "pepinfo-ebi";
-  pepinfo_ebi.id = "pepinfo-ebi";
-  pepinfo_ebi.operations = {"pepinfo-ebi"};
-  pepinfo_ebi.type = "tool";
-  pepinfo_ebi.inputs = {};
-  pepinfo_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0897";
-  pepinfo_ebi.inputs.push_back(ins);
-  pepinfo_ebi.inTypes.push_back("http://edamontology.org/data_0897");
-  sort (pepinfo_ebi.inTypes.begin(),pepinfo_ebi.inTypes.end());
-  pepinfo_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(pepinfo_ebi);
-
-  Tool pepnet;
-  pepnet.name = "pepnet";
-  pepnet.id = "pepnet";
-  pepnet.operations = {"pepnet"};
-  pepnet.type = "tool";
-  pepnet.inputs = {};
-  pepnet.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2163";
-  pepnet.inputs.push_back(ins);
-  pepnet.inTypes.push_back("http://edamontology.org/data_2163");
-  sort (pepnet.inTypes.begin(),pepnet.inTypes.end());
-  pepnet.output = "http://edamontology.org/data_0849";
-  emboss.push_back(pepnet);
-
-  Tool pepstats;
-  pepstats.name = "pepstats";
-  pepstats.id = "pepstats";
-  pepstats.operations = {"pepstats"};
-  pepstats.type = "tool";
-  pepstats.inputs = {};
-  pepstats.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0897";
-  pepstats.inputs.push_back(ins);
-  pepstats.inTypes.push_back("http://edamontology.org/data_0897");
-  sort (pepstats.inTypes.begin(),pepstats.inTypes.end());
-  pepstats.output = "http://edamontology.org/data_2886";
-  pepstats.output = "http://edamontology.org/data_1502";
-  pepstats.output = "http://edamontology.org/data_1505";
-  emboss.push_back(pepstats);
-
-  Tool pepstats_ebi;
-  pepstats_ebi.name = "pepstats-ebi";
-  pepstats_ebi.id = "pepstats-ebi";
-  pepstats_ebi.operations = {"pepstats-ebi"};
-  pepstats_ebi.type = "tool";
-  pepstats_ebi.inputs = {};
-  pepstats_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0897";
-  pepstats_ebi.inputs.push_back(ins);
-  pepstats_ebi.inTypes.push_back("http://edamontology.org/data_0897");
-  sort (pepstats_ebi.inTypes.begin(),pepstats_ebi.inTypes.end());
-  pepstats_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(pepstats_ebi);
-
-  Tool pepwheel;
-  pepwheel.name = "pepwheel";
-  pepwheel.id = "pepwheel";
-  pepwheel.operations = {"pepwheel"};
-  pepwheel.type = "tool";
-  pepwheel.inputs = {};
-  pepwheel.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2162";
-  pepwheel.inputs.push_back(ins);
-  pepwheel.inTypes.push_back("http://edamontology.org/data_2162");
-  sort (pepwheel.inTypes.begin(),pepwheel.inTypes.end());
-  pepwheel.output = "http://edamontology.org/data_0849";
-  emboss.push_back(pepwheel);
-
-  Tool pepwindow;
-  pepwindow.name = "pepwindow";
-  pepwindow.id = "pepwindow";
-  pepwindow.operations = {"pepwindow"};
-  pepwindow.type = "tool";
-  pepwindow.inputs = {};
-  pepwindow.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1522";
-  pepwindow.inputs.push_back(ins);
-  pepwindow.inTypes.push_back("http://edamontology.org/data_1522");
-  sort (pepwindow.inTypes.begin(),pepwindow.inTypes.end());
-  pepwindow.output = "http://edamontology.org/data_2886";
-  pepwindow.output = "http://edamontology.org/data_1501";
-  emboss.push_back(pepwindow);
-
-  Tool pepwindow_ebi;
-  pepwindow_ebi.name = "pepwindow-ebi";
-  pepwindow_ebi.id = "pepwindow-ebi";
-  pepwindow_ebi.operations = {"pepwindow-ebi"};
-  pepwindow_ebi.type = "tool";
-  pepwindow_ebi.inputs = {};
-  pepwindow_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1522";
-  pepwindow_ebi.inputs.push_back(ins);
-  pepwindow_ebi.inTypes.push_back("http://edamontology.org/data_1522");
-  sort (pepwindow_ebi.inTypes.begin(),pepwindow_ebi.inTypes.end());
-  pepwindow_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(pepwindow_ebi);
-
-  Tool pepwindowall;
-  pepwindowall.name = "pepwindowall";
-  pepwindowall.id = "pepwindowall";
-  pepwindowall.operations = {"pepwindowall"};
-  pepwindowall.type = "tool";
-  pepwindowall.inputs = {};
-  pepwindowall.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1522";
-  pepwindowall.inputs.push_back(ins);
-  pepwindowall.inTypes.push_back("http://edamontology.org/data_1522");
-  sort (pepwindowall.inTypes.begin(),pepwindowall.inTypes.end());
-  pepwindowall.output = "http://edamontology.org/data_1384";
-  pepwindowall.output = "http://edamontology.org/data_1501";
-  emboss.push_back(pepwindowall);
-
-  Tool plotcon;
-  plotcon.name = "plotcon";
-  plotcon.id = "plotcon";
-  plotcon.operations = {"plotcon"};
-  plotcon.type = "tool";
-  plotcon.inputs = {};
-  plotcon.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2161";
-  plotcon.inputs.push_back(ins);
-  plotcon.inTypes.push_back("http://edamontology.org/data_2161");
-  sort (plotcon.inTypes.begin(),plotcon.inTypes.end());
-  plotcon.output = "http://edamontology.org/data_0863";
-  plotcon.output = "http://edamontology.org/data_0874";
-  emboss.push_back(plotcon);
-
-  Tool plotorf;
-  plotorf.name = "plotorf";
-  plotorf.id = "plotorf";
-  plotorf.operations = {"plotorf"};
-  plotorf.type = "tool";
-  plotorf.inputs = {};
-  plotorf.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  plotorf.inputs.push_back(ins);
-  plotorf.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (plotorf.inTypes.begin(),plotorf.inTypes.end());
-  plotorf.output = "http://edamontology.org/data_2887";
-  emboss.push_back(plotorf);
-
-  Tool polydot;
-  polydot.name = "polydot";
-  polydot.id = "polydot";
-  polydot.operations = {"polydot"};
-  polydot.type = "tool";
-  polydot.inputs = {};
-  polydot.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  polydot.inputs.push_back(ins);
-  polydot.inTypes.push_back("http://edamontology.org/data_1255");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0862";
-  polydot.inputs.push_back(ins);
-  polydot.inTypes.push_back("http://edamontology.org/data_0862");
-  sort (polydot.inTypes.begin(),polydot.inTypes.end());
-  polydot.output = "http://edamontology.org/data_0849";
-  emboss.push_back(polydot);
-
-  Tool preg;
-  preg.name = "preg";
-  preg.id = "preg";
-  preg.operations = {"preg"};
-  preg.type = "tool";
-  preg.inputs = {};
-  preg.inTypes = {};
-
-  sort (preg.inTypes.begin(),preg.inTypes.end());
-  preg.output = "http://edamontology.org/data_2886";
-  preg.output = "http://edamontology.org/data_1352";
-  emboss.push_back(preg);
-
-  Tool prettyplot;
-  prettyplot.name = "prettyplot";
-  prettyplot.id = "prettyplot";
-  prettyplot.operations = {"prettyplot"};
-  prettyplot.type = "tool";
-  prettyplot.inputs = {};
-  prettyplot.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1711";
-  prettyplot.inputs.push_back(ins);
-  prettyplot.inTypes.push_back("http://edamontology.org/data_1711");
-  sort (prettyplot.inTypes.begin(),prettyplot.inTypes.end());
-  prettyplot.output = "http://edamontology.org/data_0863";
-  prettyplot.output = "http://edamontology.org/data_0874";
-  emboss.push_back(prettyplot);
-
-  Tool prettyseq;
-  prettyseq.name = "prettyseq";
-  prettyseq.id = "prettyseq";
-  prettyseq.operations = {"prettyseq"};
-  prettyseq.type = "tool";
-  prettyseq.inputs = {};
-  prettyseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  prettyseq.inputs.push_back(ins);
-  prettyseq.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (prettyseq.inTypes.begin(),prettyseq.inTypes.end());
-  prettyseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(prettyseq);
-
-  Tool primersearch;
-  primersearch.name = "primersearch";
-  primersearch.id = "primersearch";
-  primersearch.operations = {"primersearch"};
-  primersearch.type = "tool";
-  primersearch.inputs = {};
-  primersearch.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  primersearch.inputs.push_back(ins);
-  primersearch.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (primersearch.inTypes.begin(),primersearch.inTypes.end());
-  primersearch.output = "http://edamontology.org/data_2887";
-  primersearch.output = "http://edamontology.org/data_0850";
-  emboss.push_back(primersearch);
-
-  Tool printsextract;
-  printsextract.name = "printsextract";
-  printsextract.id = "printsextract";
-  printsextract.operations = {"printsextract"};
-  printsextract.type = "tool";
-  printsextract.inputs = {};
-  printsextract.inTypes = {};
-
-  sort (printsextract.inTypes.begin(),printsextract.inTypes.end());
-  printsextract.output = "http://edamontology.org/data_1365";
-  emboss.push_back(printsextract);
-
-  Tool profit;
-  profit.name = "profit";
-  profit.id = "profit";
-  profit.operations = {"profit"};
-  profit.type = "tool";
-  profit.inputs = {};
-  profit.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0869";
-  profit.inputs.push_back(ins);
-  profit.inTypes.push_back("http://edamontology.org/data_0869");
-  sort (profit.inTypes.begin(),profit.inTypes.end());
-  profit.output = "http://edamontology.org/data_1354";
-  profit.output = "http://edamontology.org/data_0849";
-  emboss.push_back(profit);
-
-  Tool prophet;
-  prophet.name = "prophet";
-  prophet.id = "prophet";
-  prophet.operations = {"prophet"};
-  prophet.type = "tool";
-  prophet.inputs = {};
-  prophet.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0863";
-  prophet.inputs.push_back(ins);
-  prophet.inTypes.push_back("http://edamontology.org/data_0863");
-  sort (prophet.inTypes.begin(),prophet.inTypes.end());
-  prophet.output = "http://edamontology.org/data_0849";
-  prophet.output = "http://edamontology.org/data_1354";
-  emboss.push_back(prophet);
-
-  Tool prosextract;
-  prosextract.name = "prosextract";
-  prosextract.id = "prosextract";
-  prosextract.operations = {"prosextract"};
-  prosextract.type = "tool";
-  prosextract.inputs = {};
-  prosextract.inTypes = {};
-
-  sort (prosextract.inTypes.begin(),prosextract.inTypes.end());
-  prosextract.output = "http://edamontology.org/data_1353";
-  emboss.push_back(prosextract);
-
-  Tool pscan;
-  pscan.name = "pscan";
-  pscan.id = "pscan";
-  pscan.operations = {"pscan"};
-  pscan.type = "tool";
-  pscan.inputs = {};
-  pscan.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0869";
-  pscan.inputs.push_back(ins);
-  pscan.inTypes.push_back("http://edamontology.org/data_0869");
-  sort (pscan.inTypes.begin(),pscan.inTypes.end());
-  pscan.output = "http://edamontology.org/data_2886";
-  emboss.push_back(pscan);
-
-  Tool psiphi;
-  psiphi.name = "psiphi";
-  psiphi.id = "psiphi";
-  psiphi.operations = {"psiphi"};
-  psiphi.type = "tool";
-  psiphi.inputs = {};
-  psiphi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1544";
-  psiphi.inputs.push_back(ins);
-  psiphi.inTypes.push_back("http://edamontology.org/data_1544");
-  sort (psiphi.inTypes.begin(),psiphi.inTypes.end());
-  psiphi.output = "http://edamontology.org/data_1460";
-  emboss.push_back(psiphi);
-
-  Tool rebaseextract;
-  rebaseextract.name = "rebaseextract";
-  rebaseextract.id = "rebaseextract";
-  rebaseextract.operations = {"rebaseextract"};
-  rebaseextract.type = "tool";
-  rebaseextract.inputs = {};
-  rebaseextract.inTypes = {};
-
-  sort (rebaseextract.inTypes.begin(),rebaseextract.inTypes.end());
-  emboss.push_back(rebaseextract);
-
-  Tool recoder;
-  recoder.name = "recoder";
-  recoder.id = "recoder";
-  recoder.operations = {"recoder"};
-  recoder.type = "tool";
-  recoder.inputs = {};
-  recoder.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  recoder.inputs.push_back(ins);
-  recoder.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (recoder.inTypes.begin(),recoder.inTypes.end());
-  recoder.output = "http://edamontology.org/data_0849";
-  emboss.push_back(recoder);
-
-  Tool redata;
-  redata.name = "redata";
-  redata.id = "redata";
-  redata.operations = {"redata"};
-  redata.type = "tool";
-  redata.inputs = {};
-  redata.inTypes = {};
-
-  sort (redata.inTypes.begin(),redata.inTypes.end());
-  emboss.push_back(redata);
-
-  Tool refseqget;
-  refseqget.name = "refseqget";
-  refseqget.id = "refseqget";
-  refseqget.operations = {"refseqget"};
-  refseqget.type = "tool";
-  refseqget.inputs = {};
-  refseqget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  refseqget.inputs.push_back(ins);
-  refseqget.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (refseqget.inTypes.begin(),refseqget.inTypes.end());
-  refseqget.output = "http://edamontology.org/data_0849";
-  emboss.push_back(refseqget);
-
-  Tool remap;
-  remap.name = "remap";
-  remap.id = "remap";
-  remap.operations = {"remap"};
-  remap.type = "tool";
-  remap.inputs = {};
-  remap.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  remap.inputs.push_back(ins);
-  remap.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (remap.inTypes.begin(),remap.inTypes.end());
-  remap.output = "http://edamontology.org/data_2887";
-  remap.output = "http://edamontology.org/data_1289";
-  emboss.push_back(remap);
-
-  Tool restover;
-  restover.name = "restover";
-  restover.id = "restover";
-  restover.operations = {"restover"};
-  restover.type = "tool";
-  restover.inputs = {};
-  restover.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  restover.inputs.push_back(ins);
-  restover.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (restover.inTypes.begin(),restover.inTypes.end());
-  restover.output = "http://edamontology.org/data_2887";
-  emboss.push_back(restover);
-
-  Tool restrict;
-  restrict.name = "restrict";
-  restrict.id = "restrict";
-  restrict.operations = {"restrict"};
-  restrict.type = "tool";
-  restrict.inputs = {};
-  restrict.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  restrict.inputs.push_back(ins);
-  restrict.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (restrict.inTypes.begin(),restrict.inTypes.end());
-  restrict.output = "http://edamontology.org/data_2887";
-  emboss.push_back(restrict);
-
-  Tool revseq;
-  revseq.name = "revseq";
-  revseq.id = "revseq";
-  revseq.operations = {"revseq"};
-  revseq.type = "tool";
-  revseq.inputs = {};
-  revseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  revseq.inputs.push_back(ins);
-  revseq.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (revseq.inTypes.begin(),revseq.inTypes.end());
-  revseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(revseq);
-
-  Tool seealso;
-  seealso.name = "seealso";
-  seealso.id = "seealso";
-  seealso.operations = {"seealso"};
-  seealso.type = "tool";
-  seealso.inputs = {};
-  seealso.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  seealso.inputs.push_back(ins);
-  seealso.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (seealso.inTypes.begin(),seealso.inTypes.end());
-  emboss.push_back(seealso);
-
-  Tool seqcount;
-  seqcount.name = "seqcount";
-  seqcount.id = "seqcount";
-  seqcount.operations = {"seqcount"};
-  seqcount.type = "tool";
-  seqcount.inputs = {};
-  seqcount.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  seqcount.inputs.push_back(ins);
-  seqcount.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (seqcount.inTypes.begin(),seqcount.inTypes.end());
-  seqcount.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqcount);
-
-  Tool seqmatchall;
-  seqmatchall.name = "seqmatchall";
-  seqmatchall.id = "seqmatchall";
-  seqmatchall.operations = {"seqmatchall"};
-  seqmatchall.type = "tool";
-  seqmatchall.inputs = {};
-  seqmatchall.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  seqmatchall.inputs.push_back(ins);
-  seqmatchall.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (seqmatchall.inTypes.begin(),seqmatchall.inTypes.end());
-  seqmatchall.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqmatchall);
-
-  Tool seqret;
-  seqret.name = "seqret";
-  seqret.id = "seqret";
-  seqret.operations = {"seqret"};
-  seqret.type = "tool";
-  seqret.inputs = {};
-  seqret.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  seqret.inputs.push_back(ins);
-  seqret.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (seqret.inTypes.begin(),seqret.inTypes.end());
-  seqret.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqret);
-
-  Tool seqret_ebi;
-  seqret_ebi.name = "seqret-ebi";
-  seqret_ebi.id = "seqret-ebi";
-  seqret_ebi.operations = {"seqret-ebi"};
-  seqret_ebi.type = "tool";
-  seqret_ebi.inputs = {};
-  seqret_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2044";
-  seqret_ebi.inputs.push_back(ins);
-  seqret_ebi.inTypes.push_back("http://edamontology.org/data_2044");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0863";
-  seqret_ebi.inputs.push_back(ins);
-  seqret_ebi.inTypes.push_back("http://edamontology.org/data_0863");
-  sort (seqret_ebi.inTypes.begin(),seqret_ebi.inTypes.end());
-  seqret_ebi.output = "http://edamontology.org/data_2044";
-  seqret_ebi.output = "http://edamontology.org/data_0863";
-  emboss.push_back(seqret_ebi);
+  biotools.push_back(inforesidue);
+
+  Tool inparanoid;
+  inparanoid.id = "inparanoid";
+  inparanoid.operations = {"inparanoid"};
+  inparanoid.type = "tool";
+
+  inparanoid.inTypes = {};
+  inparanoid.inTypes.push_back("http://edamontology.org/data_0842");
+  sort (inparanoid.inTypes.begin(),inparanoid.inTypes.end());
+  inparanoid.output = "http://edamontology.org/data_0842";
+  biotools.push_back(inparanoid);
+
+  Tool intact;
+  intact.id = "intact";
+  intact.operations = {"intact"};
+  intact.type = "tool";
+
+  intact.inTypes = {};
+  intact.inTypes.push_back("http://edamontology.org/data_0906");
+  sort (intact.inTypes.begin(),intact.inTypes.end());
+  intact.output = "http://edamontology.org/data_3021";
+  biotools.push_back(intact);
+
+  Tool interactome_insider;
+  interactome_insider.id = "interactome_insider";
+  interactome_insider.operations = {"interactome_insider"};
+  interactome_insider.type = "tool";
+
+  interactome_insider.inTypes = {};
+  interactome_insider.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (interactome_insider.inTypes.begin(),interactome_insider.inTypes.end());
+  interactome_insider.output = "http://edamontology.org/data_1048";
+  biotools.push_back(interactome_insider);
+
+  Tool interpro;
+  interpro.id = "interpro";
+  interpro.operations = {"interpro"};
+  interpro.type = "tool";
+
+  interpro.inTypes = {};
+  interpro.inTypes.push_back("http://edamontology.org/data_1355");
+  sort (interpro.inTypes.begin(),interpro.inTypes.end());
+  interpro.output = "http://edamontology.org/data_1133";
+  biotools.push_back(interpro);
+
+  Tool ipk_blast;
+  ipk_blast.id = "ipk_blast";
+  ipk_blast.operations = {"ipk_blast"};
+  ipk_blast.type = "tool";
+
+  ipk_blast.inTypes = {};
+  ipk_blast.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (ipk_blast.inTypes.begin(),ipk_blast.inTypes.end());
+  ipk_blast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(ipk_blast);
+
+  Tool isoscale;
+  isoscale.id = "isoscale";
+  isoscale.operations = {"isoscale"};
+  isoscale.type = "tool";
+
+  isoscale.inTypes = {};
+  isoscale.inTypes.push_back("http://edamontology.org/data_2907");
+  sort (isoscale.inTypes.begin(),isoscale.inTypes.end());
+  isoscale.output = "http://edamontology.org/data_0857";
+  biotools.push_back(isoscale);
+
+  Tool ispred;
+  ispred.id = "ispred";
+  ispred.operations = {"ispred"};
+  ispred.type = "tool";
+
+  ispred.inTypes = {};
+  ispred.inTypes.push_back("http://edamontology.org/data_1537");
+  ispred.inTypes.push_back("http://edamontology.org/data_1460");
+  sort (ispred.inTypes.begin(),ispred.inTypes.end());
+  ispred.output = "http://edamontology.org/data_1460";
+  ispred.output = "http://edamontology.org/data_1008";
+  biotools.push_back(ispred);
+
+  Tool kinase_sarfari_blast_search;
+  kinase_sarfari_blast_search.id = "kinase_sarfari_blast_search";
+  kinase_sarfari_blast_search.operations = {"kinase_sarfari_blast_search"};
+  kinase_sarfari_blast_search.type = "tool";
+
+  kinase_sarfari_blast_search.inTypes = {};
+  kinase_sarfari_blast_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (kinase_sarfari_blast_search.inTypes.begin(),kinase_sarfari_blast_search.inTypes.end());
+  kinase_sarfari_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(kinase_sarfari_blast_search);
+
+  Tool klifs;
+  klifs.id = "klifs";
+  klifs.operations = {"klifs"};
+  klifs.type = "tool";
+
+  klifs.inTypes = {};
+  klifs.inTypes.push_back("http://edamontology.org/data_2526");
+  klifs.inTypes.push_back("http://edamontology.org/data_1712");
+  klifs.inTypes.push_back("http://edamontology.org/data_0954");
+  klifs.inTypes.push_back("http://edamontology.org/data_2080");
+  klifs.inTypes.push_back("http://edamontology.org/data_0982");
+  klifs.inTypes.push_back("http://edamontology.org/data_0984");
+  klifs.inTypes.push_back("http://edamontology.org/data_2050");
+  klifs.inTypes.push_back("http://edamontology.org/data_0906");
+  klifs.inTypes.push_back("http://edamontology.org/data_1461");
+  klifs.inTypes.push_back("http://edamontology.org/data_0897");
+  klifs.inTypes.push_back("http://edamontology.org/data_2992");
+  klifs.inTypes.push_back("http://edamontology.org/data_1537");
+  klifs.inTypes.push_back("http://edamontology.org/data_0893");
+  klifs.inTypes.push_back("http://edamontology.org/data_1463");
+  klifs.inTypes.push_back("http://edamontology.org/data_1481");
+  klifs.inTypes.push_back("http://edamontology.org/data_0890");
+  klifs.inTypes.push_back("http://edamontology.org/data_0889");
+  klifs.inTypes.push_back("http://edamontology.org/data_0888");
+  klifs.inTypes.push_back("http://edamontology.org/data_1498");
+  sort (klifs.inTypes.begin(),klifs.inTypes.end());
+  klifs.output = "http://edamontology.org/data_1460";
+  klifs.output = "http://edamontology.org/data_2886";
+  biotools.push_back(klifs);
+
+  Tool kwip;
+  kwip.id = "kwip";
+  kwip.operations = {"kwip"};
+  kwip.type = "tool";
+
+  kwip.inTypes = {};
+  kwip.inTypes.push_back("http://edamontology.org/data_0870");
+  sort (kwip.inTypes.begin(),kwip.inTypes.end());
+  kwip.output = "http://edamontology.org/data_0848";
+  biotools.push_back(kwip);
+
+  Tool lailaps;
+  lailaps.id = "lailaps";
+  lailaps.operations = {"lailaps"};
+  lailaps.type = "tool";
+
+  lailaps.inTypes = {};
+  lailaps.inTypes.push_back("http://edamontology.org/data_2080");
+  sort (lailaps.inTypes.begin(),lailaps.inTypes.end());
+  lailaps.output = "http://edamontology.org/data_0968";
+  biotools.push_back(lailaps);
+
+  Tool lebibipqp;
+  lebibipqp.id = "lebibipqp";
+  lebibipqp.operations = {"lebibipqp"};
+  lebibipqp.type = "tool";
+
+  lebibipqp.inTypes = {};
+  lebibipqp.inTypes.push_back("http://edamontology.org/data_0863");
+  lebibipqp.inTypes.push_back("http://edamontology.org/data_2048");
+  lebibipqp.inTypes.push_back("http://edamontology.org/data_3272");
+  lebibipqp.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (lebibipqp.inTypes.begin(),lebibipqp.inTypes.end());
+  lebibipqp.output = "http://edamontology.org/data_2044";
+  lebibipqp.output = "http://edamontology.org/data_1056";
+  biotools.push_back(lebibipqp);
+
+  Tool ledpred;
+  ledpred.id = "ledpred";
+  ledpred.operations = {"ledpred"};
+  ledpred.type = "tool";
+
+  ledpred.inTypes = {};
+  ledpred.inTypes.push_back("http://edamontology.org/data_2884");
+  ledpred.inTypes.push_back("http://edamontology.org/data_0950");
+  ledpred.inTypes.push_back("http://edamontology.org/data_1772");
+  sort (ledpred.inTypes.begin(),ledpred.inTypes.end());
+  ledpred.output = "http://edamontology.org/data_1276";
+  ledpred.output = "http://edamontology.org/data_2854";
+  biotools.push_back(ledpred);
+
+  Tool legiolist;
+  legiolist.id = "legiolist";
+  legiolist.operations = {"legiolist"};
+  legiolist.type = "tool";
+
+  legiolist.inTypes = {};
+  legiolist.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (legiolist.inTypes.begin(),legiolist.inTypes.end());
+  legiolist.output = "http://edamontology.org/data_1097";
+  biotools.push_back(legiolist);
+
+  Tool leproma;
+  leproma.id = "leproma";
+  leproma.operations = {"leproma"};
+  leproma.type = "tool";
+
+  leproma.inTypes = {};
+  leproma.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (leproma.inTypes.begin(),leproma.inTypes.end());
+  leproma.output = "http://edamontology.org/data_1097";
+  biotools.push_back(leproma);
+
+  Tool lgicdb;
+  lgicdb.id = "lgicdb";
+  lgicdb.operations = {"lgicdb"};
+  lgicdb.type = "tool";
+
+  lgicdb.inTypes = {};
+  lgicdb.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (lgicdb.inTypes.begin(),lgicdb.inTypes.end());
+  lgicdb.output = "http://edamontology.org/data_2797";
+  biotools.push_back(lgicdb);
+
+  Tool lightdock;
+  lightdock.id = "lightdock";
+  lightdock.operations = {"lightdock"};
+  lightdock.type = "tool";
+
+  lightdock.inTypes = {};
+  lightdock.inTypes.push_back("http://edamontology.org/data_2877");
+  sort (lightdock.inTypes.begin(),lightdock.inTypes.end());
+  lightdock.output = "http://edamontology.org/data_2877";
+  biotools.push_back(lightdock);
+
+  Tool listinputs;
+  listinputs.id = "listinputs";
+  listinputs.operations = {"listinputs"};
+  listinputs.type = "tool";
+
+  listinputs.inTypes = {};
+  listinputs.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (listinputs.inTypes.begin(),listinputs.inTypes.end());
+  listinputs.output = "http://edamontology.org/data_0006";
+  listinputs.output = "http://edamontology.org/data_0006";
+  biotools.push_back(listinputs);
+
+  Tool mageri;
+  mageri.id = "mageri";
+  mageri.operations = {"mageri"};
+  mageri.type = "tool";
+
+  mageri.inTypes = {};
+  mageri.inTypes.push_back("http://edamontology.org/data_2955");
+  sort (mageri.inTypes.begin(),mageri.inTypes.end());
+  mageri.output = "http://edamontology.org/data_0848";
+  mageri.output = "http://edamontology.org/data_2337";
+  biotools.push_back(mageri);
+
+  Tool maizegdb;
+  maizegdb.id = "maizegdb";
+  maizegdb.operations = {"maizegdb"};
+  maizegdb.type = "tool";
+
+  maizegdb.inTypes = {};
+  maizegdb.inTypes.push_back("http://edamontology.org/data_3134");
+  sort (maizegdb.inTypes.begin(),maizegdb.inTypes.end());
+  maizegdb.output = "http://edamontology.org/data_2798";
+  biotools.push_back(maizegdb);
+
+  Tool malaria_data_blast_search;
+  malaria_data_blast_search.id = "malaria_data_blast_search";
+  malaria_data_blast_search.operations = {"malaria_data_blast_search"};
+  malaria_data_blast_search.type = "tool";
+
+  malaria_data_blast_search.inTypes = {};
+  malaria_data_blast_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (malaria_data_blast_search.inTypes.begin(),malaria_data_blast_search.inTypes.end());
+  malaria_data_blast_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(malaria_data_blast_search);
+
+  Tool mapperanalyzer;
+  mapperanalyzer.id = "mapperanalyzer";
+  mapperanalyzer.operations = {"mapperanalyzer"};
+  mapperanalyzer.type = "tool";
+
+  mapperanalyzer.inTypes = {};
+  mapperanalyzer.inTypes.push_back("http://edamontology.org/data_0006");
+  sort (mapperanalyzer.inTypes.begin(),mapperanalyzer.inTypes.end());
+  mapperanalyzer.output = "http://edamontology.org/data_3002";
+  mapperanalyzer.output = "http://edamontology.org/data_0006";
+  mapperanalyzer.output = "http://edamontology.org/data_0924";
+  mapperanalyzer.output = "http://edamontology.org/data_0924";
+  mapperanalyzer.output = "http://edamontology.org/data_0006";
+  mapperanalyzer.output = "http://edamontology.org/data_0863";
+  mapperanalyzer.output = "http://edamontology.org/data_0006";
+  mapperanalyzer.output = "http://edamontology.org/data_0006";
+  biotools.push_back(mapperanalyzer);
+
+  Tool mbwa_wrapper;
+  mbwa_wrapper.id = "mbwa_wrapper";
+  mbwa_wrapper.operations = {"mbwa_wrapper"};
+  mbwa_wrapper.type = "tool";
+
+  mbwa_wrapper.inTypes = {};
+  mbwa_wrapper.inTypes.push_back("http://edamontology.org/data_0924");
+  sort (mbwa_wrapper.inTypes.begin(),mbwa_wrapper.inTypes.end());
+  mbwa_wrapper.output = "http://edamontology.org/data_0863";
+  mbwa_wrapper.output = "http://edamontology.org/data_0006";
+  biotools.push_back(mbwa_wrapper);
+
+  Tool merops_blast;
+  merops_blast.id = "merops_blast";
+  merops_blast.operations = {"merops_blast"};
+  merops_blast.type = "tool";
+
+  merops_blast.inTypes = {};
+  merops_blast.inTypes.push_back("http://edamontology.org/data_1277");
+  merops_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (merops_blast.inTypes.begin(),merops_blast.inTypes.end());
+  merops_blast.output = "http://edamontology.org/data_2976";
+  merops_blast.output = "http://edamontology.org/data_3494";
+  biotools.push_back(merops_blast);
+
+  Tool metaQuantome;
+  metaQuantome.id = "metaQuantome";
+  metaQuantome.operations = {"metaQuantome"};
+  metaQuantome.type = "tool";
+
+  metaQuantome.inTypes = {};
+  metaQuantome.inTypes.push_back("http://edamontology.org/data_2583");
+  metaQuantome.inTypes.push_back("http://edamontology.org/data_2603");
+  metaQuantome.inTypes.push_back("http://edamontology.org/data_3028");
+  sort (metaQuantome.inTypes.begin(),metaQuantome.inTypes.end());
+  metaQuantome.output = "http://edamontology.org/data_0945";
+  metaQuantome.output = "http://edamontology.org/data_2603";
+  metaQuantome.output = "http://edamontology.org/data_1872";
+  metaQuantome.output = "http://edamontology.org/data_2583";
+  metaQuantome.output = "http://edamontology.org/data_1011";
+  biotools.push_back(metaQuantome);
+
+  Tool metexplore;
+  metexplore.id = "metexplore";
+  metexplore.operations = {"metexplore"};
+  metexplore.type = "tool";
+
+  metexplore.inTypes = {};
+  metexplore.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (metexplore.inTypes.begin(),metexplore.inTypes.end());
+  metexplore.output = "http://edamontology.org/data_2600";
+  biotools.push_back(metexplore);
+
+  Tool mfungd;
+  mfungd.id = "mfungd";
+  mfungd.operations = {"mfungd"};
+  mfungd.type = "tool";
+
+  mfungd.inTypes = {};
+  mfungd.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (mfungd.inTypes.begin(),mfungd.inTypes.end());
+  mfungd.output = "http://edamontology.org/data_2799";
+  biotools.push_back(mfungd);
+
+  Tool mgi;
+  mgi.id = "mgi";
+  mgi.operations = {"mgi"};
+  mgi.type = "tool";
+
+  mgi.inTypes = {};
+  mgi.inTypes.push_back("http://edamontology.org/data_2093");
+  sort (mgi.inTypes.begin(),mgi.inTypes.end());
+  mgi.output = "http://edamontology.org/data_1026";
+  biotools.push_back(mgi);
+
+  Tool mgx;
+  mgx.id = "mgx";
+  mgx.operations = {"mgx"};
+  mgx.type = "tool";
+
+  mgx.inTypes = {};
+  mgx.inTypes.push_back("http://edamontology.org/data_3028");
+  mgx.inTypes.push_back("http://edamontology.org/data_2048");
+  mgx.inTypes.push_back("http://edamontology.org/data_2884");
+  mgx.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (mgx.inTypes.begin(),mgx.inTypes.end());
+  mgx.output = "http://edamontology.org/data_2975";
+  biotools.push_back(mgx);
+
+  Tool microbial_advanced_database_organisation_micado;
+  microbial_advanced_database_organisation_micado.id = "microbial_advanced_database_organisation_micado";
+  microbial_advanced_database_organisation_micado.operations = {"microbial_advanced_database_organisation_micado"};
+  microbial_advanced_database_organisation_micado.type = "tool";
+
+  microbial_advanced_database_organisation_micado.inTypes = {};
+  microbial_advanced_database_organisation_micado.inTypes.push_back("http://edamontology.org/data_2093");
+  sort (microbial_advanced_database_organisation_micado.inTypes.begin(),microbial_advanced_database_organisation_micado.inTypes.end());
+  microbial_advanced_database_organisation_micado.output = "http://edamontology.org/data_1026";
+  biotools.push_back(microbial_advanced_database_organisation_micado);
+
+  Tool minepath;
+  minepath.id = "minepath";
+  minepath.operations = {"minepath"};
+  minepath.type = "tool";
+
+  minepath.inTypes = {};
+  minepath.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (minepath.inTypes.begin(),minepath.inTypes.end());
+  minepath.output = "http://edamontology.org/data_2603";
+  minepath.output = "http://edamontology.org/data_2600";
+  biotools.push_back(minepath);
+
+  Tool mirgen;
+  mirgen.id = "mirgen";
+  mirgen.operations = {"mirgen"};
+  mirgen.type = "tool";
+
+  mirgen.inTypes = {};
+  mirgen.inTypes.push_back("http://edamontology.org/data_3134");
+  mirgen.inTypes.push_back("http://edamontology.org/data_0880");
+  sort (mirgen.inTypes.begin(),mirgen.inTypes.end());
+  mirgen.output = "http://edamontology.org/data_1097";
+  mirgen.output = "http://edamontology.org/data_1869";
+  biotools.push_back(mirgen);
+
+  Tool mlst_db;
+  mlst_db.id = "mlst_db";
+  mlst_db.operations = {"mlst_db"};
+  mlst_db.type = "tool";
+
+  mlst_db.inTypes = {};
+  mlst_db.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (mlst_db.inTypes.begin(),mlst_db.inTypes.end());
+  mlst_db.output = "http://edamontology.org/data_2044";
+  biotools.push_back(mlst_db);
+
+  Tool mmb_api;
+  mmb_api.id = "mmb_api";
+  mmb_api.operations = {"mmb_api"};
+  mmb_api.type = "tool";
+
+  mmb_api.inTypes = {};
+  mmb_api.inTypes.push_back("http://edamontology.org/data_0883");
+  mmb_api.inTypes.push_back("http://edamontology.org/data_2886");
+  mmb_api.inTypes.push_back("http://edamontology.org/data_2974");
+  mmb_api.inTypes.push_back("http://edamontology.org/data_1463");
+  sort (mmb_api.inTypes.begin(),mmb_api.inTypes.end());
+  mmb_api.output = "http://edamontology.org/data_1127";
+  mmb_api.output = "http://edamontology.org/data_3021";
+  mmb_api.output = "http://edamontology.org/data_1011";
+  mmb_api.output = "http://edamontology.org/data_1005";
+  biotools.push_back(mmb_api);
+
+  Tool mobidb;
+  mobidb.id = "mobidb";
+  mobidb.operations = {"mobidb"};
+  mobidb.type = "tool";
+
+  mobidb.inTypes = {};
+  mobidb.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (mobidb.inTypes.begin(),mobidb.inTypes.end());
+  mobidb.output = "http://edamontology.org/data_3021";
+  mobidb.output = "http://edamontology.org/data_2007";
+  biotools.push_back(mobidb);
+
+  Tool modbase;
+  modbase.id = "modbase";
+  modbase.operations = {"modbase"};
+  modbase.type = "tool";
+
+  modbase.inTypes = {};
+  modbase.inTypes.push_back("http://edamontology.org/data_1537");
+  sort (modbase.inTypes.begin(),modbase.inTypes.end());
+  modbase.output = "http://edamontology.org/data_3021";
+  biotools.push_back(modbase);
+
+  Tool molmeth;
+  molmeth.id = "molmeth";
+  molmeth.operations = {"molmeth"};
+  molmeth.type = "tool";
+
+  molmeth.inTypes = {};
+  molmeth.inTypes.push_back("http://edamontology.org/data_2337");
+  sort (molmeth.inTypes.begin(),molmeth.inTypes.end());
+  molmeth.output = "http://edamontology.org/data_0968";
+  biotools.push_back(molmeth);
+
+  Tool monocle;
+  monocle.id = "monocle";
+  monocle.operations = {"monocle"};
+  monocle.type = "tool";
+
+  monocle.inTypes = {};
+  monocle.inTypes.push_back("http://edamontology.org/data_1713");
+  sort (monocle.inTypes.begin(),monocle.inTypes.end());
+  monocle.output = "http://edamontology.org/data_2603";
+  biotools.push_back(monocle);
+
+  Tool monosaccharidedb;
+  monosaccharidedb.id = "monosaccharidedb";
+  monosaccharidedb.operations = {"monosaccharidedb"};
+  monosaccharidedb.type = "tool";
+
+  monosaccharidedb.inTypes = {};
+  monosaccharidedb.inTypes.push_back("http://edamontology.org/data_2313");
+  sort (monosaccharidedb.inTypes.begin(),monosaccharidedb.inTypes.end());
+  monosaccharidedb.output = "http://edamontology.org/data_2746";
+  biotools.push_back(monosaccharidedb);
+
+  Tool mpblast;
+  mpblast.id = "mpblast";
+  mpblast.operations = {"mpblast"};
+  mpblast.type = "tool";
+
+  mpblast.inTypes = {};
+  mpblast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (mpblast.inTypes.begin(),mpblast.inTypes.end());
+  mpblast.output = "http://edamontology.org/data_2044";
+  biotools.push_back(mpblast);
+
+  Tool mugvre;
+  mugvre.id = "mugvre";
+  mugvre.operations = {"mugvre"};
+  mugvre.type = "tool";
+
+  mugvre.inTypes = {};
+  mugvre.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (mugvre.inTypes.begin(),mugvre.inTypes.end());
+  mugvre.output = "http://edamontology.org/data_2044";
+  mugvre.output = "http://edamontology.org/data_3210";
+  biotools.push_back(mugvre);
+
+  Tool multiplierz;
+  multiplierz.id = "multiplierz";
+  multiplierz.operations = {"multiplierz"};
+  multiplierz.type = "tool";
+
+  multiplierz.inTypes = {};
+  multiplierz.inTypes.push_back("http://edamontology.org/data_2536");
+  sort (multiplierz.inTypes.begin(),multiplierz.inTypes.end());
+  multiplierz.output = "http://edamontology.org/data_2536";
+  multiplierz.output = "http://edamontology.org/data_3786";
+  biotools.push_back(multiplierz);
+
+  Tool ncbi_dbprobe;
+  ncbi_dbprobe.id = "ncbi_dbprobe";
+  ncbi_dbprobe.operations = {"ncbi_dbprobe"};
+  ncbi_dbprobe.type = "tool";
+
+  ncbi_dbprobe.inTypes = {};
+  ncbi_dbprobe.inTypes.push_back("http://edamontology.org/data_2717");
+  sort (ncbi_dbprobe.inTypes.begin(),ncbi_dbprobe.inTypes.end());
+  ncbi_dbprobe.output = "http://edamontology.org/data_2719";
+  biotools.push_back(ncbi_dbprobe);
+
+  Tool ncbi_gene;
+  ncbi_gene.id = "ncbi_gene";
+  ncbi_gene.operations = {"ncbi_gene"};
+  ncbi_gene.type = "tool";
+
+  ncbi_gene.inTypes = {};
+  ncbi_gene.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (ncbi_gene.inTypes.begin(),ncbi_gene.inTypes.end());
+  ncbi_gene.output = "http://edamontology.org/data_0842";
+  biotools.push_back(ncbi_gene);
+
+  Tool netter;
+  netter.id = "netter";
+  netter.operations = {"netter"};
+  netter.type = "tool";
+
+  netter.inTypes = {};
+  netter.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (netter.inTypes.begin(),netter.inTypes.end());
+  netter.output = "http://edamontology.org/data_2600";
+  biotools.push_back(netter);
+
+  Tool nextbio;
+  nextbio.id = "nextbio";
+  nextbio.operations = {"nextbio"};
+  nextbio.type = "tool";
+
+  nextbio.inTypes = {};
+  nextbio.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (nextbio.inTypes.begin(),nextbio.inTypes.end());
+  nextbio.output = "http://edamontology.org/data_0842";
+  biotools.push_back(nextbio);
+
+  Tool nf_core_viralrecon;
+  nf_core_viralrecon.id = "nf_core_viralrecon";
+  nf_core_viralrecon.operations = {"nf_core_viralrecon"};
+  nf_core_viralrecon.type = "tool";
+
+  nf_core_viralrecon.inTypes = {};
+  nf_core_viralrecon.inTypes.push_back("http://edamontology.org/data_1383");
+  nf_core_viralrecon.inTypes.push_back("http://edamontology.org/data_0925");
+  nf_core_viralrecon.inTypes.push_back("http://edamontology.org/data_3498");
+  nf_core_viralrecon.inTypes.push_back("http://edamontology.org/data_3914");
+  sort (nf_core_viralrecon.inTypes.begin(),nf_core_viralrecon.inTypes.end());
+  nf_core_viralrecon.output = "http://edamontology.org/data_3494";
+  biotools.push_back(nf_core_viralrecon);
+
+  Tool ngmlr;
+  ngmlr.id = "ngmlr";
+  ngmlr.operations = {"ngmlr"};
+  ngmlr.type = "tool";
+
+  ngmlr.inTypes = {};
+  ngmlr.inTypes.push_back("http://edamontology.org/data_1383");
+  sort (ngmlr.inTypes.begin(),ngmlr.inTypes.end());
+  ngmlr.output = "http://edamontology.org/data_3497";
+  ngmlr.output = "http://edamontology.org/data_2093";
+  biotools.push_back(ngmlr);
+
+  Tool nibr_2d_page;
+  nibr_2d_page.id = "nibr_2d_page";
+  nibr_2d_page.operations = {"nibr_2d_page"};
+  nibr_2d_page.type = "tool";
+
+  nibr_2d_page.inTypes = {};
+  nibr_2d_page.inTypes.push_back("http://edamontology.org/data_2531");
+  sort (nibr_2d_page.inTypes.begin(),nibr_2d_page.inTypes.end());
+  nibr_2d_page.output = "http://edamontology.org/data_1096";
+  biotools.push_back(nibr_2d_page);
+
+  Tool nimefi;
+  nimefi.id = "nimefi";
+  nimefi.operations = {"nimefi"};
+  nimefi.type = "tool";
+
+  nimefi.inTypes = {};
+  nimefi.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (nimefi.inTypes.begin(),nimefi.inTypes.end());
+  nimefi.output = "http://edamontology.org/data_2603";
+  biotools.push_back(nimefi);
+
+  Tool nmpdr;
+  nmpdr.id = "nmpdr";
+  nmpdr.operations = {"nmpdr"};
+  nmpdr.type = "tool";
+
+  nmpdr.inTypes = {};
+  nmpdr.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (nmpdr.inTypes.begin(),nmpdr.inTypes.end());
+  nmpdr.output = "http://edamontology.org/data_1179";
+  biotools.push_back(nmpdr);
+
+  Tool nutrichem;
+  nutrichem.id = "nutrichem";
+  nutrichem.operations = {"nutrichem"};
+  nutrichem.type = "tool";
+
+  nutrichem.inTypes = {};
+  nutrichem.inTypes.push_back("http://edamontology.org/data_1082");
+  sort (nutrichem.inTypes.begin(),nutrichem.inTypes.end());
+  nutrichem.output = "http://edamontology.org/data_0990";
+  nutrichem.output = "http://edamontology.org/data_1150";
+  biotools.push_back(nutrichem);
+
+  Tool oi_gene;
+  oi_gene.id = "oi_gene";
+  oi_gene.operations = {"oi_gene"};
+  oi_gene.type = "tool";
+
+  oi_gene.inTypes = {};
+  oi_gene.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (oi_gene.inTypes.begin(),oi_gene.inTypes.end());
+  oi_gene.output = "http://edamontology.org/data_0957";
+  biotools.push_back(oi_gene);
+
+  Tool orange;
+  orange.id = "orange";
+  orange.operations = {"orange"};
+  orange.type = "tool";
+
+  orange.inTypes = {};
+  orange.inTypes.push_back("http://edamontology.org/data_0582");
+  orange.inTypes.push_back("http://edamontology.org/data_2082");
+  sort (orange.inTypes.begin(),orange.inTypes.end());
+  orange.output = "http://edamontology.org/data_0582";
+  orange.output = "http://edamontology.org/data_2082";
+  biotools.push_back(orange);
+
+  Tool orphanet;
+  orphanet.id = "orphanet";
+  orphanet.operations = {"orphanet"};
+  orphanet.type = "tool";
+
+  orphanet.inTypes = {};
+  orphanet.inTypes.push_back("http://edamontology.org/data_1622");
+  sort (orphanet.inTypes.begin(),orphanet.inTypes.end());
+  orphanet.output = "http://edamontology.org/data_2800";
+  biotools.push_back(orphanet);
+
+  Tool orthodisease;
+  orthodisease.id = "orthodisease";
+  orthodisease.operations = {"orthodisease"};
+  orthodisease.type = "tool";
+
+  orthodisease.inTypes = {};
+  orthodisease.inTypes.push_back("http://edamontology.org/data_1622");
+  sort (orthodisease.inTypes.begin(),orthodisease.inTypes.end());
+  orthodisease.output = "http://edamontology.org/data_1150";
+  biotools.push_back(orthodisease);
+
+  Tool p53;
+  p53.id = "p53";
+  p53.operations = {"p53"};
+  p53.type = "tool";
+
+  p53.inTypes = {};
+  p53.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (p53.inTypes.begin(),p53.inTypes.end());
+  p53.output = "http://edamontology.org/data_1277";
+  biotools.push_back(p53);
+
+  Tool parameciumdb;
+  parameciumdb.id = "parameciumdb";
+  parameciumdb.operations = {"parameciumdb"};
+  parameciumdb.type = "tool";
+
+  parameciumdb.inTypes = {};
+  parameciumdb.inTypes.push_back("http://edamontology.org/data_2080");
+  parameciumdb.inTypes.push_back("http://edamontology.org/data_0857");
+  parameciumdb.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (parameciumdb.inTypes.begin(),parameciumdb.inTypes.end());
+  parameciumdb.output = "http://edamontology.org/data_3494";
+  parameciumdb.output = "http://edamontology.org/data_1255";
+  parameciumdb.output = "http://edamontology.org/data_2603";
+  biotools.push_back(parameciumdb);
+
+  Tool pasta;
+  pasta.id = "pasta";
+  pasta.operations = {"pasta"};
+  pasta.type = "tool";
+
+  pasta.inTypes = {};
+  pasta.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (pasta.inTypes.begin(),pasta.inTypes.end());
+  pasta.output = "http://edamontology.org/data_2976";
+  biotools.push_back(pasta);
+
+  Tool pathfindR;
+  pathfindR.id = "pathfindR";
+  pathfindR.operations = {"pathfindR"};
+  pathfindR.type = "tool";
+
+  pathfindR.inTypes = {};
+  pathfindR.inTypes.push_back("http://edamontology.org/data_3753");
+  pathfindR.inTypes.push_back("http://edamontology.org/data_1669");
+  pathfindR.inTypes.push_back("http://edamontology.org/data_2884");
+  pathfindR.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (pathfindR.inTypes.begin(),pathfindR.inTypes.end());
+  pathfindR.output = "http://edamontology.org/data_1026";
+  pathfindR.output = "http://edamontology.org/data_1669";
+  biotools.push_back(pathfindR);
+
+  Tool pbg_ld;
+  pbg_ld.id = "pbg_ld";
+  pbg_ld.operations = {"pbg_ld"};
+  pbg_ld.type = "tool";
+
+  pbg_ld.inTypes = {};
+  pbg_ld.inTypes.push_back("http://edamontology.org/data_2080");
+  sort (pbg_ld.inTypes.begin(),pbg_ld.inTypes.end());
+  pbg_ld.output = "http://edamontology.org/data_0842";
+  biotools.push_back(pbg_ld);
+
+  Tool pcsf;
+  pcsf.id = "pcsf";
+  pcsf.operations = {"pcsf"};
+  pcsf.type = "tool";
+
+  pcsf.inTypes = {};
+  pcsf.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (pcsf.inTypes.begin(),pcsf.inTypes.end());
+  pcsf.output = "http://edamontology.org/data_2600";
+  biotools.push_back(pcsf);
+
+  Tool pdb_redo;
+  pdb_redo.id = "pdb_redo";
+  pdb_redo.operations = {"pdb_redo"};
+  pdb_redo.type = "tool";
+
+  pdb_redo.inTypes = {};
+  pdb_redo.inTypes.push_back("http://edamontology.org/data_0883");
+  pdb_redo.inTypes.push_back("http://edamontology.org/data_1539");
+  pdb_redo.inTypes.push_back("http://edamontology.org/data_0937");
+  pdb_redo.inTypes.push_back("http://edamontology.org/data_1460");
+  sort (pdb_redo.inTypes.begin(),pdb_redo.inTypes.end());
+  pdb_redo.output = "http://edamontology.org/data_1127";
+  biotools.push_back(pdb_redo);
+
+  Tool pdbfinder;
+  pdbfinder.id = "pdbfinder";
+  pdbfinder.operations = {"pdbfinder"};
+  pdbfinder.type = "tool";
+
+  pdbfinder.inTypes = {};
+  pdbfinder.inTypes.push_back("http://edamontology.org/data_2085");
+  sort (pdbfinder.inTypes.begin(),pdbfinder.inTypes.end());
+  pdbfinder.output = "http://edamontology.org/data_1127";
+  biotools.push_back(pdbfinder);
+
+  Tool pdbsum;
+  pdbsum.id = "pdbsum";
+  pdbsum.operations = {"pdbsum"};
+  pdbsum.type = "tool";
+
+  pdbsum.inTypes = {};
+  pdbsum.inTypes.push_back("http://edamontology.org/data_2085");
+  sort (pdbsum.inTypes.begin(),pdbsum.inTypes.end());
+  pdbsum.output = "http://edamontology.org/data_1127";
+  biotools.push_back(pdbsum);
+
+  Tool pdestrian;
+  pdestrian.id = "pdestrian";
+  pdestrian.operations = {"pdestrian"};
+  pdestrian.type = "tool";
+
+  pdestrian.inTypes = {};
+  pdestrian.inTypes.push_back("http://edamontology.org/data_2526");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1712");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0954");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_2080");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0982");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0984");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_2050");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0906");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1461");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0897");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_2992");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1537");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0893");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1463");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1481");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0890");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0889");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_0888");
+  pdestrian.inTypes.push_back("http://edamontology.org/data_1498");
+  sort (pdestrian.inTypes.begin(),pdestrian.inTypes.end());
+  pdestrian.output = "http://edamontology.org/data_1460";
+  pdestrian.output = "http://edamontology.org/data_2886";
+  biotools.push_back(pdestrian);
+
+  Tool pecan_dia;
+  pecan_dia.id = "pecan_dia";
+  pecan_dia.operations = {"pecan_dia"};
+  pecan_dia.type = "tool";
+
+  pecan_dia.inTypes = {};
+  pecan_dia.inTypes.push_back("http://edamontology.org/data_0945");
+  pecan_dia.inTypes.push_back("http://edamontology.org/data_0943");
+  sort (pecan_dia.inTypes.begin(),pecan_dia.inTypes.end());
+  pecan_dia.output = "http://edamontology.org/data_0943";
+  pecan_dia.output = "http://edamontology.org/data_0850";
+  biotools.push_back(pecan_dia);
+
+  Tool peptideatlas;
+  peptideatlas.id = "peptideatlas";
+  peptideatlas.operations = {"peptideatlas"};
+  peptideatlas.type = "tool";
+
+  peptideatlas.inTypes = {};
+  peptideatlas.inTypes.push_back("http://edamontology.org/data_0945");
+  sort (peptideatlas.inTypes.begin(),peptideatlas.inTypes.end());
+  peptideatlas.output = "http://edamontology.org/data_2398";
+  biotools.push_back(peptideatlas);
+
+  Tool peroxibase;
+  peroxibase.id = "peroxibase";
+  peroxibase.operations = {"peroxibase"};
+  peroxibase.type = "tool";
+
+  peroxibase.inTypes = {};
+  peroxibase.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (peroxibase.inTypes.begin(),peroxibase.inTypes.end());
+  peroxibase.output = "http://edamontology.org/data_2792";
+  biotools.push_back(peroxibase);
+
+  Tool pfam;
+  pfam.id = "pfam";
+  pfam.operations = {"pfam"};
+  pfam.type = "tool";
+
+  pfam.inTypes = {};
+  pfam.inTypes.push_back("http://edamontology.org/data_2976");
+  sort (pfam.inTypes.begin(),pfam.inTypes.end());
+  pfam.output = "http://edamontology.org/data_1138";
+  biotools.push_back(pfam);
+
+  Tool pharmgkb;
+  pharmgkb.id = "pharmgkb";
+  pharmgkb.operations = {"pharmgkb"};
+  pharmgkb.type = "tool";
+
+  pharmgkb.inTypes = {};
+  pharmgkb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (pharmgkb.inTypes.begin(),pharmgkb.inTypes.end());
+  pharmgkb.output = "http://edamontology.org/data_2649";
+  biotools.push_back(pharmgkb);
+
+  Tool phmmer;
+  phmmer.id = "phmmer";
+  phmmer.operations = {"phmmer"};
+  phmmer.type = "tool";
+
+  phmmer.inTypes = {};
+  phmmer.inTypes.push_back("http://edamontology.org/data_1394");
+  phmmer.inTypes.push_back("http://edamontology.org/data_3028");
+  phmmer.inTypes.push_back("http://edamontology.org/data_2085");
+  sort (phmmer.inTypes.begin(),phmmer.inTypes.end());
+  phmmer.output = "http://edamontology.org/data_3671";
+  biotools.push_back(phmmer);
+
+  Tool phosphoelm;
+  phosphoelm.id = "phosphoelm";
+  phosphoelm.operations = {"phosphoelm"};
+  phosphoelm.type = "tool";
+
+  phosphoelm.inTypes = {};
+  phosphoelm.inTypes.push_back("http://edamontology.org/data_2071");
+  sort (phosphoelm.inTypes.begin(),phosphoelm.inTypes.end());
+  phosphoelm.output = "http://edamontology.org/data_1009";
+  biotools.push_back(phosphoelm);
+
+  Tool picard_replacesamheader;
+  picard_replacesamheader.id = "picard_replacesamheader";
+  picard_replacesamheader.operations = {"picard_replacesamheader"};
+  picard_replacesamheader.type = "tool";
+
+  picard_replacesamheader.inTypes = {};
+  picard_replacesamheader.inTypes.push_back("http://edamontology.org/data_0924");
+  sort (picard_replacesamheader.inTypes.begin(),picard_replacesamheader.inTypes.end());
+  picard_replacesamheader.output = "http://edamontology.org/data_0006";
+  picard_replacesamheader.output = "http://edamontology.org/data_0006";
+  biotools.push_back(picard_replacesamheader);
+
+  Tool picky;
+  picky.id = "picky";
+  picky.operations = {"picky"};
+  picky.type = "tool";
+
+  picky.inTypes = {};
+  picky.inTypes.push_back("http://edamontology.org/data_1383");
+  picky.inTypes.push_back("http://edamontology.org/data_3498");
+  sort (picky.inTypes.begin(),picky.inTypes.end());
+  picky.output = "http://edamontology.org/data_3497";
+  picky.output = "http://edamontology.org/data_2093";
+  biotools.push_back(picky);
+
+  Tool pid;
+  pid.id = "pid";
+  pid.operations = {"pid"};
+  pid.type = "tool";
+
+  pid.inTypes = {};
+  pid.inTypes.push_back("http://edamontology.org/data_2984");
+  sort (pid.inTypes.begin(),pid.inTypes.end());
+  pid.output = "http://edamontology.org/data_2344";
+  biotools.push_back(pid);
+
+  Tool pir;
+  pir.id = "pir";
+  pir.operations = {"pir"};
+  pir.type = "tool";
+
+  pir.inTypes = {};
+  pir.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (pir.inTypes.begin(),pir.inTypes.end());
+  pir.output = "http://edamontology.org/data_0989";
+  biotools.push_back(pir);
+
+  Tool pirsf;
+  pirsf.id = "pirsf";
+  pirsf.operations = {"pirsf"};
+  pirsf.type = "tool";
+
+  pirsf.inTypes = {};
+  pirsf.inTypes.push_back("http://edamontology.org/data_0907");
+  sort (pirsf.inTypes.begin(),pirsf.inTypes.end());
+  pirsf.output = "http://edamontology.org/data_1136";
+  biotools.push_back(pirsf);
+
+  Tool plasmodb;
+  plasmodb.id = "plasmodb";
+  plasmodb.operations = {"plasmodb"};
+  plasmodb.type = "tool";
+
+  plasmodb.inTypes = {};
+  plasmodb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (plasmodb.inTypes.begin(),plasmodb.inTypes.end());
+  plasmodb.output = "http://edamontology.org/data_2295";
+  biotools.push_back(plasmodb);
+
+  Tool pmap_cutdb;
+  pmap_cutdb.id = "pmap_cutdb";
+  pmap_cutdb.operations = {"pmap_cutdb"};
+  pmap_cutdb.type = "tool";
+
+  pmap_cutdb.inTypes = {};
+  pmap_cutdb.inTypes.push_back("http://edamontology.org/data_2093");
+  sort (pmap_cutdb.inTypes.begin(),pmap_cutdb.inTypes.end());
+  pmap_cutdb.output = "http://edamontology.org/data_3021";
+  biotools.push_back(pmap_cutdb);
+
+  Tool ppi;
+  ppi.id = "ppi";
+  ppi.operations = {"ppi"};
+  ppi.type = "tool";
+
+  ppi.inTypes = {};
+  ppi.inTypes.push_back("http://edamontology.org/data_1772");
+  sort (ppi.inTypes.begin(),ppi.inTypes.end());
+  ppi.output = "http://edamontology.org/data_1460";
+  biotools.push_back(ppi);
+
+  Tool ppiexp;
+  ppiexp.id = "ppiexp";
+  ppiexp.operations = {"ppiexp"};
+  ppiexp.type = "tool";
+
+  ppiexp.inTypes = {};
+  ppiexp.inTypes.push_back("http://edamontology.org/data_2600");
+  ppiexp.inTypes.push_back("http://edamontology.org/data_3768");
+  sort (ppiexp.inTypes.begin(),ppiexp.inTypes.end());
+  ppiexp.output = "http://edamontology.org/data_2603";
+  biotools.push_back(ppiexp);
+
+  Tool pptasedb;
+  pptasedb.id = "pptasedb";
+  pptasedb.operations = {"pptasedb"};
+  pptasedb.type = "tool";
+
+  pptasedb.inTypes = {};
+  pptasedb.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (pptasedb.inTypes.begin(),pptasedb.inTypes.end());
+  pptasedb.output = "http://edamontology.org/data_0989";
+  biotools.push_back(pptasedb);
+
+  Tool predictprotein_open;
+  predictprotein_open.id = "predictprotein_open";
+  predictprotein_open.operations = {"predictprotein_open"};
+  predictprotein_open.type = "tool";
+
+  predictprotein_open.inTypes = {};
+  predictprotein_open.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (predictprotein_open.inTypes.begin(),predictprotein_open.inTypes.end());
+  predictprotein_open.output = "http://edamontology.org/data_2976";
+  biotools.push_back(predictprotein_open);
+
+  Tool pride;
+  pride.id = "pride";
+  pride.operations = {"pride"};
+  pride.type = "tool";
+
+  pride.inTypes = {};
+  pride.inTypes.push_back("http://edamontology.org/data_0945");
+  sort (pride.inTypes.begin(),pride.inTypes.end());
+  pride.output = "http://edamontology.org/data_1145";
+  biotools.push_back(pride);
+
+  Tool prints;
+  prints.id = "prints";
+  prints.operations = {"prints"};
+  prints.type = "tool";
+
+  prints.inTypes = {};
+  prints.inTypes.push_back("http://edamontology.org/data_1355");
+  sort (prints.inTypes.begin(),prints.inTypes.end());
+  prints.output = "http://edamontology.org/data_1137";
+  biotools.push_back(prints);
+
+  Tool proabc;
+  proabc.id = "proabc";
+  proabc.operations = {"proabc"};
+  proabc.type = "tool";
+
+  proabc.inTypes = {};
+  proabc.inTypes.push_back("http://edamontology.org/data_0906");
+  sort (proabc.inTypes.begin(),proabc.inTypes.end());
+  proabc.output = "http://edamontology.org/data_2976";
+  biotools.push_back(proabc);
+
+  Tool prodom;
+  prodom.id = "prodom";
+  prodom.operations = {"prodom"};
+  prodom.type = "tool";
+
+  prodom.inTypes = {};
+  prodom.inTypes.push_back("http://edamontology.org/data_0907");
+  sort (prodom.inTypes.begin(),prodom.inTypes.end());
+  prodom.output = "http://edamontology.org/data_1142";
+  biotools.push_back(prodom);
+
+  Tool profdisis;
+  profdisis.id = "profdisis";
+  profdisis.operations = {"profdisis"};
+  profdisis.type = "tool";
+
+  profdisis.inTypes = {};
+  profdisis.inTypes.push_back("http://edamontology.org/data_1276");
+  sort (profdisis.inTypes.begin(),profdisis.inTypes.end());
+  profdisis.output = "http://edamontology.org/data_2886";
+  biotools.push_back(profdisis);
+
+  Tool profisis;
+  profisis.id = "profisis";
+  profisis.operations = {"profisis"};
+  profisis.type = "tool";
+
+  profisis.inTypes = {};
+  profisis.inTypes.push_back("http://edamontology.org/data_1276");
+  sort (profisis.inTypes.begin(),profisis.inTypes.end());
+  profisis.output = "http://edamontology.org/data_2886";
+  biotools.push_back(profisis);
+
+  Tool promex;
+  promex.id = "promex";
+  promex.operations = {"promex"};
+  promex.type = "tool";
+
+  promex.inTypes = {};
+  promex.inTypes.push_back("http://edamontology.org/data_0945");
+  sort (promex.inTypes.begin(),promex.inTypes.end());
+  promex.output = "http://edamontology.org/data_0943";
+  biotools.push_back(promex);
+
+  Tool prophecy;
+  prophecy.id = "prophecy";
+  prophecy.operations = {"prophecy"};
+  prophecy.type = "tool";
+
+  prophecy.inTypes = {};
+  prophecy.inTypes.push_back("http://edamontology.org/data_2337");
+  sort (prophecy.inTypes.begin(),prophecy.inTypes.end());
+  prophecy.output = "http://edamontology.org/data_0968";
+  biotools.push_back(prophecy);
+
+  Tool protein_model_portal;
+  protein_model_portal.id = "protein_model_portal";
+  protein_model_portal.operations = {"protein_model_portal"};
+  protein_model_portal.type = "tool";
+
+  protein_model_portal.inTypes = {};
+  protein_model_portal.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (protein_model_portal.inTypes.begin(),protein_model_portal.inTypes.end());
+  protein_model_portal.output = "http://edamontology.org/data_3021";
+  biotools.push_back(protein_model_portal);
+
+  Tool proteinatlas;
+  proteinatlas.id = "proteinatlas";
+  proteinatlas.operations = {"proteinatlas"};
+  proteinatlas.type = "tool";
+
+  proteinatlas.inTypes = {};
+  proteinatlas.inTypes.push_back("http://edamontology.org/data_2603");
+  sort (proteinatlas.inTypes.begin(),proteinatlas.inTypes.end());
+  proteinatlas.output = "http://edamontology.org/data_0968";
+  biotools.push_back(proteinatlas);
+
+  Tool proteomicsdb;
+  proteomicsdb.id = "proteomicsdb";
+  proteomicsdb.operations = {"proteomicsdb"};
+  proteomicsdb.type = "tool";
+
+  proteomicsdb.inTypes = {};
+  proteomicsdb.inTypes.push_back("http://edamontology.org/data_0896");
+  proteomicsdb.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (proteomicsdb.inTypes.begin(),proteomicsdb.inTypes.end());
+  proteomicsdb.output = "http://edamontology.org/data_1009";
+  biotools.push_back(proteomicsdb);
+
+  Tool protonet;
+  protonet.id = "protonet";
+  protonet.operations = {"protonet"};
+  protonet.type = "tool";
+
+  protonet.inTypes = {};
+  protonet.inTypes.push_back("http://edamontology.org/data_0907");
+  sort (protonet.inTypes.begin(),protonet.inTypes.end());
+  protonet.output = "http://edamontology.org/data_3021";
+  biotools.push_back(protonet);
+
+  Tool proximid;
+  proximid.id = "proximid";
+  proximid.operations = {"proximid"};
+  proximid.type = "tool";
+
+  proximid.inTypes = {};
+  proximid.inTypes.push_back("http://edamontology.org/data_2655");
+  proximid.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (proximid.inTypes.begin(),proximid.inTypes.end());
+  proximid.output = "http://edamontology.org/data_3112";
+  biotools.push_back(proximid);
+
+  Tool pseudocap;
+  pseudocap.id = "pseudocap";
+  pseudocap.operations = {"pseudocap"};
+  pseudocap.type = "tool";
+
+  pseudocap.inTypes = {};
+  pseudocap.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (pseudocap.inTypes.begin(),pseudocap.inTypes.end());
+  pseudocap.output = "http://edamontology.org/data_2744";
+  biotools.push_back(pseudocap);
+
+  Tool psi_blast;
+  psi_blast.id = "psi_blast";
+  psi_blast.operations = {"psi_blast"};
+  psi_blast.type = "tool";
+
+  psi_blast.inTypes = {};
+  psi_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  psi_blast.inTypes.push_back("http://edamontology.org/data_2854");
+  sort (psi_blast.inTypes.begin(),psi_blast.inTypes.end());
+  psi_blast.output = "http://edamontology.org/data_2976";
+  biotools.push_back(psi_blast);
+
+  Tool psi_blast_rest;
+  psi_blast_rest.id = "psi_blast_rest";
+  psi_blast_rest.operations = {"psi_blast_rest"};
+  psi_blast_rest.type = "tool";
+
+  psi_blast_rest.inTypes = {};
+  psi_blast_rest.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (psi_blast_rest.inTypes.begin(),psi_blast_rest.inTypes.end());
+  psi_blast_rest.output = "http://edamontology.org/data_2044";
+  biotools.push_back(psi_blast_rest);
+
+  Tool psi_search;
+  psi_search.id = "psi_search";
+  psi_search.operations = {"psi_search"};
+  psi_search.type = "tool";
+
+  psi_search.inTypes = {};
+  psi_search.inTypes.push_back("http://edamontology.org/data_0857");
+  psi_search.inTypes.push_back("http://edamontology.org/data_2854");
+  sort (psi_search.inTypes.begin(),psi_search.inTypes.end());
+  psi_search.output = "http://edamontology.org/data_2976";
+  biotools.push_back(psi_search);
+
+  Tool pssalib;
+  pssalib.id = "pssalib";
+  pssalib.operations = {"pssalib"};
+  pssalib.type = "tool";
+
+  pssalib.inTypes = {};
+  pssalib.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (pssalib.inTypes.begin(),pssalib.inTypes.end());
+  pssalib.output = "http://edamontology.org/data_2978";
+  biotools.push_back(pssalib);
+
+  Tool psychoprot;
+  psychoprot.id = "psychoprot";
+  psychoprot.operations = {"psychoprot"};
+  psychoprot.type = "tool";
+
+  psychoprot.inTypes = {};
+  psychoprot.inTypes.push_back("http://edamontology.org/data_0950");
+  psychoprot.inTypes.push_back("http://edamontology.org/data_2087");
+  psychoprot.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (psychoprot.inTypes.begin(),psychoprot.inTypes.end());
+  psychoprot.output = "http://edamontology.org/data_0863";
+  psychoprot.output = "http://edamontology.org/data_3154";
+  biotools.push_back(psychoprot);
+
+  Tool pubmeth;
+  pubmeth.id = "pubmeth";
+  pubmeth.operations = {"pubmeth"};
+  pubmeth.type = "tool";
+
+  pubmeth.inTypes = {};
+  pubmeth.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (pubmeth.inTypes.begin(),pubmeth.inTypes.end());
+  pubmeth.output = "http://edamontology.org/data_1026";
+  biotools.push_back(pubmeth);
+
+  Tool r3cpet;
+  r3cpet.id = "r3cpet";
+  r3cpet.operations = {"r3cpet"};
+  r3cpet.type = "tool";
+
+  r3cpet.inTypes = {};
+  r3cpet.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (r3cpet.inTypes.begin(),r3cpet.inTypes.end());
+  r3cpet.output = "http://edamontology.org/data_0849";
+  biotools.push_back(r3cpet);
+
+  Tool raven_toolbox;
+  raven_toolbox.id = "raven_toolbox";
+  raven_toolbox.operations = {"raven_toolbox"};
+  raven_toolbox.type = "tool";
+
+  raven_toolbox.inTypes = {};
+  raven_toolbox.inTypes.push_back("http://edamontology.org/data_2600");
+  raven_toolbox.inTypes.push_back("http://edamontology.org/data_3722");
+  sort (raven_toolbox.inTypes.begin(),raven_toolbox.inTypes.end());
+  raven_toolbox.output = "http://edamontology.org/data_2976";
+  raven_toolbox.output = "http://edamontology.org/data_2600";
+  raven_toolbox.output = "http://edamontology.org/data_3112";
+  biotools.push_back(raven_toolbox);
+
+  Tool realphy;
+  realphy.id = "realphy";
+  realphy.operations = {"realphy"};
+  realphy.type = "tool";
+
+  realphy.inTypes = {};
+  realphy.inTypes.push_back("http://edamontology.org/data_0872");
+  sort (realphy.inTypes.begin(),realphy.inTypes.end());
+  realphy.output = "http://edamontology.org/data_2787";
+  realphy.output = "http://edamontology.org/data_1234";
+  realphy.output = "http://edamontology.org/data_2084";
+  biotools.push_back(realphy);
+
+  Tool refseq;
+  refseq.id = "refseq";
+  refseq.operations = {"refseq"};
+  refseq.type = "tool";
+
+  refseq.inTypes = {};
+  refseq.inTypes.push_back("http://edamontology.org/data_0849");
+  sort (refseq.inTypes.begin(),refseq.inTypes.end());
+  refseq.output = "http://edamontology.org/data_0989";
+  biotools.push_back(refseq);
+
+  Tool remodiscovery;
+  remodiscovery.id = "remodiscovery";
+  remodiscovery.operations = {"remodiscovery"};
+  remodiscovery.type = "tool";
+
+  remodiscovery.inTypes = {};
+  remodiscovery.inTypes.push_back("http://edamontology.org/data_2070");
+  sort (remodiscovery.inTypes.begin(),remodiscovery.inTypes.end());
+  remodiscovery.output = "http://edamontology.org/data_2603";
+  remodiscovery.output = "http://edamontology.org/data_2600";
+  remodiscovery.output = "http://edamontology.org/data_2070";
+  biotools.push_back(remodiscovery);
+
+  Tool repeatsdb;
+  repeatsdb.id = "repeatsdb";
+  repeatsdb.operations = {"repeatsdb"};
+  repeatsdb.type = "tool";
+
+  repeatsdb.inTypes = {};
+  repeatsdb.inTypes.push_back("http://edamontology.org/data_1255");
+  repeatsdb.inTypes.push_back("http://edamontology.org/data_1255");
+  sort (repeatsdb.inTypes.begin(),repeatsdb.inTypes.end());
+  repeatsdb.output = "http://edamontology.org/data_3021";
+  repeatsdb.output = "http://edamontology.org/data_2007";
+  repeatsdb.output = "http://edamontology.org/data_1127";
+  biotools.push_back(repeatsdb);
+
+  Tool resid;
+  resid.id = "resid";
+  resid.operations = {"resid"};
+  resid.type = "tool";
+
+  resid.inTypes = {};
+  resid.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (resid.inTypes.begin(),resid.inTypes.end());
+  resid.output = "http://edamontology.org/data_2619";
+  biotools.push_back(resid);
+
+  Tool rfam_search;
+  rfam_search.id = "rfam_search";
+  rfam_search.operations = {"rfam_search"};
+  rfam_search.type = "tool";
+
+  rfam_search.inTypes = {};
+  rfam_search.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (rfam_search.inTypes.begin(),rfam_search.inTypes.end());
+  rfam_search.output = "http://edamontology.org/data_2977";
+  biotools.push_back(rfam_search);
+
+  Tool rnavirusdb;
+  rnavirusdb.id = "rnavirusdb";
+  rnavirusdb.operations = {"rnavirusdb"};
+  rnavirusdb.type = "tool";
+
+  rnavirusdb.inTypes = {};
+  rnavirusdb.inTypes.push_back("http://edamontology.org/data_2530");
+  sort (rnavirusdb.inTypes.begin(),rnavirusdb.inTypes.end());
+  rnavirusdb.output = "http://edamontology.org/data_2784";
+  biotools.push_back(rnavirusdb);
+
+  Tool rouge;
+  rouge.id = "rouge";
+  rouge.operations = {"rouge"};
+  rouge.type = "tool";
+
+  rouge.inTypes = {};
+  rouge.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (rouge.inTypes.begin(),rouge.inTypes.end());
+  rouge.output = "http://edamontology.org/data_2393";
+  biotools.push_back(rouge);
+
+  Tool rseqrep;
+  rseqrep.id = "rseqrep";
+  rseqrep.operations = {"rseqrep"};
+  rseqrep.type = "tool";
+
+  rseqrep.inTypes = {};
+  rseqrep.inTypes.push_back("http://edamontology.org/data_1636");
+  rseqrep.inTypes.push_back("http://edamontology.org/data_0928");
+  rseqrep.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (rseqrep.inTypes.begin(),rseqrep.inTypes.end());
+  rseqrep.output = "http://edamontology.org/data_3495";
+  biotools.push_back(rseqrep);
+
+  Tool sabio_rk;
+  sabio_rk.id = "sabio_rk";
+  sabio_rk.operations = {"sabio_rk"};
+  sabio_rk.type = "tool";
+
+  sabio_rk.inTypes = {};
+  sabio_rk.inTypes.push_back("http://edamontology.org/data_2978");
+  sort (sabio_rk.inTypes.begin(),sabio_rk.inTypes.end());
+  sabio_rk.output = "http://edamontology.org/data_2309";
+  biotools.push_back(sabio_rk);
+
+  Tool sapp;
+  sapp.id = "sapp";
+  sapp.operations = {"sapp"};
+  sapp.type = "tool";
+
+  sapp.inTypes = {};
+  sapp.inTypes.push_back("http://edamontology.org/data_2044");
+  sort (sapp.inTypes.begin(),sapp.inTypes.end());
+  sapp.output = "http://edamontology.org/data_2044";
+  biotools.push_back(sapp);
+
+  Tool sas;
+  sas.id = "sas";
+  sas.operations = {"sas"};
+  sas.type = "tool";
+
+  sas.inTypes = {};
+  sas.inTypes.push_back("http://edamontology.org/data_0863");
+  sas.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (sas.inTypes.begin(),sas.inTypes.end());
+  sas.output = "http://edamontology.org/data_2976";
+  biotools.push_back(sas);
+
+  Tool scenery;
+  scenery.id = "scenery";
+  scenery.operations = {"scenery"};
+  scenery.type = "tool";
+
+  scenery.inTypes = {};
+  scenery.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (scenery.inTypes.begin(),scenery.inTypes.end());
+  scenery.output = "http://edamontology.org/data_2082";
+  biotools.push_back(scenery);
+
+  Tool sci_ai;
+  sci_ai.id = "sci_ai";
+  sci_ai.operations = {"sci_ai"};
+  sci_ai.type = "tool";
+
+  sci_ai.inTypes = {};
+  sci_ai.inTypes.push_back("http://edamontology.org/data_3779");
+  sort (sci_ai.inTypes.begin(),sci_ai.inTypes.end());
+  sci_ai.output = "http://edamontology.org/data_2526";
+  biotools.push_back(sci_ai);
+
+  Tool scowl;
+  scowl.id = "scowl";
+  scowl.operations = {"scowl"};
+  scowl.type = "tool";
+
+  scowl.inTypes = {};
+  scowl.inTypes.push_back("http://edamontology.org/data_0906");
+  sort (scowl.inTypes.begin(),scowl.inTypes.end());
+  scowl.output = "http://edamontology.org/data_1127";
+  biotools.push_back(scowl);
+
+  Tool scry;
+  scry.id = "scry";
+  scry.operations = {"scry"};
+  scry.type = "tool";
+
+  scry.inTypes = {};
+  scry.inTypes.push_back("http://edamontology.org/data_0842");
+  sort (scry.inTypes.begin(),scry.inTypes.end());
+  scry.output = "http://edamontology.org/data_0842";
+  biotools.push_back(scry);
+
+  Tool seattlesnps;
+  seattlesnps.id = "seattlesnps";
+  seattlesnps.operations = {"seattlesnps"};
+  seattlesnps.type = "tool";
+
+  seattlesnps.inTypes = {};
+  seattlesnps.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (seattlesnps.inTypes.begin(),seattlesnps.inTypes.end());
+  seattlesnps.output = "http://edamontology.org/data_1026";
+  biotools.push_back(seattlesnps);
+
+  Tool segmentseq;
+  segmentseq.id = "segmentseq";
+  segmentseq.operations = {"segmentseq"};
+  segmentseq.type = "tool";
+
+  segmentseq.inTypes = {};
+  segmentseq.inTypes.push_back("http://edamontology.org/data_2884");
+  sort (segmentseq.inTypes.begin(),segmentseq.inTypes.end());
+  segmentseq.output = "http://edamontology.org/data_1383";
+  biotools.push_back(segmentseq);
+
+  Tool selectome;
+  selectome.id = "selectome";
+  selectome.operations = {"selectome"};
+  selectome.type = "tool";
+
+  selectome.inTypes = {};
+  selectome.inTypes.push_back("http://edamontology.org/data_0872");
+  selectome.inTypes.push_back("http://edamontology.org/data_0916");
+  selectome.inTypes.push_back("http://edamontology.org/data_2093");
+  sort (selectome.inTypes.begin(),selectome.inTypes.end());
+  selectome.output = "http://edamontology.org/data_0842";
+  selectome.output = "http://edamontology.org/data_1075";
+  selectome.output = "http://edamontology.org/data_1868";
+  biotools.push_back(selectome);
 
   Tool seqretsetall;
-  seqretsetall.name = "seqretsetall";
   seqretsetall.id = "seqretsetall";
   seqretsetall.operations = {"seqretsetall"};
   seqretsetall.type = "tool";
-  seqretsetall.inputs = {};
-  seqretsetall.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  seqretsetall.inputs.push_back(ins);
+  seqretsetall.inTypes = {};
   seqretsetall.inTypes.push_back("http://edamontology.org/data_0849");
   sort (seqretsetall.inTypes.begin(),seqretsetall.inTypes.end());
   seqretsetall.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqretsetall);
-
-  Tool seqretsplit;
-  seqretsplit.name = "seqretsplit";
-  seqretsplit.id = "seqretsplit";
-  seqretsplit.operations = {"seqretsplit"};
-  seqretsplit.type = "tool";
-  seqretsplit.inputs = {};
-  seqretsplit.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  seqretsplit.inputs.push_back(ins);
-  seqretsplit.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (seqretsplit.inTypes.begin(),seqretsplit.inTypes.end());
-  seqretsplit.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqretsplit);
-
-  Tool seqxref;
-  seqxref.name = "seqxref";
-  seqxref.id = "seqxref";
-  seqxref.operations = {"seqxref"};
-  seqxref.type = "tool";
-  seqxref.inputs = {};
-  seqxref.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2093";
-  seqxref.inputs.push_back(ins);
-  seqxref.inTypes.push_back("http://edamontology.org/data_2093");
-  sort (seqxref.inTypes.begin(),seqxref.inTypes.end());
-  seqxref.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqxref);
-
-  Tool seqxrefget;
-  seqxrefget.name = "seqxrefget";
-  seqxrefget.id = "seqxrefget";
-  seqxrefget.operations = {"seqxrefget"};
-  seqxrefget.type = "tool";
-  seqxrefget.inputs = {};
-  seqxrefget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2093";
-  seqxrefget.inputs.push_back(ins);
-  seqxrefget.inTypes.push_back("http://edamontology.org/data_2093");
-  sort (seqxrefget.inTypes.begin(),seqxrefget.inTypes.end());
-  seqxrefget.output = "http://edamontology.org/data_0849";
-  emboss.push_back(seqxrefget);
-
-  Tool servertell;
-  servertell.name = "servertell";
-  servertell.id = "servertell";
-  servertell.operations = {"servertell"};
-  servertell.type = "tool";
-  servertell.inputs = {};
-  servertell.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  servertell.inputs.push_back(ins);
-  servertell.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (servertell.inTypes.begin(),servertell.inTypes.end());
-  emboss.push_back(servertell);
-
-  Tool showalign;
-  showalign.name = "showalign";
-  showalign.id = "showalign";
-  showalign.operations = {"showalign"};
-  showalign.type = "tool";
-  showalign.inputs = {};
-  showalign.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0863";
-  showalign.inputs.push_back(ins);
-  showalign.inTypes.push_back("http://edamontology.org/data_0863");
-  sort (showalign.inTypes.begin(),showalign.inTypes.end());
-  showalign.output = "http://edamontology.org/data_0863";
-  showalign.output = "http://edamontology.org/data_0874";
-  emboss.push_back(showalign);
-
-  Tool showdb;
-  showdb.name = "showdb";
-  showdb.id = "showdb";
-  showdb.operations = {"showdb"};
-  showdb.type = "tool";
-  showdb.inputs = {};
-  showdb.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  showdb.inputs.push_back(ins);
-  showdb.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (showdb.inTypes.begin(),showdb.inTypes.end());
-  emboss.push_back(showdb);
-
-  Tool showfeat;
-  showfeat.name = "showfeat";
-  showfeat.id = "showfeat";
-  showfeat.operations = {"showfeat"};
-  showfeat.type = "tool";
-  showfeat.inputs = {};
-  showfeat.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  showfeat.inputs.push_back(ins);
-  showfeat.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (showfeat.inTypes.begin(),showfeat.inTypes.end());
-  showfeat.output = "http://edamontology.org/data_0849";
-  emboss.push_back(showfeat);
-
-  Tool showorf;
-  showorf.name = "showorf";
-  showorf.id = "showorf";
-  showorf.operations = {"showorf"};
-  showorf.type = "tool";
-  showorf.inputs = {};
-  showorf.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  showorf.inputs.push_back(ins);
-  showorf.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (showorf.inTypes.begin(),showorf.inTypes.end());
-  showorf.output = "http://edamontology.org/data_0849";
-  emboss.push_back(showorf);
-
-  Tool showpep;
-  showpep.name = "showpep";
-  showpep.id = "showpep";
-  showpep.operations = {"showpep"};
-  showpep.type = "tool";
-  showpep.inputs = {};
-  showpep.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  showpep.inputs.push_back(ins);
-  showpep.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (showpep.inTypes.begin(),showpep.inTypes.end());
-  showpep.output = "http://edamontology.org/data_2886";
-  emboss.push_back(showpep);
-
-  Tool showseq;
-  showseq.name = "showseq";
-  showseq.id = "showseq";
-  showseq.operations = {"showseq"};
-  showseq.type = "tool";
-  showseq.inputs = {};
-  showseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  showseq.inputs.push_back(ins);
-  showseq.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (showseq.inTypes.begin(),showseq.inTypes.end());
-  showseq.output = "http://edamontology.org/data_2887";
-  emboss.push_back(showseq);
-
-  Tool showserver;
-  showserver.name = "showserver";
-  showserver.id = "showserver";
-  showserver.operations = {"showserver"};
-  showserver.type = "tool";
-  showserver.inputs = {};
-  showserver.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  showserver.inputs.push_back(ins);
-  showserver.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (showserver.inTypes.begin(),showserver.inTypes.end());
-  emboss.push_back(showserver);
-
-  Tool shuffleseq;
-  shuffleseq.name = "shuffleseq";
-  shuffleseq.id = "shuffleseq";
-  shuffleseq.operations = {"shuffleseq"};
-  shuffleseq.type = "tool";
-  shuffleseq.inputs = {};
-  shuffleseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  shuffleseq.inputs.push_back(ins);
-  shuffleseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (shuffleseq.inTypes.begin(),shuffleseq.inTypes.end());
-  shuffleseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(shuffleseq);
-
-  Tool sigcleave;
-  sigcleave.name = "sigcleave";
-  sigcleave.id = "sigcleave";
-  sigcleave.operations = {"sigcleave"};
-  sigcleave.type = "tool";
-  sigcleave.inputs = {};
-  sigcleave.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1277";
-  sigcleave.inputs.push_back(ins);
-  sigcleave.inTypes.push_back("http://edamontology.org/data_1277");
-  sort (sigcleave.inTypes.begin(),sigcleave.inTypes.end());
-  sigcleave.output = "http://edamontology.org/data_2886";
-  emboss.push_back(sigcleave);
-
-  Tool silent;
-  silent.name = "silent";
-  silent.id = "silent";
-  silent.operations = {"silent"};
-  silent.type = "tool";
-  silent.inputs = {};
-  silent.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  silent.inputs.push_back(ins);
-  silent.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (silent.inTypes.begin(),silent.inTypes.end());
-  silent.output = "http://edamontology.org/data_2887";
-  emboss.push_back(silent);
-
-  Tool sirna;
-  sirna.name = "sirna";
-  sirna.id = "sirna";
-  sirna.operations = {"sirna"};
-  sirna.type = "tool";
-  sirna.inputs = {};
-  sirna.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  sirna.inputs.push_back(ins);
-  sirna.inTypes.push_back("http://edamontology.org/data_1276");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2887";
-  sirna.inputs.push_back(ins);
-  sirna.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (sirna.inTypes.begin(),sirna.inTypes.end());
-  sirna.output = "http://edamontology.org/data_2887";
-  emboss.push_back(sirna);
-
-  Tool sixpack;
-  sixpack.name = "sixpack";
-  sixpack.id = "sixpack";
-  sixpack.operations = {"sixpack"};
-  sixpack.type = "tool";
-  sixpack.inputs = {};
-  sixpack.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  sixpack.inputs.push_back(ins);
-  sixpack.inTypes.push_back("http://edamontology.org/data_1276");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2886";
-  sixpack.inputs.push_back(ins);
-  sixpack.inTypes.push_back("http://edamontology.org/data_2886");
-  sort (sixpack.inTypes.begin(),sixpack.inTypes.end());
-  sixpack.output = "http://edamontology.org/data_0849";
-  emboss.push_back(sixpack);
-
-  Tool sixpack_ebi;
-  sixpack_ebi.name = "sixpack-ebi";
-  sixpack_ebi.id = "sixpack-ebi";
-  sixpack_ebi.operations = {"sixpack-ebi"};
-  sixpack_ebi.type = "tool";
-  sixpack_ebi.inputs = {};
-  sixpack_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2976";
-  sixpack_ebi.inputs.push_back(ins);
-  sixpack_ebi.inTypes.push_back("http://edamontology.org/data_2976");
-  sort (sixpack_ebi.inTypes.begin(),sixpack_ebi.inTypes.end());
-  sixpack_ebi.output = "http://edamontology.org/data_2977";
-  emboss.push_back(sixpack_ebi);
-
-  Tool sizeseq;
-  sizeseq.name = "sizeseq";
-  sizeseq.id = "sizeseq";
-  sizeseq.operations = {"sizeseq"};
-  sizeseq.type = "tool";
-  sizeseq.inputs = {};
-  sizeseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  sizeseq.inputs.push_back(ins);
-  sizeseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (sizeseq.inTypes.begin(),sizeseq.inTypes.end());
-  sizeseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(sizeseq);
-
-  Tool skipredundant;
-  skipredundant.name = "skipredundant";
-  skipredundant.id = "skipredundant";
-  skipredundant.operations = {"skipredundant"};
-  skipredundant.type = "tool";
-  skipredundant.inputs = {};
-  skipredundant.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  skipredundant.inputs.push_back(ins);
-  skipredundant.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (skipredundant.inTypes.begin(),skipredundant.inTypes.end());
-  skipredundant.output = "http://edamontology.org/data_0849";
-  skipredundant.output = "http://edamontology.org/data_0874";
-  emboss.push_back(skipredundant);
-
-  Tool skipseq;
-  skipseq.name = "skipseq";
-  skipseq.id = "skipseq";
-  skipseq.operations = {"skipseq"};
-  skipseq.type = "tool";
-  skipseq.inputs = {};
-  skipseq.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  skipseq.inputs.push_back(ins);
-  skipseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (skipseq.inTypes.begin(),skipseq.inTypes.end());
-  skipseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(skipseq);
-
-  Tool splitsource;
-  splitsource.name = "splitsource";
-  splitsource.id = "splitsource";
-  splitsource.operations = {"splitsource"};
-  splitsource.type = "tool";
-  splitsource.inputs = {};
-  splitsource.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  splitsource.inputs.push_back(ins);
-  splitsource.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (splitsource.inTypes.begin(),splitsource.inTypes.end());
-  splitsource.output = "http://edamontology.org/data_0849";
-  emboss.push_back(splitsource);
-
-  Tool splitter;
-  splitter.name = "splitter";
-  splitter.id = "splitter";
-  splitter.operations = {"splitter"};
-  splitter.type = "tool";
-  splitter.inputs = {};
-  splitter.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  splitter.inputs.push_back(ins);
-  splitter.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (splitter.inTypes.begin(),splitter.inTypes.end());
-  splitter.output = "http://edamontology.org/data_0849";
-  emboss.push_back(splitter);
-
-  Tool stretcher;
-  stretcher.name = "stretcher";
-  stretcher.id = "stretcher";
-  stretcher.operations = {"stretcher"};
-  stretcher.type = "tool";
-  stretcher.inputs = {};
-  stretcher.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  stretcher.inputs.push_back(ins);
-  stretcher.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (stretcher.inTypes.begin(),stretcher.inTypes.end());
-  stretcher.output = "http://edamontology.org/data_0849";
-  stretcher.output = "http://edamontology.org/data_0849";
-  stretcher.output = "http://edamontology.org/data_0874";
-  emboss.push_back(stretcher);
-
-  Tool stretcher_ebi;
-  stretcher_ebi.name = "stretcher-ebi";
-  stretcher_ebi.id = "stretcher-ebi";
-  stretcher_ebi.operations = {"stretcher-ebi"};
-  stretcher_ebi.type = "tool";
-  stretcher_ebi.inputs = {};
-  stretcher_ebi.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  stretcher_ebi.inputs.push_back(ins);
-  stretcher_ebi.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (stretcher_ebi.inTypes.begin(),stretcher_ebi.inTypes.end());
-  stretcher_ebi.output = "http://edamontology.org/data_2044";
-  emboss.push_back(stretcher_ebi);
-
-  Tool stssearch;
-  stssearch.name = "stssearch";
-  stssearch.id = "stssearch";
-  stssearch.operations = {"stssearch"};
-  stssearch.type = "tool";
-  stssearch.inputs = {};
-  stssearch.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  stssearch.inputs.push_back(ins);
-  stssearch.inTypes.push_back("http://edamontology.org/data_1276");
-  sort (stssearch.inTypes.begin(),stssearch.inTypes.end());
-  stssearch.output = "http://edamontology.org/data_2887";
-  stssearch.output = "http://edamontology.org/data_0850";
-  emboss.push_back(stssearch);
-
-  Tool supermatcher;
-  supermatcher.name = "supermatcher";
-  supermatcher.id = "supermatcher";
-  supermatcher.operations = {"supermatcher"};
-  supermatcher.type = "tool";
-  supermatcher.inputs = {};
-  supermatcher.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  supermatcher.inputs.push_back(ins);
-  supermatcher.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (supermatcher.inTypes.begin(),supermatcher.inTypes.end());
-  supermatcher.output = "http://edamontology.org/data_0849";
-  supermatcher.output = "http://edamontology.org/data_0849";
-  supermatcher.output = "http://edamontology.org/data_0874";
-  emboss.push_back(supermatcher);
-
-  Tool syco;
-  syco.name = "syco";
-  syco.id = "syco";
-  syco.operations = {"syco"};
-  syco.type = "tool";
-  syco.inputs = {};
-  syco.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1600";
-  syco.inputs.push_back(ins);
-  syco.inTypes.push_back("http://edamontology.org/data_1600");
-  sort (syco.inTypes.begin(),syco.inTypes.end());
-  syco.output = "http://edamontology.org/data_0849";
-  syco.output = "http://edamontology.org/data_1597";
-  emboss.push_back(syco);
-
-  Tool taxget;
-  taxget.name = "taxget";
-  taxget.id = "taxget";
-  taxget.operations = {"taxget"};
-  taxget.type = "tool";
-  taxget.inputs = {};
-  taxget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2858";
-  taxget.inputs.push_back(ins);
-  taxget.inTypes.push_back("http://edamontology.org/data_2858");
-  sort (taxget.inTypes.begin(),taxget.inTypes.end());
-  emboss.push_back(taxget);
-
-  Tool taxgetdown;
-  taxgetdown.name = "taxgetdown";
-  taxgetdown.id = "taxgetdown";
-  taxgetdown.operations = {"taxgetdown"};
-  taxgetdown.type = "tool";
-  taxgetdown.inputs = {};
-  taxgetdown.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2858";
-  taxgetdown.inputs.push_back(ins);
-  taxgetdown.inTypes.push_back("http://edamontology.org/data_2858");
-  sort (taxgetdown.inTypes.begin(),taxgetdown.inTypes.end());
-  emboss.push_back(taxgetdown);
-
-  Tool taxgetrank;
-  taxgetrank.name = "taxgetrank";
-  taxgetrank.id = "taxgetrank";
-  taxgetrank.operations = {"taxgetrank"};
-  taxgetrank.type = "tool";
-  taxgetrank.inputs = {};
-  taxgetrank.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2858";
-  taxgetrank.inputs.push_back(ins);
-  taxgetrank.inTypes.push_back("http://edamontology.org/data_2858");
-  sort (taxgetrank.inTypes.begin(),taxgetrank.inTypes.end());
-  emboss.push_back(taxgetrank);
-
-  Tool taxgetspecies;
-  taxgetspecies.name = "taxgetspecies";
-  taxgetspecies.id = "taxgetspecies";
-  taxgetspecies.operations = {"taxgetspecies"};
-  taxgetspecies.type = "tool";
-  taxgetspecies.inputs = {};
-  taxgetspecies.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2858";
-  taxgetspecies.inputs.push_back(ins);
-  taxgetspecies.inTypes.push_back("http://edamontology.org/data_2858");
-  sort (taxgetspecies.inTypes.begin(),taxgetspecies.inTypes.end());
-  emboss.push_back(taxgetspecies);
-
-  Tool taxgetup;
-  taxgetup.name = "taxgetup";
-  taxgetup.id = "taxgetup";
-  taxgetup.operations = {"taxgetup"};
-  taxgetup.type = "tool";
-  taxgetup.inputs = {};
-  taxgetup.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2858";
-  taxgetup.inputs.push_back(ins);
-  taxgetup.inTypes.push_back("http://edamontology.org/data_2858");
-  sort (taxgetup.inTypes.begin(),taxgetup.inTypes.end());
-  emboss.push_back(taxgetup);
-
-  Tool tcode;
-  tcode.name = "tcode";
-  tcode.id = "tcode";
-  tcode.operations = {"tcode"};
-  tcode.type = "tool";
-  tcode.inputs = {};
-  tcode.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1276";
-  tcode.inputs.push_back(ins);
-  tcode.inTypes.push_back("http://edamontology.org/data_1276");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_2160";
-  tcode.inputs.push_back(ins);
-  tcode.inTypes.push_back("http://edamontology.org/data_2160");
-  sort (tcode.inTypes.begin(),tcode.inTypes.end());
-  tcode.output = "http://edamontology.org/data_2887";
-  tcode.output = "http://edamontology.org/data_0914";
-  emboss.push_back(tcode);
-
-  Tool textget;
-  textget.name = "textget";
-  textget.id = "textget";
-  textget.operations = {"textget"};
-  textget.type = "tool";
-  textget.inputs = {};
-  textget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  textget.inputs.push_back(ins);
-  textget.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (textget.inTypes.begin(),textget.inTypes.end());
-  textget.output = "http://edamontology.org/data_0957";
-  emboss.push_back(textget);
+  biotools.push_back(seqretsetall);
+
+  Tool sequenceserver;
+  sequenceserver.id = "sequenceserver";
+  sequenceserver.operations = {"sequenceserver"};
+  sequenceserver.type = "tool";
+
+  sequenceserver.inTypes = {};
+  sequenceserver.inTypes.push_back("http://edamontology.org/data_0867");
+  sequenceserver.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (sequenceserver.inTypes.begin(),sequenceserver.inTypes.end());
+  sequenceserver.output = "http://edamontology.org/data_2044";
+  biotools.push_back(sequenceserver);
+
+  Tool sib_blast;
+  sib_blast.id = "sib_blast";
+  sib_blast.operations = {"sib_blast"};
+  sib_blast.type = "tool";
+
+  sib_blast.inTypes = {};
+  sib_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (sib_blast.inTypes.begin(),sib_blast.inTypes.end());
+  sib_blast.output = "http://edamontology.org/data_2976";
+  biotools.push_back(sib_blast);
+
+  Tool silva;
+  silva.id = "silva";
+  silva.operations = {"silva"};
+  silva.type = "tool";
+
+  silva.inTypes = {};
+  silva.inTypes.push_back("http://edamontology.org/data_2955");
+  silva.inTypes.push_back("http://edamontology.org/data_1383");
+  sort (silva.inTypes.begin(),silva.inTypes.end());
+  silva.output = "http://edamontology.org/data_1097";
+  silva.output = "http://edamontology.org/data_1868";
+  silva.output = "http://edamontology.org/data_1046";
+  silva.output = "http://edamontology.org/data_1088";
+  silva.output = "http://edamontology.org/data_2909";
+  biotools.push_back(silva);
+
+  Tool silvangs;
+  silvangs.id = "silvangs";
+  silvangs.operations = {"silvangs"};
+  silvangs.type = "tool";
+
+  silvangs.inTypes = {};
+  silvangs.inTypes.push_back("http://edamontology.org/data_2977");
+  silvangs.inTypes.push_back("http://edamontology.org/data_2082");
+  silvangs.inTypes.push_back("http://edamontology.org/data_2884");
+  silvangs.inTypes.push_back("http://edamontology.org/data_2048");
+  silvangs.inTypes.push_back("http://edamontology.org/data_1246");
+  silvangs.inTypes.push_back("http://edamontology.org/data_2977");
+  sort (silvangs.inTypes.begin(),silvangs.inTypes.end());
+  silvangs.output = "http://edamontology.org/data_2977";
+  biotools.push_back(silvangs);
+
+  Tool sisyphus;
+  sisyphus.id = "sisyphus";
+  sisyphus.operations = {"sisyphus"};
+  sisyphus.type = "tool";
+
+  sisyphus.inTypes = {};
+  sisyphus.inTypes.push_back("http://edamontology.org/data_1481");
+  sort (sisyphus.inTypes.begin(),sisyphus.inTypes.end());
+  sisyphus.output = "http://edamontology.org/data_2793";
+  biotools.push_back(sisyphus);
+
+  Tool slider;
+  slider.id = "slider";
+  slider.operations = {"slider"};
+  slider.type = "tool";
+
+  slider.inTypes = {};
+  slider.inTypes.push_back("http://edamontology.org/data_1383");
+  slider.inTypes.push_back("http://edamontology.org/data_0867");
+  sort (slider.inTypes.begin(),slider.inTypes.end());
+  slider.output = "http://edamontology.org/data_2959";
+  slider.output = "http://edamontology.org/data_2093";
+  biotools.push_back(slider);
+
+  Tool smart;
+  smart.id = "smart";
+  smart.operations = {"smart"};
+  smart.type = "tool";
+
+  smart.inTypes = {};
+  smart.inTypes.push_back("http://edamontology.org/data_1537");
+  sort (smart.inTypes.begin(),smart.inTypes.end());
+  smart.output = "http://edamontology.org/data_2782";
+  biotools.push_back(smart);
+
+  Tool spem;
+  spem.id = "spem";
+  spem.operations = {"spem"};
+  spem.type = "tool";
+
+  spem.inTypes = {};
+  spem.inTypes.push_back("http://edamontology.org/data_2600");
+  sort (spem.inTypes.begin(),spem.inTypes.end());
+  spem.output = "http://edamontology.org/data_2603";
+  biotools.push_back(spem);
+
+  Tool spliceaid;
+  spliceaid.id = "spliceaid";
+  spliceaid.operations = {"spliceaid"};
+  spliceaid.type = "tool";
+
+  spliceaid.inTypes = {};
+  spliceaid.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (spliceaid.inTypes.begin(),spliceaid.inTypes.end());
+  spliceaid.output = "http://edamontology.org/data_1009";
+  biotools.push_back(spliceaid);
+
+  Tool swepep;
+  swepep.id = "swepep";
+  swepep.operations = {"swepep"};
+  swepep.type = "tool";
+
+  swepep.inTypes = {};
+  swepep.inTypes.push_back("http://edamontology.org/data_2979");
+  sort (swepep.inTypes.begin(),swepep.inTypes.end());
+  swepep.output = "http://edamontology.org/data_2906";
+  biotools.push_back(swepep);
+
+  Tool swipe;
+  swipe.id = "swipe";
+  swipe.operations = {"swipe"};
+  swipe.type = "tool";
+
+  swipe.inTypes = {};
+  swipe.inTypes.push_back("http://edamontology.org/data_1383");
+  swipe.inTypes.push_back("http://edamontology.org/data_1384");
+  sort (swipe.inTypes.begin(),swipe.inTypes.end());
+  swipe.output = "http://edamontology.org/data_2976";
+  swipe.output = "http://edamontology.org/data_2977";
+  biotools.push_back(swipe);
+
+  Tool swiss_2dpage;
+  swiss_2dpage.id = "swiss_2dpage";
+  swiss_2dpage.operations = {"swiss_2dpage"};
+  swiss_2dpage.type = "tool";
+
+  swiss_2dpage.inTypes = {};
+  swiss_2dpage.inTypes.push_back("http://edamontology.org/data_2531");
+  sort (swiss_2dpage.inTypes.begin(),swiss_2dpage.inTypes.end());
+  swiss_2dpage.output = "http://edamontology.org/data_0989";
+  biotools.push_back(swiss_2dpage);
+
+  Tool systempiper;
+  systempiper.id = "systempiper";
+  systempiper.operations = {"systempiper"};
+  systempiper.type = "tool";
+
+  systempiper.inTypes = {};
+  systempiper.inTypes.push_back("http://edamontology.org/data_1383");
+  sort (systempiper.inTypes.begin(),systempiper.inTypes.end());
+  systempiper.output = "http://edamontology.org/data_0849";
+  biotools.push_back(systempiper);
+
+  Tool tapir;
+  tapir.id = "tapir";
+  tapir.operations = {"tapir"};
+  tapir.type = "tool";
+
+  tapir.inTypes = {};
+  tapir.inTypes.push_back("http://edamontology.org/data_1276");
+  sort (tapir.inTypes.begin(),tapir.inTypes.end());
+  tapir.output = "http://edamontology.org/data_1234";
+  biotools.push_back(tapir);
+
+  Tool tassdb;
+  tassdb.id = "tassdb";
+  tassdb.operations = {"tassdb"};
+  tassdb.type = "tool";
+
+  tassdb.inTypes = {};
+  tassdb.inTypes.push_back("http://edamontology.org/data_1276");
+  sort (tassdb.inTypes.begin(),tassdb.inTypes.end());
+  tassdb.output = "http://edamontology.org/data_1026";
+  biotools.push_back(tassdb);
+
+  Tool tcdb;
+  tcdb.id = "tcdb";
+  tcdb.operations = {"tcdb"};
+  tcdb.type = "tool";
+
+  tcdb.inTypes = {};
+  tcdb.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (tcdb.inTypes.begin(),tcdb.inTypes.end());
+  tcdb.output = "http://edamontology.org/data_2756";
+  biotools.push_back(tcdb);
+
+  Tool ternarynet;
+  ternarynet.id = "ternarynet";
+  ternarynet.operations = {"ternarynet"};
+  ternarynet.type = "tool";
+
+  ternarynet.inTypes = {};
+  ternarynet.inTypes.push_back("http://edamontology.org/data_0951");
+  sort (ternarynet.inTypes.begin(),ternarynet.inTypes.end());
+  ternarynet.output = "http://edamontology.org/data_3108";
+  ternarynet.output = "http://edamontology.org/data_3112";
+  biotools.push_back(ternarynet);
 
   Tool textsearch;
-  textsearch.name = "textsearch";
   textsearch.id = "textsearch";
   textsearch.operations = {"textsearch"};
   textsearch.type = "tool";
-  textsearch.inputs = {};
-  textsearch.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_3756";
-  textsearch.inputs.push_back(ins);
+  textsearch.inTypes = {};
   textsearch.inTypes.push_back("http://edamontology.org/data_3756");
   sort (textsearch.inTypes.begin(),textsearch.inTypes.end());
   textsearch.output = "http://edamontology.org/data_0849";
-  emboss.push_back(textsearch);
+  biotools.push_back(textsearch);
 
-  Tool tfextract;
-  tfextract.name = "tfextract";
-  tfextract.id = "tfextract";
-  tfextract.operations = {"tfextract"};
-  tfextract.type = "tool";
-  tfextract.inputs = {};
-  tfextract.inTypes = {};
+  Tool theseed;
+  theseed.id = "theseed";
+  theseed.operations = {"theseed"};
+  theseed.type = "tool";
 
-  sort (tfextract.inTypes.begin(),tfextract.inTypes.end());
-  tfextract.output = "http://edamontology.org/data_0896";
-  emboss.push_back(tfextract);
+  theseed.inTypes = {};
+  theseed.inTypes.push_back("http://edamontology.org/data_2711");
+  sort (theseed.inTypes.begin(),theseed.inTypes.end());
+  theseed.output = "http://edamontology.org/data_2737";
+  biotools.push_back(theseed);
 
-  Tool tfm;
-  tfm.name = "tfm";
-  tfm.id = "tfm";
-  tfm.operations = {"tfm"};
-  tfm.type = "tool";
-  tfm.inputs = {};
-  tfm.inTypes = {};
+  Tool tigrfams;
+  tigrfams.id = "tigrfams";
+  tigrfams.operations = {"tigrfams"};
+  tigrfams.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  tfm.inputs.push_back(ins);
-  tfm.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (tfm.inTypes.begin(),tfm.inTypes.end());
-  emboss.push_back(tfm);
+  tigrfams.inTypes = {};
+  tigrfams.inTypes.push_back("http://edamontology.org/data_1354");
+  sort (tigrfams.inTypes.begin(),tigrfams.inTypes.end());
+  tigrfams.output = "http://edamontology.org/data_1141";
+  biotools.push_back(tigrfams);
 
-  Tool tfscan;
-  tfscan.name = "tfscan";
-  tfscan.id = "tfscan";
-  tfscan.operations = {"tfscan"};
-  tfscan.type = "tool";
-  tfscan.inputs = {};
-  tfscan.inTypes = {};
+  Tool topdb;
+  topdb.id = "topdb";
+  topdb.operations = {"topdb"};
+  topdb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0916";
-  tfscan.inputs.push_back(ins);
-  tfscan.inTypes.push_back("http://edamontology.org/data_0916");
-  sort (tfscan.inTypes.begin(),tfscan.inTypes.end());
-  tfscan.output = "http://edamontology.org/data_2887";
-  tfscan.output = "http://edamontology.org/data_0896";
-  emboss.push_back(tfscan);
+  topdb.inTypes = {};
+  topdb.inTypes.push_back("http://edamontology.org/data_1277");
+  sort (topdb.inTypes.begin(),topdb.inTypes.end());
+  topdb.output = "http://edamontology.org/data_2789";
+  biotools.push_back(topdb);
 
-  Tool tranalign;
-  tranalign.name = "tranalign";
-  tranalign.id = "tranalign";
-  tranalign.operations = {"tranalign"};
-  tranalign.type = "tool";
-  tranalign.inputs = {};
-  tranalign.inTypes = {};
+  Tool toxodb;
+  toxodb.id = "toxodb";
+  toxodb.operations = {"toxodb"};
+  toxodb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  tranalign.inputs.push_back(ins);
-  tranalign.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (tranalign.inTypes.begin(),tranalign.inTypes.end());
-  tranalign.output = "http://edamontology.org/data_0849";
-  tranalign.output = "http://edamontology.org/data_1384";
-  emboss.push_back(tranalign);
+  toxodb.inTypes = {};
+  toxodb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (toxodb.inTypes.begin(),toxodb.inTypes.end());
+  toxodb.output = "http://edamontology.org/data_2295";
+  biotools.push_back(toxodb);
 
-  Tool transeq;
-  transeq.name = "transeq";
-  transeq.id = "transeq";
-  transeq.operations = {"transeq"};
-  transeq.type = "tool";
-  transeq.inputs = {};
-  transeq.inTypes = {};
+  Tool trans_abyss;
+  trans_abyss.id = "trans_abyss";
+  trans_abyss.operations = {"trans_abyss"};
+  trans_abyss.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2886";
-  transeq.inputs.push_back(ins);
-  transeq.inTypes.push_back("http://edamontology.org/data_2886");
-  sort (transeq.inTypes.begin(),transeq.inTypes.end());
-  transeq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(transeq);
+  trans_abyss.inTypes = {};
+  trans_abyss.inTypes.push_back("http://edamontology.org/data_2977");
+  sort (trans_abyss.inTypes.begin(),trans_abyss.inTypes.end());
+  trans_abyss.output = "http://edamontology.org/data_2977";
+  biotools.push_back(trans_abyss);
 
-  Tool transeq_ebi;
-  transeq_ebi.name = "transeq-ebi";
-  transeq_ebi.id = "transeq-ebi";
-  transeq_ebi.operations = {"transeq-ebi"};
-  transeq_ebi.type = "tool";
-  transeq_ebi.inputs = {};
-  transeq_ebi.inTypes = {};
+  Tool trichdb;
+  trichdb.id = "trichdb";
+  trichdb.operations = {"trichdb"};
+  trichdb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2977";
-  transeq_ebi.inputs.push_back(ins);
-  transeq_ebi.inTypes.push_back("http://edamontology.org/data_2977");
-  sort (transeq_ebi.inTypes.begin(),transeq_ebi.inTypes.end());
-  transeq_ebi.output = "http://edamontology.org/data_2976";
-  emboss.push_back(transeq_ebi);
+  trichdb.inTypes = {};
+  trichdb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (trichdb.inTypes.begin(),trichdb.inTypes.end());
+  trichdb.output = "http://edamontology.org/data_2295";
+  biotools.push_back(trichdb);
 
-  Tool trimest;
-  trimest.name = "trimest";
-  trimest.id = "trimest";
-  trimest.operations = {"trimest"};
-  trimest.type = "tool";
-  trimest.inputs = {};
-  trimest.inTypes = {};
+  Tool trifusion;
+  trifusion.id = "trifusion";
+  trifusion.operations = {"trifusion"};
+  trifusion.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  trimest.inputs.push_back(ins);
-  trimest.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (trimest.inTypes.begin(),trimest.inTypes.end());
-  trimest.output = "http://edamontology.org/data_2887";
-  emboss.push_back(trimest);
+  trifusion.inTypes = {};
+  trifusion.inTypes.push_back("http://edamontology.org/data_0850");
+  sort (trifusion.inTypes.begin(),trifusion.inTypes.end());
+  trifusion.output = "http://edamontology.org/data_0850";
+  biotools.push_back(trifusion);
 
-  Tool trimseq;
-  trimseq.name = "trimseq";
-  trimseq.id = "trimseq";
-  trimseq.operations = {"trimseq"};
-  trimseq.type = "tool";
-  trimseq.inputs = {};
-  trimseq.inTypes = {};
+  Tool triton;
+  triton.id = "triton";
+  triton.operations = {"triton"};
+  triton.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  trimseq.inputs.push_back(ins);
-  trimseq.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (trimseq.inTypes.begin(),trimseq.inTypes.end());
-  trimseq.output = "http://edamontology.org/data_0849";
-  emboss.push_back(trimseq);
+  triton.inTypes = {};
+  triton.inTypes.push_back("http://edamontology.org/data_2048");
+  sort (triton.inTypes.begin(),triton.inTypes.end());
+  triton.output = "http://edamontology.org/data_1759";
+  biotools.push_back(triton);
 
-  Tool trimspace;
-  trimspace.name = "trimspace";
-  trimspace.id = "trimspace";
-  trimspace.operations = {"trimspace"};
-  trimspace.type = "tool";
-  trimspace.inputs = {};
-  trimspace.inTypes = {};
+  Tool tuberculist;
+  tuberculist.id = "tuberculist";
+  tuberculist.operations = {"tuberculist"};
+  tuberculist.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2048";
-  trimspace.inputs.push_back(ins);
-  trimspace.inTypes.push_back("http://edamontology.org/data_2048");
-  sort (trimspace.inTypes.begin(),trimspace.inTypes.end());
-  trimspace.output = "http://edamontology.org/data_2048";
-  emboss.push_back(trimspace);
+  tuberculist.inTypes = {};
+  tuberculist.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (tuberculist.inTypes.begin(),tuberculist.inTypes.end());
+  tuberculist.output = "http://edamontology.org/data_1097";
+  biotools.push_back(tuberculist);
 
   Tool twofeat;
-  twofeat.name = "twofeat";
   twofeat.id = "twofeat";
   twofeat.operations = {"twofeat"};
   twofeat.type = "tool";
-  twofeat.inputs = {};
-  twofeat.inTypes = {};
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1255";
-  twofeat.inputs.push_back(ins);
+  twofeat.inTypes = {};
   twofeat.inTypes.push_back("http://edamontology.org/data_1255");
   sort (twofeat.inTypes.begin(),twofeat.inTypes.end());
   twofeat.output = "http://edamontology.org/data_0849";
-  emboss.push_back(twofeat);
+  biotools.push_back(twofeat);
 
-  Tool emboss_union;
-  emboss_union.name = "emboss_union";
-  emboss_union.id = "emboss_union";
-  emboss_union.operations = {"emboss_union"};
-  emboss_union.type = "tool";
-  emboss_union.inputs = {};
-  emboss_union.inTypes = {};
+  Tool unicarb_db;
+  unicarb_db.id = "unicarb_db";
+  unicarb_db.operations = {"unicarb_db"};
+  unicarb_db.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  emboss_union.inputs.push_back(ins);
-  emboss_union.inTypes.push_back("http://edamontology.org/data_0849");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_0850";
-  emboss_union.inputs.push_back(ins);
-  emboss_union.inTypes.push_back("http://edamontology.org/data_0850");
-  sort (emboss_union.inTypes.begin(),emboss_union.inTypes.end());
-  emboss_union.output = "http://edamontology.org/data_0849";
-  emboss.push_back(emboss_union);
+  unicarb_db.inTypes = {};
+  unicarb_db.inTypes.push_back("http://edamontology.org/data_3425");
+  sort (unicarb_db.inTypes.begin(),unicarb_db.inTypes.end());
+  unicarb_db.output = "http://edamontology.org/data_0968";
+  biotools.push_back(unicarb_db);
 
-  Tool urlget;
-  urlget.name = "urlget";
-  urlget.id = "urlget";
-  urlget.operations = {"urlget"};
-  urlget.type = "tool";
-  urlget.inputs = {};
-  urlget.inTypes = {};
+  Tool unigene;
+  unigene.id = "unigene";
+  unigene.operations = {"unigene"};
+  unigene.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  urlget.inputs.push_back(ins);
-  urlget.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (urlget.inTypes.begin(),urlget.inTypes.end());
-  urlget.output = "http://edamontology.org/data_0957";
-  emboss.push_back(urlget);
+  unigene.inTypes = {};
+  unigene.inTypes.push_back("http://edamontology.org/data_3134");
+  sort (unigene.inTypes.begin(),unigene.inTypes.end());
+  unigene.output = "http://edamontology.org/data_2594";
+  unigene.output = "http://edamontology.org/data_1104";
+  biotools.push_back(unigene);
 
-  Tool variationget;
-  variationget.name = "variationget";
-  variationget.id = "variationget";
-  variationget.operations = {"variationget"};
-  variationget.type = "tool";
-  variationget.inputs = {};
-  variationget.inTypes = {};
+  Tool uniprot_ws;
+  uniprot_ws.id = "uniprot_ws";
+  uniprot_ws.operations = {"uniprot_ws"};
+  uniprot_ws.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0849";
-  variationget.inputs.push_back(ins);
-  variationget.inTypes.push_back("http://edamontology.org/data_0849");
-  sort (variationget.inTypes.begin(),variationget.inTypes.end());
-  variationget.output = "http://edamontology.org/data_0849";
-  emboss.push_back(variationget);
+  uniprot_ws.inTypes = {};
+  uniprot_ws.inTypes.push_back("http://edamontology.org/data_2976");
+  sort (uniprot_ws.inTypes.begin(),uniprot_ws.inTypes.end());
+  uniprot_ws.output = "http://edamontology.org/data_0842";
+  biotools.push_back(uniprot_ws);
 
-  Tool vectorstrip;
-  vectorstrip.name = "vectorstrip";
-  vectorstrip.id = "vectorstrip";
-  vectorstrip.operations = {"vectorstrip"};
-  vectorstrip.type = "tool";
-  vectorstrip.inputs = {};
-  vectorstrip.inTypes = {};
+  Tool uniprot_blast;
+  uniprot_blast.id = "uniprot_blast";
+  uniprot_blast.operations = {"uniprot_blast"};
+  uniprot_blast.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_2887";
-  vectorstrip.inputs.push_back(ins);
-  vectorstrip.inTypes.push_back("http://edamontology.org/data_2887");
-  sort (vectorstrip.inTypes.begin(),vectorstrip.inTypes.end());
-  vectorstrip.output = "http://edamontology.org/data_2887";
-  vectorstrip.output = "http://edamontology.org/data_0850";
-  emboss.push_back(vectorstrip);
+  uniprot_blast.inTypes = {};
+  uniprot_blast.inTypes.push_back("http://edamontology.org/data_0857");
+  sort (uniprot_blast.inTypes.begin(),uniprot_blast.inTypes.end());
+  uniprot_blast.output = "http://edamontology.org/data_2976";
+  biotools.push_back(uniprot_blast);
 
-  Tool water;
-  water.name = "water";
-  water.id = "water";
-  water.operations = {"water"};
-  water.type = "tool";
-  water.inputs = {};
-  water.inTypes = {};
+  Tool uniref;
+  uniref.id = "uniref";
+  uniref.operations = {"uniref"};
+  uniref.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  water.inputs.push_back(ins);
-  water.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (water.inTypes.begin(),water.inTypes.end());
-  water.output = "http://edamontology.org/data_0849";
-  water.output = "http://edamontology.org/data_0849";
-  water.output = "http://edamontology.org/data_0874";
-  emboss.push_back(water);
+  uniref.inTypes = {};
+  uniref.inTypes.push_back("http://edamontology.org/data_1245");
+  sort (uniref.inTypes.begin(),uniref.inTypes.end());
+  uniref.output = "http://edamontology.org/data_2347";
+  biotools.push_back(uniref);
 
-  Tool water_ebi;
-  water_ebi.name = "water-ebi";
-  water_ebi.id = "water-ebi";
-  water_ebi.operations = {"water-ebi"};
-  water_ebi.type = "tool";
-  water_ebi.inputs = {};
-  water_ebi.inTypes = {};
+  Tool unite_rdna;
+  unite_rdna.id = "unite_rdna";
+  unite_rdna.operations = {"unite_rdna"};
+  unite_rdna.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  water_ebi.inputs.push_back(ins);
-  water_ebi.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (water_ebi.inTypes.begin(),water_ebi.inTypes.end());
-  water_ebi.output = "http://edamontology.org/data_2044";
-  emboss.push_back(water_ebi);
+  unite_rdna.inTypes = {};
+  unite_rdna.inTypes.push_back("http://edamontology.org/data_2955");
+  sort (unite_rdna.inTypes.begin(),unite_rdna.inTypes.end());
+  unite_rdna.output = "http://edamontology.org/data_2390";
+  biotools.push_back(unite_rdna);
 
-  Tool whichdb;
-  whichdb.name = "whichdb";
-  whichdb.id = "whichdb";
-  whichdb.operations = {"whichdb"};
-  whichdb.type = "tool";
-  whichdb.inputs = {};
-  whichdb.inTypes = {};
+  Tool unitrap;
+  unitrap.id = "unitrap";
+  unitrap.operations = {"unitrap"};
+  unitrap.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  whichdb.inputs.push_back(ins);
-  whichdb.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (whichdb.inTypes.begin(),whichdb.inTypes.end());
-  emboss.push_back(whichdb);
+  unitrap.inTypes = {};
+  unitrap.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (unitrap.inTypes.begin(),unitrap.inTypes.end());
+  unitrap.output = "http://edamontology.org/data_1033";
+  biotools.push_back(unitrap);
 
-  Tool wobble;
-  wobble.name = "wobble";
-  wobble.id = "wobble";
-  wobble.operations = {"wobble"};
-  wobble.type = "tool";
-  wobble.inputs = {};
-  wobble.inTypes = {};
+  Tool v_pipe;
+  v_pipe.id = "v_pipe";
+  v_pipe.operations = {"v_pipe"};
+  v_pipe.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1261";
-  wobble.inputs.push_back(ins);
-  wobble.inTypes.push_back("http://edamontology.org/data_1261");
-  sort (wobble.inTypes.begin(),wobble.inTypes.end());
-  wobble.output = "http://edamontology.org/data_2887";
-  emboss.push_back(wobble);
+  v_pipe.inTypes = {};
+  v_pipe.inTypes.push_back("http://edamontology.org/data_0920");
+  sort (v_pipe.inTypes.begin(),v_pipe.inTypes.end());
+  v_pipe.output = "http://edamontology.org/data_2975";
+  biotools.push_back(v_pipe);
 
-  Tool wordcount;
-  wordcount.name = "wordcount";
-  wordcount.id = "wordcount";
-  wordcount.operations = {"wordcount"};
-  wordcount.type = "tool";
-  wordcount.inputs = {};
-  wordcount.inTypes = {};
+  Tool vhldb;
+  vhldb.id = "vhldb";
+  vhldb.operations = {"vhldb"};
+  vhldb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1261";
-  wordcount.inputs.push_back(ins);
-  wordcount.inTypes.push_back("http://edamontology.org/data_1261");
-  sort (wordcount.inTypes.begin(),wordcount.inTypes.end());
-  wordcount.output = "http://edamontology.org/data_0849";
-  emboss.push_back(wordcount);
+  vhldb.inTypes = {};
+  vhldb.inTypes.push_back("http://edamontology.org/data_0896");
+  sort (vhldb.inTypes.begin(),vhldb.inTypes.end());
+  vhldb.output = "http://edamontology.org/data_2538";
+  biotools.push_back(vhldb);
 
-  Tool wordfinder;
-  wordfinder.name = "wordfinder";
-  wordfinder.id = "wordfinder";
-  wordfinder.operations = {"wordfinder"};
-  wordfinder.type = "tool";
-  wordfinder.inputs = {};
-  wordfinder.inTypes = {};
+  Tool war;
+  war.id = "war";
+  war.operations = {"war"};
+  war.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  wordfinder.inputs.push_back(ins);
-  wordfinder.inTypes.push_back("http://edamontology.org/data_1381");
-  sort (wordfinder.inTypes.begin(),wordfinder.inTypes.end());
-  wordfinder.output = "http://edamontology.org/data_0849";
-  wordfinder.output = "http://edamontology.org/data_0849";
-  wordfinder.output = "http://edamontology.org/data_0874";
-  emboss.push_back(wordfinder);
+  war.inTypes = {};
+  war.inTypes.push_back("http://edamontology.org/data_0863");
+  sort (war.inTypes.begin(),war.inTypes.end());
+  war.output = "http://edamontology.org/data_3495";
+  war.output = "http://edamontology.org/data_0863";
+  biotools.push_back(war);
 
-  Tool wordmatch;
-  wordmatch.name = "wordmatch";
-  wordmatch.id = "wordmatch";
-  wordmatch.operations = {"wordmatch"};
-  wordmatch.type = "tool";
-  wordmatch.inputs = {};
-  wordmatch.inTypes = {};
+  Tool worfdb;
+  worfdb.id = "worfdb";
+  worfdb.operations = {"worfdb"};
+  worfdb.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_1381";
-  wordmatch.inputs.push_back(ins);
-  wordmatch.inTypes.push_back("http://edamontology.org/data_1381");
-  ins.label = "output1";
-  ins.type = "http://edamontology.org/data_1255";
-  wordmatch.inputs.push_back(ins);
-  wordmatch.inTypes.push_back("http://edamontology.org/data_1255");
-  ins.label = "output2";
-  ins.type = "http://edamontology.org/data_1255";
-  wordmatch.inputs.push_back(ins);
-  wordmatch.inTypes.push_back("http://edamontology.org/data_1255");
-  sort (wordmatch.inTypes.begin(),wordmatch.inTypes.end());
-  wordmatch.output = "http://edamontology.org/data_0849";
-  wordmatch.output = "http://edamontology.org/data_0849";
-  emboss.push_back(wordmatch);
+  worfdb.inTypes = {};
+  worfdb.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (worfdb.inTypes.begin(),worfdb.inTypes.end());
+  worfdb.output = "http://edamontology.org/data_1807";
+  biotools.push_back(worfdb);
 
-  Tool wossdata;
-  wossdata.name = "wossdata";
-  wossdata.id = "wossdata";
-  wossdata.operations = {"wossdata"};
-  wossdata.type = "tool";
-  wossdata.inputs = {};
-  wossdata.inTypes = {};
+  Tool world_2dpage;
+  world_2dpage.id = "world_2dpage";
+  world_2dpage.operations = {"world_2dpage"};
+  world_2dpage.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossdata.inputs.push_back(ins);
-  wossdata.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossdata.inTypes.begin(),wossdata.inTypes.end());
-  emboss.push_back(wossdata);
+  world_2dpage.inTypes = {};
+  world_2dpage.inTypes.push_back("http://edamontology.org/data_2531");
+  sort (world_2dpage.inTypes.begin(),world_2dpage.inTypes.end());
+  world_2dpage.output = "http://edamontology.org/data_1096";
+  biotools.push_back(world_2dpage);
 
-  Tool wossinput;
-  wossinput.name = "wossinput";
-  wossinput.id = "wossinput";
-  wossinput.operations = {"wossinput"};
-  wossinput.type = "tool";
-  wossinput.inputs = {};
-  wossinput.inTypes = {};
+  Tool wormbase;
+  wormbase.id = "wormbase";
+  wormbase.operations = {"wormbase"};
+  wormbase.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossinput.inputs.push_back(ins);
-  wossinput.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossinput.inTypes.begin(),wossinput.inTypes.end());
-  emboss.push_back(wossinput);
+  wormbase.inTypes = {};
+  wormbase.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (wormbase.inTypes.begin(),wormbase.inTypes.end());
+  wormbase.output = "http://edamontology.org/data_1026";
+  biotools.push_back(wormbase);
 
-  Tool wossname;
-  wossname.name = "wossname";
-  wossname.id = "wossname";
-  wossname.operations = {"wossname"};
-  wossname.type = "tool";
-  wossname.inputs = {};
-  wossname.inTypes = {};
+  Tool yeast_gene_order_browser;
+  yeast_gene_order_browser.id = "yeast_gene_order_browser";
+  yeast_gene_order_browser.operations = {"yeast_gene_order_browser"};
+  yeast_gene_order_browser.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossname.inputs.push_back(ins);
-  wossname.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossname.inTypes.begin(),wossname.inTypes.end());
-  emboss.push_back(wossname);
+  yeast_gene_order_browser.inTypes = {};
+  yeast_gene_order_browser.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (yeast_gene_order_browser.inTypes.begin(),yeast_gene_order_browser.inTypes.end());
+  yeast_gene_order_browser.output = "http://edamontology.org/data_1026";
+  biotools.push_back(yeast_gene_order_browser);
 
-  Tool wossoperation;
-  wossoperation.name = "wossoperation";
-  wossoperation.id = "wossoperation";
-  wossoperation.operations = {"wossoperation"};
-  wossoperation.type = "tool";
-  wossoperation.inputs = {};
-  wossoperation.inTypes = {};
+  Tool yeastgfp;
+  yeastgfp.id = "yeastgfp";
+  yeastgfp.operations = {"yeastgfp"};
+  yeastgfp.type = "tool";
 
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossoperation.inputs.push_back(ins);
-  wossoperation.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossoperation.inTypes.begin(),wossoperation.inTypes.end());
-  emboss.push_back(wossoperation);
-
-  Tool wossoutput;
-  wossoutput.name = "wossoutput";
-  wossoutput.id = "wossoutput";
-  wossoutput.operations = {"wossoutput"};
-  wossoutput.type = "tool";
-  wossoutput.inputs = {};
-  wossoutput.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossoutput.inputs.push_back(ins);
-  wossoutput.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossoutput.inTypes.begin(),wossoutput.inTypes.end());
-  emboss.push_back(wossoutput);
-
-  Tool wossparam;
-  wossparam.name = "wossparam";
-  wossparam.id = "wossparam";
-  wossparam.operations = {"wossparam"};
-  wossparam.type = "tool";
-  wossparam.inputs = {};
-  wossparam.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wossparam.inputs.push_back(ins);
-  wossparam.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wossparam.inTypes.begin(),wossparam.inTypes.end());
-  emboss.push_back(wossparam);
-
-  Tool wosstopic;
-  wosstopic.name = "wosstopic";
-  wosstopic.id = "wosstopic";
-  wosstopic.operations = {"wosstopic"};
-  wosstopic.type = "tool";
-  wosstopic.inputs = {};
-  wosstopic.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0958";
-  wosstopic.inputs.push_back(ins);
-  wosstopic.inTypes.push_back("http://edamontology.org/data_0958");
-  sort (wosstopic.inTypes.begin(),wosstopic.inTypes.end());
-  emboss.push_back(wosstopic);
-
-  Tool xmlget;
-  xmlget.name = "xmlget";
-  xmlget.id = "xmlget";
-  xmlget.operations = {"xmlget"};
-  xmlget.type = "tool";
-  xmlget.inputs = {};
-  xmlget.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  xmlget.inputs.push_back(ins);
-  xmlget.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (xmlget.inTypes.begin(),xmlget.inTypes.end());
-  xmlget.output = "http://edamontology.org/data_0957";
-  emboss.push_back(xmlget);
-
-  Tool xmltext;
-  xmltext.name = "xmltext";
-  xmltext.id = "xmltext";
-  xmltext.operations = {"xmltext"};
-  xmltext.type = "tool";
-  xmltext.inputs = {};
-  xmltext.inTypes = {};
-
-  ins.label = "output0";
-  ins.type = "http://edamontology.org/data_0957";
-  xmltext.inputs.push_back(ins);
-  xmltext.inTypes.push_back("http://edamontology.org/data_0957");
-  sort (xmltext.inTypes.begin(),xmltext.inTypes.end());
-  xmltext.output = "http://edamontology.org/data_0957";
-  emboss.push_back(xmltext);
-
-  Tool yank;
-  yank.name = "yank";
-  yank.id = "yank";
-  yank.operations = {"yank"};
-  yank.type = "tool";
-  yank.inputs = {};
-  yank.inTypes = {};
-
-  sort (yank.inTypes.begin(),yank.inTypes.end());
-  yank.output = "http://edamontology.org/data_0849";
-  emboss.push_back(yank);
-  return emboss;
+  yeastgfp.inTypes = {};
+  yeastgfp.inTypes.push_back("http://edamontology.org/data_0916");
+  sort (yeastgfp.inTypes.begin(),yeastgfp.inTypes.end());
+  yeastgfp.output = "http://edamontology.org/data_1807";
+  biotools.push_back(yeastgfp);
+  return biotools;
 }
+
+//In total there were 393 tools output

@@ -98,13 +98,12 @@ int NDETree::GetSubTreeLength(int ind) {
 
   // Step 1: get the maximum depth of a node:
   int mdepth = Depths[ind];
-  int l = Depths.size() - ind;
-
-  // Step 2: loop over the tree until we reach its end and see if any node is higher.
+  
+  // Step 2: loop over the tree
   // If a node is higher (or equal) we store the last index which was lower and return it
   for(auto i = ind + 1; i < Depths.size(); i++)
-    if(Depths[i] <= mdepth) l = i - ind;
-  return l;
+    if(Depths[i] <= mdepth) return i - ind;
+  return Depths.size() - ind;
 }
 
 // Creates a new NDETree with a moved subtree compared to this one.
@@ -119,10 +118,11 @@ void NDETree::MoveSubTree(int from, int to) {
   // Now to extract the subtrees
   auto subDs = Slice(Depths, from, from + len);
   auto subTs = Slice(Tools , from, from + len);
-  // printf("subTs length: %d\n", subTs.size());
 
   // Update the depths:
-  for(auto i = 0; i < len; i++) subDs[i] += Depths[to] - Depths[from] + 1;
+  for(auto i = 0; i < len; i++) { subDs[i] += Depths[to] - Depths[from] + 1; 
+    if(subDs[i] < 0) printf("ERROR");
+  }
 
   // Recompile the vectors
   auto newTs = vector<Tool>();
@@ -145,6 +145,7 @@ void NDETree::MoveSubTree(int from, int to) {
   // Now update this tree...
   Depths = newDs;
   Tools = newTs;
+
 }
 
 
@@ -154,7 +155,6 @@ void NDETree::MoveSubTree(int from, int to) {
 
 void NDETree::EPO(int from, int to) {
   // See if the swap is valid or not, if it isn't, switch indices
-  // printf("EPO!\n");
   int len = GetSubTreeLength(from);
 
   if (to >= from && to < from + len) {
@@ -181,16 +181,12 @@ static int _findIndex(NDETree* tree, Tool tool) {
   //
   // printf("Find index\n");
   for(int i = 0; i < tree->Depths.size(); i++){
-     // printf("  Tree lengths %d and index %d\n", tree->Tools.size(), i);
-     // printf("  Tool at index: %s\n", tree->Tools[i].name.c_str());
-     // printf("  Supposed tool: %s\n", tool.name.c_str());
-     // fflush(stdout);
      if(tree->Tools[i] == tool) return i;
   }
   return -1;
 }
 
-static NDETree _ECOStep(NDETree fab, NDETree* ref) {
+static NDETree _ECOStep(NDETree& fab, NDETree* ref) {
   // Perform a single step of ECO
   // Determine what tool will get a new parent
   int v = rand() % (fab.Depths.size()-1) + 1;
@@ -248,12 +244,8 @@ NDETree NDETree::ECO(NDETree* base, NDETree* ref) {
 bool isOne(int x) { return x == 1; }
 
 NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
-  // Perform crossover by exchaging random subtrees
-  // We will only use lvel one subtrees... for now?
+  // Perform crossover by exchanging random subtrees of the root of the tree
   // Step one is to find how many subtrees we want:
-  // printf("SUBTREEEXCHANGE\n");
-  // fflush(stdout);
-
   int na = count(a->Depths.begin(), a->Depths.end(), 1);
   int nb = count(b->Depths.begin(), b->Depths.end(), 1);
   int c = 0;
@@ -263,7 +255,7 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
   
   // Determine which one is the lowest, then add a random amount to that.
   // This way we can get a value between na and nb
-  if (na == nb) c = na;
+  if (na == nb) c = na; // Catch the case where they are equal
   else if (na > nb)
     c = nb + rand() % (na-nb);
   else
@@ -285,33 +277,13 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
 
   for(auto i = 0; i < b->size(); i++)
      if (b->Depths[i] == 1) indsB.push_back(i);
-  
-  // printf("     indsA: ");
-  // for(auto i : indsA) printf("%d ", i);
-  // printf("\n");
-  
-  // printf("     indsB: ");
-  // for(auto i : indsB) printf("%d ", i);
-  // printf("\n");
-  
-  // Now we take the indices at random from each tree and copy them to the child!
+ 
+  // Now we take the indices at random 
   shuffle(indsA.begin(), indsA.end(), rng);
   shuffle(indsB.begin(), indsB.end(), rng);
   
-  // printf("  shuffleA: ");
-  // for(auto i : indsA) printf("%d ", i);
-  // printf("\n");
-  
-  // printf("  shuffleB: ");
-  // for(auto i : indsB) printf("%d ", i);
-  // printf("\n");
-
-
   // Now we get the subtrees and fill in the new list:
   vector<int> lensA = {}, lensB = {};
-  lensA.clear();
-  lensB.clear();
-
 
   // Retrieve the subtree lengths:
   for(auto i = 0; i < ca; i++)
@@ -319,11 +291,7 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
 
   for(auto i = 0; i < cb; i++)
      lensB.push_back(b->GetSubTreeLength(indsB[i]));
-  
-
-//  printf("Lengthsgot\n");
-//  fflush(stdout);
-  
+   
   // And now we extract the subtrees:
   _ntools.clear();
   _ndepths.clear();
@@ -331,37 +299,23 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
   _ntools.push_back(a->Tools[0]);
   _ndepths.push_back(0);
   
-
   // Take ca subtrees from the one tree and then cb from the other.
   for(auto i = 0; i < ca; i++) 
     if(lensA[i] > 0)
     {
-      // In the following two if statements there is an error somehow...  and we gotta figure it out
-      // printf("A index: %d size of array %d size of subtree %d vs %d \n", indsA[i], a->Tools.size(), lensA[i], a->GetSubTreeLength(indsA[i]));
-
       _ntools.insert(_ntools.end(), a->Tools.begin() + indsA[i], a->Tools.begin() + indsA[i]+lensA[i]);
       _ndepths.insert(_ndepths.end(), a->Depths.begin() + indsA[i], a->Depths.begin() + indsA[i]+lensA[i]);
     }
 
-  // printf("ca tools, done\n");
-  // fflush(stdout); 
-  // In the next two lines there is a bug possbile, somehow...
   for(auto i = 0; i < cb; i++) 
      if(lensB[i] > 0)
-     {
-      // printf("B index: %d size of array %d size of subtree %d vs %d \n", indsB[i], b->Tools.size(), lensB[i], b->GetSubTreeLength(indsB[i]));
-      
+     {  
        _ntools.insert(_ntools.end(), b->Tools.begin() + indsB[i], b->Tools.begin() + indsB[i] + lensB[i]);
        _ndepths.insert(_ndepths.end(), b->Depths.begin() + indsB[i], b->Depths.begin() + indsB[i] + lensB[i]);
      }
   
-//  printf("DONE\n");
-//  fflush(stdout);
   // And now we generate a new individual and return it!
   return NDETree(_ntools, _ndepths);
-
-  // Preferably we keep the subtrees unique...
-
 }
 
 // ==========================================================
@@ -370,6 +324,6 @@ NDETree NDETree::SubTreeExchange(NDETree* a, NDETree* b) {
 
 void NDETree::Print() {
   for(auto i = 0; i < Depths.size(); i++) 
-     printf("(%s, %d) ", Tools[i].name.c_str(), Depths[i]); 
+     printf("(%s, %d) ", Tools[i].id.c_str(), Depths[i]); 
   printf("\n");
 }

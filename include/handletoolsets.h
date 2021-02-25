@@ -77,6 +77,8 @@ public:
     }
     else if (tsn == FACTORIO)
       return _getFactorioTree();
+    else if (tsn == EMBOSS)
+      return _getBiotoolsTree();
   }
   
   // Solution helepr for the check solution function
@@ -154,8 +156,7 @@ private:
   }
 
   vector<Tool> _getEMBOSS() {
-    printf("Not yet implemented!\n");
-    return _getFactorio();
+    return biotools();
   }
 
 
@@ -352,6 +353,13 @@ private:
     };
     
     return NDETree(tools, depths);
+  }
+
+
+  NDETree _getBiotoolsTree() {
+    auto tools = {
+      dataset["profisis"],dataset["biogrid"],dataset["blast"];
+    }
   }
 
 
