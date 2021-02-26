@@ -1079,6 +1079,17 @@ vector<Tool> biotools() {
   biobb.output = "http://edamontology.org/data_0883";
   biotools.push_back(biobb);
 
+  Tool biogrid;
+  biogrid.id = "biogrid";
+  biogrid.operations = {"biogrid"};
+  biogrid.type = "tool";
+
+  biogrid.inTypes = {};
+  biogrid.inTypes.push_back("http://edamontology.org/data_2044");
+  sort (biogrid.inTypes.begin(),biogrid.inTypes.end());
+  biogrid.output = "http://edamontology.org/data_1276";
+  biotools.push_back(biogrid);
+
   Tool bionda;
   bionda.id = "bionda";
   bionda.operations = {"bionda"};
@@ -4739,4 +4750,4 @@ vector<Tool> biotools() {
   return biotools;
 }
 
-//In total there were 393 tools output
+//In total there were 394 tools output

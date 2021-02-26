@@ -40,6 +40,7 @@ def PrintOutput(outputs, recipe, ind = 2):
 
 def PrintInput(inputs, recipe, ind = 2):
     for input in inputs:
+        # print("DEBUG:: "+str(input))
         print(' ' * ind + recipe +'.inTypes.push_back("' + input['type']  + '");')
     #print(' '*ind + 'sort ('+ recipe+'.inputs.begin(),' + recipe+'.inputs.end());' )
     print(' '*ind + 'sort ('+ recipe+'.inTypes.begin(),' + recipe+'.inTypes.end());' )

@@ -2,11 +2,10 @@
 #include "common.h"
 #endif
 
+// Import the toolset generators
 #include "../src/datagenerators/imagemagickGenerator.cpp"
-
 #include "../src/datagenerators/factorioGenerator.cpp"
 #include "../src/datagenerators/factorioSolution.cpp"
-
 #include "../src/datagenerators/embossGenerator.cpp"
 
 // To compare whether two workflows are exactly the same
@@ -40,6 +39,7 @@ public:
        tools = _getFactorio();
        ExpandFactoriotoolset();
     }
+
     else if(toolsetname == IMAGEMAGICK) 
        tools = _getImageMagick();
     else if(toolsetname == EMBOSS)
@@ -54,8 +54,12 @@ public:
        toolset[t.id.c_str()] = t;
        dataset[t.id.c_str()] = t;
     }
-    
+
     for(auto n : forbiddentools) {
+	auto ind = toolset.find(n);
+        if (ind == toolset.end())
+	   continue;
+	
 	toolset.erase(toolset.find(n));
 
 	tools.erase(remove_if(begin(tools), end(tools), [n](Tool const& u)
@@ -156,7 +160,15 @@ private:
   }
 
   vector<Tool> _getEMBOSS() {
-    return biotools();
+    auto bt = biotools();
+
+    Tool input;
+    input.type = "resource";
+    input.id = "input";
+    input.output =  "http://edamontology.org/data_0857";
+    
+    bt.push_back(input);
+    return bt;
   }
 
 
@@ -357,9 +369,14 @@ private:
 
 
   NDETree _getBiotoolsTree() {
+    
+    
     auto tools = {
-      dataset["profisis"],dataset["biogrid"],dataset["blast"];
-    }
+      dataset["profisis"], dataset["biogrid"], dataset["blast"], dataset["input"]
+    };
+    auto depths = {0, 1, 2, 3};
+    
+    return NDETree(tools, depths);
   }
 
 

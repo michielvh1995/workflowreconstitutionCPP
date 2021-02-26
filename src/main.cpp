@@ -115,12 +115,15 @@ void Fitness(FitnessCalculator &fc, NDETree *tree){
   }
   if(FITNESS == 'a' || FITNESS == 'b' || FITNESS == 'l') // All, set B or LD
     tree->Fitness += fc.CalculateLDValue(tree);
+  // printf("%d\n",tree->Fitness);
   if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c' || FITNESS == 'd') // All, set B/d or Correctness
   {  tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
   }
+  // printf("%d\n",tree->Fitness);
   if(FITNESS == 'a' || FITNESS == 's' || FITNESS == 'd') // All, set d or size
   {    tree->Fitness += fc.CalculateSizeDifference(tree) ;
   }
+  // printf("%d\n",tree->Fitness);
   //if(FTNESS == 'a' || FITNESS == 'e')                  // All or EditDistance
   //  printf("Editdistance!");
 }
@@ -346,10 +349,8 @@ int main(int argc, char **argv) {
   auto t1 = std::chrono::high_resolution_clock::now();
   DataHandler data = DataHandler(ts, getForbidden(ts), CASE);
   
-  // printf("Retrieved the tools! \n");
+  printf("Retrieved the tools! \n");
   vector<Tool> tools = data.tools;
-  // for(auto t: tools) printf("%s\n", t.name.c_str());
-
 
   auto usableTools = data.toolset;
 
@@ -361,13 +362,21 @@ int main(int argc, char **argv) {
   if(verbose) {  
      printf("\nTrying to reconstitute this workflow: \n");
      goal.Print();
+     /*
+     for(auto t : goal.Tools) {
+        printf("\n%s outputs %s",t.id.c_str(), t.output.c_str());
+	printf(" and needs: ");
+	
+	for(auto it : t.inTypes)
+	   printf("   %s ", it.c_str());
+     }
+     */
+
   }
-
-
  
   // The fitness calculator object
   FitnessCalculator test(goal);
-  
+  Fitness(test, &goal); 
   // Let's try generating a pool completely at random
 //  pool = GenerateInitialPopRandomly(tools, goal);
 
