@@ -38,7 +38,6 @@ static NDETree GenerateRandomTree(int mdepth, int size, vector<Tool> toolset, To
 
 static vector<NDETree> _GenerateInitialPopRandomly(vector<Tool> toolset, NDETree goal) {
   vector<NDETree> pool;
-  goal.Print(); 
 
   for (auto i = 0; i< POOLSIZE; ++i) {
     // Determine what the maximum depth is, this is done by taking the depth of the original
