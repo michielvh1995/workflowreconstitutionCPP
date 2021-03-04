@@ -232,7 +232,7 @@ double average(vector<float> v) {
 }
 
 // Returns a tuple with the average fitness values and the average time cost to find the solution
-vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, char xof, DataHandler& dh, bool verbose = true) {
+vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, char xof, bool verbose = true) {
   int fitsum = 0; // Sum of the fitnesses
 
   // Keeping track of calculation time
@@ -350,7 +350,6 @@ int main(int argc, char **argv) {
   // ========================== Dataset ==========================
   // =============================================================
   // Retrieve the dataset
-  auto t1 = std::chrono::high_resolution_clock::now();
   DataHandler data = DataHandler(ts, getForbidden(ts), CASE);
   
   // printf("Retrieved the tools! \n");
@@ -387,7 +386,7 @@ int main(int argc, char **argv) {
  
   // The Population generator object
   Generator poolGen(usableTools, tools, goal);
-  vector<float> res = RunGame(poolGen, REPEATS, test, xof, data, verbose);
+  vector<float> res = RunGame(poolGen, REPEATS, test, xof, verbose);
   
   // Poolsize, size of toolset, p(mut), p(xo), goal-tree size, crossover function, fitness function, avg fitness, avg calctime, optimals found, testcase
   printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f & %c\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2], CASE);

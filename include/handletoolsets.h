@@ -266,6 +266,7 @@ private:
   // =============================================================
   NDETree _getIMCone() {
     auto tools = {
+     dataset["output"],
       dataset["imagemagick-draw-square"],
         dataset["imagemagick-new"],
           dataset["user-input-string"],
@@ -274,7 +275,7 @@ private:
 	    dataset["user-input-string"]
     };
     auto depths = {
-      0, 1, 2, 2, 2, 3
+      0, 1, 2, 3, 3, 3, 4
     };
     
     return NDETree(tools, depths);
@@ -300,6 +301,7 @@ private:
   // We have our one-bar flag tool
   NDETree _getIMCtwo() {
     auto tools = {
+     dataset["output"],
       dataset["create-flag-two-op"],
         dataset["user-input-string"],
 	dataset["user-input-int"],
@@ -307,7 +309,7 @@ private:
 	  dataset["user-input-string"]
     };
     auto depths = {
-      0, 1, 1, 1, 2
+      0, 1, 2, 2, 2, 3
     };
     
     return NDETree(tools, depths);
@@ -329,6 +331,7 @@ private:
  // Get the tree for case four: 
   NDETree _getIMCfour() {
     auto tools = {
+     dataset["output"],
         dataset["imagemagick-draw-square"],
           dataset["imagemagick-new"],
             dataset["user-input-string"],
@@ -337,7 +340,7 @@ private:
 	      dataset["user-input-string"]
     };
     auto depths = {
-      0, 1, 2, 2, 2, 3
+      0, 1, 2, 3, 3, 3, 4
     };
     
     return NDETree(tools, depths);

@@ -1,7 +1,7 @@
 import sys
 
 # Outpute file:
-outfil = "../results/roundTwoTests.csv"
+outfil = "../results/roundTwoTests2.csv"
 header = "Poolsize & count& pmut& pxo, goal.Tools.size()& xof& fof& avg fitness & avgtime & corrects&testcase\n"
 
 # Step one: get the base command and the common parameters:

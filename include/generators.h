@@ -56,15 +56,6 @@ static vector<NDETree> _GenerateInitialPopRandomly(vector<Tool> toolset, NDETree
   return pool;
 }
 
-static vector<NDETree> GenerateInitialPopOriginalOnly(NDETree goal) {
-  // Generate the initial population by copying the goal tree a million times
-  vector<NDETree> pool;
-
-  for (auto i = 0; i< POOLSIZE; ++i) pool.push_back(NDETree::Copy(goal));
-
-  return pool;
-}
-
 static vector<NDETree> _GenerateInitialPopRandomReplace(map<string, Tool> toolbox, vector<Tool> toolset, NDETree goal) {
   // Generate the initial population by copying the goal tree a million times
   //  however, this function also checks whether or not the tree has missing tools. Those are randomly filled in
