@@ -208,7 +208,7 @@ static NDETree _ECOStep(NDETree& fab, NDETree* ref) {
   int fpi = _findParent(&fab, ind);
 
   // If a parent is missing, quit it.
-  if(rpi == -1 | fpi == -1) return fab;
+  if(rpi == -1 || fpi == -1) return fab;
   // printf("Now to do EPO\n");
   // Now do EPO!
   fab.EPO(ind, fpi);

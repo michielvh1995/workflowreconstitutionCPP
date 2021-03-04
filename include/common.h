@@ -19,7 +19,7 @@ using namespace std;
 #define MAXINT			1E8
 #define PRELIMINARY             "p"
 #define FACTORIO                "f"
-#define EMBOSS	                "e"
+#define EMBOSS	                "b"
 #define IMAGEMAGICK             "i"
 
 
@@ -42,7 +42,7 @@ struct Tool {
 	inline bool operator ==(Tool a) {
 	  if(operations.size() != a.operations.size()) return false;
 
-	  int j = 0, acc = 0; // index of a and accounted for
+	  // int j = 0, acc = 0; // index of a and accounted for
 	  for(auto i = 0; i < operations.size(); i++)
 	     if(operations[i] != a.operations[i]) return false;
 	     /*for(auto t = j; t < operations.size(); t++)

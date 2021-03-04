@@ -99,7 +99,7 @@ recipes = GetAllRecipesDict()
 tools = ConvertDictToRecipeList(recipes)
 # Now output it into the .cpp generate Tools format #lmayo
 print('#ifndef COMMON\n#include "common.h" \n#endif\n')
-print("vector<Tool> Factorio() {")
+print("vector<Tool> FactorioSolution() {")
 print("  vector<Tool> factorio;")
 print("  Input ins;")
 print("  Input outs;")

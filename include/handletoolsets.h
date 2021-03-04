@@ -30,10 +30,7 @@ public:
 
     // Now select which toolset we use and create it
     if(toolsetname == FACTORIO) {
-       tools = _getFactorio();
-       
-       for(auto t : FactorioSolution())
-	 tools.push_back(t);
+       tools = _getFactorio();   
     } 
     else if(toolsetname == PRELIMINARY) {
        tools = _getFactorio();
@@ -89,6 +86,7 @@ public:
   NDETree _getSolution() {
     if (tsn == IMAGEMAGICK)
     {  
+       Tool t = toolset["output"]; 
        if(cn == '1') return _getIMSone();
        if(cn == '2') return _getIMStwo();
        if(cn == '3') return _getIMSthree();
@@ -124,9 +122,6 @@ public:
     if(tsn == PRELIMINARY)
       return _checkPreliminarySolution(tree);
 
-//    if(tsn == FACTORIO)
-//      return _checkFactorioSolution(tree);
-
     if(tsn == IMAGEMAGICK) {
        tree.CalculateOperatorLD();
        auto control = _getSolution();
@@ -152,11 +147,24 @@ public:
 
 private:
   vector<Tool> _getImageMagick() {
-    return imagemagick();
+    // We need an output tool.
+    Tool outp;
+    outp.type = "tool";
+    outp.output = "none";
+    outp.inTypes = { "image" };
+    
+    // Get the toolset and append it with the output tool
+    auto ts = imagemagick();
+    ts.push_back(outp);
+
+    return ts;
   }
 
   vector<Tool> _getFactorio() {
-    return Factorio();
+    auto tsn = Factorio();
+    for (auto t : FactorioSolution())
+      tsn.push_back(t);
+    return tsn;
   }
 
   vector<Tool> _getEMBOSS() {
@@ -170,7 +178,6 @@ private:
     bt.push_back(input);
     return bt;
   }
-
 
 // =============================================================
 // ======================== Preliminary ========================
@@ -258,7 +265,19 @@ private:
   // ======================== ImageMagick ========================
   // =============================================================
   NDETree _getIMCone() {
-    return _getIMStwo();
+    auto tools = {
+      dataset["imagemagick-draw-square"],
+        dataset["imagemagick-new"],
+          dataset["user-input-string"],
+          dataset["user-input-int"],
+	  dataset["select-colour-string"],
+	    dataset["user-input-string"]
+    };
+    auto depths = {
+      0, 1, 2, 2, 2, 3
+    };
+    
+    return NDETree(tools, depths);
   }
 
   NDETree _getIMSone() {
@@ -295,47 +314,21 @@ private:
   }
 
   NDETree _getIMStwo() {
-    auto tools = {
-      dataset["imagemagick-draw-square"],
-        dataset["imagemagick-new"],
-          dataset["user-input-string"],
-          dataset["user-input-int"],
-	  dataset["select-colour-string"],
-	    dataset["user-input-string"]
-    };
-    auto depths = {
-      0, 1, 2, 2, 2, 3
-    };
-    
-    return NDETree(tools, depths);
+    return _getIMCone();
   }
 
-
-  // Get the tree for case three:
-  // We have our Dutch flag tool (replaced by 2 draw squares)
+  // new image + draw square are decayed
   NDETree _getIMCthree(){
-    auto tools = {
-      dataset["create-flag-three-op"],
-        dataset["user-input-string"],
-	dataset["user-input-int"],
-	dataset["select-colour-string"],
-	  dataset["user-input-string"]
-    };
-    auto depths = {
-      0, 1, 1, 1, 2
-    };
-    
-    return NDETree(tools, depths);
+    return _getIMCone();
   };
 
   NDETree _getIMSthree() {
-    return _getIMCfour();
+    return _getIMCtwo();
   }
  
  // Get the tree for case four: 
   NDETree _getIMCfour() {
     auto tools = {
-      dataset["imagemagick-draw-square"],
         dataset["imagemagick-draw-square"],
           dataset["imagemagick-new"],
             dataset["user-input-string"],
@@ -344,33 +337,33 @@ private:
 	      dataset["user-input-string"]
     };
     auto depths = {
-      0, 1, 2, 3, 3, 3, 4
+      0, 1, 2, 2, 2, 3
     };
     
     return NDETree(tools, depths);
   }
 
+  // Solution four:
   NDETree _getIMSfour() {
     auto tools = {
-      dataset["draw-square"],
-        dataset["draw-square"],
-          dataset["imagemagick-new"],
-            dataset["user-input-string"],
-            dataset["user-input-int"],
-	    dataset["select-colour-rgb"],
-	      dataset["user-input-int"]
+      dataset["draw-flag-two-op"],
+        dataset["user-input-string"],
+        dataset["user-input-int"],
+	dataset["select-colour-rgb"],
+	  dataset["user-input-int"]
     };
     auto depths = {
-      0, 1, 2, 3, 3, 3, 4
+      0, 1, 1, 1, 2
     };
     
     return NDETree(tools, depths);
   }
 
-
-  NDETree _getBiotoolsTree() {
-    
-    
+  // =============================================================
+  // ======================== Preliminary ========================
+  // =============================================================
+  NDETree _getBiotoolsTree() { 
+    // Retrieve the workflow
     auto tools = {
       dataset["profisis"], dataset["biogrid"], dataset["blast"], dataset["input"]
     };

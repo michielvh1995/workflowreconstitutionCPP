@@ -44,7 +44,7 @@ char GENERATOR   = 'd';
 // Selection
 #include "operators/tournament.cpp"
 
-bool Stop(int gen, int last, int best, int platsize){
+bool Stop(int gen, int platsize){
   #ifdef maxGen
   if(gen > maxGen)
     return false;
@@ -63,11 +63,14 @@ vector<NDETree> Select(vector<NDETree> *pool) {
 //
 //
 NDETree CrossOver(NDETree* p1, NDETree* p2, char xof) {
-  if(((float) (rand() % 1000))/1000 < xoChance)
+  if ((float)(rand() % 1000) / 1000 < xoChance) {
     if (xof == ECOCONST)
-      return NDETree::ECO(p1, p2);
-    else if(xof == SUBCONST)
-      return NDETree::SubTreeExchange(p1, p2);
+       return NDETree::ECO(p1, p2);
+
+    if (xof == SUBCONST)
+       return NDETree::SubTreeExchange(p1, p2);
+  }
+  
   return *(p1);
 }
 
@@ -90,7 +93,7 @@ void Mutate(NDETree* tree) {
   // Do we get past
   // printf("Indices: %d, %d, tree length: %d \n", ind1, ind2, tree->Depths.size());
   // This is just a dumb check to catch a dumb case...
-  if(ind1 ==0 && ind2 == 1) return;
+  if(ind1 == 0 && ind2 == 1) return;
 
   while(ind1 == ind2) ind2 = rand() % tree->Depths.size();
   
@@ -113,26 +116,32 @@ void Fitness(FitnessCalculator &fc, NDETree *tree){
     tree->Fitness += fc.CalculateLDValue(tree);
     return;
   }
+  
   if(FITNESS == 'a' || FITNESS == 'b' || FITNESS == 'l') // All, set B or LD
     tree->Fitness += fc.CalculateLDValue(tree);
-  // printf("%d\n",tree->Fitness);
+  
   if(FITNESS == 'a'|| FITNESS == 'b' || FITNESS == 'c' || FITNESS == 'd') // All, set B/d or Correctness
-  {  tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
-  }
-  // printf("%d\n",tree->Fitness);
+    tree->Fitness += fc.CalculateSubTreeCorrectness(tree);
+
   if(FITNESS == 'a' || FITNESS == 's' || FITNESS == 'd') // All, set d or size
-  {    tree->Fitness += fc.CalculateSizeDifference(tree) ;
-  }
-  // printf("%d\n",tree->Fitness);
-  //if(FTNESS == 'a' || FITNESS == 'e')                  // All or EditDistance
-  //  printf("Editdistance!");
+      tree->Fitness += fc.CalculateSizeDifference(tree) ;
+  
+}
+
+// Switch function for generating the population pool
+vector<NDETree> getPopulation(Generator poolGen) {
+  if(GENERATOR == 'r') 
+    return poolGen.GenerateInitialPopRandomly();
+  
+  // Default is to generate it using randomreplace
+  return poolGen.GenerateInitialPopRandomReplace();
 }
 
 // =============================================================
 // ================== The Genetic Game itself ==================
 // =============================================================
 
-NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xof, bool verbose = true) {
+NDETree Play(vector<NDETree> pool, FitnessCalculator &fc, char xof, bool verbose = true) {
   if(verbose)
     printf("Parameters:\n popsize: %d, p(xo) %.2f, p(mut) %.2f \n\n", POOLSIZE, xoChance, mutChance);
 
@@ -145,7 +154,7 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
   int lastbest = MAXINT;
 
   // Play the genetic game
-  while (Stop(generation, lastbest, pool[0].Fitness, platSize)) {
+  while (Stop(generation, platSize)) {
     if(verbose)
       printf("start of generation\n");
     // TIMING
@@ -186,9 +195,6 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
       #endif
     }
   
-    if(verbose)
-      printf("Generation calculation done\n");
-
     // Sort the children vector and store the first N in the pool vector
     sort(children.begin(), children.end(), treeCompare);
     pool = vector<NDETree>(&children[0], &children[POOLSIZE]);
@@ -217,48 +223,50 @@ NDETree Play(vector<NDETree> pool, NDETree& goal, FitnessCalculator &fc, char xo
   return pool[0];
 }
 
-double average(vector<int> v) {
+double average(vector<float> v) {
   double sum;
   for (auto i : v) sum += i;
 
-  return (sum/v.size());
+  return (sum / v.size());
 
 }
 
 // Returns a tuple with the average fitness values and the average time cost to find the solution
-vector<float> RunGame(vector<NDETree> pool, NDETree goal, int repeats, FitnessCalculator &fc, char xof, DataHandler& dh, bool verbose = true) {
+vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, char xof, DataHandler& dh, bool verbose = true) {
   int fitsum = 0; // Sum of the fitnesses
 
   // Keeping track of calculation time
   auto t1 = std::chrono::high_resolution_clock::now();
 
   float foundcount = 0;
+  
+  // Prepare the vector for the population pool
+  vector<NDETree> pool;
+  pool.reserve(POOLSIZE);
 
   for(auto i =0; i< repeats; ++i) {
-    auto tree = Play(pool, goal, fc, xof, verbose = verbose);
+    
+    // Each repeat of the algorithm, we want a new population pool 
+    pool = getPopulation(poolGen);
+    auto tree = Play(pool, fc, xof, verbose = verbose);
 
-    if(verbose || true) {
+    if (verbose) {
       auto t2 = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
       printf("Generated solution: \n");
-      tree.Print();
       printf("Calculating this tree took %.3f seconds\n", ((float)duration)/1000000);
     }
+    
+    tree.Print(); // Output the solution for evaluation
 
-    fitsum += tree.Fitness;
-    //tree.SubTreeSort(0);
-    if(dh.CheckSolution(tree)) {
-      foundcount += 1;
-
-      if(verbose)
-	      printf("Found the %.0fth solution!\n", foundcount);
-    }
+    fitsum += tree.Fitness; 
   }
+
   auto t2 = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
 
   // Output the average fitness and the average time per found solution
-  return { fitsum / repeats, ((float)duration)/(1000000 * repeats), foundcount };
+  return { (float) fitsum / repeats, ((float)duration)/(1000000 * repeats), foundcount };
 }
 
 
@@ -266,36 +274,32 @@ vector<string> getForbidden(string ts) {
   if(ts == PRELIMINARY)
     return { string("copper-cable") };
   else if(ts == IMAGEMAGICK) {
-    if(CASE == '1')
-      return { string("imagemagick-draw-square") };
-    if(CASE == '2')
-      return { string("create-flag-two-op"), string("create-flag-three-op") };
-    if(CASE == '3')
-      return { string("create-flag-two-op"), string("create-flag-three-op") };
-    if(CASE == '4')
-      return { string("select-colour-string") };
+      if(CASE == '1')
+        return { string("imagemagick-draw-square") };
+      if(CASE == '2')
+        return { string("create-flag-two-op"), string("create-flag-three-op") };
+      if(CASE == '3')
+        return { string ("imagemagick-draw-square"), string("imagemagick-new") };
+      if(CASE == '4')
+        return { string("select-colour-string") };
   } else if(ts == FACTORIO) {
-    if(CASE == '1')
-      return { string("sulfur") };
-    if(CASE == '2')
-      return { string("steel-plate"), string("form-steel") };
-    if(CASE == '3')
-      return { string("steel-plate"), string("recover-steel") };
-    if(CASE == '4')
-      return { string("electronic-circuit") };
+      if(CASE == '1')
+        return { string("sulfur") };
+      if(CASE == '2')
+        return { string("steel-plate"), string("form-steel") };
+      if(CASE == '3')
+        return { string("electronic-circuit") };
+      if(CASE == '4')
+        return {  string("electronic-circuit"), string("copper-cable")};
   } else if(ts == EMBOSS) {
+      if(CASE == '1')
+        return { string("blast") };
+      if(CASE == '2')
+	return { string("blast"), string("biogrid") };
   }
   return { string("nonne") };
 }
 
-// Switch function for generating the population pool
-vector<NDETree> getPopulation(map<string, Tool> usableTools, vector<Tool> tools, NDETree goal) {
-  if(GENERATOR == 'r') {
-    printf("There is a bug with random generation!! \n");
-    return GenerateInitialPopRandomly(tools, goal);
-  } // Default is to generate it using randomreplace
-  return GenerateInitialPopRandomReplace(usableTools, tools, goal);
-}
 
 // Commandline arguments will be:
 // None: reverts to default values
@@ -323,15 +327,15 @@ int main(int argc, char **argv) {
        verbose = true;
 
     // Set the amount if repeating tests
-    else if(strcmp(argv[i], "-r") == 0)
+    else if(strcmp(argv[i], "-r") == 0) // Repeats
        REPEATS = atof(argv[++i]);
-    else if(strcmp(argv[i], "-f") == 0)
+    else if(strcmp(argv[i], "-f") == 0) // Fitness function
        FITNESS = argv[++i][0];
-    else if(strcmp(argv[i], "-t") == 0)
+    else if(strcmp(argv[i], "-t") == 0) // Toolset
        ts = string(argv[++i]);
-    else if(strcmp(argv[i], "-c") == 0)
+    else if(strcmp(argv[i], "-c") == 0) // Testcase
        CASE = argv[++i][0];
-    else if(strcmp(argv[i], "-g") == 0)
+    else if(strcmp(argv[i], "-g") == 0) // population generator
        GENERATOR = argv[++i][0];
 
   }
@@ -349,10 +353,11 @@ int main(int argc, char **argv) {
   auto t1 = std::chrono::high_resolution_clock::now();
   DataHandler data = DataHandler(ts, getForbidden(ts), CASE);
   
-  printf("Retrieved the tools! \n");
+  // printf("Retrieved the tools! \n");
   vector<Tool> tools = data.tools;
-
-  auto usableTools = data.toolset;
+  
+  // This is a 
+  map<string,Tool> usableTools = data.toolset;
 
   // =============================================================
   // Retrieve the tree
@@ -371,20 +376,18 @@ int main(int argc, char **argv) {
 	   printf("   %s ", it.c_str());
      }
      */
-
+     // printf("%s\n", usableTools["press-ec"].output.c_str());
+     
   }
+
  
   // The fitness calculator object
   FitnessCalculator test(goal);
   Fitness(test, &goal); 
-  // Let's try generating a pool completely at random
-//  pool = GenerateInitialPopRandomly(tools, goal);
-
-  vector<NDETree> pool = getPopulation(usableTools, tools, goal);
-//  for(auto t:pool)
-//     t.Print();
-
-  vector<float> res = RunGame(pool, goal, REPEATS, test, xof, data, verbose);
+ 
+  // The Population generator object
+  Generator poolGen(usableTools, tools, goal);
+  vector<float> res = RunGame(poolGen, REPEATS, test, xof, data, verbose);
   
   // Poolsize, size of toolset, p(mut), p(xo), goal-tree size, crossover function, fitness function, avg fitness, avg calctime, optimals found, testcase
   printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f & %c\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2], CASE);

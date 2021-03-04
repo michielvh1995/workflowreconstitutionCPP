@@ -141,13 +141,13 @@ vector<Tool> FactorioSolution() {
   alloy_metal.inTypes = {};
 
   ins.label = "input1";
-  ins.type = "copper-ore";
+  ins.type = "copper-plate";
   alloy_metal.inputs.push_back(ins);
-  alloy_metal.inTypes.push_back("copper-ore");
+  alloy_metal.inTypes.push_back("copper-plate");
   ins.label = "input2";
-  ins.type = "iron-ore";
+  ins.type = "iron-plate";
   alloy_metal.inputs.push_back(ins);
-  alloy_metal.inTypes.push_back("iron-ore");
+  alloy_metal.inTypes.push_back("iron-plate");
   sort (alloy_metal.inTypes.begin(),alloy_metal.inTypes.end());
   alloy_metal.output = "copper-iron-alloy";
   factorio.push_back(alloy_metal);
