@@ -279,9 +279,9 @@ vector<string> getForbidden(string ts) {
       if(CASE == '2')
         return { string("create-flag-two-op"), string("create-flag-three-op") };
       if(CASE == '3')
-        return { string ("imagemagick-draw-square"), string("imagemagick-new") };
-      if(CASE == '4')
         return { string("select-colour-string") };
+      if(CASE == '4')
+        return { string ("imagemagick-draw-square"), string("imagemagick-new") };
   } else if(ts == FACTORIO) {
       if(CASE == '1')
         return { string("sulfur") };
