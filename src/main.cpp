@@ -162,28 +162,21 @@ NDETree Play(vector<NDETree> pool, FitnessCalculator &fc, char xof, bool verbose
 
     // Get the parent pool
     parents = Select(&pool);
-//    if(verbose)
-  //    printf("Parents selected\n");
 
     // Generate the offspring
     for (auto i = 0; i < parents.size()/2; i++) {
-      // printf("Begin with individual %d\n", i);
-      //printf("preXO\n");
 
       // perform crossover
       NDETree c1 = CrossOver(&parents[i*2], &parents[i*2 +1], xof);
       NDETree c2 = CrossOver(&parents[i*2 +1], &parents[i*2], xof);
-      // printf("They crossed the line\n");
 
       // mutate both
       Mutate(&c1);
       Mutate(&c2);
-      // printf("Mutats everywhere\n");
       	
       // Calculate their fitness
       Fitness(fc, &c1);
       Fitness(fc, &c2);
-      // printf("Kast status achieved \n");
 
       // Add them to the list
       children.push_back(c1);
@@ -232,7 +225,7 @@ double average(vector<float> v) {
 }
 
 // Returns a tuple with the average fitness values and the average time cost to find the solution
-vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, char xof, bool verbose = true) {
+vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, char xof, DataHandler data, bool verbose = true) {
   int fitsum = 0; // Sum of the fitnesses
 
   // Keeping track of calculation time
@@ -249,15 +242,19 @@ vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, cha
     // Each repeat of the algorithm, we want a new population pool 
     pool = getPopulation(poolGen);
     auto tree = Play(pool, fc, xof, verbose = verbose);
-
+    
+    // For the preliminary tests we can run the checking algorithm
+    if(data.CheckSolution(tree))
+      foundcount += 1;
+    
     if (verbose) {
       auto t2 = std::chrono::high_resolution_clock::now();
       auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
       printf("Generated solution: \n");
       printf("Calculating this tree took %.3f seconds\n", ((float)duration)/1000000);
+      tree.Print(); // Output the solution for evaluation
     }
     
-    tree.Print(); // Output the solution for evaluation
 
     fitsum += tree.Fitness; 
   }
@@ -386,7 +383,7 @@ int main(int argc, char **argv) {
  
   // The Population generator object
   Generator poolGen(usableTools, tools, goal);
-  vector<float> res = RunGame(poolGen, REPEATS, test, xof, verbose);
+  vector<float> res = RunGame(poolGen, REPEATS, test, xof, data, verbose);
   
   // Poolsize, size of toolset, p(mut), p(xo), goal-tree size, crossover function, fitness function, avg fitness, avg calctime, optimals found, testcase
   printf("%d & %d & %.2f & %.2f & %d & %c & %c & %.2f & %.2fs & %.0f & %c\\\\ \n", POOLSIZE, tools.size(), mutChance, xoChance, goal.Tools.size(), xof, FITNESS, res[0], res[1], res[2], CASE);
