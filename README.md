@@ -24,12 +24,12 @@ Parameters:
 `px`: Crossover chance
 
 ## Additional flags:
-* `-v`: verbosity, either 0, 1 or 2
-* `-f`: fitness function, can be a, b, c, d, l, s
-* `-g`: generator of initial population, can be 'r' or 'g'. Default 'g'.
-* `-r`: how many times the algorithm is repeated
-* `-c`: which testcase it is run on, can be (1-4)
-* `-t`: which toolset it is run on
+* `-v`: verbosity, either 0, 1 or 2 (default: 0)
+* `-f`: fitness function, can be a, b, c, d, l, s (default: a)
+* `-g`: generator of initial population, can be 'r' or 'g' (default: g)
+* `-r`: how many times the algorithm is repeated (default: 1)
+* `-c`: which testcase it is run on, can be [1-4] (default: 1)
+* `-t`: which toolset it is run on, can be f, i or e (default: f)
 
 # ToDo:
 In order to improve this program:
