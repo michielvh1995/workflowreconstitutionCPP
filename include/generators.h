@@ -69,7 +69,7 @@ static vector<NDETree> _GenerateInitialPopRandomReplace(map<string, Tool> toolbo
   // printf("There are %d tools missing, namely:\n", missingInds.size());
   // for(auto i : missingInds)
   //   printf("  %s\n", goal.Tools[i].id.c_str() );
-  printf("  \n" );
+  //printf("  \n" );
 
   for (auto i = 0; i < POOLSIZE; ++i) {
     auto tree = NDETree::Copy(goal);
