@@ -17,6 +17,11 @@ When on linux:
 $ ./rebuild.sh
 $ ./build/reconstitute ps xf pm px
  ```
+Parameters:
+`ps`: Poolsize,
+`xf` Crossover function, can be 's' or 'e', 
+`pm`: Mutation chance
+`px`: Crossover chance
 
 ## Additional flags:
 * `-v`: verbosity, either 0, 1 or 2

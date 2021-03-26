@@ -3,4 +3,4 @@ Release/*
 data/*.txt
 *.csv
 test/*
-*.sh
+.sh
