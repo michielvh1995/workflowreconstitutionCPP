@@ -245,7 +245,7 @@ vector<float> RunGame(Generator poolGen, int repeats, FitnessCalculator &fc, cha
     auto tree = Play(pool, fc, xof, verbose = verbose);
 
     // For the preliminary tests we can run the checking algorithm
-    // if(data.CheckSolution(tree))
+    //if(data.CheckSolution(tree))
     //  foundcount += 1;
 
     if (verbose) {
