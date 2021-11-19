@@ -1,0 +1,515 @@
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (water, 3) (iron-plate, 3) (iron-ore, 4) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur-alt-a, 3) (petroleum-gas, 4) (water, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,0.00,7.05,20,1,t
+
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (press-ec, 1) (form-steel, 1)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (form-steel, 1) (electronic-circuit, 1) (iron-plate, 2)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (form-steel, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1) (iron-plate, 2)
+(laser-turret, 0) (steel-plate, 1)
+(laser-turret, 0) (steel-plate, 1) (press-ec, 1)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (form-steel, 1) (press-ec, 1)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,22.40,6.04,0,1,c
+
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-string, 3) (select-colour-string, 3) (user-input-string, 4) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-new, 2) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3)
+
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (select-colour-string, 3) (user-input-string, 4) (user-input-int, 3)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-int, 3) (user-input-string, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (imagemagick-new, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,1.00,2.80,12,1,t
+
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2)
+(, 0) (select-colour-rgb, 1) (int-parse-str, 2) (user-input-string, 3) (select-colour-rgb, 4) (int-parse-str, 5) (user-input-string, 6)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (select-colour-rgb, 3) (user-input-int, 4) (user-input-int, 3) (user-input-string, 3)
+(, 0) (int-parse-str, 1) (str-parse-int, 2) (int-parse-str, 3) (str-parse-int, 4) (user-input-int, 5) (user-input-int, 3)
+(, 0) (select-colour-string, 1) (str-parse-int, 2) (user-input-int, 3) (select-colour-string, 1) (str-parse-int, 2) (user-input-int, 3)
+(, 0) (imagemagick-crop, 1) (imagemagick-draw-rectangle, 2) (int-parse-str, 2) (user-input-string, 3) (str-parse-int, 2) (user-input-int, 3)
+(, 0) (create-flag-three-op, 1) (user-input-int, 2) (user-input-string, 2) (select-colour-string, 2) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (create-flag-two-op, 1) (user-input-int, 2) (select-colour-rgb, 2) (int-parse-str, 3) (user-input-string, 4) (str-parse-int, 2)
+(, 0) (create-flag-three-op, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (int-parse-str, 2) (user-input-string, 3)
+(, 0) (imagemagick-set-colour-blue, 1) (str-parse-int, 2) (int-parse-str, 3) (str-parse-int, 4) (int-parse-str, 5) (user-input-string, 6)
+(, 0) (select-colour-rgb, 1) (str-parse-int, 2) (int-parse-str, 3) (user-input-string, 4) (int-parse-str, 2) (user-input-string, 3)
+(, 0) (create-flag-three-op, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-draw, 1) (imagemagick-draw-rectangle, 2) (imagemagick-set-colour-green, 3) (user-input-string, 4) (str-parse-int, 2) (user-input-string, 2)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (select-colour-rgb, 2) (user-input-int, 3) (int-parse-str, 2) (user-input-string, 3)
+(, 0) (create-flag-two-op, 1) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2)
+(, 0) (select-colour-rgb, 1) (int-parse-str, 2) (user-input-string, 3) (select-colour-rgb, 1) (int-parse-str, 2) (user-input-string, 3)
+(, 0) (imagemagick-negate, 1) (user-input-string, 2) (imagemagick-set-colour-green, 2) (imagemagick-draw-rectangle, 3) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (int-parse-str, 1) (user-input-string, 2) (select-colour-rgb, 2) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (create-flag-three-op, 1) (select-colour-rgb, 2) (user-input-int, 3) (user-input-int, 2) (user-input-string, 2)
+(, 0) (imagemagick-crop, 1) (imagemagick-crop, 2) (user-input-string, 3) (user-input-int, 3) (user-input-string, 2) (user-input-int, 2)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,1.90,3.23,0,1,c
+
+(profisis, 0) (biogrid, 1) (ena_sequence_search, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ena_sequence_search, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ensembl_sequence_search_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (TARA_BLAST_Service, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (FASTA_API_EBI, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (FASTA_API_EBI, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (FASTA_EBI, 2) (input, 3)
+
+(profisis, 0) (biogrid, 1) (psi_blast_rest, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (psi_blast_rest, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (bwt_sw, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (bwt_sw, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (mpblast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_ebi, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_ebi, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_ebi, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_ebi, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (h_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (gwfasta, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_betacoronavirus, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blast_betacoronavirus, 2) (input, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,b,0.50,0.25,4,s,d,0.00,1.37,7,1,t
+
+(profisis, 0) (biogrid, 1) (ensembl_sequence_search_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ensembl_sequence_search_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ensembl_sequence_search_blast, 2) (input, 3)
+
+(profisis, 0) (biogrid, 1) (hs_blastn, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (blastprodom, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (h_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (h_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (gwfasta, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ensembl_genomes_fungi_blast, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (ensembl_sequence_search_blast, 2)
+(profisis, 0) (biogrid, 1) (blast_api_ebi, 2)
+(profisis, 0) (biogrid, 1) (blast_ebi, 2) (input, 3)
+(profisis, 0) (biogrid, 1) (psi_blast_rest, 2)
+(profisis, 0) (biogrid, 1) (bwa, 2)
+(profisis, 0) (biogrid, 1) (hs_blastn, 2)
+(profisis, 0) (biogrid, 1) (FASTA_EBI, 2)
+(profisis, 0) (biogrid, 1) (blast_betacoronavirus, 2)
+(profisis, 0) (biogrid, 1) (ensembl_genomes_protists_blast, 2)
+(profisis, 0) (biogrid, 1) (ena_sequence_search, 2) (isoscale, 3)
+(profisis, 0) (biogrid, 1) (eosc_pipeline_reproducibility, 2) (blast_api_ebi, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,b,0.50,0.25,4,s,d,0.95,2.49,3,1,c
+
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (scrap-iron, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (pipe, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-chest, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (light-armor, 4) (iron-plate, 5) (iron-ore, 6) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (firearm-magazine, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-stick, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (recover-steel, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (firearm-magazine, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (pipe, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (water, 4) (petroleum-gas, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (recover-steel, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (sulfuric-acid, 2) (water, 3) (iron-plate, 3) (iron-ore, 4) (sulfur, 3) (petroleum-gas, 4) (water, 4) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (electronic-circuit, 1) (iron-plate, 2) (iron-ore, 3) (pipe, 4) (iron-plate, 5) (iron-ore, 6) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,2.00,6.76,0,2,t
+
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1) (scrap-iron, 2)
+(laser-turret, 0) (press-ec, 1) (heavy-oil, 2) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (iron-ore, 2)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (heavy-oil, 2) (alloy-metal, 2)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,22.65,5.80,0,2,c
+
+(, 0) (imagemagick-new, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-new, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2)
+(, 0) (imagemagick-new, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (user-input-string, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (user-input-string, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (user-input-string, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-int, 2) (user-input-string, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+(, 0) (imagemagick-new, 1) (user-input-string, 2) (user-input-int, 2) (select-colour-string, 2) (user-input-string, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,6,s,d,1.00,2.26,0,2,t
+
+(, 0) (select-colour-string, 1) (str-parse-int, 2) (int-parse-str, 3) (str-parse-int, 4) (user-input-int, 5)
+(, 0) (str-parse-int, 1) (int-parse-str, 2) (str-parse-int, 3) (int-parse-str, 4) (str-parse-int, 5)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-set-colour-green, 2) (user-input-string, 3) (imagemagick-copy, 3) (user-input-string, 4)
+(, 0) (select-colour-string, 1) (str-parse-int, 2) (user-input-int, 3) (select-colour-rgb, 4) (user-input-int, 5)
+(, 0) (imagemagick-set-colour-green, 1) (user-input-string, 2) (imagemagick-set-colour-red, 2) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-new, 2) (user-input-int, 3) (select-colour-rgb, 3) (user-input-string, 3)
+(, 0) (int-parse-str, 1) (user-input-string, 2) (select-colour-rgb, 2) (int-parse-str, 3) (user-input-string, 4)
+(, 0) (imagemagick-negate, 1) (user-input-string, 2) (imagemagick-draw, 2) (user-input-string, 3) (user-input-string, 3)
+(, 0) (str-parse-int, 1) (int-parse-str, 2) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (, 1) (imagemagick-draw-square, 2) (imagemagick-draw-rectangle, 3) (imagemagick-copy, 4) (user-input-string, 5)
+(, 0) (int-parse-str, 1) (str-parse-int, 2) (int-parse-str, 3) (str-parse-int, 4) (user-input-int, 5)
+(, 0) (imagemagick-crop, 1) (user-input-string, 2) (imagemagick-draw-rectangle, 2) (imagemagick-draw-rectangle, 3) (user-input-int, 2)
+(, 0) (str-parse-int, 1) (int-parse-str, 2) (str-parse-int, 3) (int-parse-str, 4) (user-input-string, 5)
+(, 0) (, 1) (imagemagick-draw-rectangle, 2) (imagemagick-set-colour-blue, 3) (user-input-string, 4) (imagemagick-draw-square, 4)
+(, 0) (imagemagick-set-colour-green, 1) (user-input-string, 2) (imagemagick-draw-square, 2) (imagemagick-draw-square, 3) (imagemagick-draw-square, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-negate, 2) (str-parse-int, 3) (user-input-int, 4) (imagemagick-draw-rectangle, 3)
+(, 0) (imagemagick-copy, 1) (user-input-string, 2) (imagemagick-set-colour-red, 2) (user-input-string, 3) (imagemagick-draw-square, 3)
+(, 0) (, 1) (imagemagick-set-colour-red, 2) (imagemagick-copy, 3) (user-input-string, 4) (user-input-string, 3)
+(, 0) (int-parse-str, 1) (str-parse-int, 2) (int-parse-str, 3) (user-input-string, 4) (user-input-string, 2)
+(, 0) (select-colour-rgb, 1) (int-parse-str, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,6,s,d,1.85,2.70,0,2,c
+
+(profisis, 0) (amped, 1) (MMseqs2, 2) (input, 3)
+(profisis, 0) (uniprot_ws, 1) (uniprot_blast, 2) (input, 3)
+(profisis, 0) (uniprot_ws, 1) (uniprot_blast, 2) (input, 3)
+(profisis, 0) (IMGT_PRIMER_DB, 1) (rfam_search, 2) (input, 3)
+(profisis, 0) (MMseqs2, 1) (input, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (blast_api_ebi, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (ensembl_sequence_search_blast, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (FASTA_EBI, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (blast_sib, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (blast_betacoronavirus, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (ensembl_genomes_fungi_sequence_search, 2) (input, 3)
+(profisis, 0) (sapp, 1) (blast_betacoronavirus, 2) (input, 3)
+(profisis, 0) (sapp, 1) (fasta, 2) (input, 3)
+(profisis, 0) (sapp, 1) (blast_api_ebi, 2) (input, 3)
+(profisis, 0) (sapp, 1) (blast_betacoronavirus, 2) (input, 3)
+(profisis, 0) (sapp, 1) (blastprodom, 2) (input, 3)
+(profisis, 0) (sapp, 1) (blast_api_ebi, 2) (input, 3)
+(profisis, 0) (sapp, 1) (fasta, 2) (input, 3)
+(profisis, 0) (IMGT_PRIMER_DB, 1) (rfam_search, 2) (input, 3)
+(profisis, 0) (eosc_pipeline_reproducibility, 1) (blast_betacoronavirus, 2) (input, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,b,0.50,0.25,4,s,d,2.10,1.29,0,2,t
+
+(profisis, 0) (sapp, 1) (gwfasta, 2) (input, 3)
+(profisis, 0) (sapp, 1) (fasta, 2) (input, 3)
+(profisis, 0) (blast_ebi, 1) (input, 2)
+(profisis, 0) (uniprot_blast, 1) (input, 2)
+(profisis, 0) (blastprodom, 1) (input, 2)
+(profisis, 0) (kinase_sarfari_blast_search, 1) (input, 2)
+(profisis, 0) (blast2srs, 1) (input, 2)
+(profisis, 0) (IMGT_DomainDisplay, 1) (uniprot_blast, 2) (isoscale, 3)
+(profisis, 0) (pssalib, 1) (idrem, 2) (minepath, 3)
+(profisis, 0) (gwfasta, 1) (input, 2)
+(profisis, 0) (hs_blastn, 1) (input, 2)
+(profisis, 0) (blast_ebi, 1) (input, 2)
+(profisis, 0) (gpcr_sarfari_blast_search, 1) (input, 2)
+(profisis, 0) (kinase_sarfari_blast_search, 1) (input, 2)
+(profisis, 0) (kinase_sarfari_blast_search, 1) (input, 2)
+(profisis, 0) (fastm_ebi, 1) (input, 2)
+(profisis, 0) (hs_blastn, 1) (input, 2)
+(profisis, 0) (fasta, 1) (input, 2)
+(profisis, 0) (ensembl_sequence_search_blast, 1) (input, 2)
+(profisis, 0) (blast_sib, 1) (input, 2)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,b,0.50,0.25,4,s,d,2.90,2.34,0,2,c
+
+(laser-turret, 0) (iron-gear-wheel, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (sulfur, 3) (petroleum-gas, 4) (water, 4) (iron-plate, 3) (iron-ore, 4) (water, 3)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (power-switch, 3) (iron-plate, 4) (iron-ore, 5) (copper-cable, 4) (copper-plate, 5) (copper-ore, 6) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (iron-chest, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 1) (iron-plate, 2) (copper-cable, 3) (copper-plate, 4) (copper-ore, 5) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (light-armor, 4) (iron-plate, 5) (iron-ore, 6) (copper-cable, 5) (copper-plate, 6) (copper-ore, 7) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (pipe, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (power-switch, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (small-lamp, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (iron-stick, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (iron-chest, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4)
+(laser-turret, 0) (iron-chest, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (copper-cable, 3) (copper-plate, 4) (copper-ore, 5) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (iron-chest, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (power-switch, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 4) (copper-plate, 5) (copper-ore, 6) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (firearm-magazine, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (light-armor, 1) (iron-plate, 2) (iron-ore, 3) (copper-cable, 2) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (pipe, 4) (iron-plate, 5) (iron-ore, 6) (copper-cable, 5) (copper-plate, 6) (copper-ore, 7) (petroleum-gas, 4) (water, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,3.00,6.64,0,3,t
+
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (recover-steel, 1) (scrap-iron, 2)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (form-steel, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (form-steel, 1)
+(laser-turret, 0) (steel-plate, 1) (solid-fuel-from-light-oil, 2) (light-oil, 3)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (form-steel, 1) (process-slag, 2)
+(laser-turret, 0) (form-steel, 1) (press-ec, 1) (wood, 2)
+(laser-turret, 0) (press-ec, 1)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,b,0.50,0.25,22,s,d,22.25,6.54,0,3,c
+
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-red, 2) (imagemagick-new, 3) (user-input-int, 4) (user-input-string, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-red, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-blue, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-blue, 2) (imagemagick-new, 3) (user-input-int, 4) (user-input-string, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-negate, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-red, 2) (user-input-string, 3) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-blue, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-copy, 2) (imagemagick-new, 3) (user-input-int, 4) (user-input-string, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-red, 2) (user-input-string, 3) (imagemagick-new, 3) (user-input-int, 4) (user-input-string, 4)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-copy, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-red, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-copy, 2) (imagemagick-new, 3) (user-input-int, 4) (user-input-string, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-green, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-green, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-blue, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 3)
+(, 0) (imagemagick-set-colour-green, 1) (imagemagick-draw-square, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 2)
+(, 0) (imagemagick-negate, 1) (imagemagick-draw-square, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 2)
+(, 0) (imagemagick-set-colour-red, 1) (imagemagick-draw-square, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 2)
+(, 0) (imagemagick-negate, 1) (imagemagick-draw-square, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 2)
+(, 0) (imagemagick-set-colour-green, 1) (imagemagick-draw-square, 2) (imagemagick-new, 3) (user-input-string, 4) (user-input-int, 4) (user-input-string, 2)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,2.00,3.22,0,3,t
+
+(, 0) (, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-rgb, 3) (user-input-int, 4)
+(, 0) (create-flag-three-op, 1) (select-colour-rgb, 2) (user-input-int, 3) (user-input-int, 2) (user-input-string, 2)
+
+(, 0) (, 1) (imagemagick-draw-square, 2) (imagemagick-negate, 3) (imagemagick-draw-rectangle, 4) (imagemagick-draw-rectangle, 5) (user-input-string, 4)
+(, 0) (imagemagick-copy, 1) (imagemagick-draw-rectangle, 2) (imagemagick-copy, 3) (imagemagick-draw-rectangle, 4) (user-input-string, 4) (user-input-string, 2)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-draw-rectangle, 2) (imagemagick-new, 3) (select-colour-rgb, 4) (user-input-string, 4) (user-input-int, 4)
+(, 0) (int-parse-str, 1) (str-parse-int, 2) (int-parse-str, 3) (str-parse-int, 4) (int-parse-str, 5) (user-input-string, 6)
+(, 0) (imagemagick-set-colour-blue, 1) (user-input-string, 2) (imagemagick-draw-square, 2) (imagemagick-draw-square, 3) (imagemagick-draw-square, 4) (imagemagick-draw-square, 5)
+(, 0) (imagemagick-negate, 1) (imagemagick-negate, 2) (user-input-string, 3) (imagemagick-draw-square, 3) (imagemagick-set-colour-blue, 4) (user-input-string, 5)
+(, 0) (imagemagick-set-colour-green, 1) (user-input-string, 2) (imagemagick-resize-absolute, 2) (user-input-int, 3) (user-input-int, 3) (user-input-string, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-negate, 2) (user-input-string, 3) (imagemagick-draw-square, 3) (imagemagick-set-colour-blue, 4) (user-input-string, 5)
+(, 0) (imagemagick-draw-square, 1) (imagemagick-set-colour-green, 2) (str-parse-int, 3) (user-input-int, 4) (imagemagick-draw-square, 3) (imagemagick-draw-rectangle, 4)
+(, 0) (, 1) (imagemagick-draw-circle, 2) (user-input-int, 3) (user-input-string, 3) (imagemagick-draw-square, 3) (imagemagick-draw-rectangle, 4)
+(, 0) (imagemagick-negate, 1) (user-input-string, 2) (imagemagick-new, 2) (user-input-int, 3) (select-colour-rgb, 3) (user-input-int, 4)
+(, 0) (imagemagick-set-colour-blue, 1) (user-input-string, 2) (imagemagick-draw-square, 2) (imagemagick-draw-rectangle, 3) (imagemagick-set-colour-red, 4) (imagemagick-draw-rectangle, 5)
+(, 0) (imagemagick-set-colour-blue, 1) (imagemagick-set-colour-green, 2) (imagemagick-resize-percentual, 3) (user-input-string, 4) (user-input-string, 3) (user-input-string, 2)
+(, 0) (, 1) (imagemagick-draw-square, 2) (imagemagick-set-colour-blue, 3) (user-input-string, 4) (imagemagick-draw-rectangle, 4) (imagemagick-draw-square, 5)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-draw-square, 2) (imagemagick-set-colour-red, 3) (user-input-string, 4) (imagemagick-set-colour-red, 4) (user-input-string, 5)
+(, 0) (imagemagick-resize-percentual, 1) (imagemagick-set-colour-blue, 2) (imagemagick-draw-square, 3) (user-input-string, 3) (user-input-string, 2) (user-input-int, 2)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-draw-square, 2) (imagemagick-draw-rectangle, 3) (imagemagick-set-colour-blue, 4) (str-parse-int, 5) (user-input-int, 6)
+(, 0) (create-flag-three-op, 1) (select-colour-rgb, 2) (user-input-int, 3) (user-input-int, 3) (user-input-int, 2) (user-input-string, 2)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,2.10,3.37,1,3,c
+
+(laser-turret, 0) (press-ec, 1) (alloy-metal, 2) (iron-plate, 3) (iron-ore, 4) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+
+(laser-turret, 0) (press-ec, 1) (shotgun-shell, 2) (iron-plate, 3) (iron-ore, 4) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (sulfur, 2) (petroleum-gas, 3) (water, 3) (iron-plate, 2) (iron-ore, 3) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (press-ec, 1) (pistol, 2) (iron-plate, 3) (iron-ore, 4) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (heat-pipe, 2) (steel-plate, 3) (iron-plate, 4) (iron-ore, 5) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (pipe-to-ground, 1) (iron-plate, 2) (iron-ore, 3) (pipe, 2) (iron-plate, 3) (iron-ore, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (heavy-armor, 4) (steel-plate, 5) (iron-plate, 6) (iron-ore, 7) (copper-plate, 5) (copper-ore, 6) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (sulfuric-acid, 1) (iron-plate, 2) (iron-ore, 3) (water, 2) (sulfur, 2) (petroleum-gas, 3) (water, 3)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 4) (iron-plate, 5) (sulfur, 6) (petroleum-gas, 7) (water, 7) (iron-ore, 6)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (sulfur, 2) (petroleum-gas, 3) (water, 3) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (steel-plate, 4) (iron-plate, 5) (iron-ore, 6) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (alloy-metal, 1) (copper-plate, 2) (copper-ore, 3) (iron-plate, 2) (iron-ore, 3) (crude-oil, 2) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 4) (iron-plate, 5) (iron-ore, 6) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (sulfur, 4) (petroleum-gas, 5) (water, 5)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (heat-pipe, 4) (steel-plate, 5) (iron-plate, 6) (iron-ore, 7) (copper-plate, 5) (copper-ore, 6) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (press-ec, 1) (iron-plate, 2) (iron-ore, 3) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (steel-plate, 5) (iron-plate, 6) (iron-ore, 7) (water, 4)
+(laser-turret, 0) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (sulfuric-acid, 1) (iron-plate, 2) (iron-ore, 3) (water, 2) (sulfur, 2) (petroleum-gas, 3) (water, 3)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (heat-pipe, 2) (steel-plate, 3) (iron-plate, 4) (iron-ore, 5) (copper-plate, 3) (copper-ore, 4) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (steel-plate, 1) (sulfur, 2) (petroleum-gas, 3) (water, 3) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+(laser-turret, 0) (press-ec, 1) (pistol, 2) (iron-plate, 3) (iron-ore, 4) (copper-plate, 3) (copper-ore, 4) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+(laser-turret, 0) (grenade, 1) (copper-plate, 2) (copper-ore, 3) (iron-plate, 2) (iron-ore, 3) (coal, 2) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3) (battery, 1) (iron-plate, 2) (iron-ore, 3) (copper-plate, 2) (copper-ore, 3) (sulfuric-acid, 2) (iron-plate, 3) (iron-ore, 4) (water, 3) (sulfur, 3) (petroleum-gas, 4) (water, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,2.45,7.93,1,4,t
+
+(laser-turret, 0) (steel-plate, 1) (press-ec, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (form-steel, 1) (stone, 2)
+(laser-turret, 0) (press-ec, 1) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (form-steel, 1)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (recover-steel, 1) (press-ec, 1)
+(laser-turret, 0) (form-steel, 1) (process-slag, 2)
+(laser-turret, 0) (form-steel, 1)
+(laser-turret, 0) (press-ec, 1) (basic-oil-processing, 1) (crude-oil, 2)
+(laser-turret, 0) (press-ec, 1)
+(laser-turret, 0) (steel-plate, 1)
+(laser-turret, 0) (steel-plate, 1) (press-ec, 1)
+(laser-turret, 0) (form-steel, 1) (press-ec, 1)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2)
+(laser-turret, 0) (recover-steel, 1)
+(laser-turret, 0) (press-ec, 1) (form-steel, 1)
+(laser-turret, 0) (press-ec, 1) (steel-plate, 1)
+(laser-turret, 0) (steel-plate, 1) (iron-plate, 2) (iron-ore, 3)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,f,0.50,0.25,22,s,d,22.25,6.53,0,4,c
+
+(, 0) (, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-two-op, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (, 1) (create-flag-two-op, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+
+(, 0) (, 1) (create-flag-three-op, 2) (user-input-int, 3) (user-input-string, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-two-op, 2) (user-input-int, 3) (user-input-string, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-two-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 3) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (user-input-string, 3) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,1.00,3.09,5,4,t
+
+(, 0) (create-flag-two-op, 1) (select-colour-string, 2) (user-input-string, 3) (int-parse-str, 2) (user-input-string, 3) (user-input-string, 2)
+
+(, 0) (, 1) (create-flag-two-op, 2) (select-colour-rgb, 3) (str-parse-int, 3) (user-input-int, 4) (user-input-int, 3)
+(, 0) (create-flag-two-op, 1) (int-parse-str, 2) (str-parse-int, 3) (int-parse-str, 4) (user-input-string, 5) (user-input-string, 2)
+(, 0) (imagemagick-set-colour-blue, 1) (imagemagick-draw-rectangle, 2) (imagemagick-set-colour-blue, 3) (user-input-string, 4) (user-input-string, 2)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-two-op, 2) (select-colour-rgb, 3) (user-input-string, 3) (user-input-int, 3)
+(, 0) (int-parse-str, 1) (str-parse-int, 2) (user-input-int, 3) (select-colour-string, 1) (str-parse-int, 2) (user-input-int, 3)
+(, 0) (imagemagick-resize-absolute, 1) (user-input-int, 2) (user-input-int, 2) (user-input-string, 2) (imagemagick-set-colour-green, 2) (user-input-string, 3)
+(, 0) (select-colour-rgb, 1) (int-parse-str, 2) (user-input-string, 3) (select-colour-rgb, 1) (int-parse-str, 2) (user-input-string, 3)
+(, 0) (imagemagick-set-colour-green, 1) (imagemagick-draw-rectangle, 2) (imagemagick-copy, 3) (imagemagick-draw-rectangle, 4) (user-input-string, 4) (user-input-string, 2)
+(, 0) (imagemagick-draw-rectangle, 1) (create-flag-three-op, 2) (str-parse-int, 3) (int-parse-str, 4) (user-input-string, 5) (user-input-int, 3)
+(, 0) (imagemagick-draw-rectangle, 1) (imagemagick-draw, 2) (str-parse-int, 3) (user-input-int, 4) (imagemagick-draw-rectangle, 3) (user-input-string, 3)
+(, 0) (imagemagick-copy, 1) (create-flag-three-op, 2) (user-input-int, 3) (select-colour-string, 3) (user-input-string, 4) (user-input-string, 2)
+(, 0) (imagemagick-set-colour-red, 1) (imagemagick-draw-rectangle, 2) (imagemagick-resize-percentual, 3) (user-input-int, 4) (user-input-string, 4) (user-input-string, 2)
+(, 0) (create-flag-three-op, 1) (select-colour-rgb, 2) (user-input-int, 3) (user-input-int, 2) (user-input-string, 2)
+(, 0) (create-flag-three-op, 1) (select-colour-string, 2) (user-input-string, 3) (user-input-int, 2) (user-input-string, 2)
+(, 0) (imagemagick-negate, 1) (imagemagick-set-colour-green, 2) (str-parse-int, 3) (user-input-int, 4) (str-parse-int, 2) (user-input-int, 3)
+(, 0) (imagemagick-set-colour-blue, 1) (user-input-string, 2) (imagemagick-draw-rectangle, 2) (imagemagick-negate, 3) (str-parse-int, 4) (user-input-int, 5)
+(, 0) (imagemagick-negate, 1) (user-input-string, 2) (imagemagick-set-colour-green, 2) (imagemagick-draw-rectangle, 3) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (, 1) (imagemagick-crop, 2) (int-parse-str, 3) (user-input-string, 4) (str-parse-int, 3) (user-input-int, 4)
+(, 0) (, 1) (imagemagick-set-colour-green, 2) (str-parse-int, 3) (user-input-int, 4) (imagemagick-set-colour-red, 3) (user-input-string, 4)
+Poolsize,toolcnt,pmut,pxo,goalsize,xof,fof,avgfitnness,avgtime,corrects,case
+10000,i,0.50,0.25,7,s,d,2.05,3.47,0,4,c
+
+# Original
+10000,f,0.50,0.25,22,s,d,0.00,7.62,25,1,t
+10000,f,0.50,0.25,22,s,d,22.28,6.83,0,1,c
+10000,f,0.50,0.25,22,s,d,2.00,7.61,0,2,t
+10000,f,0.50,0.25,22,s,d,22.56,6.44,0,2,c
+10000,f,0.50,0.25,22,s,d,3.00,6.80,0,3,t
+10000,f,0.50,0.25,22,s,d,22.44,6.17,0,3,c
+10000,f,0.50,0.25,22,s,d,2.08,7.40,5,4,t
+10000,f,0.50,0.25,22,s,d,22.44,6.12,0,4,c
+
+10000,i,0.50,0.25,7,s,d,1.00,2.77,11,1,t
+10000,i,0.50,0.25,7,s,d,1.96,3.18,0,1,c
+10000,i,0.50,0.25,6,s,d,1.00,2.38,0,2,t
+10000,i,0.50,0.25,6,s,d,2.00,2.79,0,2,c
+10000,i,0.50,0.25,7,s,d,2.00,3.11,0,3,t
+10000,i,0.50,0.25,7,s,d,2.08,3.36,0,3,c
+10000,i,0.50,0.25,7,s,d,1.00,3.01,3,4,t
+10000,i,0.50,0.25,7,s,d,2.24,3.20,1,4,c
+
+10000,b,0.50,0.25,4,s,d,0.00,1.30,15,1,t
+10000,b,0.50,0.25,4,s,d,0.88,2.56,8,1,c
+10000,b,0.50,0.25,4,s,d,2.20,1.25,0,2,t
+10000,b,0.50,0.25,4,s,d,3.12,2.51,0,2,c
+
+# REPEAT
+10000,f,0.50,0.25,22,s,d,0.00,7.05,20,1,t
+10000,f,0.50,0.25,22,s,d,22.40,6.04,0,1,c
+10000,i,0.50,0.25,7,s,d,1.00,2.80,12,1,t
+10000,i,0.50,0.25,7,s,d,1.90,3.23,0,1,c
+10000,b,0.50,0.25,4,s,d,0.00,1.37,7,1,t
+10000,b,0.50,0.25,4,s,d,0.95,2.49,3,1,c
+
+10000,f,0.50,0.25,22,s,d,2.00,6.76,0,2,t
+10000,f,0.50,0.25,22,s,d,22.65,5.80,0,2,c
+10000,i,0.50,0.25,6,s,d,1.00,2.26,0,2,t
+10000,i,0.50,0.25,6,s,d,1.85,2.70,0,2,c
+10000,b,0.50,0.25,4,s,d,2.10,1.29,0,2,t
+10000,b,0.50,0.25,4,s,d,2.90,2.34,0,2,c
+
+10000,f,0.50,0.25,22,s,d,3.00,6.64,0,3,t
+10000,f,0.50,0.25,22,s,d,22.25,6.54,0,3,c
+10000,i,0.50,0.25,7,s,d,2.00,3.22,0,3,t
+10000,i,0.50,0.25,7,s,d,2.10,3.37,1,3,c
+
+10000,f,0.50,0.25,22,s,d,2.45,7.93,1,4,t
+10000,f,0.50,0.25,22,s,d,22.25,6.53,0,4,c
+10000,i,0.50,0.25,7,s,d,1.00,3.09,5,4,t
+10000,i,0.50,0.25,7,s,d,2.05,3.47,0,4,c
